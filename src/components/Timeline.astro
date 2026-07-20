@@ -8,7 +8,7 @@ import { timeline } from '../data/timeline';
       <div class="timeline-content card">
         <span class="timeline-year">{item.year}</span>
         <h3 class="timeline-title">{item.title}</h3>
-        <p class="timeline-desc">{item.description}</p>
+        <p class="timeline-desc" set:html={item.description}></p>
       </div>
     </div>
   ))}

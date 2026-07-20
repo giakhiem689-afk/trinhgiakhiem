@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { profile } from '../data/profile';
+---
+<BaseLayout title={`Liên hệ | ${profile.name}`} description="Kết nối và trao đổi với Trịnh Gia Khiêm.">
+  <div class="container content-wrapper page-section">
+    <SectionHeading title="Liên hệ" subtitle="Kết nối" align="center" />
+    
+    <div class="contact-card card">
+      <p class="contact-intro">Tôi sẵn sàng trao đổi về hỗ trợ người học, giảng dạy tiếng Anh, nghiên cứu giáo dục và các dự án ứng dụng AI có trách nhiệm.</p>
+      
+      <div class="contact-methods">
+        <a href={`mailto:${profile.email}`} class="btn btn-primary contact-email">
+          Gửi Email
+        </a>
+      </div>
+      
+      <div class="social-links">
+        <h3>Hồ sơ trực tuyến</h3>
+        <ul class="social-list">
+          {profile.socials.github !== "#" && <li><a href={profile.socials.github} target="_blank" rel="noopener noreferrer">GitHub</a></li>}
+          {profile.socials.linkedin !== "#" && <li><a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></li>}
+          {profile.socials.orcid !== "#" && <li><a href={profile.socials.orcid} target="_blank" rel="noopener noreferrer">ORCID</a></li>}
+          {profile.socials.scholar !== "#" && <li><a href={profile.socials.scholar} target="_blank" rel="noopener noreferrer">Google Scholar</a></li>}
+          {profile.socials.researchgate !== "#" && <li><a href={profile.socials.researchgate} target="_blank" rel="noopener noreferrer">ResearchGate</a></li>}
+        </ul>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .contact-card {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-12) var(--space-8);
+  }
+  
+  .contact-intro {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-8);
+  }
+  
+  .contact-methods {
+    margin-bottom: var(--space-12);
+  }
+  
+  .social-links h3 {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .social-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+  }
+  
+  .social-list a {
+    display: inline-block;
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-bg-main);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+</style>

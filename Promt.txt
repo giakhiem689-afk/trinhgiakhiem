@@ -1,0 +1,2722 @@
+
+Tôi đang dự định lập một trang web cá nhân để làm CV, blog cá nhân, giới thiệu bản thân, trình bày quan điểm, nghiên cứu, quá trình học tập của cá nhân tôi. Hãy tìm kiếm cẩn thận và chi tiết các thông tin về tôi, lập một kế hoạch cụ thể, một cấu trúc khoa học và chuẩn seo, thân thiện tâm lý người dùng để thực hiện trang web này
+
+Đã xử lý trong 3m 44s
+Em đề xuất xây website của anh theo mô hình “hồ sơ nghề nghiệp kết hợp kho tri thức cá nhân”, không chỉ là một CV trực tuyến. Trang web cần giúp người xem nhanh chóng nhận ra anh là ai, tin tưởng năng lực của anh, tiếp cận các nghiên cứu và tiếp tục quay lại để đọc nội dung mới.
+
+1. Kết quả rà soát thông tin về anh
+Thông tin được tổng hợp từ những gì anh đã chia sẻ và các nguồn công khai tìm thấy đến ngày 20/07/2026.
+
+Nhóm	Thông tin có thể sử dụng
+Họ tên	Trịnh Gia Khiêm
+Lĩnh vực nền tảng	Tâm lý giáo dục
+Công việc hiện tại	Chuyên viên Trung tâm Hỗ trợ học vụ, UEF
+Học vấn	Cử nhân Tâm lý giáo dục; học viên Thạc sĩ Ngôn ngữ Anh tại UEF từ năm 2025
+Định hướng nghiên cứu hiện tại	Thái độ của giáo viên Việt Nam đối với việc sử dụng công cụ AI để phản hồi sửa lỗi bài viết tiếng Anh của sinh viên
+Lĩnh vực quan tâm	Educational Psychology, Learner Support, AI in Language Education, Corrective Feedback, Academic Writing, Teacher Attitudes, Educational Technology
+Định hướng nghề nghiệp	Phát triển theo hướng giảng dạy tiếng Anh, nghiên cứu và giảng dạy Tâm lý giáo dục
+Kinh nghiệm	Hỗ trợ học vụ; giảng dạy kỹ năng sống; tổ chức hoạt động sinh viên; truyền thông giáo dục; công tác Đội
+Dự án tiêu biểu	Website khảo sát và hỗ trợ sinh viên; bảng kỹ năng học tập; hệ thống hỗ trợ qua Telegram/Zalo; ứng dụng AI và tự động hóa trong công việc
+Phong cách cá nhân	Chân thành, suy tư, hướng về người học; có khả năng kết hợp trải nghiệm cá nhân với góc nhìn giáo dục
+Nguồn công khai xác nhận anh là cựu sinh viên khóa 2017 của Khoa Giáo dục và đang công tác tại Trung tâm Hỗ trợ học vụ UEF: Khoa Giáo dục, USSH–VNUHCM, Trung tâm Nghiên cứu và Hỗ trợ sức khỏe tinh thần. Mô tả chính thức của UEF cũng cho thấy Trung tâm đảm nhiệm tư vấn học vụ, giải đáp quy định và xử lý thủ tục cho sinh viên, phù hợp với kinh nghiệm anh đã cung cấp. UEF Student Support Services
+
+Những điểm cần xác nhận trước khi công bố
+Thời gian chính xác của từng vị trí công việc.
+
+Tên chính thức của bằng cử nhân và năm tốt nghiệp.
+
+Tên tiếng Anh chính thức của chương trình thạc sĩ.
+
+Tên đề tài luận văn cuối cùng và tình trạng: đang xây dựng đề cương, đã được duyệt hay đang thu thập dữ liệu.
+
+Danh sách bài báo, báo cáo hội thảo, chứng nhận và thành tích có minh chứng.
+
+Anh có đang tham gia giảng dạy Tâm lý học tại UEF hay không. Một số tài liệu công khai cũ liệt kê anh trong đội ngũ giảng dạy nhưng chức danh hiện tại anh cung cấp là chuyên viên hỗ trợ học vụ.
+
+Không nên công khai
+Ngày sinh đầy đủ, số điện thoại cá nhân, địa chỉ nhà.
+
+Mã số sinh viên, hồ sơ học tập, tài liệu nội bộ.
+
+Thông tin nhận diện của sinh viên từng được anh hỗ trợ.
+
+Chi tiết gia đình nếu không trực tiếp phục vụ câu chuyện nghề nghiệp.
+
+Tài liệu môn học chưa rõ quyền chia sẻ.
+
+Trong kết quả tìm kiếm có nhiều người trùng tên “Trịnh Gia Khiêm”, đặc biệt trong các lĩnh vực Toán–Thống kê và công nghệ. Đây là lý do website phải nhất quán gắn tên anh với “Tâm lý giáo dục – UEF – hỗ trợ người học – AI trong giáo dục”.
+
+2. Định vị thương hiệu cá nhân
+Định vị đề xuất
+Trịnh Gia Khiêm là người làm giáo dục tại giao điểm giữa Tâm lý giáo dục, hỗ trợ người học, giảng dạy tiếng Anh và công nghệ AI.
+
+Không nên tự giới thiệu là “chuyên gia” ở giai đoạn này. “Người làm giáo dục”, “chuyên viên hỗ trợ học vụ” và “học viên cao học” vừa chính xác vừa tạo cảm giác chân thành.
+
+Thông điệp chính
+Tôi nghiên cứu và xây dựng những cách giúp người học học tập chủ động hơn, hiệu quả hơn và nhân văn hơn.
+
+Dòng mô tả ngắn
+Tâm lý giáo dục • Hỗ trợ người học • Giảng dạy tiếng Anh • AI trong giáo dục
+
+Tiêu đề SEO trang chủ
+Trịnh Gia Khiêm | Tâm lý giáo dục, Hỗ trợ người học và AI trong giáo dục
+
+Phiên bản tiếng Anh
+Trinh Gia Khiem | Educational Psychology, Learner Support and AI in Education
+
+3. Nhóm người dùng chính
+Người xem	Điều họ cần	Hành trình ưu tiên
+Nhà tuyển dụng	Kinh nghiệm, kỹ năng, minh chứng	Trang chủ → CV → Dự án → Liên hệ
+Giảng viên, nhà nghiên cứu	Đề tài, phương pháp, tài liệu	Nghiên cứu → Công trình → Hồ sơ tác giả
+Sinh viên	Phương pháp học và nguồn lực hỗ trợ	Bài viết → Tài nguyên → Bài liên quan
+Đồng nghiệp giáo dục	Quan điểm và dự án thực tế	Giới thiệu → Dự án → Bài viết
+Người đọc cá nhân	Câu chuyện, trải nghiệm, giá trị sống	Hành trình → Góc nhìn → Giới thiệu
+Mỗi nhóm phải tìm được nội dung mình cần trong tối đa hai hoặc ba lần nhấp.
+
+4. Cấu trúc website đề xuất
+
+
+Menu chính
+Trang	URL đề xuất	Nội dung
+Trang chủ	/	Nhận diện, năng lực, nội dung nổi bật
+Giới thiệu	/gioi-thieu	Tiểu sử nghề nghiệp, giá trị, định hướng
+Nghiên cứu	/nghien-cuu	Đề tài, hướng nghiên cứu, báo cáo, tài liệu
+Dự án	/du-an	Các dự án giáo dục, truyền thông và công nghệ
+Bài viết	/bai-viet	Blog, quan điểm và ghi chú học thuật
+Hành trình	/hanh-trinh	Quá trình học tập và phát triển nghề nghiệp
+Liên hệ	/lien-he	Email, hồ sơ nghề nghiệp, đề nghị hợp tác
+CV	/cv	CV trực tuyến và nút tải PDF
+“Quan điểm cá nhân” nên là một chuyên mục của Bài viết, không cần trở thành một mục menu riêng. Cách này giảm số lựa chọn và tải nhận thức cho người dùng. Việc tổ chức nội dung rõ ràng, có phân cấp và tiết lộ dần thông tin giúp người đọc tập trung tốt hơn. Nielsen Norman Group về cognitive load
+
+5. Bố cục trang chủ
+1. Phần mở đầu
+Ảnh chân dung thật, chuyên nghiệp.
+
+Tên đầy đủ.
+
+Thông điệp định vị.
+
+Hai nút: “Khám phá nghiên cứu” và “Xem CV”.
+
+Không nên đặt quá nhiều chữ, biểu tượng hoặc hiệu ứng chuyển động tại đây.
+
+2. Thông tin xác thực nhanh
+Ba hoặc bốn dòng ngắn:
+
+Chuyên viên hỗ trợ học vụ tại UEF.
+
+Cử nhân Tâm lý giáo dục.
+
+Học viên Thạc sĩ Ngôn ngữ Anh.
+
+Nghiên cứu AI trong phản hồi bài viết tiếng Anh.
+
+3. Ba trụ cột chuyên môn
+Tâm lý giáo dục và hỗ trợ người học.
+
+Giảng dạy tiếng Anh và phản hồi sửa lỗi.
+
+AI và công nghệ ứng dụng trong giáo dục.
+
+4. Nghiên cứu nổi bật
+Giới thiệu đề tài luận văn hiện tại, câu hỏi nghiên cứu, mô hình thái độ ba thành phần và tình trạng nghiên cứu.
+
+5. Dự án tiêu biểu
+Mỗi dự án cần có:
+
+Vấn đề.
+
+Vai trò của anh.
+
+Giải pháp.
+
+Công cụ.
+
+Sản phẩm hoặc kết quả.
+
+Bài học rút ra.
+
+6. Bài viết mới
+Hiển thị ba bài gần nhất, thời gian đọc và chuyên mục.
+
+7. Hành trình học tập
+Một timeline ngắn từ Tâm lý giáo dục, hỗ trợ học vụ đến Ngôn ngữ Anh và AI trong giáo dục.
+
+8. Kêu gọi kết nối
+Nếu bạn quan tâm đến hỗ trợ người học, giảng dạy tiếng Anh hoặc AI trong giáo dục, tôi rất vui được trao đổi và hợp tác.
+
+6. Hệ thống nội dung và từ khóa SEO
+Bốn cụm nội dung chính
+Cụm chủ đề	Từ khóa định hướng
+Tâm lý giáo dục	tâm lý giáo dục, hỗ trợ tâm lý học tập, động lực học tập, thái độ học tập
+Hỗ trợ người học	hỗ trợ học vụ, phương pháp học đại học, kỹ năng học tập, sinh viên học lực yếu
+AI trong giáo dục	AI trong giáo dục, thái độ giáo viên đối với AI, AI feedback, AI tools for teachers
+Giảng dạy tiếng Anh	corrective feedback, written corrective feedback, English writing skills, vocabulary learning strategies
+Mười bài nền tảng nên xuất bản đầu tiên
+Tâm lý giáo dục có thể giúp sinh viên học tập như thế nào?
+
+Hỗ trợ học vụ không chỉ là giải quyết thủ tục
+
+Siêu nhận thức là gì và người học có thể áp dụng ra sao?
+
+Những phương pháp học tập hiệu quả dựa trên nghiên cứu
+
+Corrective feedback là gì trong giảng dạy tiếng Anh?
+
+Giáo viên có thái độ như thế nào đối với AI trong giáo dục?
+
+AI nên hỗ trợ hay thay thế phản hồi của giáo viên?
+
+Cách sử dụng AI để góp ý bài viết tiếng Anh có trách nhiệm
+
+Hành trình từ Tâm lý giáo dục đến Ngôn ngữ Anh của tôi
+
+Tôi đã học được gì khi làm công việc hỗ trợ sinh viên?
+
+Mẫu cấu trúc một bài viết
+Tiêu đề trả lời đúng nhu cầu tìm kiếm.
+
+“Tóm tắt trong 30 giây”.
+
+Vấn đề hoặc câu hỏi.
+
+Cơ sở khoa học.
+
+Ví dụ hoặc trải nghiệm thực tế.
+
+Quan điểm của anh.
+
+Giới hạn và lưu ý.
+
+Tài liệu tham khảo APA 7.
+
+Bài viết liên quan.
+
+Hồ sơ tác giả và ngày cập nhật.
+
+Nên dùng nhãn để người đọc phân biệt mức độ học thuật:
+
+Nghiên cứu đang thực hiện.
+
+Bài viết dựa trên nghiên cứu.
+
+Ghi chú học tập.
+
+Quan điểm cá nhân.
+
+Dự án thực hành.
+
+Điều này đặc biệt quan trọng với uy tín học thuật vì “quan điểm”, “nghiên cứu đang thực hiện” và “kết quả đã công bố” không nên được trình bày như nhau.
+
+7. Chiến lược SEO thực thể cá nhân
+Hồ sơ tác giả trung tâm
+Trang /gioi-thieu phải là trang định danh chính thức của “Trịnh Gia Khiêm”, bao gồm:
+
+Tên tiếng Việt và tên không dấu.
+
+Ảnh chân dung thống nhất.
+
+Chức danh hiện tại.
+
+Học vấn.
+
+Lĩnh vực nghiên cứu.
+
+Đơn vị công tác.
+
+Email nghề nghiệp.
+
+Các hồ sơ được xác minh.
+
+Google hỗ trợ dữ liệu ProfilePage và Person để giúp công cụ tìm kiếm hiểu trang đang mô tả một cá nhân cụ thể. Google ProfilePage structured data
+
+Những hồ sơ nên tạo hoặc chuẩn hóa
+LinkedIn.
+
+ORCID.
+
+Google Scholar khi có sản phẩm nghiên cứu phù hợp.
+
+ResearchGate nếu cần.
+
+Hồ sơ tác giả trên website.
+
+Hồ sơ công khai tại đơn vị công tác nếu được phép.
+
+Em chưa tìm thấy một hồ sơ LinkedIn, ORCID hoặc Google Scholar có thể xác nhận chắc chắn là của anh. Đây là khoảng trống nên xử lý sớm để tránh nhầm với người trùng tên.
+
+SEO cho công trình nghiên cứu
+Mỗi nghiên cứu cần một URL riêng, có:
+
+Tên nghiên cứu.
+
+Tác giả.
+
+Năm.
+
+Tóm tắt.
+
+Từ khóa.
+
+Trạng thái.
+
+Trích dẫn đề xuất.
+
+Tệp PDF nếu được phép công khai.
+
+Google Scholar yêu cầu tối thiểu tiêu đề, tên tác giả và năm công bố trong metadata; PDF nên được liên kết từ trang tóm tắt HTML tương ứng. Google Scholar Inclusion Guidelines
+
+Website song ngữ
+Giai đoạn đầu nên dùng:
+
+Tiếng Việt làm ngôn ngữ chính.
+
+Tiếng Anh cho Trang chủ, Giới thiệu, CV và Nghiên cứu.
+
+URL tiếng Anh đặt trong /en/.
+
+Dùng hreflang cho các trang có hai phiên bản tương đương. Google multilingual guidance
+
+Không nên dịch tự động toàn bộ blog ngay từ đầu vì dễ tạo nội dung trùng lặp và thiếu tự nhiên.
+
+8. Thiết kế thân thiện tâm lý người dùng
+Phong cách hình ảnh
+Em đề xuất phong cách “ấm áp nhưng học thuật”:
+
+Xanh navy hoặc xanh lục đậm: tạo cảm giác tin cậy.
+
+Nền kem sáng: giảm cảm giác lạnh và hành chính.
+
+Màu nhấn vàng ấm hoặc xanh ngọc.
+
+Ảnh thật từ quá trình học tập, giảng dạy và dự án.
+
+Hiệu ứng nổi khối nhẹ; phong cách pastel 3D có thể dùng trong hình minh họa, không cần phủ toàn bộ giao diện.
+
+Nguyên tắc sử dụng
+Đoạn văn ngắn, tiêu đề mô tả rõ nội dung.
+
+Nội dung quan trọng đặt ở đầu và phía trái vùng đọc vì người dùng thường quét trang theo mô hình gần chữ F. Nielsen Norman Group
+
+Mỗi màn hình chỉ có một hành động chính.
+
+Menu cố định nhưng gọn.
+
+Có mục lục cho bài dài.
+
+Không dùng cuộn trang bị điều khiển, hiệu ứng nhấp nháy hoặc animation kéo dài.
+
+Nút bấm nên đủ lớn; mục tiêu thực tế là khoảng 44 × 44 px.
+
+Độ tương phản, bàn phím, focus và cấu trúc heading phải đạt WCAG 2.2 AA. W3C WCAG 2.2
+
+9. Công nghệ nên sử dụng
+Phương án phù hợp nhất với anh
+Astro + Markdown/MDX + Decap CMS + Cloudflare Pages + tên miền riêng.
+
+Lý do:
+
+Phù hợp website nhiều nội dung.
+
+Tạo trang tĩnh nhẹ và nhanh.
+
+Viết blog bằng Markdown hoặc giao diện quản trị /admin.
+
+Dễ lưu phiên bản trên Git.
+
+Chi phí vận hành ban đầu thấp.
+
+Có thể mở rộng tìm kiếm, form liên hệ và tự động hóa sau này.
+
+Astro được thiết kế cho website tập trung vào nội dung, mặc định hạn chế JavaScript phía người dùng và hỗ trợ quản lý nội dung theo collection. Astro documentation, Decap CMS với Astro
+
+Nếu anh muốn tự quản trị hoàn toàn mà gần như không đụng vào mã nguồn, WordPress là phương án thay thế. Tuy nhiên, Astro phù hợp hơn với kinh nghiệm HTML/CSS/JS, GitHub Pages và định hướng tự động hóa hiện tại của anh.
+
+Tên miền ưu tiên
+trinhgiakhiem.com
+
+giakhiemtrinh.com
+
+trinhgiakhiem.vn
+
+Cần kiểm tra tình trạng đăng ký trước khi quyết định. Tên miền phải dùng lâu dài, không gắn với một trường hoặc một đề tài cụ thể.
+
+10. Yêu cầu kỹ thuật SEO
+Mỗi trang có một title, một H1 và meta description riêng.
+
+Có canonical URL.
+
+Sitemap XML, RSS và robots.txt.
+
+Dữ liệu JSON-LD: ProfilePage, Person, Article, BreadcrumbList.
+
+Open Graph cho Facebook, Zalo và LinkedIn.
+
+Ảnh có tên mô tả, kích thước cố định và alt text phù hợp. Google Image SEO
+
+URL ngắn, không chứa ngày nếu bài có tính lâu dài.
+
+Chuyển hướng 301 khi đổi URL.
+
+Cài Google Search Console và Bing Webmaster Tools.
+
+Theo dõi Core Web Vitals với mục tiêu: LCP ≤ 2,5 giây, INP ≤ 200 ms và CLS ≤ 0,1. web.dev
+
+Có trang chính sách quyền riêng tư và tuyên bố sử dụng AI.
+
+Có tuyên bố: “Các quan điểm trên website là quan điểm cá nhân, không đại diện cho UEF hoặc đơn vị công tác.”
+
+Google hiện tiếp tục ưu tiên nội dung hữu ích, đáng tin cậy và được viết trước hết cho con người. Vì vậy, giá trị SEO lớn nhất của website sẽ đến từ trải nghiệm thật, chuyên môn thật, trích dẫn khoa học và các dự án có minh chứng, không phải từ việc lặp lại từ khóa. Google SEO Starter Guide, People-first content
+
+11. Kế hoạch triển khai sáu tuần
+Thời gian	Công việc	Kết quả
+Tuần 1	Xác minh thông tin, chọn tên miền, chốt định vị	Hồ sơ dữ liệu chính thức
+Tuần 2	Viết Trang chủ, Giới thiệu, CV, Nghiên cứu	Bộ nội dung cốt lõi
+Tuần 3	Thiết kế giao diện và hệ thống màu chữ	Prototype desktop và mobile
+Tuần 4	Lập trình Astro, CMS, SEO và dữ liệu cấu trúc	Website thử nghiệm
+Tuần 5	Đưa dự án, bài viết, ảnh và tài liệu lên web	Website đủ nội dung để ra mắt
+Tuần 6	Kiểm tra mobile, tốc độ, accessibility, metadata	Công bố chính thức
+90 ngày tiếp theo	Xuất bản 8–12 bài nền tảng và theo dõi Search Console	Xây dựng nhận diện trên Google
+Kết luận
+Cấu trúc phù hợp nhất với anh là:
+
+Hồ sơ nghề nghiệp + Nghiên cứu + Dự án thực tế + Blog khoa học + Hành trình cá nhân.
+
+Điểm khác biệt của website không nằm ở thiết kế cầu kỳ, mà ở câu chuyện rất riêng của anh: từ nền tảng Tâm lý giáo dục, trải nghiệm hỗ trợ sinh viên đến việc học Ngôn ngữ Anh và nghiên cứu AI trong giáo dục. Đây là một hướng nhận diện rõ ràng, có chiều sâu và đủ khả năng phát triển lâu dài thành hồ sơ học thuật lẫn thương hiệu nghề nghiệp.
+
+
+Giải thích các công cụ này: Astro + Markdown/MDX + Decap CMS + Cloudflare Pages + tên miền riêng.
+
+Có thể hiểu bộ công cụ này như một “dây chuyền xuất bản website”:
+
+
+
+1. Astro: Bộ khung xây dựng website
+Astro là công cụ dùng để tạo giao diện và cấu trúc website, tương tự như “bộ máy” kết hợp nội dung, hình ảnh và thiết kế thành các trang hoàn chỉnh.
+
+Astro sẽ đảm nhiệm:
+
+Tạo Trang chủ, Giới thiệu, CV, Nghiên cứu, Dự án, Blog.
+
+Đọc các bài viết từ Markdown/MDX.
+
+Tự động tạo trang cho từng bài viết.
+
+Tạo menu, danh mục, bài liên quan và trang tác giả.
+
+Tạo title, meta description, sitemap và dữ liệu SEO.
+
+Tối ưu hình ảnh và tốc độ tải trang.
+
+Tạo phiên bản tiếng Việt và tiếng Anh.
+
+Vì sao phù hợp với website của anh?
+Website của anh chủ yếu là nội dung, không phải một ứng dụng phức tạp. Astro có thể tạo sẵn các trang HTML trước khi đưa lên Internet, nhờ đó website thường tải nhanh và ít phụ thuộc JavaScript. Tài liệu Astro
+
+Ví dụ, anh tạo file:
+
+ai-trong-giao-duc.md
+Astro có thể tự biến nó thành trang:
+
+trinhgiakhiem.com/bai-viet/ai-trong-giao-duc
+Astro là công cụ kỹ thuật. Sau khi website được xây dựng hoàn chỉnh, anh không nhất thiết phải trực tiếp làm việc với mã Astro mỗi khi viết bài.
+
+2. Markdown: Cách viết nội dung đơn giản
+Markdown là một định dạng văn bản đơn giản, giúp anh viết bài mà không cần sử dụng mã HTML phức tạp.
+
+Ví dụ:
+
+# AI trong giáo dục
+
+AI đang tạo ra nhiều thay đổi trong quá trình dạy và học.
+
+## Lợi ích đối với giáo viên
+
+- Hỗ trợ xây dựng ý tưởng
+- Góp ý bài viết
+- Thực hiện các công việc lặp lại
+Khi website được xuất bản, Astro sẽ chuyển nội dung này thành tiêu đề, đoạn văn và danh sách có định dạng đẹp.
+
+Một bài viết Markdown có thể chứa thông tin SEO ở đầu file:
+
+---
+title: "AI trong giáo dục: Cơ hội và thách thức"
+description: "Phân tích vai trò của AI trong hoạt động giảng dạy và hỗ trợ người học."
+date: 2026-07-20
+author: "Trịnh Gia Khiêm"
+category: "AI trong giáo dục"
+tags:
+  - AI tools
+  - teacher attitudes
+  - corrective feedback
+---
+Phần nằm giữa hai dấu --- được gọi là metadata. Astro sử dụng nó để tạo:
+
+Tiêu đề trang.
+
+Mô tả trên Google.
+
+Ngày xuất bản.
+
+Chuyên mục.
+
+Danh sách bài liên quan.
+
+Hồ sơ tác giả.
+
+Ưu điểm
+File nhẹ, dễ sao lưu.
+
+Không phụ thuộc vào một nhà cung cấp.
+
+Có thể viết bằng Notepad, VS Code hoặc giao diện Decap CMS.
+
+Dễ chuyển sang hệ thống khác trong tương lai.
+
+Phù hợp với blog, bài nghiên cứu và nhật ký học tập.
+
+3. MDX: Markdown có thêm thành phần tương tác
+MDX là phiên bản mở rộng của Markdown. Nó cho phép chèn các thành phần giao diện vào giữa bài viết.
+
+Ví dụ, trong một bài nghiên cứu, anh có thể chèn:
+
+<ResearchStatus status="Đang thực hiện" />
+
+<DownloadButton file="/documents/research-proposal.pdf" />
+
+<CitationBox style="APA7" />
+Khi hiển thị, chúng có thể trở thành:
+
+Nhãn trạng thái nghiên cứu.
+
+Nút tải PDF.
+
+Hộp trích dẫn APA.
+
+Biểu đồ.
+
+Timeline.
+
+Câu hỏi tự kiểm tra.
+
+Thẻ từ vựng.
+
+Nội dung có thể mở rộng.
+
+Khi nào dùng Markdown và MDX?
+Trường hợp	Nên dùng
+Bài blog thông thường	Markdown
+Ghi chép học tập	Markdown
+Bài nghiên cứu có nút tải tài liệu	MDX
+Bài cần biểu đồ hoặc thành phần tương tác	MDX
+Trang dự án có bố cục đặc biệt	MDX hoặc Astro
+Anh có thể sử dụng Markdown cho khoảng 80–90% nội dung và chỉ dùng MDX khi thật sự cần.
+
+4. Decap CMS: Trang quản trị nội dung
+Decap CMS tạo một giao diện quản trị để anh không phải mở và chỉnh sửa trực tiếp các file Markdown.
+
+Anh có thể truy cập một địa chỉ như:
+
+trinhgiakhiem.com/admin
+Sau khi đăng nhập, anh có thể:
+
+Viết bài mới.
+
+Chỉnh sửa bài cũ.
+
+Đặt tiêu đề và mô tả SEO.
+
+Chọn chuyên mục.
+
+Thêm ảnh đại diện.
+
+Lưu bản nháp.
+
+Đặt ngày xuất bản.
+
+Cập nhật trang Giới thiệu hoặc Dự án.
+
+Có thể hình dung Decap CMS giống phần quản trị của WordPress, nhưng nội dung được lưu thành file trong kho mã nguồn thay vì cơ sở dữ liệu.
+
+Quy trình khi anh đăng bài
+Anh đăng nhập vào /admin.
+
+Anh viết bài và nhấn “Publish”.
+
+Decap lưu bài thành file Markdown.
+
+File được gửi vào kho mã nguồn GitHub.
+
+Cloudflare phát hiện nội dung mới.
+
+Astro tạo lại website.
+
+Bài viết mới xuất hiện trên tên miền của anh.
+
+Decap là phần mềm mã nguồn mở và có thể kết hợp với Astro để quản lý nội dung, hình ảnh và các collection. Decap CMS với Astro
+
+Điểm cần lưu ý
+Decap cần thiết lập phương thức đăng nhập, thường thông qua GitHub hoặc một dịch vụ xác thực. Đây là phần hơi kỹ thuật trong lần cài đặt đầu tiên, nhưng sau khi hoàn thành thì việc đăng bài khá đơn giản.
+
+5. Cloudflare Pages: Nơi vận hành website
+Sau khi Astro tạo xong website, các file cần được đặt trên một máy chủ để mọi người có thể truy cập. Cloudflare Pages thực hiện nhiệm vụ đó.
+
+Cloudflare Pages sẽ:
+
+Nhận mã nguồn từ GitHub.
+
+Tự động chạy Astro để tạo website.
+
+Đưa website lên Internet.
+
+Phân phối nội dung qua mạng lưới máy chủ toàn cầu.
+
+Cung cấp HTTPS.
+
+Kết nối với tên miền riêng.
+
+Tạo bản xem trước khi website được cập nhật.
+
+Tự động triển khai lại khi có bài viết mới.
+
+Ví dụ
+Anh chỉnh sửa bài viết và lưu lên GitHub. Cloudflare Pages sẽ tự động:
+
+Phát hiện thay đổi
+→ Chạy lệnh xây dựng Astro
+→ Tạo phiên bản website mới
+→ Xuất bản
+Anh không phải tải file thủ công lên hosting sau mỗi lần chỉnh sửa.
+
+Cloudflare Pages hiện hỗ trợ triển khai Astro và kết nối tên miền riêng. Cloudflare Pages dành cho Astro
+
+Chi phí
+Astro: miễn phí.
+
+Markdown/MDX: miễn phí.
+
+Decap CMS: miễn phí.
+
+GitHub: có thể sử dụng gói miễn phí.
+
+Cloudflare Pages: có gói miễn phí phù hợp website cá nhân.
+
+Tên miền riêng: trả phí hằng năm.
+
+Website tĩnh thường không cần mua hosting truyền thống trong giai đoạn đầu.
+
+6. Tên miền riêng: Địa chỉ và thương hiệu
+Tên miền riêng là địa chỉ người dùng nhập để truy cập website, chẳng hạn:
+
+trinhgiakhiem.com
+Thay vì sử dụng địa chỉ mặc định:
+
+trinhgiakhiem.pages.dev
+Tên miền riêng mang lại:
+
+Địa chỉ chuyên nghiệp và dễ nhớ.
+
+Thương hiệu cá nhân lâu dài.
+
+Email nghề nghiệp như contact@trinhgiakhiem.com.
+
+Khả năng chuyển website sang nền tảng khác mà không mất địa chỉ.
+
+Hỗ trợ Google nhận diện anh như một thực thể cá nhân nhất quán.
+
+Tên miền được mua từ nhà đăng ký như Cloudflare Registrar, Namecheap hoặc nhà cung cấp Việt Nam. Sau đó, tên miền được kết nối với Cloudflare Pages bằng cấu hình DNS.
+
+7. GitHub: Thành phần trung gian cần bổ sung
+Trong hệ thống này còn có GitHub, dù chưa được nhắc trong danh sách ban đầu.
+
+GitHub đóng vai trò như “kho lưu trữ trung tâm”:
+
+GitHub
+├── Mã nguồn Astro
+├── Giao diện website
+├── Bài viết Markdown/MDX
+├── Hình ảnh
+└── Lịch sử chỉnh sửa
+GitHub giúp:
+
+Lưu mã nguồn và bài viết.
+
+Theo dõi mọi lần chỉnh sửa.
+
+Khôi phục phiên bản cũ.
+
+Kết nối Decap CMS với Cloudflare Pages.
+
+Tự động triển khai website.
+
+Nếu một bài viết bị chỉnh sửa sai, anh có thể quay lại phiên bản trước đó.
+
+8. Toàn bộ hệ thống hoạt động như thế nào?
+Thành phần	Vai trò dễ hiểu
+Astro	Xây dựng website
+Markdown	Viết và lưu nội dung
+MDX	Viết nội dung có thành phần đặc biệt
+Decap CMS	Giao diện quản trị để đăng bài
+GitHub	Kho lưu mã nguồn và nội dung
+Cloudflare Pages	Đưa website lên Internet
+Tên miền	Địa chỉ chính thức của website
+Quy trình đầy đủ:
+
+Anh viết bài trên Decap CMS
+→ Bài được lưu dưới dạng Markdown trên GitHub
+→ Cloudflare Pages nhận thay đổi
+→ Astro tạo lại website
+→ Bài xuất hiện tại trinhgiakhiem.com
+Ưu điểm lớn nhất của hệ thống này là tốc độ tốt, chi phí thấp, dữ liệu thuộc quyền kiểm soát của anh và dễ mở rộng. Hạn chế chính là lần cài đặt đầu tiên kỹ thuật hơn WordPress; các chức năng như form liên hệ, bình luận, tìm kiếm nâng cao hoặc đăng ký email cần được bổ sung riêng.
+
+
+Hiện tại anh mới chỉ đang dùng github, hãy giúp anh thiết kế lại kế hoạch từ Antigravity, tạo một thư mục trong máy, đẩy lên github và công bố trên website đường link của anh
+
+Đã xử lý trong 1m 43s
+GitHub
+Đã kết nối
+Đúng với tình trạng hiện tại, anh chưa cần Decap CMS hay Cloudflare Pages. Hệ thống nên tối giản thành:
+
+Antigravity → thư mục Astro trên máy → GitHub → GitHub Actions → GitHub Pages → tên miền riêng
+
+Em chưa thể đẩy mã nguồn ngay vì kết nối GitHub hiện chưa được cấp quyền truy cập repository nào và anh chưa cung cấp GitHub username/tên miền. Dưới đây là kế hoạch hoàn chỉnh để triển khai.
+
+1. Kiến trúc giai đoạn đầu
+Thành phần	Vai trò
+Antigravity	Tạo mã nguồn, sửa nội dung, chạy thử
+Astro	Xây dựng website
+Markdown	Lưu bài blog, nghiên cứu, dự án
+Git	Theo dõi các lần chỉnh sửa
+GitHub	Lưu mã nguồn trực tuyến
+GitHub Actions	Tự động xây dựng website
+GitHub Pages	Công bố website miễn phí
+Tên miền riêng	Địa chỉ chính thức của website
+Mỗi khi anh cập nhật bài viết và push lên GitHub, GitHub Actions sẽ tự động xuất bản phiên bản mới.
+
+2. Repository nên sử dụng
+Em khuyến nghị tạo repository đặc biệt:
+
+<GITHUB-USERNAME>.github.io
+Ví dụ, nếu username là trinhgiakhiem, repository sẽ là:
+
+trinhgiakhiem.github.io
+Website mặc định sẽ có địa chỉ:
+
+https://trinhgiakhiem.github.io
+Ưu điểm của cách này:
+
+Không xuất hiện tên repository phía sau URL.
+
+Không phải cấu hình base phức tạp trong Astro.
+
+Dễ chuyển sang tên miền riêng.
+
+Phù hợp để làm website cá nhân lâu dài.
+
+Repository nên đặt ở chế độ Public. Không lưu mật khẩu, API key hoặc thông tin sinh viên trong repository.
+
+3. Thư mục trên máy
+Trên Windows, tạo thư mục:
+
+C:\Websites\trinh-gia-khiem
+Cấu trúc dự kiến:
+
+trinh-gia-khiem/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── public/
+│   ├── images/
+│   ├── documents/
+│   ├── favicon.svg
+│   └── robots.txt
+├── src/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   │   ├── index.astro
+│   │   ├── gioi-thieu.astro
+│   │   ├── cv.astro
+│   │   ├── nghien-cuu.astro
+│   │   ├── du-an.astro
+│   │   ├── bai-viet/
+│   │   └── lien-he.astro
+│   ├── content/
+│   │   ├── blog/
+│   │   ├── research/
+│   │   └── projects/
+│   └── styles/
+├── astro.config.mjs
+├── package.json
+├── README.md
+└── tsconfig.json
+4. Prompt hoàn chỉnh dành cho Antigravity
+Anh mở Antigravity, chọn thư mục C:\Websites\trinh-gia-khiem, sau đó gửi prompt dưới đây:
+
+Hãy tạo một website cá nhân hoàn chỉnh cho tôi trong thư mục hiện tại bằng Astro phiên bản ổn định mới nhất.
+
+THÔNG TIN CHUNG
+
+Tên website: Trịnh Gia Khiêm
+Ngôn ngữ chính: Tiếng Việt
+Loại website: CV trực tuyến, hồ sơ nghề nghiệp, nghiên cứu, dự án, blog và hành trình học tập.
+
+Định vị cá nhân:
+Trịnh Gia Khiêm là người làm giáo dục tại giao điểm giữa Tâm lý giáo dục, hỗ trợ người học, giảng dạy tiếng Anh và công nghệ AI.
+
+Thông điệp:
+“Tôi nghiên cứu và xây dựng những cách giúp người học học tập chủ động hơn, hiệu quả hơn và nhân văn hơn.”
+
+Mô tả ngắn:
+“Tâm lý giáo dục • Hỗ trợ người học • Giảng dạy tiếng Anh • AI trong giáo dục”
+
+Thông tin nghề nghiệp:
+- Chuyên viên Trung tâm Hỗ trợ học vụ tại UEF.
+- Cử nhân Tâm lý giáo dục.
+- Học viên Thạc sĩ Ngôn ngữ Anh tại UEF.
+- Quan tâm đến Educational Psychology, Learner Support, AI in Language Education, Corrective Feedback, Academic Writing, Teacher Attitudes và Educational Technology.
+- Hướng nghiên cứu hiện tại: Vietnamese teachers’ attitudes toward using AI tools for corrective feedback on their students’ English writing.
+
+YÊU CẦU CÔNG NGHỆ
+
+1. Sử dụng Astro ở chế độ static.
+2. Sử dụng TypeScript với cấu hình strict.
+3. Không sử dụng React, Vue hoặc framework bổ sung nếu không thật sự cần thiết.
+4. Dùng Markdown và Astro Content Collections để quản lý:
+   - Bài viết.
+   - Nghiên cứu.
+   - Dự án.
+5. Không sử dụng cơ sở dữ liệu.
+6. Không sử dụng CMS trong phiên bản đầu tiên.
+7. Tạo đầy đủ:
+   - package.json
+   - astro.config.mjs
+   - tsconfig.json
+   - .gitignore
+   - README.md
+8. Cài đặt integration sitemap chính thức của Astro.
+9. Tạo RSS cho blog.
+10. Tạo GitHub Actions workflow tại:
+    .github/workflows/deploy.yml
+11. Workflow phải sử dụng official Astro GitHub Action để triển khai lên GitHub Pages.
+12. Website phải chạy được bằng:
+    npm install
+    npm run dev
+    npm run build
+    npm run preview
+
+CẤU TRÚC WEBSITE
+
+Tạo các trang:
+
+1. Trang chủ: /
+2. Giới thiệu: /gioi-thieu
+3. CV: /cv
+4. Nghiên cứu: /nghien-cuu
+5. Dự án: /du-an
+6. Danh sách bài viết: /bai-viet
+7. Chi tiết bài viết: /bai-viet/[slug]
+8. Hành trình học tập: /hanh-trinh
+9. Liên hệ: /lien-he
+10. Chính sách quyền riêng tư: /quyen-rieng-tu
+
+TRANG CHỦ
+
+Trang chủ bao gồm:
+
+1. Header và menu responsive.
+2. Hero:
+   - Tên Trịnh Gia Khiêm.
+   - Thông điệp định vị.
+   - Nút “Khám phá nghiên cứu”.
+   - Nút “Xem CV”.
+   - Khu vực ảnh chân dung có placeholder.
+3. Bốn thông tin xác thực:
+   - Chuyên viên hỗ trợ học vụ tại UEF.
+   - Cử nhân Tâm lý giáo dục.
+   - Học viên Thạc sĩ Ngôn ngữ Anh.
+   - Nghiên cứu AI trong phản hồi bài viết.
+4. Ba trụ cột:
+   - Tâm lý giáo dục và hỗ trợ người học.
+   - Giảng dạy tiếng Anh và corrective feedback.
+   - AI và công nghệ trong giáo dục.
+5. Nghiên cứu nổi bật.
+6. Ba dự án tiêu biểu.
+7. Ba bài viết mới nhất.
+8. Timeline hành trình học tập.
+9. Khu vực kêu gọi kết nối.
+10. Footer đầy đủ.
+
+THIẾT KẾ
+
+1. Phong cách ấm áp, học thuật, hiện đại và chân thành.
+2. Màu chủ đạo:
+   - Xanh navy đậm.
+   - Xanh lục học thuật.
+   - Nền kem sáng.
+   - Màu nhấn vàng ấm.
+3. Không sử dụng hiệu ứng 3D quá mạnh.
+4. Chuyển động nhẹ, tôn trọng prefers-reduced-motion.
+5. Giao diện ưu tiên mobile.
+6. Không sử dụng animation gây mất tập trung.
+7. Dùng font tiếng Việt rõ ràng và dễ đọc.
+8. Đảm bảo độ tương phản tốt.
+9. Có trạng thái hover và keyboard focus rõ ràng.
+10. Nút bấm có vùng tương tác tối thiểu 44 x 44 px.
+
+BLOG VÀ NỘI DUNG
+
+Tạo Content Collections cho blog, research và projects.
+
+Schema bài viết gồm:
+- title
+- description
+- publishedDate
+- updatedDate
+- category
+- tags
+- coverImage
+- coverAlt
+- draft
+- featured
+- readingTime
+- references
+
+Tạo ba bài viết mẫu:
+
+1. Tâm lý giáo dục có thể giúp sinh viên học tập như thế nào?
+2. Corrective feedback là gì trong giảng dạy tiếng Anh?
+3. Giáo viên có thái độ như thế nào đối với AI trong giáo dục?
+
+Các bài mẫu phải được đánh dấu rõ là nội dung minh họa và có thể chỉnh sửa.
+
+SEO
+
+1. Mỗi trang chỉ có một H1.
+2. Tạo title và meta description riêng.
+3. Tạo canonical URL.
+4. Tạo Open Graph và Twitter Card.
+5. Tạo sitemap.xml.
+6. Tạo robots.txt.
+7. Tạo RSS.
+8. Tạo JSON-LD:
+   - ProfilePage
+   - Person
+   - Article
+   - BreadcrumbList
+9. Profile Person sử dụng:
+   - name: Trịnh Gia Khiêm
+   - alternateName: Trinh Gia Khiem
+   - jobTitle: Academic Support Specialist
+10. Không tự tạo URL mạng xã hội chưa được cung cấp.
+11. Không tự thêm số điện thoại, ngày sinh, địa chỉ nhà hoặc dữ liệu cá nhân nhạy cảm.
+12. Hình ảnh phải có width, height và alt text.
+13. Tạo trang 404 thân thiện.
+
+GITHUB PAGES
+
+1. Hỏi tôi GitHub username trước khi cấu hình URL chính thức.
+2. Nếu repository là <username>.github.io:
+   - site: https://<username>.github.io
+   - không sử dụng base.
+3. Nếu sử dụng tên miền riêng:
+   - site phải là https://<domain>
+   - không sử dụng base.
+4. Tạo workflow GitHub Pages theo tài liệu chính thức mới nhất của Astro.
+5. Workflow chạy khi push vào nhánh main.
+6. Không lưu secret hoặc token trong mã nguồn.
+
+KIỂM TRA
+
+Sau khi hoàn thành:
+
+1. Chạy npm install.
+2. Chạy npm run build.
+3. Sửa mọi lỗi build.
+4. Kiểm tra các liên kết nội bộ.
+5. Kiểm tra responsive.
+6. Kiểm tra TypeScript.
+7. Kiểm tra sitemap và RSS.
+8. Không push lên GitHub cho đến khi tôi cung cấp repository URL.
+9. Báo cáo danh sách file đã tạo và hướng dẫn chỉnh sửa nội dung.
+5. Tạo repository trên GitHub
+Trên GitHub:
+
+Chọn New repository.
+
+Repository name:
+
+<GITHUB-USERNAME>.github.io
+Chọn Public.
+
+Không chọn thêm README, .gitignore hoặc License vì Antigravity sẽ tạo.
+
+Chọn Create repository.
+
+Sao chép repository URL, ví dụ:
+
+https://github.com/trinhgiakhiem/trinhgiakhiem.github.io.git
+6. Đẩy thư mục lên GitHub
+Sau khi Antigravity hoàn thành và npm run build thành công, chạy trong terminal:
+
+git init
+git add .
+git commit -m "Initial personal website"
+git branch -M main
+git remote add origin https://github.com/<USERNAME>/<USERNAME>.github.io.git
+git push -u origin main
+Nếu thư mục đã có Git:
+
+git status
+git remote -v
+git add .
+git commit -m "Build personal website"
+git push
+Không đưa file .env, API key hoặc token vào GitHub.
+
+7. Công bố bằng GitHub Pages
+Trên repository:
+
+Chọn Settings.
+
+Chọn Pages.
+
+Tại Build and deployment, chọn:
+
+Source: GitHub Actions
+Mở tab Actions.
+
+Chờ workflow Deploy to GitHub Pages hoàn thành.
+
+Truy cập:
+
+https://<USERNAME>.github.io
+Astro hiện khuyến nghị triển khai GitHub Pages bằng official Astro GitHub Action; mỗi lần push lên main, website sẽ được xây dựng và công bố tự động. Hướng dẫn chính thức của Astro
+
+8. Kết nối tên miền riêng
+Sau khi website GitHub Pages hoạt động:
+
+Vào repository → Settings → Pages.
+
+Nhập tên miền tại Custom domain.
+
+Trong astro.config.mjs, đặt:
+
+export default defineConfig({
+  site: 'https://TEN-MIEN-CUA-ANH'
+});
+Không đặt base khi đã sử dụng tên miền riêng.
+
+DNS cho tên miền gốc
+Ví dụ tên miền:
+
+trinhgiakhiem.com
+Tạo bốn bản ghi A:
+
+Type	Name	Value
+A	@	185.199.108.153
+A	@	185.199.109.153
+A	@	185.199.110.153
+A	@	185.199.111.153
+Tạo thêm:
+
+Type	Name	Value
+CNAME	www	<USERNAME>.github.io
+Không dùng wildcard *. Sau khi GitHub xác nhận DNS, bật Enforce HTTPS. Đây là cấu hình DNS hiện được GitHub hướng dẫn cho GitHub Pages. GitHub Custom Domain
+
+9. Cách đăng bài sau này
+Trong Antigravity, tạo file:
+
+src/content/blog/ten-bai-viet.md
+Sau đó chạy:
+
+npm run dev
+Kiểm tra bài viết tại máy, rồi:
+
+git add .
+git commit -m "Add new article"
+git push
+GitHub sẽ tự động cập nhật website. Giai đoạn này anh chưa cần quản trị viên /admin.
+
+Thông tin em cần để tiếp tục trực tiếp
+Anh gửi lại đúng ba dòng sau:
+
+GitHub username:
+Repository URL:
+Tên miền muốn sử dụng:
+Đồng thời, anh cần cấp quyền repository đó cho kết nối GitHub vừa cài đặt. Khi có ba thông tin này, em có thể kiểm tra cấu hình repository, chuẩn bị mã nguồn và hướng dẫn phần công bố theo đúng địa chỉ của anh.
+
+
+nếu dùng astro (astrong là tên gọi của một cahcs thức hay là một phần mềm/ứng dụng) anh có cần tạo tại khoản hay gì không
+
+Astro là một bộ công cụ lập trình website, không phải website hay ứng dụng trực tuyến cần đăng ký tài khoản.
+
+Anh có thể hiểu đơn giản:
+
+Antigravity: nơi anh yêu cầu AI viết và chỉnh sửa website.
+
+Astro: công nghệ được cài trong thư mục dự án để tạo website.
+
+GitHub: nơi lưu trữ mã nguồn.
+
+GitHub Pages: nơi công bố website lên Internet.
+
+Tên miền: địa chỉ riêng của website.
+
+Anh có cần tạo tài khoản Astro không?
+Không cần.
+
+Astro là phần mềm mã nguồn mở, được cài trực tiếp vào thư mục website bằng lệnh:
+
+npm create astro@latest
+Sau khi cài, thư mục dự án sẽ có Astro bên trong:
+
+trinh-gia-khiem/
+├── node_modules/
+├── public/
+├── src/
+├── astro.config.mjs
+├── package.json
+└── package-lock.json
+Anh không phải:
+
+Đăng ký tài khoản Astro.
+
+Đăng nhập Astro.
+
+Trả phí cho Astro.
+
+Tải bài viết lên trang web của Astro.
+
+Cung cấp thông tin cá nhân hoặc thẻ thanh toán.
+
+Anh cần chuẩn bị những gì?
+Công cụ	Có cần tài khoản?	Mục đích
+Antigravity	Anh đang sử dụng	Tạo và sửa mã nguồn
+Astro	Không	Xây dựng website
+Node.js	Không	Chạy Astro trên máy
+Git	Không	Quản lý phiên bản mã nguồn
+GitHub	Có	Lưu mã và công bố website
+GitHub Pages	Dùng chung tài khoản GitHub	Đưa website lên Internet
+Tên miền	Có tài khoản tại nơi mua tên miền	Tạo địa chỉ riêng
+Astro được cài như thế nào?
+Astro được cài bên trong từng dự án. Trước tiên, máy cần có Node.js. Sau đó Antigravity chạy:
+
+npm create astro@latest
+Lệnh này sẽ:
+
+Tải Astro từ kho phần mềm npm.
+
+Tạo cấu trúc website.
+
+Cài các thư viện cần thiết.
+
+Tạo lệnh chạy thử và xuất bản.
+
+Để chạy website trên máy:
+
+npm run dev
+Website thử nghiệm thường xuất hiện tại:
+
+http://localhost:4321
+Địa chỉ này chỉ dùng trên máy của anh, chưa phải website công khai.
+
+Để tạo phiên bản chính thức:
+
+npm run build
+Astro chuyển toàn bộ nội dung thành các file website nằm trong:
+
+dist/
+Sau đó GitHub Actions đưa các file này lên GitHub Pages.
+
+Astro là “cách thức” hay “phần mềm”?
+Chính xác nhất, Astro là một web framework, tức bộ công cụ và quy tắc hỗ trợ xây dựng website.
+
+Có thể hình dung:
+
+HTML, CSS và JavaScript là vật liệu; Astro là bộ khung và quy trình xây dựng; Antigravity là người hỗ trợ thi công; GitHub Pages là nơi đặt ngôi nhà; tên miền là địa chỉ ngôi nhà.
+
+Astro vừa là:
+
+Một phần mềm được cài trong dự án.
+
+Một bộ quy tắc tổ chức website.
+
+Một công cụ chuyển mã nguồn thành trang web hoàn chỉnh.
+
+Astro không phải:
+
+Phần mềm mở riêng như Word hay Photoshop.
+
+Dịch vụ lưu trữ website.
+
+Tên miền.
+
+Tài khoản quản trị.
+
+Công cụ thay thế GitHub.
+
+Những tài khoản anh thực sự cần
+Với kế hoạch hiện tại, anh chỉ cần:
+
+Tài khoản GitHub: Anh đã có.
+
+Tài khoản nơi mua tên miền: Chỉ cần khi muốn dùng tên miền riêng.
+
+Antigravity: Anh đang dùng.
+
+Astro, Node.js và Git đều được cài trên máy, không cần tạo tài khoản.
+
+Tóm lại: anh không cần tạo tài khoản Astro. Anh chỉ cần yêu cầu Antigravity cài Astro vào thư mục website; sau đó đẩy thư mục đó lên GitHub và dùng GitHub Pages để công bố.
+
+
+Thay đổi promt về giao diện. anh muốn xây dựng giao diện chuyên nghiệp nhưng ấm áp, lịch sự, sử dụng các màu pastel, chủ đạo là hồng pastel
+
+Anh hãy thay toàn bộ phần THIẾT KẾ trong prompt cũ bằng nội dung dưới đây:
+
+THIẾT KẾ GIAO DIỆN
+
+Hãy thiết kế website theo phong cách chuyên nghiệp, ấm áp, lịch sự và gần gũi. Giao diện phải phù hợp với hình ảnh một người làm việc trong lĩnh vực giáo dục, tâm lý giáo dục, hỗ trợ người học và nghiên cứu.
+
+1. PHONG CÁCH CHUNG
+
+- Phong cách chủ đạo: Warm Academic, Professional Pastel và Human-Centered.
+- Tạo cảm giác chân thành, đáng tin cậy, điềm tĩnh và thân thiện.
+- Sử dụng hồng pastel làm màu nhận diện chính.
+- Giao diện nhẹ nhàng nhưng vẫn phải rõ ràng, nghiêm túc và chuyên nghiệp.
+- Tránh thiết kế quá trẻ con, quá nữ tính, quá lãng mạn hoặc giống website bán mỹ phẩm.
+- Không sử dụng quá nhiều màu hồng trên cùng một màn hình.
+- Kết hợp khoảng trắng rộng để giao diện thoáng và dễ đọc.
+- Ưu tiên nội dung, hình ảnh thật và trải nghiệm của người dùng.
+
+2. BẢNG MÀU
+
+Sử dụng bảng màu sau làm nền tảng:
+
+- Nền chính: #FFF8FA
+- Hồng pastel nhạt: #F8DDE5
+- Hồng pastel chủ đạo: #E8A9B8
+- Hồng đậm dùng cho nút và liên kết: #9E5066
+- Màu chữ chính: #3B2F35
+- Màu chữ phụ: #6F6268
+- Màu kem ấm: #FFF3E8
+- Xanh sage pastel: #DDEBDD
+- Xanh dương pastel: #DDEAF7
+- Tím lavender pastel: #E9E2F4
+- Màu trắng cho thẻ nội dung: #FFFFFF
+- Màu đường viền: #EED8DF
+
+Hồng pastel là màu chủ đạo. Các màu kem, xanh sage, xanh dương và lavender chỉ được dùng làm màu bổ trợ để phân biệt nhóm nội dung.
+
+Không sử dụng màu pastel quá nhạt cho văn bản. Văn bản và nút bấm phải có độ tương phản tốt, đáp ứng WCAG 2.2 AA.
+
+3. HỆ THỐNG MÀU THEO NỘI DUNG
+
+- Tâm lý giáo dục và hỗ trợ người học: hồng pastel.
+- Nghiên cứu và học thuật: xanh dương pastel.
+- AI và công nghệ giáo dục: tím lavender pastel.
+- Hành trình học tập và phát triển cá nhân: màu kem ấm.
+- Dự án hỗ trợ sinh viên: xanh sage pastel.
+
+Màu sắc chỉ hỗ trợ nhận diện. Không sử dụng màu sắc làm phương tiện duy nhất để truyền tải ý nghĩa.
+
+4. TYPOGRAPHY
+
+- Sử dụng font chữ hỗ trợ tiếng Việt đầy đủ.
+- Tiêu đề có thể sử dụng Lora, Merriweather hoặc một serif font mềm mại, học thuật.
+- Nội dung sử dụng Be Vietnam Pro, Inter hoặc một sans-serif font rõ ràng.
+- Tên “Trịnh Gia Khiêm” phải nổi bật nhưng không quá phô trương.
+- Tiêu đề có khoảng cách rõ ràng và hệ thống phân cấp nhất quán.
+- Nội dung bài viết có chiều rộng tối đa khoảng 720–760 px để dễ đọc.
+- Line-height nội dung từ 1.6 đến 1.8.
+- Không sử dụng chữ hồng nhạt trên nền trắng.
+
+5. BỐ CỤC
+
+- Thiết kế theo hướng mobile-first.
+- Header gọn, có logo chữ “Trịnh Gia Khiêm” và menu rõ ràng.
+- Menu gồm: Giới thiệu, Nghiên cứu, Dự án, Bài viết, Hành trình và Liên hệ.
+- Nút “Xem CV” được thiết kế nổi bật nhưng lịch sự.
+- Sử dụng grid rõ ràng và khoảng trắng rộng.
+- Mỗi phần nội dung phải có tiêu đề, mô tả ngắn và hành động phù hợp.
+- Không đặt quá nhiều thẻ nội dung trên cùng một hàng.
+- Trên desktop, tối đa ba thẻ mỗi hàng.
+- Trên mobile, hiển thị một thẻ mỗi hàng.
+
+6. HERO TRANG CHỦ
+
+Thiết kế hero theo bố cục hai cột trên desktop và một cột trên mobile.
+
+Cột nội dung gồm:
+
+- Dòng giới thiệu nhỏ: “Xin chào, tôi là”.
+- Tên lớn: “Trịnh Gia Khiêm”.
+- Dòng định vị:
+  “Tâm lý giáo dục • Hỗ trợ người học • Giảng dạy tiếng Anh • AI trong giáo dục”.
+- Thông điệp:
+  “Tôi nghiên cứu và xây dựng những cách giúp người học học tập chủ động hơn, hiệu quả hơn và nhân văn hơn.”
+- Hai nút:
+  “Khám phá nghiên cứu”
+  “Xem CV”
+
+Cột hình ảnh gồm:
+
+- Ảnh chân dung thật có placeholder để thay thế sau.
+- Khung ảnh bo tròn mềm mại.
+- Có một hoặc hai hình khối pastel trang trí nhẹ phía sau.
+- Không sử dụng hiệu ứng chuyển động mạnh.
+- Không làm ảnh chân dung quá nhỏ hoặc bị chìm trong trang trí.
+
+Nền hero sử dụng màu hồng pastel rất nhạt hoặc gradient nhẹ:
+
+linear-gradient(135deg, #FFF8FA 0%, #F8DDE5 55%, #FFF3E8 100%)
+
+Gradient phải nhẹ, không gây chói và không làm giảm khả năng đọc.
+
+7. THẺ NỘI DUNG
+
+- Nền trắng hoặc pastel rất nhạt.
+- Bo góc từ 16 đến 20 px.
+- Đường viền mảnh màu #EED8DF.
+- Bóng đổ nhẹ, mềm và có độ trong suốt thấp.
+- Có khoảng đệm rộng.
+- Khi hover, thẻ chỉ nâng lên khoảng 2–4 px.
+- Không sử dụng hiệu ứng lật, xoay hoặc phóng to mạnh.
+- Mỗi thẻ phải có tiêu đề, mô tả ngắn, nhãn nội dung và liên kết rõ ràng.
+
+8. NÚT BẤM
+
+Nút chính:
+
+- Nền #9E5066.
+- Chữ trắng.
+- Bo góc từ 10 đến 14 px.
+- Có trạng thái hover đậm hơn.
+- Có focus outline rõ ràng.
+
+Nút phụ:
+
+- Nền trắng hoặc hồng pastel rất nhạt.
+- Chữ #9E5066.
+- Viền #E8A9B8.
+
+Không sử dụng hồng pastel nhạt làm nền nút nếu chữ trắng không đủ tương phản.
+
+9. HÌNH ẢNH VÀ MINH HỌA
+
+- Ưu tiên ảnh chân dung thật và ảnh hoạt động thật.
+- Có thể sử dụng hình minh họa pastel trừu tượng ở mức độ vừa phải.
+- Hình ảnh cần thể hiện giáo dục, học tập, nghiên cứu và kết nối con người.
+- Không sử dụng ảnh trang trí không liên quan.
+- Không sử dụng hình ảnh AI quá giả hoặc quá bóng bẩy.
+- Tất cả hình ảnh phải có alt text, width và height.
+- Ảnh cần được tối ưu thành WebP hoặc AVIF khi phù hợp.
+
+10. CHUYỂN ĐỘNG
+
+- Chỉ sử dụng fade-in hoặc translate nhẹ.
+- Thời gian chuyển động từ 150 đến 300 ms.
+- Hỗ trợ prefers-reduced-motion.
+- Không sử dụng hiệu ứng parallax mạnh.
+- Không sử dụng scrolljacking.
+- Không để nội dung xuất hiện quá chậm.
+- Không sử dụng hiệu ứng nhấp nháy.
+
+11. CẢM GIÁC GIAO DIỆN CẦN ĐẠT ĐƯỢC
+
+Khi truy cập website, người dùng cần cảm nhận được:
+
+- Sự chuyên nghiệp.
+- Sự ấm áp và chân thành.
+- Tinh thần giáo dục và hỗ trợ người học.
+- Sự nghiêm túc trong nghiên cứu.
+- Tính hiện đại của công nghệ.
+- Cá tính riêng của Trịnh Gia Khiêm.
+
+Giao diện không được tạo cảm giác giống mẫu CV đại trà. Website phải có nhận diện cá nhân rõ ràng nhưng không làm thiết kế lấn át nội dung.
+
+12. ACCESSIBILITY VÀ RESPONSIVE
+
+- Đảm bảo WCAG 2.2 AA.
+- Nút và liên kết có vùng tương tác tối thiểu 44 x 44 px.
+- Có keyboard focus rõ ràng.
+- Menu mobile dễ sử dụng.
+- Không ẩn nội dung chính trên mobile.
+- Kiểm tra tại các kích thước 360 px, 768 px, 1024 px và 1440 px.
+- Không để chữ tràn, nút vỡ hoặc thẻ nội dung lệch hàng.
+Màu hồng pastel sẽ tạo sự ấm áp và nhân văn; màu hồng đậm #9E5066 giữ cho các nút, đường dẫn và điểm nhấn đủ trang trọng, dễ đọc. Các màu xanh sage, xanh dương và lavender giúp website vẫn có chiều sâu học thuật, không bị đơn điệu.
+
+
+Cung cấp full promt cho toàn dự án nhé
+
+Dưới đây là full prompt cho toàn bộ dự án. Anh chỉ cần sao chép và dán vào Antigravity. Prompt đã bao gồm: tạo thư mục trên máy, xây website Astro, thiết kế hồng pastel, tạo nội dung, tối ưu SEO, kiểm thử, đẩy GitHub, triển khai GitHub Pages và kết nối tên miền.
+
+# DỰ ÁN WEBSITE CÁ NHÂN TRỊNH GIA KHIÊM
+
+Bạn là một Senior Web Developer, UI/UX Designer, SEO Specialist và Content Architect. Hãy xây dựng hoàn chỉnh website cá nhân cho Trịnh Gia Khiêm, từ khâu tạo dự án trên máy, thiết kế giao diện, tổ chức nội dung, kiểm thử, đẩy mã nguồn lên GitHub đến triển khai website bằng GitHub Pages.
+
+Website phải chuyên nghiệp, ấm áp, lịch sự, thân thiện với người dùng, chuẩn SEO, responsive và dễ tiếp tục phát triển trong tương lai.
+
+Không chỉ lập kế hoạch. Sau khi nhận đủ thông tin cần thiết, hãy trực tiếp tạo mã nguồn, cài đặt, chạy thử, kiểm tra và chuẩn bị triển khai.
+
+---
+
+# 1. THÔNG TIN CẦN HỎI TRƯỚC KHI THỰC HIỆN
+
+Trước khi tạo hoặc chỉnh sửa dự án, hãy hỏi tôi một lần duy nhất các thông tin sau:
+
+1. Đường dẫn thư mục muốn tạo trên máy.
+   Đề xuất mặc định:
+   C:\Websites\trinh-gia-khiem
+
+2. GitHub username.
+
+3. GitHub repository URL.
+
+4. Tên miền riêng muốn sử dụng.
+   Nếu chưa có tên miền, sử dụng:
+   https://<github-username>.github.io
+
+5. Email nghề nghiệp muốn công khai.
+
+6. Các liên kết chính thức:
+   - LinkedIn
+   - ORCID
+   - Google Scholar
+   - ResearchGate
+   - Facebook nghề nghiệp
+   - GitHub
+
+7. Đường dẫn ảnh chân dung trên máy.
+
+8. Đường dẫn CV PDF trên máy.
+
+Nếu tôi chưa có ảnh, CV PDF, tên miền hoặc hồ sơ mạng xã hội, hãy tạo placeholder rõ ràng để thay thế sau.
+
+Không tự bịa đặt email, số điện thoại, ngày sinh, địa chỉ, hồ sơ mạng xã hội hoặc thành tích.
+
+Sau khi tôi trả lời, hãy bắt đầu thực hiện liên tục theo các giai đoạn bên dưới.
+
+---
+
+# 2. NGUYÊN TẮC AN TOÀN
+
+Trước khi tạo dự án:
+
+1. Kiểm tra thư mục đích đã tồn tại hay chưa.
+2. Nếu thư mục chưa tồn tại, tạo thư mục mới.
+3. Nếu thư mục đã tồn tại, kiểm tra nội dung trước khi chỉnh sửa.
+4. Không xóa hoặc ghi đè file hiện có khi chưa xác định rõ.
+5. Nếu repository đã có nội dung, clone và kiểm tra trước khi thay đổi.
+6. Không sử dụng:
+   - git push --force
+   - git reset --hard
+   - git clean -fd
+   - Các lệnh xóa dữ liệu hàng loạt
+7. Không ghi API key, mật khẩu, token hoặc thông tin bí mật vào mã nguồn.
+8. Không đưa file .env lên GitHub.
+9. Không công bố thông tin cá nhân nhạy cảm.
+10. Không sử dụng logo UEF hoặc đơn vị khác nếu chưa được phép.
+11. Không trình bày quan điểm cá nhân như quan điểm chính thức của UEF.
+12. Không đẩy mã lên GitHub nếu npm run build chưa thành công.
+13. Không thay đổi DNS tên miền khi chưa báo cáo cấu hình dự kiến.
+
+---
+
+# 3. MÔ HÌNH CÔNG NGHỆ
+
+Sử dụng kiến trúc tối giản:
+
+Antigravity
+→ Thư mục Astro trên máy
+→ Git
+→ GitHub
+→ GitHub Actions
+→ GitHub Pages
+→ Tên miền riêng
+
+Không sử dụng trong phiên bản đầu:
+
+- WordPress
+- Decap CMS
+- Cloudflare Pages
+- Cơ sở dữ liệu
+- Backend riêng
+- React
+- Vue
+- Hệ thống đăng nhập
+- Bình luận trực tiếp
+- Dashboard quản trị
+- Công cụ theo dõi người dùng chưa được đồng ý
+
+Nội dung sẽ được quản lý bằng Markdown trong mã nguồn.
+
+---
+
+# 4. CÔNG NGHỆ BẮT BUỘC
+
+1. Astro phiên bản ổn định mới nhất.
+2. Chế độ static site generation.
+3. TypeScript với cấu hình strict.
+4. Astro Content Collections.
+5. Markdown để quản lý nội dung.
+6. CSS thuần hoặc CSS scoped của Astro.
+7. Không dùng Tailwind nếu không thật sự cần thiết.
+8. @astrojs/sitemap.
+9. @astrojs/rss hoặc giải pháp RSS chính thức tương thích với phiên bản Astro hiện tại.
+10. GitHub Actions.
+11. GitHub Pages.
+12. npm làm package manager.
+13. Cam kết package-lock.json vào GitHub.
+
+Trước khi cài đặt, kiểm tra:
+
+node --version
+npm --version
+git --version
+
+Nếu Node.js hoặc Git chưa được cài, dừng lại và hướng dẫn tôi cài đặt. Không tự tải từ nguồn không chính thức.
+
+Khởi tạo dự án bằng công cụ chính thức của Astro, ví dụ:
+
+npm create astro@latest
+
+Sử dụng tài liệu hiện tại của Astro, không dùng cú pháp lỗi thời.
+
+---
+
+# 5. MỤC TIÊU WEBSITE
+
+Website phục vụ đồng thời các mục tiêu:
+
+1. CV trực tuyến.
+2. Giới thiệu bản thân.
+3. Trình bày học vấn và kinh nghiệm.
+4. Giới thiệu nghiên cứu.
+5. Trình bày các dự án giáo dục và công nghệ.
+6. Viết blog cá nhân.
+7. Trình bày quan điểm về giáo dục.
+8. Ghi lại hành trình học tập.
+9. Chia sẻ tài nguyên học tập.
+10. Xây dựng thương hiệu cá nhân lâu dài.
+11. Tạo hồ sơ tác giả đáng tin cậy trên Google.
+12. Kết nối với giảng viên, nhà nghiên cứu, đồng nghiệp và nhà tuyển dụng.
+
+---
+
+# 6. THÔNG TIN CÁ NHÂN VÀ ĐỊNH VỊ
+
+Tên:
+
+Trịnh Gia Khiêm
+
+Tên không dấu:
+
+Trinh Gia Khiem
+
+Định vị:
+
+Trịnh Gia Khiêm là người làm giáo dục tại giao điểm giữa Tâm lý giáo dục, hỗ trợ người học, giảng dạy tiếng Anh và công nghệ AI.
+
+Thông điệp chính:
+
+“Tôi nghiên cứu và xây dựng những cách giúp người học học tập chủ động hơn, hiệu quả hơn và nhân văn hơn.”
+
+Dòng mô tả ngắn:
+
+“Tâm lý giáo dục • Hỗ trợ người học • Giảng dạy tiếng Anh • AI trong giáo dục”
+
+Thông tin nghề nghiệp:
+
+- Hiện công tác tại Trung tâm Hỗ trợ học vụ, Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh.
+- Có nền tảng đào tạo về Tâm lý giáo dục.
+- Đang theo học Chương trình Thạc sĩ Ngôn ngữ Anh tại UEF.
+- Quan tâm đến hỗ trợ người học, phương pháp học tập, giảng dạy tiếng Anh và công nghệ giáo dục.
+- Định hướng phát triển trong lĩnh vực Tâm lý giáo dục, giảng dạy tiếng Anh và nghiên cứu ứng dụng.
+
+Lĩnh vực quan tâm:
+
+- Educational Psychology
+- Learner Support
+- Learning Strategies
+- Metacognition
+- English Language Education
+- AI in Language Education
+- Corrective Feedback
+- Written Corrective Feedback
+- Academic Writing
+- Teacher Attitudes toward AI
+- Educational Technology
+- Personal Development
+
+Hướng nghiên cứu hiện tại:
+
+“Vietnamese teachers’ attitudes toward using AI tools for corrective feedback on their students’ English writing.”
+
+Trạng thái nghiên cứu:
+
+Nghiên cứu đang thực hiện.
+
+Không được trình bày nghiên cứu này như một công trình đã xuất bản.
+
+---
+
+# 7. NHÓM NGƯỜI DÙNG
+
+Thiết kế website phục vụ bốn nhóm chính:
+
+1. Nhà tuyển dụng
+   - Muốn xem CV, kinh nghiệm, kỹ năng và dự án.
+   - Hành trình: Trang chủ → CV → Dự án → Liên hệ.
+
+2. Giảng viên và nhà nghiên cứu
+   - Muốn xem hướng nghiên cứu, phương pháp và tài liệu.
+   - Hành trình: Trang chủ → Nghiên cứu → Hồ sơ tác giả → Liên hệ.
+
+3. Sinh viên và người học
+   - Muốn đọc phương pháp học tập và tài nguyên.
+   - Hành trình: Bài viết → Tài nguyên → Bài liên quan.
+
+4. Đồng nghiệp trong giáo dục
+   - Muốn tìm hiểu quan điểm và dự án thực tế.
+   - Hành trình: Giới thiệu → Dự án → Bài viết → Liên hệ.
+
+Mỗi nhóm phải tìm thấy nội dung chính trong tối đa ba lần nhấp.
+
+---
+
+# 8. CẤU TRÚC WEBSITE
+
+Tạo các trang sau:
+
+1. Trang chủ
+   URL: /
+
+2. Giới thiệu
+   URL: /gioi-thieu
+
+3. CV trực tuyến
+   URL: /cv
+
+4. Nghiên cứu
+   URL: /nghien-cuu
+
+5. Chi tiết nghiên cứu
+   URL: /nghien-cuu/[slug]
+
+6. Dự án
+   URL: /du-an
+
+7. Chi tiết dự án
+   URL: /du-an/[slug]
+
+8. Bài viết
+   URL: /bai-viet
+
+9. Chi tiết bài viết
+   URL: /bai-viet/[slug]
+
+10. Hành trình học tập
+    URL: /hanh-trinh
+
+11. Tài nguyên
+    URL: /tai-nguyen
+
+12. Liên hệ
+    URL: /lien-he
+
+13. Chính sách quyền riêng tư
+    URL: /quyen-rieng-tu
+
+14. Tuyên bố sử dụng AI
+    URL: /su-dung-ai
+
+15. Trang 404
+    URL: tự động xử lý khi không tìm thấy trang.
+
+Menu chính gồm:
+
+- Giới thiệu
+- Nghiên cứu
+- Dự án
+- Bài viết
+- Hành trình
+- Liên hệ
+
+Nút “Xem CV” được đặt riêng và nổi bật trong header.
+
+---
+
+# 9. GIAO DIỆN VÀ PHONG CÁCH THIẾT KẾ
+
+## 9.1. Phong cách chung
+
+Thiết kế theo phong cách:
+
+- Warm Academic
+- Professional Pastel
+- Human-Centered
+- Modern Editorial
+
+Giao diện phải tạo cảm giác:
+
+- Chuyên nghiệp.
+- Ấm áp.
+- Chân thành.
+- Lịch sự.
+- Đáng tin cậy.
+- Có chiều sâu học thuật.
+- Gần gũi với người học.
+- Hiện đại nhưng không phô trương.
+
+Sử dụng hồng pastel làm màu nhận diện chính.
+
+Tránh thiết kế:
+
+- Quá trẻ con.
+- Quá nữ tính.
+- Quá lãng mạn.
+- Giống website bán mỹ phẩm.
+- Quá nhiều hiệu ứng.
+- Quá nhiều gradient.
+- Quá nhiều khối màu hồng trên một màn hình.
+- Giống mẫu CV đại trà.
+
+## 9.2. Bảng màu
+
+Sử dụng CSS custom properties để quản lý màu.
+
+Màu đề xuất:
+
+- Nền chính: #FFF8FA
+- Hồng pastel nhạt: #F8DDE5
+- Hồng pastel chủ đạo: #E8A9B8
+- Hồng đậm cho nút và liên kết: #9E5066
+- Màu hồng hover: #844255
+- Chữ chính: #3B2F35
+- Chữ phụ: #6F6268
+- Màu kem ấm: #FFF3E8
+- Xanh sage pastel: #DDEBDD
+- Xanh dương pastel: #DDEAF7
+- Tím lavender pastel: #E9E2F4
+- Nền thẻ: #FFFFFF
+- Đường viền: #EED8DF
+- Màu focus: #71384A
+
+Hồng pastel là màu chủ đạo.
+
+Các màu bổ trợ được sử dụng như sau:
+
+- Tâm lý giáo dục: hồng pastel.
+- Nghiên cứu: xanh dương pastel.
+- AI và công nghệ: tím lavender.
+- Hành trình học tập: kem ấm.
+- Dự án hỗ trợ sinh viên: xanh sage.
+
+Không sử dụng màu pastel quá nhạt cho chữ.
+
+Tất cả văn bản, nút và thành phần tương tác phải đáp ứng WCAG 2.2 AA.
+
+## 9.3. Typography
+
+Sử dụng font hỗ trợ tiếng Việt đầy đủ.
+
+Đề xuất:
+
+- Tiêu đề: Lora.
+- Nội dung: Be Vietnam Pro.
+
+Ưu tiên self-host font hoặc package font phù hợp để tránh phụ thuộc không cần thiết vào dịch vụ ngoài.
+
+Yêu cầu:
+
+- Tên “Trịnh Gia Khiêm” nổi bật nhưng không phô trương.
+- Nội dung bài viết có chiều rộng tối đa khoảng 720–760 px.
+- Line-height từ 1.6 đến 1.8.
+- Hệ thống kích thước chữ responsive bằng clamp().
+- Heading có phân cấp rõ ràng.
+- Không dùng quá ba font weight.
+- Không dùng chữ hồng nhạt trên nền trắng.
+- Không dùng đoạn văn quá dài.
+
+## 9.4. Khoảng cách và bố cục
+
+- Thiết kế mobile-first.
+- Sử dụng container có chiều rộng tối đa khoảng 1180–1240 px.
+- Khoảng trắng rộng và nhất quán.
+- Desktop tối đa ba thẻ trên một hàng.
+- Tablet tối đa hai thẻ trên một hàng.
+- Mobile một thẻ trên một hàng.
+- Không để nội dung sát mép màn hình.
+- Không tạo các hàng quá dày đặc.
+- Không để dòng văn bản quá dài.
+
+## 9.5. Thẻ nội dung
+
+- Nền trắng hoặc pastel rất nhạt.
+- Bo góc 16–20 px.
+- Viền mảnh #EED8DF.
+- Bóng đổ nhẹ.
+- Khoảng đệm rộng.
+- Hover nâng lên tối đa 2–4 px.
+- Không sử dụng hiệu ứng lật.
+- Không xoay.
+- Không phóng to mạnh.
+- Có trạng thái focus rõ ràng.
+- Mỗi thẻ có tiêu đề, mô tả, nhãn và liên kết.
+
+## 9.6. Nút bấm
+
+Nút chính:
+
+- Nền #9E5066.
+- Chữ trắng.
+- Bo góc 10–14 px.
+- Hover #844255.
+- Focus outline rõ ràng.
+- Vùng tương tác tối thiểu 44 x 44 px.
+
+Nút phụ:
+
+- Nền trắng hoặc hồng pastel rất nhạt.
+- Chữ #9E5066.
+- Viền #E8A9B8.
+
+Không sử dụng chữ trắng trên nền hồng quá nhạt.
+
+## 9.7. Chuyển động
+
+- Chỉ sử dụng fade-in và translate nhẹ.
+- Thời gian chuyển động 150–300 ms.
+- Hỗ trợ prefers-reduced-motion.
+- Không sử dụng parallax mạnh.
+- Không sử dụng scrolljacking.
+- Không sử dụng hiệu ứng nhấp nháy.
+- Không làm nội dung xuất hiện quá chậm.
+- Không để animation cản trở đọc nội dung.
+
+---
+
+# 10. TRANG CHỦ
+
+Trang chủ gồm các phần sau:
+
+## 10.1. Header
+
+- Logo chữ “Trịnh Gia Khiêm”.
+- Menu desktop.
+- Menu mobile.
+- Nút “Xem CV”.
+- Header sticky nhẹ.
+- Có trạng thái active cho trang hiện tại.
+- Menu mobile phải điều khiển được bằng bàn phím.
+- Không khóa cuộn sai cách.
+- Có nút đóng rõ ràng.
+
+## 10.2. Hero
+
+Desktop: bố cục hai cột.
+
+Mobile: một cột.
+
+Cột nội dung:
+
+- Dòng nhỏ: “Xin chào, tôi là”.
+- H1: “Trịnh Gia Khiêm”.
+- Dòng định vị:
+  “Tâm lý giáo dục • Hỗ trợ người học • Giảng dạy tiếng Anh • AI trong giáo dục”
+- Đoạn giới thiệu:
+  “Tôi nghiên cứu và xây dựng những cách giúp người học học tập chủ động hơn, hiệu quả hơn và nhân văn hơn.”
+- Nút chính: “Khám phá nghiên cứu”.
+- Nút phụ: “Xem CV”.
+
+Cột hình ảnh:
+
+- Ảnh chân dung thật hoặc placeholder.
+- Khung ảnh bo tròn mềm mại.
+- Có tối đa hai hình khối pastel trang trí.
+- Không để trang trí lấn át khuôn mặt.
+- Không sử dụng ảnh AI nếu đã có ảnh thật.
+
+Nền hero:
+
+linear-gradient(
+  135deg,
+  #FFF8FA 0%,
+  #F8DDE5 55%,
+  #FFF3E8 100%
+)
+
+Gradient phải nhẹ và không ảnh hưởng khả năng đọc.
+
+## 10.3. Thông tin xác thực nhanh
+
+Hiển thị bốn thông tin:
+
+- Công tác trong lĩnh vực hỗ trợ học vụ tại UEF.
+- Nền tảng Tâm lý giáo dục.
+- Học viên Thạc sĩ Ngôn ngữ Anh.
+- Nghiên cứu AI trong phản hồi bài viết tiếng Anh.
+
+Không dùng số liệu hoặc thành tích chưa được xác nhận.
+
+## 10.4. Ba trụ cột chuyên môn
+
+1. Tâm lý giáo dục và hỗ trợ người học.
+2. Giảng dạy tiếng Anh và corrective feedback.
+3. AI và công nghệ trong giáo dục.
+
+Mỗi trụ cột có:
+
+- Biểu tượng đơn giản.
+- Tiêu đề.
+- Mô tả 40–70 từ.
+- Liên kết đến nội dung liên quan.
+
+## 10.5. Nghiên cứu nổi bật
+
+Giới thiệu nghiên cứu hiện tại:
+
+“Vietnamese teachers’ attitudes toward using AI tools for corrective feedback on their students’ English writing.”
+
+Hiển thị nhãn:
+
+“Nghiên cứu đang thực hiện”
+
+Không hiển thị như công trình đã công bố.
+
+## 10.6. Dự án tiêu biểu
+
+Hiển thị ba dự án nổi bật:
+
+1. Website khảo sát và nguồn lực hỗ trợ sinh viên.
+2. Góc kỹ năng và phương pháp học tập dành cho sinh viên.
+3. Ứng dụng AI và tự động hóa trong hỗ trợ học vụ.
+
+Nếu chưa có đủ dữ liệu, sử dụng nhãn:
+
+- Đang phát triển.
+- Ý tưởng dự án.
+- Bản thử nghiệm.
+- Đã triển khai nội bộ.
+
+Không tự tạo kết quả hoặc số liệu.
+
+## 10.7. Bài viết mới
+
+Hiển thị ba bài gần nhất:
+
+- Ảnh đại diện.
+- Chuyên mục.
+- Tiêu đề.
+- Mô tả.
+- Ngày xuất bản.
+- Thời gian đọc.
+- Liên kết “Đọc bài”.
+
+## 10.8. Hành trình học tập
+
+Timeline ngắn gồm:
+
+- Nền tảng Tâm lý giáo dục.
+- Trải nghiệm giảng dạy và hoạt động giáo dục.
+- Công việc hỗ trợ học vụ.
+- Học Thạc sĩ Ngôn ngữ Anh.
+- Nghiên cứu AI trong giáo dục.
+- Định hướng tương lai.
+
+Không tự điền năm nếu chưa được xác nhận.
+
+## 10.9. Kêu gọi kết nối
+
+Nội dung:
+
+“Nếu bạn quan tâm đến hỗ trợ người học, giảng dạy tiếng Anh hoặc AI trong giáo dục, tôi rất vui được trao đổi và hợp tác.”
+
+Có nút:
+
+“Liên hệ với tôi”
+
+---
+
+# 11. TRANG GIỚI THIỆU
+
+Trang Giới thiệu gồm:
+
+1. Giới thiệu ngắn.
+2. Câu chuyện nghề nghiệp.
+3. Nền tảng Tâm lý giáo dục.
+4. Quá trình chuyển sang Ngôn ngữ Anh.
+5. Trải nghiệm hỗ trợ sinh viên.
+6. Quan tâm đến AI trong giáo dục.
+7. Giá trị nghề nghiệp.
+8. Định hướng tương lai.
+9. Nút xem CV.
+10. Nút xem nghiên cứu.
+
+Giọng văn:
+
+- Chân thành.
+- Tự nhiên.
+- Khiêm tốn.
+- Có chiều sâu.
+- Không khoa trương.
+- Không sử dụng ngôn ngữ quảng cáo.
+
+Có thể sử dụng hình ảnh hoặc câu chuyện về tuổi thơ và quê hương ở Đồng bằng sông Cửu Long ở mức vừa phải, nhưng không công khai thông tin gia đình hoặc địa chỉ cụ thể.
+
+---
+
+# 12. TRANG CV
+
+Trang CV trực tuyến gồm:
+
+1. Tóm tắt nghề nghiệp.
+2. Học vấn.
+3. Kinh nghiệm làm việc.
+4. Kinh nghiệm giảng dạy.
+5. Hoạt động tổ chức và phong trào.
+6. Truyền thông giáo dục.
+7. Dự án.
+8. Nghiên cứu.
+9. Kỹ năng.
+10. Công cụ.
+11. Ngôn ngữ.
+12. Nút tải CV PDF.
+
+Kỹ năng có thể trình bày:
+
+- Giải quyết vấn đề.
+- Tư vấn và tham vấn.
+- Thuyết trình.
+- Hỗ trợ người học.
+- Truyền thông giáo dục.
+- Tổ chức chương trình và sự kiện.
+- Microsoft Word.
+- Microsoft PowerPoint.
+- Microsoft Excel.
+- ChatGPT.
+- Gemini.
+- Antigravity.
+- Adobe Photoshop.
+- Canva.
+
+Không tự đặt mức độ thành thạo bằng phần trăm.
+
+Nếu thời gian, chức danh hoặc đơn vị chưa được xác nhận, sử dụng placeholder cần cập nhật.
+
+---
+
+# 13. TRANG NGHIÊN CỨU
+
+Trang tổng hợp nghiên cứu gồm:
+
+1. Hướng nghiên cứu hiện tại.
+2. Mối quan tâm nghiên cứu.
+3. Nghiên cứu đang thực hiện.
+4. Nghiên cứu hoặc đề xuất trước đây.
+5. Bài trình bày học thuật.
+6. Ghi chú nghiên cứu.
+7. Tài liệu có thể tải.
+8. Cách trích dẫn.
+9. Liên kết ORCID và Google Scholar nếu có.
+
+Sử dụng nhãn phân biệt:
+
+- Đã công bố.
+- Đang thực hiện.
+- Đề xuất nghiên cứu.
+- Bài trình bày.
+- Ghi chú học thuật.
+- Tài liệu học tập.
+
+Mỗi nghiên cứu có trang riêng và metadata:
+
+- title
+- englishTitle
+- description
+- abstract
+- status
+- researchType
+- startDate
+- endDate
+- supervisor
+- keywords
+- citation
+- pdf
+- featured
+- draft
+
+Không đưa tên người hướng dẫn nếu tôi chưa xác nhận.
+
+---
+
+# 14. TRANG DỰ ÁN
+
+Mỗi dự án gồm:
+
+1. Tên dự án.
+2. Bối cảnh.
+3. Vấn đề.
+4. Mục tiêu.
+5. Vai trò của Trịnh Gia Khiêm.
+6. Đối tượng phục vụ.
+7. Giải pháp.
+8. Công cụ.
+9. Quy trình.
+10. Sản phẩm.
+11. Kết quả có thể xác minh.
+12. Bài học.
+13. Hình ảnh.
+14. Liên kết liên quan.
+
+Metadata:
+
+- title
+- description
+- status
+- role
+- startDate
+- endDate
+- tools
+- skills
+- coverImage
+- coverAlt
+- featured
+- draft
+
+Không bịa số lượng người dùng, tỷ lệ cải thiện hoặc thành tích.
+
+---
+
+# 15. BLOG
+
+Tạo bốn chuyên mục chính:
+
+1. Tâm lý giáo dục và hỗ trợ người học.
+2. AI và giảng dạy tiếng Anh.
+3. Nghiên cứu và phương pháp.
+4. Hành trình và quan điểm cá nhân.
+
+Metadata bài viết:
+
+- title
+- description
+- publishedDate
+- updatedDate
+- category
+- tags
+- coverImage
+- coverAlt
+- draft
+- featured
+- readingTime
+- references
+
+Mỗi bài viết gồm:
+
+1. Tiêu đề.
+2. Tóm tắt trong 30 giây.
+3. Mục lục.
+4. Vấn đề hoặc câu hỏi.
+5. Cơ sở khoa học.
+6. Phân tích.
+7. Ví dụ thực tế.
+8. Quan điểm cá nhân.
+9. Giới hạn và lưu ý.
+10. Tài liệu tham khảo.
+11. Bài liên quan.
+12. Hồ sơ tác giả.
+13. Ngày xuất bản và cập nhật.
+
+Tạo một bài được công bố:
+
+“Tại sao tôi xây dựng website cá nhân này?”
+
+Tạo ba bài học thuật mẫu và đặt draft: true:
+
+1. Tâm lý giáo dục có thể giúp sinh viên học tập như thế nào?
+2. Corrective feedback là gì trong giảng dạy tiếng Anh?
+3. Giáo viên có thái độ như thế nào đối với AI trong giáo dục?
+
+Không tự tạo tài liệu tham khảo giả.
+
+Nếu chưa xác minh được nguồn khoa học:
+
+- Giữ bài ở trạng thái draft.
+- Đặt ghi chú “Cần bổ sung nguồn”.
+- Không công bố bài.
+- Không tạo DOI hoặc thông tin trích dẫn giả.
+
+---
+
+# 16. HÀNH TRÌNH HỌC TẬP
+
+Trang Hành trình có timeline:
+
+- Học tập.
+- Công việc.
+- Hoạt động sinh viên.
+- Giảng dạy.
+- Nghiên cứu.
+- Dự án.
+- Mục tiêu nghề nghiệp.
+
+Mỗi mốc gồm:
+
+- Thời gian.
+- Tiêu đề.
+- Mô tả.
+- Bài học.
+- Hình ảnh hoặc tài liệu liên quan.
+
+Nếu thời gian chưa xác nhận, sử dụng placeholder và không hiển thị trên bản công khai.
+
+---
+
+# 17. TRANG LIÊN HỆ
+
+Hiển thị:
+
+- Email nghề nghiệp.
+- GitHub.
+- LinkedIn.
+- ORCID.
+- Google Scholar.
+- ResearchGate.
+
+Chỉ hiển thị liên kết đã được cung cấp.
+
+Có thông điệp:
+
+“Tôi sẵn sàng trao đổi về hỗ trợ người học, giảng dạy tiếng Anh, nghiên cứu giáo dục và các dự án ứng dụng AI có trách nhiệm.”
+
+Phiên bản đầu chưa cần form backend.
+
+Sử dụng liên kết email:
+
+mailto:<email>
+
+Không công khai số điện thoại nếu tôi chưa yêu cầu.
+
+---
+
+# 18. FOOTER
+
+Footer gồm:
+
+1. Tên Trịnh Gia Khiêm.
+2. Mô tả ngắn.
+3. Menu rút gọn.
+4. Email.
+5. Liên kết mạng xã hội đã xác nhận.
+6. Chính sách quyền riêng tư.
+7. Tuyên bố sử dụng AI.
+8. Năm hiện tại tự động.
+9. Tuyên bố:
+
+“Các quan điểm trên website là quan điểm cá nhân và không đại diện cho UEF hoặc đơn vị công tác.”
+
+Không sử dụng logo UEF nếu chưa được phép.
+
+---
+
+# 19. SEO
+
+## 19.1. SEO cơ bản
+
+Mỗi trang phải có:
+
+- Một title riêng.
+- Một meta description riêng.
+- Chỉ một H1.
+- Canonical URL.
+- Open Graph.
+- Twitter Card.
+- Ảnh chia sẻ.
+- Breadcrumb khi phù hợp.
+- Heading đúng thứ tự.
+- URL ngắn và dễ hiểu.
+
+Title trang chủ:
+
+“Trịnh Gia Khiêm | Tâm lý giáo dục, Hỗ trợ người học và AI trong giáo dục”
+
+Meta description trang chủ:
+
+“Website cá nhân của Trịnh Gia Khiêm, chia sẻ về tâm lý giáo dục, hỗ trợ người học, giảng dạy tiếng Anh, nghiên cứu và ứng dụng AI trong giáo dục.”
+
+## 19.2. Structured data
+
+Tạo JSON-LD phù hợp:
+
+- WebSite
+- ProfilePage
+- Person
+- Article
+- BreadcrumbList
+
+Person:
+
+- name: Trịnh Gia Khiêm
+- alternateName: Trinh Gia Khiem
+- jobTitle: Academic Support Specialist
+- knowsAbout:
+  - Educational Psychology
+  - Learner Support
+  - English Language Education
+  - AI in Education
+  - Corrective Feedback
+  - Academic Writing
+
+Chỉ thêm sameAs cho các hồ sơ mạng xã hội đã được xác nhận.
+
+Không thêm dữ liệu không hiển thị trên trang.
+
+## 19.3. SEO kỹ thuật
+
+Tạo:
+
+- sitemap.xml
+- robots.txt
+- RSS
+- favicon
+- manifest cơ bản nếu phù hợp
+- 404 page
+- canonical URLs
+- internal links
+- semantic HTML
+- responsive images
+
+Tạo placeholder cho Google Search Console verification nhưng không thêm mã giả.
+
+---
+
+# 20. KHẢ NĂNG TIẾP CẬN
+
+Đảm bảo WCAG 2.2 AA:
+
+1. Có skip link.
+2. Có keyboard focus rõ ràng.
+3. Menu dùng được bằng bàn phím.
+4. Độ tương phản đạt yêu cầu.
+5. Alt text cho hình ảnh có ý nghĩa.
+6. Hình trang trí dùng alt rỗng.
+7. Form và nút có label.
+8. Không dùng màu làm tín hiệu duy nhất.
+9. Hỗ trợ prefers-reduced-motion.
+10. Kích thước nút tối thiểu 44 x 44 px.
+11. Không có keyboard trap.
+12. Heading đúng cấu trúc.
+13. Có lang="vi".
+14. Nội dung tiếng Anh phải có lang="en" khi phù hợp.
+
+---
+
+# 21. HIỆU SUẤT
+
+Mục tiêu:
+
+- LCP không quá 2,5 giây.
+- INP không quá 200 ms.
+- CLS không quá 0,1.
+- Lighthouse Performance tối thiểu 90.
+- Lighthouse Accessibility tối thiểu 95.
+- Lighthouse SEO tối thiểu 95.
+- Lighthouse Best Practices tối thiểu 90.
+
+Yêu cầu:
+
+- Tối ưu ảnh.
+- Sử dụng WebP hoặc AVIF khi phù hợp.
+- Khai báo width và height.
+- Không tải JavaScript không cần thiết.
+- Không sử dụng thư viện icon quá lớn.
+- Có thể sử dụng SVG nội tuyến.
+- Không tải video tự động.
+- Không tải ảnh nền quá nặng.
+- Không sử dụng nhiều font và font weight.
+- Không làm primary content phụ thuộc JavaScript.
+
+---
+
+# 22. CẤU TRÚC FILE
+
+Tổ chức dự án rõ ràng, ví dụ:
+
+.github/
+  workflows/
+    deploy.yml
+
+public/
+  images/
+    profile/
+    blog/
+    projects/
+    research/
+  documents/
+  favicon.svg
+  robots.txt
+
+src/
+  components/
+    Header.astro
+    Footer.astro
+    Hero.astro
+    SectionHeading.astro
+    ContentCard.astro
+    ResearchCard.astro
+    ProjectCard.astro
+    ArticleCard.astro
+    Timeline.astro
+    Breadcrumbs.astro
+    SeoHead.astro
+    SocialLinks.astro
+
+  layouts/
+    BaseLayout.astro
+    ArticleLayout.astro
+    ResearchLayout.astro
+    ProjectLayout.astro
+
+  content/
+    blog/
+    research/
+    projects/
+
+  pages/
+    index.astro
+    gioi-thieu.astro
+    cv.astro
+    nghien-cuu/
+    du-an/
+    bai-viet/
+    hanh-trinh.astro
+    tai-nguyen.astro
+    lien-he.astro
+    quyen-rieng-tu.astro
+    su-dung-ai.astro
+    rss.xml.js
+    404.astro
+
+  styles/
+    global.css
+    tokens.css
+    typography.css
+    utilities.css
+
+  data/
+    profile.ts
+    navigation.ts
+    timeline.ts
+
+  content.config.ts
+
+astro.config.mjs
+package.json
+package-lock.json
+tsconfig.json
+README.md
+.gitignore
+
+Có thể điều chỉnh cấu trúc theo phiên bản Astro mới nhất, nhưng phải giữ tính rõ ràng và dễ bảo trì.
+
+---
+
+# 23. GITHUB ACTIONS VÀ GITHUB PAGES
+
+Tạo file:
+
+.github/workflows/deploy.yml
+
+Sử dụng official Astro GitHub Action theo tài liệu mới nhất:
+
+https://docs.astro.build/en/guides/deploy/github/
+
+Workflow phải:
+
+1. Chạy khi push lên nhánh main.
+2. Cho phép chạy thủ công.
+3. Có quyền:
+   - contents: read
+   - pages: write
+   - id-token: write
+4. Checkout repository.
+5. Cài dependencies.
+6. Build Astro.
+7. Upload Pages artifact.
+8. Deploy GitHub Pages.
+9. Sử dụng phiên bản action hiện được Astro khuyến nghị.
+10. Không hard-code token.
+11. Sử dụng package-lock.json để xác định npm.
+
+Nếu repository là:
+
+<username>.github.io
+
+Cấu hình:
+
+site: https://<username>.github.io
+
+Không đặt base.
+
+Nếu repository là repository dự án thông thường:
+
+<username>.github.io/<repository-name>
+
+Cấu hình base theo tài liệu Astro.
+
+Ưu tiên repository:
+
+<username>.github.io
+
+để tránh cấu hình base phức tạp.
+
+---
+
+# 24. CẤU HÌNH TÊN MIỀN
+
+Nếu chưa có tên miền:
+
+- Triển khai trước tại:
+  https://<username>.github.io
+
+Nếu có tên miền:
+
+1. Cập nhật astro.config.mjs:
+
+site: https://<custom-domain>
+
+2. Không sử dụng base.
+
+3. Trong GitHub:
+
+Repository
+→ Settings
+→ Pages
+→ Custom domain
+
+4. Cấu hình DNS theo tài liệu GitHub:
+
+https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+
+Nếu dùng apex domain, chuẩn bị các bản ghi A:
+
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+Nếu dùng www, tạo CNAME:
+
+www
+→ <username>.github.io
+
+Không sử dụng wildcard DNS.
+
+Không thay đổi DNS cho đến khi:
+
+- Website GitHub Pages hoạt động.
+- Custom domain đã được nhập trong GitHub Pages.
+- Cấu hình DNS đã được trình bày để tôi kiểm tra.
+
+Sau khi DNS được xác nhận:
+
+- Bật Enforce HTTPS.
+- Kiểm tra cả domain gốc và www.
+- Đảm bảo chỉ một phiên bản canonical.
+- Kiểm tra chuyển hướng.
+
+---
+
+# 25. QUY TRÌNH GIT
+
+Nếu repository mới hoàn toàn:
+
+git init
+git add .
+git commit -m "Initial personal website"
+git branch -M main
+git remote add origin <repository-url>
+git push -u origin main
+
+Nếu repository đã tồn tại:
+
+1. Clone repository.
+2. Kiểm tra:
+   git status
+   git branch
+   git remote -v
+3. Không force push.
+4. Không ghi đè lịch sử.
+5. Commit với thông điệp rõ ràng.
+
+Trước khi push:
+
+npm install
+npm run build
+
+Chỉ push khi build thành công.
+
+Sau khi push:
+
+1. Mở GitHub Actions.
+2. Theo dõi workflow.
+3. Nếu workflow thất bại, đọc log và sửa lỗi.
+4. Không tạo nhiều workflow trùng chức năng.
+5. Xác nhận website truy cập được.
+
+---
+
+# 26. README
+
+Tạo README.md bằng tiếng Việt, gồm:
+
+1. Giới thiệu dự án.
+2. Công nghệ sử dụng.
+3. Cách cài đặt.
+4. Cách chạy local.
+5. Cách build.
+6. Cách viết bài mới.
+7. Cách thêm nghiên cứu.
+8. Cách thêm dự án.
+9. Cách thay ảnh chân dung.
+10. Cách thay CV PDF.
+11. Cách cập nhật email và mạng xã hội.
+12. Cách triển khai GitHub Pages.
+13. Cách kết nối tên miền.
+14. Cấu trúc thư mục.
+15. Nguyên tắc không lưu thông tin nhạy cảm.
+
+Hướng dẫn viết bài mới phải đơn giản, ví dụ:
+
+1. Tạo file trong src/content/blog.
+2. Điền metadata.
+3. Viết nội dung Markdown.
+4. Chạy npm run dev.
+5. Chuyển draft thành false.
+6. Commit và push.
+
+---
+
+# 27. KIỂM THỬ
+
+Sau khi xây dựng xong:
+
+## 27.1. Kiểm tra mã nguồn
+
+- npm install thành công.
+- npm run build thành công.
+- Không có lỗi TypeScript.
+- Không có import lỗi.
+- Không có link nội bộ hỏng.
+- Không có asset bị thiếu.
+- Không có cảnh báo nghiêm trọng.
+- Không có secret trong repository.
+
+## 27.2. Kiểm tra giao diện
+
+Kiểm tra ở:
+
+- 360 px.
+- 390 px.
+- 768 px.
+- 1024 px.
+- 1440 px.
+
+Kiểm tra:
+
+- Header.
+- Menu mobile.
+- Hero.
+- Thẻ nội dung.
+- Timeline.
+- Blog.
+- CV.
+- Footer.
+- Nút.
+- Ảnh.
+- Font tiếng Việt.
+- Nội dung dài.
+- Keyboard navigation.
+- Reduced motion.
+
+## 27.3. Kiểm tra SEO
+
+- Một H1 mỗi trang.
+- Title duy nhất.
+- Meta description duy nhất.
+- Canonical chính xác.
+- Sitemap hoạt động.
+- RSS hoạt động.
+- robots.txt hợp lệ.
+- JSON-LD hợp lệ.
+- Open Graph hợp lệ.
+- Không index nội dung draft.
+- Không hiển thị trang nháp trong danh sách.
+
+## 27.4. Kiểm tra triển khai
+
+- GitHub Actions thành công.
+- GitHub Pages hoạt động.
+- Không có lỗi 404 do base URL.
+- CSS và ảnh hoạt động trên production.
+- Các liên kết absolute và relative chính xác.
+- HTTPS hoạt động.
+- Custom domain hoạt động nếu đã cấu hình.
+
+---
+
+# 28. TIÊU CHÍ HOÀN THÀNH
+
+Dự án chỉ được xem là hoàn thành khi:
+
+1. Website chạy được trên máy.
+2. npm run build thành công.
+3. Giao diện đúng phong cách hồng pastel chuyên nghiệp.
+4. Mobile hoạt động tốt.
+5. Nội dung không chứa thông tin bịa đặt.
+6. Không có trích dẫn khoa học giả.
+7. Trang chủ, Giới thiệu, CV, Nghiên cứu, Dự án, Bài viết, Hành trình và Liên hệ hoạt động.
+8. Markdown Content Collections hoạt động.
+9. Sitemap và RSS hoạt động.
+10. GitHub Actions hoạt động.
+11. Website được triển khai trên GitHub Pages.
+12. Tên miền được cấu hình nếu tôi cung cấp.
+13. README đầy đủ.
+14. Có hướng dẫn cập nhật nội dung.
+15. Không có secret hoặc dữ liệu nhạy cảm trong repository.
+
+---
+
+# 29. BÁO CÁO CUỐI CÙNG
+
+Sau khi hoàn thành, báo cáo ngắn gọn theo cấu trúc:
+
+1. Thư mục dự án đã tạo.
+2. Công nghệ đã cài đặt.
+3. Danh sách các trang.
+4. Danh sách Content Collections.
+5. Các nội dung đang là placeholder.
+6. Kết quả npm run build.
+7. Repository URL.
+8. Commit SHA gần nhất.
+9. Trạng thái GitHub Actions.
+10. Địa chỉ GitHub Pages.
+11. Địa chỉ tên miền riêng.
+12. Cấu hình DNS đã sử dụng.
+13. Các bước tôi cần làm thủ công.
+14. Cách đăng bài mới.
+15. Các đề xuất cho giai đoạn tiếp theo.
+
+Nếu có bước nào không thể hoàn thành do thiếu quyền truy cập, thiếu tài khoản hoặc thiếu thông tin, hãy:
+
+- Hoàn thành tất cả phần còn lại.
+- Nêu chính xác bước đang bị chặn.
+- Không giả vờ đã triển khai thành công.
+- Không tự ý chọn thông tin thay tôi.
+- Cung cấp đúng một danh sách ngắn những gì tôi cần bổ sung.
+
+trinhgiakhiem
+URL: https://github.com/giakhiem689-afk/trinhgiakhiem.git
+Folder: D:\GIA KHIEM\CÁ NHÂN\BlogCanhan

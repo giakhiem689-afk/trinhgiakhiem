@@ -1,0 +1,120 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, publishedDate, coverImage, category, readingTime } = post.data;
+
+const formattedDate = new Date(publishedDate).toLocaleDateString('vi-VN', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+<BaseLayout title={title} description={description} type="article" image={coverImage} publishDate={publishedDate}>
+  <article class="article-container">
+    <header class="article-header text-center">
+      <span class="article-category">{category}</span>
+      <h1 class="article-title">{title}</h1>
+      
+      <div class="article-meta">
+        <time datetime={publishedDate.toISOString()}>{formattedDate}</time>
+        {readingTime && <span class="separator">•</span>}
+        {readingTime && <span>{readingTime}</span>}
+      </div>
+      
+      {coverImage && (
+        <div class="article-cover">
+          <img src={coverImage} alt={title} class="card" />
+        </div>
+      )}
+    </header>
+    
+    <div class="article-content content-wrapper">
+      <div class="prose">
+        <slot />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-container {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .article-header {
+    max-width: 800px;
+    margin: 0 auto var(--space-12);
+  }
+  
+  .article-category {
+    display: inline-block;
+    padding: var(--space-1) var(--space-3);
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    margin-bottom: var(--space-4);
+  }
+  
+  .article-title {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-4);
+  }
+  
+  .article-meta {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-8);
+  }
+  
+  .separator {
+    margin: 0 var(--space-2);
+  }
+  
+  .article-cover img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+  }
+  
+  .prose {
+    font-size: var(--text-lg);
+    line-height: 1.8;
+  }
+  
+  .prose :global(h2) {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+    color: var(--color-pink-dark);
+  }
+  
+  .prose :global(h3) {
+    margin-top: var(--space-6);
+  }
+  
+  .prose :global(p) {
+    margin-bottom: var(--space-6);
+  }
+  
+  .prose :global(a) {
+    text-decoration: underline;
+    text-decoration-color: var(--color-pink-light);
+    text-underline-offset: 4px;
+  }
+  
+  .prose :global(blockquote) {
+    border-left: 4px solid var(--color-pink-main);
+    padding-left: var(--space-4);
+    margin-left: 0;
+    font-style: italic;
+    color: var(--color-text-muted);
+  }
+</style>

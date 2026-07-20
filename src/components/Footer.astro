@@ -1,0 +1,99 @@
+---
+import { profile } from '../data/profile';
+import { navigation } from '../data/navigation';
+
+const currentYear = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>{profile.name}</h3>
+        <p>{profile.tagline}</p>
+        <a href={`mailto:${profile.email}`} class="footer-email">{profile.email}</a>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Điều hướng</h4>
+        <ul>
+          {navigation.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      
+      <div class="footer-legal">
+        <h4>Chính sách</h4>
+        <ul>
+          <li><a href="/quyen-rieng-tu">Quyền riêng tư</a></li>
+          <li><a href="/su-dung-ai">Tuyên bố sử dụng AI</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">&copy; {currentYear} {profile.name}. All rights reserved.</p>
+      <p class="disclaimer">Các quan điểm trên website là quan điểm cá nhân và không đại diện cho UEF hoặc đơn vị công tác.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-bg-card);
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-12) 0 var(--space-6);
+    margin-top: auto;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+  }
+  
+  .footer-about h3 {
+    font-family: var(--font-heading);
+    color: var(--color-pink-dark);
+    margin-bottom: var(--space-2);
+  }
+  
+  .footer-email {
+    display: inline-block;
+    margin-top: var(--space-4);
+    font-weight: 500;
+  }
+  
+  .footer-links h4, .footer-legal h4 {
+    margin-bottom: var(--space-4);
+    color: var(--color-text-main);
+  }
+  
+  .footer-links ul, .footer-legal ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li, .footer-legal li {
+    margin-bottom: var(--space-2);
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-6);
+    text-align: center;
+    font-size: var(--text-sm);
+  }
+  
+  .disclaimer {
+    margin-top: var(--space-2);
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

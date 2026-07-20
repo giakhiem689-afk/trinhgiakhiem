@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { profile } from '../data/profile';
+---
+<BaseLayout title={`Giới thiệu | ${profile.name}`} description="Câu chuyện nghề nghiệp và định hướng của Trịnh Gia Khiêm.">
+  <div class="container content-wrapper page-section">
+    <SectionHeading title="Giới thiệu" subtitle="Về tôi" align="left" />
+    
+    <div class="about-content">
+      <div class="about-text">
+        <p>Xin chào, tôi là <strong>{profile.name}</strong>.</p>
+        <p>Tôi bắt đầu hành trình của mình với nền tảng Tâm lý giáo dục, học cách thấu hiểu những rào cản và khó khăn mà người học phải đối mặt. Hiện tại, công việc hỗ trợ học vụ tại UEF giúp tôi tiếp xúc hàng ngày với những nhu cầu thực tế của sinh viên, từ đó nhận ra tầm quan trọng của việc xây dựng một môi trường học tập chủ động và nhân văn.</p>
+        <p>Trong quá trình đó, tôi cũng nhận thấy ngôn ngữ và công nghệ là hai công cụ mạnh mẽ để mở rộng khả năng tiếp thu tri thức. Đó là lý do tôi tiếp tục theo đuổi chương trình Thạc sĩ Ngôn ngữ Anh, đồng thời nghiên cứu cách ứng dụng trí tuệ nhân tạo (AI) vào việc phản hồi sửa lỗi bài viết, nhằm hỗ trợ giáo viên và người học hiệu quả hơn.</p>
+        <p>Tôi tin rằng giáo dục không chỉ là truyền đạt kiến thức, mà là tạo ra những không gian an toàn để người học tự tin phát triển bản thân.</p>
+        
+        <div class="about-actions">
+          <a href="/cv" class="btn btn-primary">Xem CV</a>
+          <a href="/nghien-cuu" class="btn btn-secondary">Khám phá nghiên cứu</a>
+        </div>
+      </div>
+      
+      <div class="about-image">
+        <img src="/images/profile/placeholder.jpg" alt={`Chân dung ${profile.name}`} class="card" />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .about-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--space-12);
+    align-items: flex-start;
+  }
+  
+  .about-text p {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-6);
+  }
+  
+  .about-actions {
+    display: flex;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: var(--radius-xl);
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+      order: -1;
+    }
+    
+    .about-actions {
+      flex-wrap: wrap;
+    }
+  }
+</style>

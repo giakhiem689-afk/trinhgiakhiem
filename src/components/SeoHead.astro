@@ -1,0 +1,88 @@
+---
+import { profile } from '../data/profile';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'profile';
+  publishDate?: Date | string;
+  author?: string;
+  url?: URL | string;
+}
+
+const {
+  title = `${profile.name} | Tâm lý giáo dục, Hỗ trợ người học và AI trong giáo dục`,
+  description = "Website cá nhân của Trịnh Gia Khiêm, chia sẻ về tâm lý giáo dục, hỗ trợ người học, giảng dạy tiếng Anh, nghiên cứu và ứng dụng AI trong giáo dục.",
+  image = "/images/profile-placeholder.jpg",
+  type = "website",
+  publishDate,
+  author = profile.name,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const imageURL = new URL(image, Astro.site);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${Astro.site}#person`,
+      "name": profile.name,
+      "alternateName": profile.alternateName,
+      "jobTitle": profile.role,
+      "url": Astro.site,
+      "sameAs": Object.values(profile.socials).filter(url => url !== "#"),
+      "knowsAbout": profile.interests
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${Astro.site}#website`,
+      "url": Astro.site,
+      "name": title,
+      "publisher": { "@id": `${Astro.site}#person` }
+    },
+    {
+      "@type": type === 'article' ? "Article" : "ProfilePage",
+      "@id": `${canonicalURL}#webpage`,
+      "url": canonicalURL,
+      "name": title,
+      "description": description,
+      "isPartOf": { "@id": `${Astro.site}#website` },
+      ...(publishDate && { "datePublished": new Date(publishDate).toISOString() }),
+      ...(author && { "author": { "@id": `${Astro.site}#person` } })
+    }
+  ]
+};
+---
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={imageURL} />
+{publishDate && <meta property="article:published_time" content={new Date(publishDate).toISOString()} />}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={imageURL} />
+
+<!-- JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

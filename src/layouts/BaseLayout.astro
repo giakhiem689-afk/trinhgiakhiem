@@ -1,0 +1,56 @@
+---
+import SeoHead from '../components/SeoHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'profile';
+  publishDate?: Date | string;
+}
+
+const { title, description, image, type, publishDate } = Astro.props;
+---
+<html lang="vi">
+  <head>
+    <SeoHead 
+      title={title} 
+      description={description} 
+      image={image} 
+      type={type} 
+      publishDate={publishDate} 
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="screen-reader-text focusable">Bỏ qua đến nội dung chính</a>
+    
+    <Header />
+    
+    <main id="main-content">
+      <slot />
+    </main>
+    
+    <Footer />
+  </body>
+</html>
+
+<style>
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: var(--space-4);
+    background: var(--color-bg-card);
+    color: var(--color-pink-dark);
+    z-index: 1000;
+  }
+</style>

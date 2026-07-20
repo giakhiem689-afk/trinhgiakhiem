@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { profile } from '../data/profile';
+---
+<BaseLayout title={`CV | ${profile.name}`} description="Hồ sơ năng lực của Trịnh Gia Khiêm.">
+  <div class="container content-wrapper page-section">
+    <SectionHeading title="Curriculum Vitae" subtitle="Hồ sơ nghề nghiệp" align="left" />
+    
+    <div class="cv-actions">
+      <a href="/documents/cv_placeholder.pdf" class="btn btn-primary" download>Tải CV PDF</a>
+    </div>
+    
+    <div class="cv-grid">
+      <aside class="cv-sidebar">
+        <section class="cv-section">
+          <h3>Kỹ năng chuyên môn</h3>
+          <ul class="skill-list">
+            <li>Hỗ trợ người học</li>
+            <li>Tư vấn và tham vấn</li>
+            <li>Thuyết trình & Giảng dạy</li>
+            <li>Giải quyết vấn đề</li>
+            <li>Truyền thông giáo dục</li>
+            <li>Tổ chức sự kiện</li>
+          </ul>
+        </section>
+        
+        <section class="cv-section">
+          <h3>Công cụ</h3>
+          <ul class="skill-list">
+            <li>Microsoft Office</li>
+            <li>ChatGPT & Gemini</li>
+            <li>AI in Education Tools</li>
+            <li>Canva & Adobe Photoshop</li>
+          </ul>
+        </section>
+      </aside>
+      
+      <main class="cv-main">
+        <section class="cv-section">
+          <h3>Học vấn</h3>
+          <div class="cv-item">
+            <div class="cv-meta">Hiện tại</div>
+            <h4>Thạc sĩ Ngôn ngữ Anh</h4>
+            <p>Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</p>
+          </div>
+          <div class="cv-item">
+            <div class="cv-meta">[Năm tốt nghiệp]</div>
+            <h4>Cử nhân Tâm lý giáo dục</h4>
+            <p>[Tên trường đại học]</p>
+          </div>
+        </section>
+        
+        <section class="cv-section">
+          <h3>Kinh nghiệm làm việc</h3>
+          <div class="cv-item">
+            <div class="cv-meta">Hiện tại</div>
+            <h4>Chuyên viên Trung tâm Hỗ trợ học vụ</h4>
+            <p>Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</p>
+            <ul>
+              <li>Tư vấn học vụ, giải đáp quy định và xử lý thủ tục cho sinh viên.</li>
+              <li>Hỗ trợ sinh viên giải quyết khó khăn trong quá trình học tập.</li>
+              <li>Ứng dụng công nghệ và AI vào quy trình hỗ trợ sinh viên.</li>
+            </ul>
+          </div>
+          <div class="cv-item">
+            <div class="cv-meta">[Thời gian]</div>
+            <h4>Giảng dạy kỹ năng sống & Tổ chức hoạt động</h4>
+            <p>[Đơn vị]</p>
+            <ul>
+              <li>Thiết kế và giảng dạy kỹ năng sống cho học sinh/sinh viên.</li>
+              <li>Tổ chức các hoạt động giáo dục ngoại khóa.</li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="cv-section">
+          <h3>Dự án tiêu biểu</h3>
+          <div class="cv-item">
+            <h4>Hệ thống hỗ trợ sinh viên</h4>
+            <p>Xây dựng website khảo sát và hệ thống hỗ trợ sinh viên qua Telegram/Zalo.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .cv-actions {
+    margin-bottom: var(--space-8);
+  }
+  
+  .cv-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+  }
+  
+  .cv-section {
+    margin-bottom: var(--space-8);
+  }
+  
+  .cv-section h3 {
+    color: var(--color-pink-dark);
+    border-bottom: 2px solid var(--color-pink-light);
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+  
+  .skill-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skill-list li {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-2);
+    font-size: var(--text-sm);
+  }
+  
+  .cv-item {
+    margin-bottom: var(--space-6);
+  }
+  
+  .cv-meta {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    margin-bottom: var(--space-1);
+  }
+  
+  .cv-item h4 {
+    margin-bottom: var(--space-1);
+    font-size: var(--text-lg);
+  }
+  
+  .cv-item p {
+    margin-bottom: var(--space-2);
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .cv-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

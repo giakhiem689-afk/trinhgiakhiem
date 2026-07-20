@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giakhiem689-afk.github.io/trinhgiakhiem/sitemap-index.xml

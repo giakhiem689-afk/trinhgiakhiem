@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Không tìm thấy trang (404) | Trịnh Gia Khiêm" description="Trang bạn tìm kiếm không tồn tại.">
+  <div class="container content-wrapper page-section error-page">
+    <div class="text-center">
+      <h1 class="error-code">404</h1>
+      <h2 class="error-title">Không tìm thấy trang</h2>
+      <p class="error-desc">Xin lỗi, nội dung bạn đang tìm kiếm có thể đã bị xóa, đổi tên hoặc tạm thời không truy cập được.</p>
+      
+      <div class="error-actions">
+        <a href="/" class="btn btn-primary">Về trang chủ</a>
+        <a href="/bai-viet" class="btn btn-secondary">Đọc bài viết</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-24) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+  }
+  
+  .error-code {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 700;
+    color: var(--color-pink-light);
+    line-height: 1;
+    margin-bottom: var(--space-4);
+    text-shadow: 2px 2px 0px var(--color-pink-main);
+  }
+  
+  .error-title {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-4);
+  }
+  
+  .error-desc {
+    font-size: var(--text-lg);
+    max-width: 500px;
+    margin: 0 auto var(--space-8);
+  }
+  
+  .error-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
+</style>

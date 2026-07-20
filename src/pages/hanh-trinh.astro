@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Timeline from '../components/Timeline.astro';
+import { profile } from '../data/profile';
+---
+<BaseLayout title={`Hành trình học tập | ${profile.name}`} description="Quá trình học tập và phát triển nghề nghiệp của Trịnh Gia Khiêm.">
+  <div class="container content-wrapper page-section">
+    <SectionHeading title="Hành trình & Phát triển" subtitle="Timeline" align="center" />
+    
+    <div class="journey-content">
+      <p class="intro-text">Một hành trình liên tục học hỏi từ Tâm lý giáo dục, hỗ trợ học vụ, đến Ngôn ngữ Anh và ứng dụng AI trong giáo dục.</p>
+      
+      <Timeline />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .intro-text {
+    text-align: center;
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto var(--space-12);
+  }
+</style>

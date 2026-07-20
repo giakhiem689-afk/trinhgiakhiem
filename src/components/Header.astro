@@ -1,0 +1,78 @@
+---
+import { navigation } from '../data/navigation';
+import { profile } from '../data/profile';
+
+const currentPath = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">{profile.name}</a>
+    
+    <nav class="main-nav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        {navigation.map((item) => (
+          <li>
+            <a 
+              href={item.href} 
+              class={`nav-link ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) ? 'active' : ''}`}
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    
+    <div class="header-actions">
+      <a href="/cv" class="btn btn-primary">Xem CV</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-bg-main);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+  
+  .logo {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-pink-dark);
+  }
+  
+  .nav-list {
+    display: flex;
+    gap: var(--space-6);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-link {
+    color: var(--color-text-main);
+    font-weight: 500;
+  }
+  
+  .nav-link:hover, .nav-link.active {
+    color: var(--color-pink-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none; /* Add mobile menu implementation if needed */
+    }
+  }
+</style>

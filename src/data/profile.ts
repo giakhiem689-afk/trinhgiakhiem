@@ -27,22 +27,22 @@ export const profile = {
   verificationsTable: [
     {
       title: "Cử nhân Tâm lý giáo dục",
-      institution: "Trường ĐH Khoa học Xã hội và Nhân văn - ĐHQG TP.HCM",
+      institution: "ĐH KHXH&NV - ĐHQG TP.HCM",
       period: "2017 - 2021"
     },
     {
       title: "Học viên Thạc sĩ Ngôn ngữ Anh",
-      institution: "Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)",
+      institution: "ĐH Kinh tế - Tài chính TP.HCM (UEF)",
       period: "2022 - 2024"
     },
     {
       title: "Chuyên viên Hỗ trợ học vụ",
-      institution: "Trung tâm Hỗ trợ học vụ - Trường ĐH Kinh tế - Tài chính TP.HCM (UEF)",
+      institution: "Trung tâm Hỗ trợ học vụ UEF",
       period: "2022 - Hiện tại"
     },
     {
-      title: "Luận văn Nghiên cứu \"Thái độ của giáo viên trong việc sử dụng AI trong phản hồi bài viết\"",
-      institution: "Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)",
+      title: "Nghiên cứu AI trong phản hồi bài viết",
+      institution: "Luận văn Thạc sĩ UEF",
       period: "Đang thực hiện"
     }
   ]

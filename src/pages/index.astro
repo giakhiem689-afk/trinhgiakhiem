@@ -37,30 +37,23 @@ try {
 <BaseLayout>
   <Hero />
 
-  <!-- Thông tin xác thực nhanh dạng bảng -->
+  <!-- Nền tảng chuyên môn nhanh dạng Thẻ tối giản -->
   <section class="section bg-card verification-section">
     <div class="container">
-      <div class="verification-table-wrapper">
-        <table class="verification-table">
-          <thead>
-            <tr>
-              <th>Chuyên môn / Vị trí / Nghiên cứu</th>
-              <th>Đơn vị / Cơ sở</th>
-              <th>Thời gian</th>
-            </tr>
-          </thead>
-          <tbody>
-            {profile.verificationsTable.map((row) => (
-              <tr>
-                <td class="col-title">
-                  <span class="check-icon-inline">✓</span> {row.title}
-                </td>
-                <td class="col-inst">{row.institution}</td>
-                <td class="col-period">{row.period}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div class="summary-grid">
+        {profile.verificationsTable.map((item) => (
+          <div class="summary-item card">
+            <div class="summary-icon">✓</div>
+            <div class="summary-info">
+              <h4 class="summary-title">{item.title}</h4>
+              <p class="summary-meta">
+                <span class="summary-inst">{item.institution}</span>
+                <span class="summary-dot">•</span>
+                <span class="summary-period">{item.period}</span>
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -196,60 +189,59 @@ try {
   .mt-8 { margin-top: var(--space-8); }
   .mb-4 { margin-bottom: var(--space-4); }
   
-  /* Verification Table */
-  .verification-table-wrapper {
-    overflow-x: auto;
-    border-radius: var(--radius-xl);
-    border: 1px solid var(--color-border);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  /* Summary Grid (Simplified Verification) */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+  
+  .summary-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-6);
     background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
   }
   
-  .verification-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    font-size: var(--text-sm);
-  }
-  
-  .verification-table th {
+  .summary-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
     background-color: var(--color-pink-light);
     color: var(--color-pink-dark);
-    padding: var(--space-4);
-    font-weight: 600;
-    font-family: var(--font-heading);
-    border-bottom: 2px solid var(--color-border);
-  }
-  
-  .verification-table td {
-    padding: var(--space-4);
-    border-top: 1px solid var(--color-border);
-    vertical-align: middle;
-  }
-  
-  .verification-table tr:hover {
-    background-color: rgba(232, 169, 184, 0.05);
-  }
-  
-  .col-title {
-    font-weight: 600;
-    color: var(--color-text-main);
-  }
-  
-  .col-inst {
-    color: var(--color-text-main);
-  }
-  
-  .col-period {
-    white-space: nowrap;
-    color: var(--color-text-muted);
-    font-weight: 500;
-  }
-  
-  .check-icon-inline {
-    color: var(--color-pink-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bold;
-    margin-right: var(--space-2);
+    font-size: 0.875rem;
+    flex-shrink: 0;
+  }
+  
+  .summary-title {
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 0.15rem;
+  }
+  
+  .summary-meta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+    margin-bottom: 0;
+  }
+  
+  .summary-dot {
+    margin: 0 var(--space-1);
+    color: var(--color-border);
+  }
+
+  @media (max-width: 768px) {
+    .summary-grid {
+      grid-template-columns: 1fr;
+    }
   }
   
   /* Pillars */

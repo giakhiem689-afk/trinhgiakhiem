@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: giakhiem689-afk/trinhgiakhiem
+  branch: main
+
+# Tùy chọn lưu trữ hình ảnh
+media_folder: "public/images"
+public_folder: "/images"
+
+# Cấu hình giao diện CMS
+site_url: https://trinhgiakhiem.info.vn
+logo_url: https://trinhgiakhiem.info.vn/images/avatar.png
+
+collections:
+  - name: "blog"
+    label: "Bài viết"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Tiêu đề", name: "title", widget: "string"}
+      - {label: "Mô tả ngắn", name: "description", widget: "text"}
+      - {label: "Ngày đăng", name: "publishedDate", widget: "datetime"}
+      - {label: "Danh mục", name: "category", widget: "string"}
+      - {label: "Từ khóa (Tags)", name: "tags", widget: "list"}
+      - {label: "Thời gian đọc (Ví dụ: 3 phút)", name: "readingTime", widget: "string", required: false}
+      - {label: "Ảnh bìa", name: "coverImage", widget: "image", required: false}
+      - {label: "Bản nháp", name: "draft", widget: "boolean", default: false}
+      - {label: "Nổi bật", name: "featured", widget: "boolean", default: false}
+      - {label: "Nội dung", name: "body", widget: "markdown"}
+
+  - name: "projects"
+    label: "Dự án"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Tên dự án", name: "title", widget: "string"}
+      - {label: "Mô tả ngắn", name: "description", widget: "text"}
+      - {label: "Trạng thái", name: "status", widget: "string"}
+      - {label: "Vai trò", name: "role", widget: "string"}
+      - {label: "Công cụ sử dụng", name: "tools", widget: "list"}
+      - {label: "Ảnh bìa", name: "coverImage", widget: "image", required: false}
+      - {label: "Bản nháp", name: "draft", widget: "boolean", default: false}
+      - {label: "Nổi bật", name: "featured", widget: "boolean", default: false}
+      - {label: "Nội dung", name: "body", widget: "markdown"}

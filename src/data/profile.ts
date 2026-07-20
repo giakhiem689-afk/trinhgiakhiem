@@ -24,10 +24,26 @@ export const profile = {
     "Corrective Feedback", 
     "Academic Writing"
   ],
-  verifications: [
-    "Chuyên viên Hỗ trợ học vụ tại UEF",
-    "Cử nhân Tâm lý giáo dục",
-    "Học viên Thạc sĩ Ngôn ngữ Anh",
-    "Nghiên cứu AI trong phản hồi bài viết"
+  verificationsTable: [
+    {
+      title: "Cử nhân Tâm lý giáo dục",
+      institution: "Trường ĐH Khoa học Xã hội và Nhân văn - ĐHQG TP.HCM",
+      period: "2015 - 2019"
+    },
+    {
+      title: "Học viên Thạc sĩ Ngôn ngữ Anh",
+      institution: "Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)",
+      period: "2025 - Hiện tại"
+    },
+    {
+      title: "Chuyên viên Hỗ trợ học vụ",
+      institution: "Trung tâm Hỗ trợ học vụ - Trường ĐH Kinh tế - Tài chính TP.HCM (UEF)",
+      period: "2022 - Hiện tại"
+    },
+    {
+      title: "Luận văn Nghiên cứu \"Thái độ của giáo viên trong việc sử dụng AI trong phản hồi bài viết\"",
+      institution: "Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)",
+      period: "Đang thực hiện"
+    }
   ]
 };

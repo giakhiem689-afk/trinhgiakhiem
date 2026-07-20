@@ -37,16 +37,30 @@ try {
 <BaseLayout>
   <Hero />
 
-  <!-- Thông tin xác thực nhanh -->
+  <!-- Thông tin xác thực nhanh dạng bảng -->
   <section class="section bg-card verification-section">
     <div class="container">
-      <div class="verification-grid">
-        {profile.verifications.map((item) => (
-          <div class="verification-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="check-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>{item}</span>
-          </div>
-        ))}
+      <div class="verification-table-wrapper">
+        <table class="verification-table">
+          <thead>
+            <tr>
+              <th>Chuyên môn / Vị trí / Nghiên cứu</th>
+              <th>Đơn vị / Cơ sở</th>
+              <th>Thời gian</th>
+            </tr>
+          </thead>
+          <tbody>
+            {profile.verificationsTable.map((row) => (
+              <tr>
+                <td class="col-title">
+                  <span class="check-icon-inline">✓</span> {row.title}
+                </td>
+                <td class="col-inst">{row.institution}</td>
+                <td class="col-period">{row.period}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -182,24 +196,60 @@ try {
   .mt-8 { margin-top: var(--space-8); }
   .mb-4 { margin-bottom: var(--space-4); }
   
-  /* Verification Grid */
-  .verification-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-4);
+  /* Verification Table */
+  .verification-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    background-color: var(--color-bg-main);
   }
   
-  .verification-item {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
+  .verification-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
     font-size: var(--text-sm);
+  }
+  
+  .verification-table th {
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    padding: var(--space-4);
+    font-weight: 600;
+    font-family: var(--font-heading);
+    border-bottom: 2px solid var(--color-border);
+  }
+  
+  .verification-table td {
+    padding: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    vertical-align: middle;
+  }
+  
+  .verification-table tr:hover {
+    background-color: rgba(232, 169, 184, 0.05);
+  }
+  
+  .col-title {
+    font-weight: 600;
+    color: var(--color-text-main);
+  }
+  
+  .col-inst {
+    color: var(--color-text-main);
+  }
+  
+  .col-period {
+    white-space: nowrap;
+    color: var(--color-text-muted);
     font-weight: 500;
   }
   
-  .check-icon {
+  .check-icon-inline {
     color: var(--color-pink-main);
-    flex-shrink: 0;
+    font-weight: bold;
+    margin-right: var(--space-2);
   }
   
   /* Pillars */

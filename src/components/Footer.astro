@@ -9,13 +9,17 @@ const currentYear = new Date().getFullYear();
     <div class="footer-grid">
       <div class="footer-about">
         <h3>{profile.name}</h3>
-        <p>{profile.tagline}</p>
+        <ul class="footer-tagline-list">
+          {profile.tagline.split(' • ').map(item => (
+            <li>- {item}</li>
+          ))}
+        </ul>
         <a href={`mailto:${profile.email}`} class="footer-email">{profile.email}</a>
       </div>
       
       <div class="footer-links">
         <h4>Điều hướng</h4>
-        <ul>
+        <ul class="footer-nav-columns">
           {navigation.map((item) => (
             <li><a href={item.href}>{item.label}</a></li>
           ))}
@@ -59,6 +63,18 @@ const currentYear = new Date().getFullYear();
     margin-bottom: var(--space-2);
   }
   
+  .footer-tagline-list {
+    list-style: none;
+    padding: 0;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--color-text-main);
+  }
+  
+  .footer-tagline-list li {
+    margin-bottom: 0.35rem;
+  }
+
   .footer-email {
     display: inline-block;
     margin-top: var(--space-4);
@@ -73,6 +89,12 @@ const currentYear = new Date().getFullYear();
   .footer-links ul, .footer-legal ul {
     list-style: none;
     padding: 0;
+  }
+  
+  .footer-nav-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25rem 1rem;
   }
   
   .footer-links li, .footer-legal li {

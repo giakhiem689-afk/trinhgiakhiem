@@ -11,8 +11,7 @@ import StatusBadge from '../components/StatusBadge.astro';
     <div class="cv-header no-print">
       <SectionHeading title="Curriculum Vitae" subtitle="Hồ sơ nghề nghiệp" align="left" />
       <div class="cv-actions">
-        <!-- Nút tải PDF: Nếu chưa có file thật thì vô hiệu hóa nút nhưng không để dead link -->
-        <a href="#" class="btn btn-primary" onclick="alert('Bản PDF đang được cập nhật.'); return false;">Tải CV PDF</a>
+        <a href={`${import.meta.env.BASE_URL}docs/cv.pdf`} class="btn btn-primary" download>Tải CV PDF</a>
         <button class="btn btn-secondary" onclick="window.print()">In CV</button>
       </div>
     </div>

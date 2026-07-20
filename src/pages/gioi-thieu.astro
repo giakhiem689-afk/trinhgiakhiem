@@ -19,10 +19,7 @@ import { profile } from '../data/profile';
         </p>
       </div>
       <div class="about-hero-image">
-        <!-- Thay bằng đường dẫn ảnh chân dung khi có -->
-        <div class="image-placeholder card">
-          <span>Ảnh chân dung</span>
-        </div>
+        <img src={`${import.meta.env.BASE_URL}images/avatar.png`} alt={`Chân dung ${profile.name}`} style="width: 100%; aspect-ratio: 4/5; border-radius: var(--radius-xl); object-fit: cover; box-shadow: 0 10px 25px -5px rgba(232, 169, 184, 0.3);" />
       </div>
     </section>
 

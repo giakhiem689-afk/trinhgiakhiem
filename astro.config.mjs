@@ -3,7 +3,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://giakhiem689-afk.github.io',
-  base: '/trinhgiakhiem',
+  site: 'https://trinhgiakhiem.info.vn',
   integrations: [sitemap()]
 });

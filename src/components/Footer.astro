@@ -52,7 +52,7 @@ const currentYear = new Date().getFullYear();
   
   .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 3fr 4fr 2fr;
     gap: var(--space-8);
     margin-bottom: var(--space-8);
   }
@@ -93,8 +93,8 @@ const currentYear = new Date().getFullYear();
   
   .footer-nav-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.25rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem 1rem;
   }
   
   .footer-links li, .footer-legal li {

@@ -28,12 +28,12 @@ export const profile = {
     {
       title: "Cử nhân Tâm lý giáo dục",
       institution: "Trường ĐH Khoa học Xã hội và Nhân văn - ĐHQG TP.HCM",
-      period: "2015 - 2019"
+      period: "2017 - 2021"
     },
     {
       title: "Học viên Thạc sĩ Ngôn ngữ Anh",
       institution: "Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)",
-      period: "2025 - Hiện tại"
+      period: "2022 - 2024"
     },
     {
       title: "Chuyên viên Hỗ trợ học vụ",

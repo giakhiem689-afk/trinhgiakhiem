@@ -1,6 +1,6 @@
 export const timeline = [
   {
-    year: "2015 - 2019",
+    year: "2017 - 2021",
     title: "Sinh viên Tâm lý Giáo dục dấn thân & Hoạt động cộng đồng",
     description: `Giai đoạn xây dựng nền tảng lý thuyết giáo dục và tích lũy hoạt động phong trào:<br/>
     <ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc; font-size: 0.9em; line-height: 1.6;">
@@ -37,7 +37,7 @@ export const timeline = [
     </ul>`
   },
   {
-    year: "2025 - Hiện tại",
+    year: "2022 - 2024",
     title: "Thạc sĩ Ngôn ngữ Anh & Phát triển năng lực Sư phạm",
     description: `Mở rộng chuyên môn và chuẩn bị cho vai trò giảng dạy tiếng Anh chuyên nghiệp:<br/>
     <ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc; font-size: 0.9em; line-height: 1.6;">

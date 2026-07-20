@@ -1,25 +1,16 @@
 export const timeline = [
   {
-    year: "Thời phổ thông",
-    title: "Rèn luyện kỷ luật & Hoạt động phong trào Đội",
-    description: `Bắt đầu hình thành tinh thần trách nhiệm và lòng yêu nước qua các hoạt động phong trào:<br/>
-    <ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc; font-size: 0.9em; line-height: 1.6;">
-      <li>Đạt danh hiệu <strong>Học sinh giỏi 9 năm liền</strong>.</li>
-      <li>Gương Đội viên tiêu biểu và <strong>Chỉ huy Đội xuất sắc</strong> tỉnh Kiên Giang.</li>
-      <li>Đạt giải <strong>Bảng Nhãn môn Lịch sử</strong> cấp tỉnh ở cả cấp tiểu học và trung học cơ sở.</li>
-      <li>Rèn luyện tinh thần kỷ luật và ý chí vượt khó qua các cuộc thi học thuật, lịch sử, quốc phòng và bắn súng quốc phòng cấp tỉnh (bậc THPT).</li>
-    </ul>`
-  },
-  {
     year: "2015 - 2019",
     title: "Sinh viên Tâm lý Giáo dục dấn thân & Hoạt động cộng đồng",
-    description: `Giai đoạn xây dựng nền tảng lý thuyết giáo dục và kỹ năng làm việc tập thể:<br/>
+    description: `Giai đoạn xây dựng nền tảng lý thuyết giáo dục và tích lũy hoạt động phong trào:<br/>
     <ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc; font-size: 0.9em; line-height: 1.6;">
       <li>Tốt nghiệp chuyên ngành <strong>Tâm lý giáo dục</strong>, Khoa Giáo dục, Trường ĐH KHXH&NV – ĐHQG TP.HCM.</li>
-      <li>Giữ vai trò <strong>Liên chi Hội phó Liên chi Hội Sinh viên Khoa Giáo dục</strong>, tổ chức nhiều chương trình học thuật & phong trào quy mô lớn.</li>
-      <li>Đạt giải <strong>Quý quân cuộc thi Hùng biện Tiếng nói Thanh niên</strong> (“Hành động vì một thành phố phát triển”).</li>
-      <li>Được trao tặng danh hiệu <strong>Chiến sĩ xuất sắc Xuân Tình Nguyện 2019</strong> và nhận nhiều Giấy khen của Khoa/Trường.</li>
-      <li>Nhận <strong>Học bổng khuyến khích học tập</strong> của Trường cùng <strong>Học bổng VNHelp</strong> cho các nỗ lực học tập và cộng đồng.</li>
+      <li>Giữ vai trò <strong>Liên chi Hội phó Liên chi Hội Sinh viên Khoa Giáo dục</strong>.</li>
+      <li><strong>Quý quân cuộc thi Hùng biện Tiếng nói Thanh niên</strong> (“Hành động vì một thành phố phát triển”).</li>
+      <li><strong>Giấy khen của Khoa Giáo dục:</strong> Cá nhân có thành tích xuất sắc trong hoạt động phong trào năm học 2017-2018.</li>
+      <li><strong>Giấy khen của Hội Sinh viên Trường:</strong> Đạt thành tích xuất sắc trong công tác Hội và phong trào sinh viên các năm học 2017-2018, 2018-2019 và cả giai đoạn 2016-2019.</li>
+      <li><strong>Giấy khen của Hội Sinh viên Trường:</strong> Đạt danh hiệu Chiến sĩ xuất sắc chiến dịch Xuân Tình Nguyện 2019.</li>
+      <li>Nhận <strong>Học bổng khuyến khích học tập</strong> của Trường cùng <strong>Học bổng VNHelp</strong>.</li>
     </ul>`
   },
   {
@@ -37,10 +28,12 @@ export const timeline = [
     title: "Công việc hỗ trợ học vụ & Tự động hóa tại UEF",
     description: `Công tác tại <strong>Trung tâm Hỗ trợ học vụ UEF</strong>, cầu nối quan trọng giữa người học và nhà trường:<br/>
     <ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc; font-size: 0.9em; line-height: 1.6;">
+      <li>Đạt đánh giá <strong>Nhân viên xuất sắc</strong> Trung tâm Hỗ trợ học vụ - Phòng Đào tạo - Trường Đại học Kinh tế - Tài chính TP.HCM liên tiếp các năm học 2022-2023, 2023-2024 và 2024-2025.</li>
+      <li>Đạt danh hiệu <strong>Chiến sĩ thi đua cơ sở</strong> Trường Đại học Kinh tế - Tài chính TP.HCM các năm học 2022-2023, 2023-2024 và 2024-2025.</li>
       <li>Hỗ trợ trực tiếp sinh viên xử lý quy chế học vụ (đăng ký học phần, bảo lưu, chuyển ngành, tốt nghiệp...).</li>
       <li>Phối hợp cùng Khoa và giảng viên xác minh tình trạng học tập, chuyên cần, sức khỏe và các khó khăn ảnh hưởng đến người học.</li>
-      <li><strong>Chuyển đổi số & Tự động hóa:</strong> Tự nghiên cứu và xây dựng quy trình số hỗ trợ online (Google Sheets, Google Apps Script, gửi mã OTP email, thiết lập dashboard báo cáo tự động) giúp tối ưu hiệu suất công việc.</li>
-      <li>Thiết kế poster, infographic truyền thông giúp thông tin học vụ trở nên sinh động, trực quan và dễ tiếp cận hơn với sinh viên.</li>
+      <li><strong>Chuyển đổi số & Tự động hóa:</strong> Tự nghiên cứu và xây dựng quy trình số hỗ trợ online (Google Sheets, Google Apps Script, OTP email, Dashboard báo cáo tự động) giúp tối ưu hiệu suất công việc.</li>
+      <li>Thiết kế poster, infographic truyền thông giúp thông tin học vụ trở nên trực quan và dễ tiếp cận hơn với sinh viên.</li>
     </ul>`
   },
   {

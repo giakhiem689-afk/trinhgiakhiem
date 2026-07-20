@@ -37,7 +37,7 @@ export const timeline = [
     </ul>`
   },
   {
-    year: "2022 - 2024",
+    year: "2025 - Hiện tại",
     title: "Thạc sĩ Ngôn ngữ Anh & Phát triển năng lực Sư phạm",
     description: `Mở rộng chuyên môn và chuẩn bị cho vai trò giảng dạy tiếng Anh chuyên nghiệp:<br/>
     <ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc; font-size: 0.9em; line-height: 1.6;">

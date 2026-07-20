@@ -33,7 +33,7 @@ export const profile = {
     {
       title: "Học viên Thạc sĩ Ngôn ngữ Anh",
       institution: "ĐH Kinh tế - Tài chính TP.HCM (UEF)",
-      period: "2022 - 2024"
+      period: "2025 - Hiện tại"
     },
     {
       title: "Chuyên viên Hỗ trợ học vụ",

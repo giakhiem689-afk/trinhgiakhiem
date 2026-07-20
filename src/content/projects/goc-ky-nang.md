@@ -2,7 +2,7 @@
 title: Phương pháp học tập
 description: Dự án xây dựng các nội dung trực quan dành cho sinh viên, tập trung vào mục tiêu học tập, kỷ luật, phương pháp học, tìm kiếm sự hỗ trợ, chăm sóc sức khỏe tinh thần và theo dõi tiến độ.
 status: Đã hoàn thành
-role: Cung cấp thông tin, Hỗ trợ học tập & Trình bày trực quan
+role: Biên xoạn & Thiết kế
 tools:
   - Adobe Photoshop
   - Microsoft Word

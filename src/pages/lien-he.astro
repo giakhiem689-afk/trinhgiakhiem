@@ -3,29 +3,69 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import { profile } from '../data/profile';
 ---
-<BaseLayout title={`Liên hệ | ${profile.name}`} description="Kết nối và trao đổi với Trịnh Gia Khiêm.">
+
+<BaseLayout title={`Liên hệ | ${profile.name}`} description="Thông tin liên hệ của Trịnh Gia Khiêm.">
   <div class="container content-wrapper page-section">
-    <SectionHeading title="Liên hệ" subtitle="Kết nối" align="center" />
+    <SectionHeading title="Cùng kết nối" subtitle="Liên hệ" align="left" />
     
-    <div class="contact-card card">
-      <p class="contact-intro">Tôi sẵn sàng trao đổi về hỗ trợ người học, giảng dạy tiếng Anh, nghiên cứu giáo dục và các dự án ứng dụng AI có trách nhiệm.</p>
-      
-      <div class="contact-methods">
-        <a href={`mailto:${profile.email}`} class="btn btn-primary contact-email">
-          Gửi Email
-        </a>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="lead-text">Tôi sẵn sàng trao đổi về hỗ trợ người học, giảng dạy tiếng Anh, nghiên cứu giáo dục và các dự án ứng dụng AI có trách nhiệm. Nếu bạn có cùng mối quan tâm hoặc mong muốn hợp tác, bạn có thể liên hệ với tôi qua các kênh dưới đây.</p>
+        
+        <div class="contact-topics mt-8">
+          <h3>Các chủ đề tôi thường trao đổi:</h3>
+          <ul class="topic-list">
+            <li>Trao đổi học thuật & Nghiên cứu</li>
+            <li>Hợp tác dự án giáo dục</li>
+            <li>Chia sẻ kinh nghiệm hỗ trợ người học</li>
+            <li>Kết nối nghề nghiệp</li>
+          </ul>
+        </div>
       </div>
       
-      <div class="social-links">
-        <h3>Hồ sơ trực tuyến</h3>
-        <ul class="social-list">
-          {profile.socials.github !== "#" && <li><a href={profile.socials.github} target="_blank" rel="noopener noreferrer">GitHub</a></li>}
-          {profile.socials.linkedin !== "#" && <li><a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a></li>}
-          {profile.socials.orcid !== "#" && <li><a href={profile.socials.orcid} target="_blank" rel="noopener noreferrer">ORCID</a></li>}
-          {profile.socials.scholar !== "#" && <li><a href={profile.socials.scholar} target="_blank" rel="noopener noreferrer">Google Scholar</a></li>}
-          {profile.socials.researchgate !== "#" && <li><a href={profile.socials.researchgate} target="_blank" rel="noopener noreferrer">ResearchGate</a></li>}
-        </ul>
+      <div class="contact-cards">
+        {profile.email ? (
+          <a href={`mailto:${profile.email}`} class="card link-card">
+            <div class="card-icon">✉️</div>
+            <div>
+              <h3>Email</h3>
+              <p>{profile.email}</p>
+            </div>
+          </a>
+        ) : (
+          <div class="card link-card disabled">
+            <div class="card-icon">✉️</div>
+            <div>
+              <h3>Email</h3>
+              <p>Thông tin liên hệ đang được cập nhật.</p>
+            </div>
+          </div>
+        )}
+        
+        {profile.socials.github && profile.socials.github !== "#" && (
+          <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" class="card link-card">
+            <div class="card-icon">💻</div>
+            <div>
+              <h3>GitHub</h3>
+              <p>giakhiem689-afk</p>
+            </div>
+          </a>
+        )}
+        
+        {profile.socials.linkedin && profile.socials.linkedin !== "#" && (
+          <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" class="card link-card">
+            <div class="card-icon">👔</div>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>Kết nối nghề nghiệp</p>
+            </div>
+          </a>
+        )}
       </div>
+    </div>
+    
+    <div class="disclaimer mt-16">
+      <p><strong>Lưu ý:</strong> Các quan điểm trên website là quan điểm cá nhân và không đại diện cho UEF hoặc đơn vị công tác.</p>
     </div>
   </div>
 </BaseLayout>
@@ -35,45 +75,112 @@ import { profile } from '../data/profile';
     padding: var(--space-12) var(--space-4);
   }
   
-  .contact-card {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: var(--space-12) var(--space-8);
+  .mt-8 { margin-top: var(--space-8); }
+  .mt-16 { margin-top: var(--space-16); }
+  
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+    margin-top: var(--space-8);
   }
   
-  .contact-intro {
+  .lead-text {
     font-size: var(--text-lg);
-    margin-bottom: var(--space-8);
+    line-height: 1.7;
+    color: var(--color-text-main);
   }
   
-  .contact-methods {
-    margin-bottom: var(--space-12);
-  }
-  
-  .social-links h3 {
-    font-size: var(--text-base);
-    color: var(--color-text-muted);
+  .contact-topics h3 {
+    color: var(--color-pink-dark);
     margin-bottom: var(--space-4);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
   
-  .social-list {
+  .topic-list {
     list-style: none;
     padding: 0;
+  }
+  
+  .topic-list li {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border);
+    position: relative;
+    padding-left: var(--space-6);
+  }
+  
+  .topic-list li::before {
+    content: "→";
+    color: var(--color-pink-main);
+    position: absolute;
+    left: 0;
+  }
+  
+  .topic-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .contact-cards {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
     gap: var(--space-4);
   }
   
-  .social-list a {
-    display: inline-block;
-    padding: var(--space-2) var(--space-4);
-    background-color: var(--color-bg-main);
+  .link-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    background-color: var(--color-bg-card);
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .link-card:hover:not(.disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(232, 169, 184, 0.15);
+    border-color: var(--color-pink-main);
+  }
+  
+  .link-card.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    background-color: var(--color-pink-light);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: var(--radius-full);
-    font-size: var(--text-sm);
-    font-weight: 500;
+  }
+  
+  .link-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .link-card p {
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+  }
+  
+  .disclaimer {
+    background-color: var(--color-cream-warm);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+  
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

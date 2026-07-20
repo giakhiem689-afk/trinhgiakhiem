@@ -1,46 +1,119 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
 import { getCollection } from 'astro:content';
 
-let researchItems = [];
+const title = "Nghiên cứu | Trịnh Gia Khiêm";
+const description = "Các định hướng và dự án nghiên cứu trong lĩnh vực Tâm lý giáo dục và AI trong giảng dạy tiếng Anh.";
+
+// Lấy dữ liệu nghiên cứu và phân loại
+let allResearch = [];
+let currentResearch = [];
+let pastResearch = [];
+
 try {
-  const allResearch = await getCollection('research');
-  researchItems = allResearch.filter(item => !item.data.draft);
+  allResearch = await getCollection('research');
+  // Lọc ra các bài không phải là draft
+  const publishedResearch = allResearch.filter(r => !r.data.draft);
+  
+  // Phân loại dựa trên status (Đang thực hiện vs Khám phá trước đây)
+  currentResearch = publishedResearch.filter(r => r.data.status.toLowerCase().includes("đang thực hiện"));
+  pastResearch = publishedResearch.filter(r => r.data.status.toLowerCase().includes("trước đây"));
 } catch (e) {
-  console.log("No research items found");
+  console.log("No research found", e);
 }
 ---
-<BaseLayout title="Nghiên cứu | Trịnh Gia Khiêm" description="Các công trình nghiên cứu và tài liệu học thuật.">
+
+<BaseLayout title={title} description={description}>
   <div class="container content-wrapper page-section">
-    <SectionHeading title="Nghiên cứu & Học thuật" subtitle="Công trình" align="left" />
-    
-    <div class="research-list">
-      {researchItems.length > 0 ? (
-        researchItems.map(item => (
-          <div class="research-card card">
-            <span class="status-tag">{item.data.status}</span>
-            <h3 class="research-title">{item.data.title}</h3>
-            {item.data.englishTitle && <h4 class="research-subtitle">{item.data.englishTitle}</h4>}
-            
-            <p class="research-desc">{item.data.description}</p>
-            
-            <div class="research-meta">
-              <span class="research-type">{item.data.researchType}</span>
-              <div class="keywords">
-                {item.data.keywords.map(kw => (
-                  <span class="keyword">{kw}</span>
+    <!-- Phần giới thiệu -->
+    <section class="research-header">
+      <SectionHeading title="Nghiên cứu" subtitle="Hướng quan tâm" align="left" />
+      <div class="lead-text">
+        <p>Các mối quan tâm nghiên cứu của tôi tập trung vào người học, giáo viên và cách công nghệ tác động đến quá trình dạy và học. Tôi đặc biệt quan tâm đến việc sử dụng AI trong giáo dục ngôn ngữ, phản hồi sửa lỗi, viết tiếng Anh và thái độ của giáo viên đối với công nghệ.</p>
+      </div>
+      
+      <!-- Các lĩnh vực quan tâm -->
+      <div class="interests-tags mt-6">
+        <span class="tag">AI in Language Education</span>
+        <span class="tag">Teacher Attitudes toward AI</span>
+        <span class="tag">Corrective Feedback</span>
+        <span class="tag">Academic Writing</span>
+        <span class="tag">Educational Psychology</span>
+        <span class="tag">Learner Support</span>
+        <span class="tag">Metacognition</span>
+        <span class="tag">Learning Strategies</span>
+      </div>
+    </section>
+
+    <!-- Nghiên cứu hiện tại -->
+    {currentResearch.length > 0 && (
+      <section class="research-section mt-16">
+        <h2>Nghiên cứu hiện tại</h2>
+        <div class="research-list">
+          {currentResearch.map((item) => (
+            <article class="research-card card">
+              <div class="research-meta">
+                <StatusBadge status={item.data.status} />
+                <span class="research-type">{item.data.researchType}</span>
+              </div>
+              <h3 class="research-title">
+                <a href={`/nghien-cuu/${item.id}`}>{item.data.title}</a>
+              </h3>
+              {item.data.englishTitle && (
+                <p class="research-english-title">"{item.data.englishTitle}"</p>
+              )}
+              <p class="research-desc">{item.data.description}</p>
+              <div class="research-keywords">
+                {item.data.keywords.map((kw: string) => (
+                  <span class="kw-tag">#{kw}</span>
                 ))}
               </div>
-            </div>
-            
-            {/* Nếu có trang chi tiết, có thể thêm link ở đây */}
-          </div>
-        ))
-      ) : (
-        <p>Các công trình nghiên cứu đang được cập nhật...</p>
-      )}
-    </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Khám phá nghiên cứu trước đây -->
+    {pastResearch.length > 0 && (
+      <section class="research-section mt-16">
+        <h2>Khám phá nghiên cứu trước đây</h2>
+        <div class="research-list">
+          {pastResearch.map((item) => (
+            <article class="research-card card past-card">
+              <div class="research-meta">
+                <StatusBadge status={item.data.status} />
+              </div>
+              <h3 class="research-title">
+                <a href={`/nghien-cuu/${item.id}`}>{item.data.title}</a>
+              </h3>
+              {item.data.englishTitle && (
+                <p class="research-english-title">"{item.data.englishTitle}"</p>
+              )}
+              <p class="research-desc">{item.data.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Nguyên tắc nghiên cứu -->
+    <section class="research-principles mt-16">
+      <h2>Nguyên tắc nghiên cứu</h2>
+      <ul class="principle-list">
+        <li>
+          <strong>Trung thực và minh bạch:</strong> Quá trình thu thập, phân tích dữ liệu và trình bày kết quả luôn đề cao tính minh bạch, phản ánh đúng bản chất của sự việc.
+        </li>
+        <li>
+          <strong>Tôn trọng người tham gia:</strong> Bảo vệ quyền riêng tư, danh tính và quyền lợi của người tham gia nghiên cứu (giáo viên, sinh viên).
+        </li>
+        <li>
+          <strong>Công nghệ phải hỗ trợ, không thay thế:</strong> Giữ vững quan điểm rằng AI và công nghệ sinh ra để hỗ trợ con người, không phải để thay thế phán đoán nghề nghiệp của giáo viên hay triệt tiêu nỗ lực của người học.
+        </li>
+      </ul>
+    </section>
   </div>
 </BaseLayout>
 
@@ -49,83 +122,135 @@ try {
     padding: var(--space-12) var(--space-4);
   }
   
-  .research-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
+  .mt-6 { margin-top: var(--space-6); }
+  .mt-16 { margin-top: var(--space-16); }
+  
+  .lead-text {
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: var(--space-6);
   }
   
-  .research-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .status-tag {
-    font-size: var(--text-xs);
-    font-weight: 600;
-    color: var(--color-pink-dark);
-    background-color: var(--color-cream-warm);
-    padding: var(--space-1) var(--space-3);
-    border-radius: var(--radius-full);
-    margin-bottom: var(--space-3);
-  }
-  
-  .research-title {
-    font-size: var(--text-xl);
-    margin-bottom: var(--space-1);
-    color: var(--color-text-main);
-  }
-  
-  .research-subtitle {
-    font-size: var(--text-base);
-    font-family: var(--font-body);
-    font-style: italic;
-    font-weight: 400;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-4);
-  }
-  
-  .research-desc {
-    margin-bottom: var(--space-4);
-    font-size: var(--text-base);
-  }
-  
-  .research-meta {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--space-4);
-    margin-top: auto;
-  }
-  
-  .research-type {
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--color-text-muted);
-  }
-  
-  .keywords {
+  /* Tags */
+  .interests-tags {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-2);
   }
   
-  .keyword {
-    font-size: var(--text-xs);
-    background-color: var(--color-bg-main);
-    padding: 2px 8px;
-    border-radius: 4px;
-    color: var(--color-text-muted);
+  .tag {
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
   }
   
-  @media (max-width: 768px) {
-    .research-meta {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: var(--space-4);
-    }
+  /* Research Cards */
+  .research-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    margin-top: var(--space-6);
+  }
+  
+  .research-card {
+    padding: var(--space-8);
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+  }
+  
+  .past-card {
+    background-color: #FAFAFA;
+  }
+  
+  .research-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+  }
+  
+  .research-type {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+  
+  .research-title {
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    margin-bottom: var(--space-2);
+  }
+  
+  .research-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .research-title a:hover {
+    color: var(--color-pink-main);
+  }
+  
+  .research-english-title {
+    font-size: var(--text-base);
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-4);
+  }
+  
+  .research-desc {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    margin-bottom: var(--space-6);
+  }
+  
+  .research-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  
+  .kw-tag {
+    font-size: var(--text-sm);
+    color: var(--color-pink-main);
+  }
+  
+  /* Principles */
+  .research-principles {
+    background-color: var(--color-cream-warm);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+  }
+  
+  .research-principles h2 {
+    margin-bottom: var(--space-6);
+  }
+  
+  .principle-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .principle-list li {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    position: relative;
+    padding-left: var(--space-6);
+  }
+  
+  .principle-list li::before {
+    content: "•";
+    color: var(--color-pink-main);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
   }
 </style>

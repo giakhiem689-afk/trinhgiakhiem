@@ -1,29 +1,80 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
+import ValueCard from '../components/ValueCard.astro';
 import { profile } from '../data/profile';
 ---
-<BaseLayout title={`Giới thiệu | ${profile.name}`} description="Câu chuyện nghề nghiệp và định hướng của Trịnh Gia Khiêm.">
+
+<BaseLayout title={`Giới thiệu | ${profile.name} | Tâm lý giáo dục và Hỗ trợ người học`} description="Câu chuyện nghề nghiệp và định hướng của Trịnh Gia Khiêm.">
   <div class="container content-wrapper page-section">
-    <SectionHeading title="Giới thiệu" subtitle="Về tôi" align="left" />
-    
-    <div class="about-content">
-      <div class="about-text">
-        <p>Xin chào, tôi là <strong>{profile.name}</strong>.</p>
-        <p>Tôi bắt đầu hành trình của mình với nền tảng Tâm lý giáo dục, học cách thấu hiểu những rào cản và khó khăn mà người học phải đối mặt. Hiện tại, công việc hỗ trợ học vụ tại UEF giúp tôi tiếp xúc hàng ngày với những nhu cầu thực tế của sinh viên, từ đó nhận ra tầm quan trọng của việc xây dựng một môi trường học tập chủ động và nhân văn.</p>
-        <p>Trong quá trình đó, tôi cũng nhận thấy ngôn ngữ và công nghệ là hai công cụ mạnh mẽ để mở rộng khả năng tiếp thu tri thức. Đó là lý do tôi tiếp tục theo đuổi chương trình Thạc sĩ Ngôn ngữ Anh, đồng thời nghiên cứu cách ứng dụng trí tuệ nhân tạo (AI) vào việc phản hồi sửa lỗi bài viết, nhằm hỗ trợ giáo viên và người học hiệu quả hơn.</p>
-        <p>Tôi tin rằng giáo dục không chỉ là truyền đạt kiến thức, mà là tạo ra những không gian an toàn để người học tự tin phát triển bản thân.</p>
-        
-        <div class="about-actions">
-          <a href="/cv" class="btn btn-primary">Xem CV</a>
-          <a href="/nghien-cuu" class="btn btn-secondary">Khám phá nghiên cứu</a>
+    <!-- Phần mở đầu -->
+    <section class="about-hero">
+      <div class="about-hero-text">
+        <h1 class="page-title">Xin chào, tôi là {profile.name}</h1>
+        <p class="lead-text">
+          Tôi là một người làm việc trong lĩnh vực giáo dục, hiện công tác tại Trung tâm Hỗ trợ học vụ UEF và theo học Chương trình Thạc sĩ Ngôn ngữ Anh. Với nền tảng Tâm lý giáo dục, tôi đặc biệt quan tâm đến cách người học hình thành động lực, phát triển phương pháp học tập và tìm kiếm sự hỗ trợ khi gặp khó khăn.
+        </p>
+        <p class="lead-text">
+          Hành trình của tôi đang phát triển tại giao điểm giữa Tâm lý giáo dục, hỗ trợ người học, giảng dạy tiếng Anh và công nghệ. Tôi mong muốn kết nối những lĩnh vực này để xây dựng các giải pháp học tập có cơ sở khoa học, dễ tiếp cận và phù hợp với nhu cầu thực tế của người học.
+        </p>
+      </div>
+      <div class="about-hero-image">
+        <!-- Thay bằng đường dẫn ảnh chân dung khi có -->
+        <div class="image-placeholder card">
+          <span>Ảnh chân dung</span>
         </div>
       </div>
-      
-      <div class="about-image">
-        <img src="/images/profile/placeholder.jpg" alt={`Chân dung ${profile.name}`} class="card" />
+    </section>
+
+    <!-- Câu chuyện nghề nghiệp -->
+    <section class="story-section mt-16">
+      <SectionHeading title="Từ Tâm lý giáo dục đến hỗ trợ người học" align="left" />
+      <div class="story-content">
+        <p>Việc theo học Tâm lý giáo dục tại Trường Đại học Khoa học Xã hội và Nhân văn, ĐHQG-HCM đã định hình cách tôi nhìn nhận giáo dục: không chỉ là truyền đạt kiến thức, mà là hiểu người học trong một bức tranh tổng thể bao gồm nhận thức, cảm xúc và môi trường sống. Sự quan tâm đặc biệt đến quá trình phát triển của cá nhân đã thúc đẩy tôi bước vào con đường giáo dục từ rất sớm.</p>
+        <p>Trong quá trình tham gia giảng dạy kỹ năng sống và các hoạt động phong trào sinh viên, tôi học được cách giao tiếp, tổ chức và lắng nghe những nhu cầu đa dạng. Những trải nghiệm này đã trở thành tiền đề quan trọng khi tôi bước vào công việc hỗ trợ học vụ hiện tại.</p>
+        <p>Tại Trung tâm Hỗ trợ học vụ, công việc của tôi không chỉ dừng lại ở việc xử lý thủ tục hành chính, mà là đồng hành cùng sinh viên tháo gỡ khó khăn, tiếp cận quy trình và nâng cao khả năng chủ động trong học tập. Qua việc lắng nghe những vấn đề thực tế, tôi nhận ra rằng sự hỗ trợ hiệu quả nhất là trang bị cho sinh viên năng lực để họ tự giải quyết vấn đề của chính mình.</p>
       </div>
-    </div>
+    </section>
+
+    <!-- Hành trình Ngôn ngữ Anh -->
+    <section class="story-section mt-16">
+      <SectionHeading title="Mở rộng hành trình qua Ngôn ngữ Anh" align="left" />
+      <div class="story-content">
+        <p>Việc theo học Thạc sĩ Ngôn ngữ Anh giúp tôi tiếp cận sâu hơn với quá trình học ngôn ngữ, giảng dạy tiếng Anh, phản hồi sửa lỗi và viết học thuật. Đây cũng là cơ hội để tôi kết nối nền tảng Tâm lý giáo dục với những vấn đề thực tiễn trong lớp học ngôn ngữ.</p>
+        <p>Học tiếng Anh đối với tôi không chỉ là việc tiếp thu một công cụ giao tiếp, mà là một hành trình phát triển cá nhân và nghề nghiệp. Bằng cách tự đặt mình vào vị trí của một người học ngôn ngữ, tôi có thể hiểu rõ hơn những rào cản về tâm lý, những khó khăn trong siêu nhận thức (metacognition) mà người học thường gặp phải, từ đó tìm kiếm các phương pháp giảng dạy và hỗ trợ phù hợp hơn.</p>
+      </div>
+    </section>
+
+    <!-- Các giá trị nghề nghiệp -->
+    <section class="values-section mt-16">
+      <SectionHeading title="Giá trị cốt lõi" subtitle="Niềm tin nghề nghiệp" align="center" />
+      <div class="values-grid">
+        <ValueCard title="Người học là trung tâm" icon="🎯">
+          Mọi giải pháp hỗ trợ đều bắt đầu từ việc thấu hiểu nhu cầu, rào cản và xuất phát điểm của từng người học.
+        </ValueCard>
+        <ValueCard title="Hỗ trợ bằng sự thấu hiểu" icon="🤝">
+          Lắng nghe không phán xét và đồng hành cùng người học trong quá trình giải quyết khó khăn thay vì làm thay họ.
+        </ValueCard>
+        <ValueCard title="Học tập dựa trên bằng chứng" icon="📚">
+          Đề cao các phương pháp học tập và giảng dạy đã được kiểm chứng bởi khoa học, kết hợp với Tâm lý giáo dục.
+        </ValueCard>
+        <ValueCard title="Công nghệ phục vụ con người" icon="💻">
+          Sử dụng AI và công nghệ để nâng cao hiệu quả giáo dục, nhưng không thay thế sự phán đoán và thấu cảm của giáo viên.
+        </ValueCard>
+      </div>
+    </section>
+
+    <!-- Định hướng tương lai -->
+    <section class="future-section mt-16 text-center">
+      <h2>Định hướng tương lai</h2>
+      <p class="future-text">
+        Tôi mong muốn tiếp tục phát triển năng lực nghiên cứu, giảng dạy và thiết kế các giải pháp hỗ trợ người học. Về lâu dài, tôi hướng đến việc tham gia sâu hơn vào lĩnh vực Tâm lý giáo dục, giảng dạy tiếng Anh và ứng dụng công nghệ có trách nhiệm trong giáo dục.
+      </p>
+      <div class="future-actions">
+        <a href="/nghien-cuu" class="btn btn-primary">Xem nghiên cứu</a>
+        <a href="/cv" class="btn btn-secondary">Xem CV</a>
+      </div>
+    </section>
   </div>
 </BaseLayout>
 
@@ -32,40 +83,100 @@ import { profile } from '../data/profile';
     padding: var(--space-12) var(--space-4);
   }
   
-  .about-content {
+  .mt-16 {
+    margin-top: var(--space-16);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .about-hero {
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: var(--space-12);
-    align-items: flex-start;
+    align-items: center;
+    margin-bottom: var(--space-12);
   }
   
-  .about-text p {
-    font-size: var(--text-lg);
+  .page-title {
+    font-size: 2.5rem;
+    color: var(--color-pink-dark);
     margin-bottom: var(--space-6);
   }
   
-  .about-actions {
-    display: flex;
-    gap: var(--space-4);
-    margin-top: var(--space-8);
+  .lead-text {
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+    color: var(--color-text-main);
   }
   
-  .about-image img {
+  .image-placeholder {
     width: 100%;
+    aspect-ratio: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    font-weight: 600;
     border-radius: var(--radius-xl);
   }
   
+  /* Story Section */
+  .story-content p {
+    font-size: var(--text-base);
+    line-height: 1.8;
+    margin-bottom: var(--space-4);
+  }
+  
+  /* Values Grid */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+  }
+  
+  /* Future Section */
+  .future-section {
+    background-color: var(--color-bg-card);
+    padding: var(--space-12);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+  }
+  
+  .future-text {
+    max-width: 700px;
+    margin: var(--space-6) auto;
+    font-size: var(--text-lg);
+    line-height: 1.7;
+  }
+  
+  .future-actions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    margin-top: var(--space-8);
+  }
+  
   @media (max-width: 768px) {
-    .about-content {
+    .about-hero {
       grid-template-columns: 1fr;
     }
     
-    .about-image {
+    .about-hero-image {
       order: -1;
     }
     
-    .about-actions {
-      flex-wrap: wrap;
+    .future-actions {
+      flex-direction: column;
+    }
+    
+    .future-section {
+      padding: var(--space-8) var(--space-4);
     }
   }
 </style>

@@ -1,29 +1,21 @@
 ---
 title: "Tại sao tôi xây dựng website cá nhân này?"
-description: "Mục đích, ý nghĩa và định hướng phát triển của blog cá nhân Trịnh Gia Khiêm."
+description: "Lý do đằng sau việc xây dựng một không gian cá nhân trên internet, nơi tập hợp hành trình nghề nghiệp, việc học tập và những trải nghiệm giáo dục."
 publishedDate: 2026-07-20
-category: "Hành trình cá nhân"
-tags: ["blog", "giáo dục", "phát triển cá nhân"]
+category: "Hành trình và quan điểm cá nhân"
+tags: ["Personal Growth", "Education", "Journey"]
+readingTime: "3 phút"
 draft: false
 featured: true
-readingTime: "3 phút đọc"
 ---
 
-## Tóm tắt trong 30 giây
-Website này không chỉ là một CV trực tuyến. Đây là một "hồ sơ nghề nghiệp kết hợp kho tri thức cá nhân", nơi tôi hệ thống hóa hành trình của mình từ Tâm lý giáo dục, công việc Hỗ trợ học vụ, đến Ngôn ngữ Anh và những nghiên cứu về AI trong giáo dục.
+Lý do xây dựng website này không đơn thuần chỉ là để có một bản CV trực tuyến, mà là mong muốn tập hợp một hành trình nghề nghiệp, ghi lại những chặng đường phát triển bản thân.
 
-## Vấn đề đặt ra
-Trong quá trình làm việc và học tập, tôi đã tích lũy được nhiều tài liệu, kinh nghiệm và những suy ngẫm về giáo dục. Tuy nhiên, chúng thường nằm rải rác trên các nền tảng khác nhau hoặc lưu trữ riêng tư. Điều này khiến việc chia sẻ và kết nối với những người cùng chí hướng trở nên khó khăn.
+Trong quá trình học tập và làm việc, tôi nhận ra rằng những kinh nghiệm, suy nghĩ và những bài học rút ra thường xuyên bị lãng quên hoặc phân tán rải rác trên nhiều nền tảng khác nhau. Website này được sinh ra để trở thành một không gian tập trung - một "ngôi nhà kỹ thuật số" - nơi tôi có thể chia sẻ kiến thức có trách nhiệm, ghi lại những bước tiến trong việc nghiên cứu và hỗ trợ người học.
 
-## Mục đích của website
-1. **Lưu trữ tri thức:** Hệ thống hóa các bài viết, ghi chú học thuật và nghiên cứu của cá nhân tôi.
-2. **Chia sẻ giá trị:** Cung cấp tài nguyên và phương pháp học tập hữu ích cho sinh viên.
-3. **Kết nối nghề nghiệp:** Xây dựng một hồ sơ minh bạch, thể hiện rõ định hướng và năng lực của bản thân đối với nhà tuyển dụng, đồng nghiệp và nhà nghiên cứu.
+Không chỉ là lưu giữ, tôi xem việc viết blog như một công cụ tự phản tỉnh (self-reflection). Tôi có thể nhìn lại sự thay đổi trong quan điểm của chính mình qua từng năm tháng, từ những ngày đầu tiếp xúc với Tâm lý giáo dục cho đến khi làm việc với hỗ trợ học vụ, và giờ đây là mở rộng sang việc nghiên cứu Ngôn ngữ Anh và AI.
 
-## Định hướng phát triển
-Trong thời gian tới, tôi sẽ tập trung chia sẻ về các chủ đề:
-- Tâm lý giáo dục và hỗ trợ người học
-- Corrective feedback trong giảng dạy tiếng Anh
-- Ứng dụng AI có trách nhiệm trong môi trường học thuật
+Hơn thế nữa, tôi hy vọng qua không gian nhỏ này, tôi có thể kết nối với những người có cùng mối quan tâm về giáo dục, về học tập chủ động và cách công nghệ định hình tương lai của giáo dục. Mọi nội dung tại đây đều cam kết được cập nhật theo đúng quá trình phát triển thực tế, giữ vững tinh thần khiêm tốn và ham học hỏi.
 
-Cảm ơn bạn đã ghé thăm. Tôi hy vọng chúng ta có thể kết nối và trao đổi nhiều hơn!
+> [!NOTE]
+> Website này được duy trì và phát triển song song với quá trình làm việc, nên sẽ luôn là một phiên bản "đang hoàn thiện".

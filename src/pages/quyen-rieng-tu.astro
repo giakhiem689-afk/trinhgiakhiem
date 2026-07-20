@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<BaseLayout title="Quyền riêng tư | Trịnh Gia Khiêm" description="Chính sách quyền riêng tư trên website.">
+  <div class="container content-wrapper page-section">
+    <SectionHeading title="Quyền riêng tư" align="left" />
+    
+    <div class="policy-content mt-8">
+      <p>Chào mừng bạn đến với không gian cá nhân của tôi. Để đảm bảo sự minh bạch, dưới đây là thông tin về cách tôi tiếp cận quyền riêng tư của bạn khi truy cập website này:</p>
+      
+      <h3>1. Thu thập dữ liệu</h3>
+      <p>Website này là một trang web tĩnh (Static Site) được xây dựng nhằm mục đích giới thiệu thông tin nghề nghiệp và chia sẻ kiến thức. Tôi <strong>không</strong> chủ động thu thập, lưu trữ hay theo dõi thông tin cá nhân của người truy cập (ví dụ: tên, địa chỉ email, số điện thoại) trừ khi bạn chủ động liên hệ với tôi qua email.</p>
+      
+      <h3>2. Cookie và Analytics</h3>
+      <p>Ở thời điểm hiện tại, website không sử dụng bất kỳ công cụ phân tích (analytics) hay cookie theo dõi (tracking cookies) nào của bên thứ ba để theo dõi hành vi của bạn.</p>
+      
+      <h3>3. Liên kết ra bên ngoài</h3>
+      <p>Website có thể chứa các liên kết dẫn đến các trang web bên ngoài (ví dụ: bài báo khoa học, nguồn tham khảo, mạng xã hội). Khi bạn nhấp vào các liên kết đó, bạn sẽ rời khỏi website của tôi và chịu sự điều chỉnh bởi chính sách quyền riêng tư của các trang web tương ứng.</p>
+      
+      <p class="mt-8 text-muted"><em>Cập nhật lần cuối: 20/07/2026</em></p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-12) var(--space-4);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .mt-8 { margin-top: var(--space-8); }
+  .text-muted { color: var(--color-text-muted); font-size: 0.875rem; }
+  
+  .policy-content h3 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+    color: var(--color-pink-dark);
+  }
+  
+  .policy-content p {
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+    color: var(--color-text-main);
+  }
+</style>

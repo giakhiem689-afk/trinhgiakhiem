@@ -1,45 +1,65 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
 import { getCollection } from 'astro:content';
 
+const title = "Dự án giáo dục và công nghệ | Trịnh Gia Khiêm";
+const description = "Các dự án xây dựng nguồn lực, công cụ và quy trình hỗ trợ sinh viên trong quá trình học tập.";
+
+// Lấy tất cả dự án không phải là draft
 let projects = [];
 try {
   const allProjects = await getCollection('projects');
   projects = allProjects.filter(p => !p.data.draft);
 } catch (e) {
-  console.log("No projects found");
+  console.log("No projects found", e);
 }
 ---
-<BaseLayout title="Dự án | Trịnh Gia Khiêm" description="Các dự án giáo dục, hỗ trợ sinh viên và ứng dụng công nghệ.">
+
+<BaseLayout title={title} description={description}>
   <div class="container content-wrapper page-section">
-    <SectionHeading title="Dự án thực tế" subtitle="Kinh nghiệm" align="left" />
-    
-    <div class="projects-grid">
-      {projects.length > 0 ? (
-        projects.map(project => (
-          <div class="project-card card">
-            {project.data.coverImage && (
-              <img src={project.data.coverImage} alt={project.data.coverAlt || project.data.title} class="project-image" />
-            )}
+    <!-- Phần giới thiệu -->
+    <section class="projects-header">
+      <SectionHeading title="Dự án" subtitle="Thực tiễn & Ứng dụng" align="left" />
+      <div class="lead-text">
+        <p>Các dự án của tôi tập trung vào việc chuyển những vấn đề thực tế trong học tập và hỗ trợ sinh viên thành các nguồn lực, công cụ và quy trình dễ sử dụng. Một số dự án đang ở giai đoạn ý tưởng hoặc thử nghiệm và sẽ tiếp tục được cập nhật theo tiến độ thực tế.</p>
+      </div>
+    </section>
+
+    <!-- Danh sách Dự án -->
+    {projects.length > 0 ? (
+      <section class="projects-grid mt-12">
+        {projects.map((project) => (
+          <article class="project-card card">
             <div class="project-content">
-              <span class="status-tag">{project.data.status}</span>
-              <h3 class="project-title">{project.data.title}</h3>
-              <p class="project-role"><strong>Vai trò:</strong> {project.data.role}</p>
+              <div class="project-meta">
+                <StatusBadge status={project.data.status} />
+              </div>
+              <h3 class="project-title">
+                <a href={`/du-an/${project.id}`}>{project.data.title}</a>
+              </h3>
+              
+              <div class="project-details">
+                <p><strong>Vai trò:</strong> {project.data.role}</p>
+              </div>
+              
               <p class="project-desc">{project.data.description}</p>
               
               <div class="project-tools">
-                {project.data.tools.map(tool => (
-                  <span class="tool">{tool}</span>
+                {project.data.tools.map((tool: string) => (
+                  <span class="tool-tag">{tool}</span>
                 ))}
               </div>
             </div>
-          </div>
-        ))
-      ) : (
-        <p>Danh sách dự án đang được cập nhật...</p>
-      )}
-    </div>
+          </article>
+        ))}
+      </section>
+    ) : (
+      <div class="empty-state mt-12">
+        <p>Các dự án đang được cập nhật.</p>
+      </div>
+    )}
   </div>
 </BaseLayout>
 
@@ -48,59 +68,77 @@ try {
     padding: var(--space-12) var(--space-4);
   }
   
+  .mt-12 { margin-top: var(--space-12); }
+  
+  .lead-text {
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: var(--space-8);
+  }
+  
+  /* Projects Grid */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: var(--space-8);
   }
   
   .project-card {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    height: 100%;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
     overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
-  .project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid var(--color-border);
+  .project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(232, 169, 184, 0.2);
   }
   
   .project-content {
     padding: var(--space-6);
-    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    height: 100%;
   }
   
-  .status-tag {
-    font-size: var(--text-xs);
-    font-weight: 600;
-    color: var(--color-pink-dark);
-    background-color: var(--color-sage-pastel);
-    padding: var(--space-1) var(--space-3);
-    border-radius: var(--radius-full);
-    margin-bottom: var(--space-3);
+  .project-meta {
+    margin-bottom: var(--space-4);
   }
   
   .project-title {
-    font-size: var(--text-xl);
-    margin-bottom: var(--space-2);
+    font-size: 1.25rem;
+    color: var(--color-text-main);
+    margin-bottom: var(--space-3);
+    line-height: 1.4;
   }
   
-  .project-role {
+  .project-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .project-title a:hover {
+    color: var(--color-pink-main);
+  }
+  
+  .project-details {
     font-size: var(--text-sm);
-    color: var(--color-pink-dark);
-    margin-bottom: var(--space-2);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
   }
   
   .project-desc {
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--color-text-main);
+    flex-grow: 1;
     margin-bottom: var(--space-6);
-    flex: 1;
   }
   
   .project-tools {
@@ -110,13 +148,26 @@ try {
     margin-top: auto;
   }
   
-  .tool {
-    font-size: var(--text-xs);
+  .tool-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    border-radius: var(--radius-sm);
     font-weight: 500;
+  }
+  
+  .empty-state {
+    padding: var(--space-12);
+    text-align: center;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-lg);
     color: var(--color-text-muted);
-    background-color: var(--color-bg-main);
-    padding: 2px 8px;
-    border-radius: 4px;
-    border: 1px solid var(--color-border);
+  }
+  
+  @media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

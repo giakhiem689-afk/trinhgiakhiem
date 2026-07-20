@@ -2,86 +2,159 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import { profile } from '../data/profile';
+import StatusBadge from '../components/StatusBadge.astro';
 ---
-<BaseLayout title={`CV | ${profile.name}`} description="Hồ sơ năng lực của Trịnh Gia Khiêm.">
-  <div class="container content-wrapper page-section">
-    <SectionHeading title="Curriculum Vitae" subtitle="Hồ sơ nghề nghiệp" align="left" />
+
+<BaseLayout title={`CV ${profile.name} | Academic Support and Educational Psychology`} description="Hồ sơ năng lực trực tuyến của Trịnh Gia Khiêm.">
+  <div class="container content-wrapper page-section cv-page">
     
-    <div class="cv-actions">
-      <a href="/documents/cv_placeholder.pdf" class="btn btn-primary" download>Tải CV PDF</a>
+    <div class="cv-header no-print">
+      <SectionHeading title="Curriculum Vitae" subtitle="Hồ sơ nghề nghiệp" align="left" />
+      <div class="cv-actions">
+        <!-- Nút tải PDF: Nếu chưa có file thật thì vô hiệu hóa nút nhưng không để dead link -->
+        <a href="#" class="btn btn-primary" onclick="alert('Bản PDF đang được cập nhật.'); return false;">Tải CV PDF</a>
+        <button class="btn btn-secondary" onclick="window.print()">In CV</button>
+      </div>
     </div>
-    
-    <div class="cv-grid">
-      <aside class="cv-sidebar">
-        <section class="cv-section">
-          <h3>Kỹ năng chuyên môn</h3>
-          <ul class="skill-list">
-            <li>Hỗ trợ người học</li>
-            <li>Tư vấn và tham vấn</li>
-            <li>Thuyết trình & Giảng dạy</li>
-            <li>Giải quyết vấn đề</li>
-            <li>Truyền thông giáo dục</li>
-            <li>Tổ chức sự kiện</li>
-          </ul>
-        </section>
-        
-        <section class="cv-section">
-          <h3>Công cụ</h3>
-          <ul class="skill-list">
-            <li>Microsoft Office</li>
-            <li>ChatGPT & Gemini</li>
-            <li>AI in Education Tools</li>
-            <li>Canva & Adobe Photoshop</li>
-          </ul>
-        </section>
-      </aside>
-      
-      <main class="cv-main">
-        <section class="cv-section">
-          <h3>Học vấn</h3>
-          <div class="cv-item">
-            <div class="cv-meta">Hiện tại</div>
-            <h4>Thạc sĩ Ngôn ngữ Anh</h4>
-            <p>Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</p>
-          </div>
-          <div class="cv-item">
-            <div class="cv-meta">[Năm tốt nghiệp]</div>
-            <h4>Cử nhân Tâm lý giáo dục</h4>
-            <p>[Tên trường đại học]</p>
-          </div>
-        </section>
-        
-        <section class="cv-section">
-          <h3>Kinh nghiệm làm việc</h3>
-          <div class="cv-item">
-            <div class="cv-meta">Hiện tại</div>
-            <h4>Chuyên viên Trung tâm Hỗ trợ học vụ</h4>
-            <p>Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</p>
-            <ul>
-              <li>Tư vấn học vụ, giải đáp quy định và xử lý thủ tục cho sinh viên.</li>
-              <li>Hỗ trợ sinh viên giải quyết khó khăn trong quá trình học tập.</li>
-              <li>Ứng dụng công nghệ và AI vào quy trình hỗ trợ sinh viên.</li>
+
+    <!-- Nội dung bản CV chính (hiển thị khi in) -->
+    <div class="cv-document">
+      <header class="cv-doc-header">
+        <h1>{profile.name}</h1>
+        <p class="cv-doc-subtitle">Academic Support • Educational Psychology • English Language Education • AI in Education</p>
+      </header>
+
+      <section class="cv-doc-summary mt-6">
+        <p>Người làm việc trong lĩnh vực giáo dục với nền tảng Tâm lý giáo dục, kinh nghiệm hỗ trợ học vụ, giảng dạy kỹ năng sống, tổ chức hoạt động và truyền thông giáo dục. Hiện đang theo học Chương trình Thạc sĩ Ngôn ngữ Anh và phát triển hướng nghiên cứu về thái độ của giáo viên đối với việc sử dụng AI trong phản hồi bài viết tiếng Anh.</p>
+      </section>
+
+      <div class="cv-doc-body mt-8">
+        <aside class="cv-doc-sidebar">
+          
+          <section class="cv-doc-section">
+            <h3 class="section-title">Kỹ năng nghề nghiệp</h3>
+            <ul class="clean-list skill-tags">
+              <li>Hỗ trợ người học</li>
+              <li>Tư vấn và tham vấn</li>
+              <li>Giải quyết vấn đề</li>
+              <li>Thuyết trình</li>
+              <li>Tổ chức chương trình</li>
+              <li>Truyền thông giáo dục</li>
+              <li>Xây dựng nội dung</li>
             </ul>
-          </div>
-          <div class="cv-item">
-            <div class="cv-meta">[Thời gian]</div>
-            <h4>Giảng dạy kỹ năng sống & Tổ chức hoạt động</h4>
-            <p>[Đơn vị]</p>
-            <ul>
-              <li>Thiết kế và giảng dạy kỹ năng sống cho học sinh/sinh viên.</li>
-              <li>Tổ chức các hoạt động giáo dục ngoại khóa.</li>
+          </section>
+
+          <section class="cv-doc-section mt-6">
+            <h3 class="section-title">Công cụ</h3>
+            <div class="tool-group">
+              <strong>Văn phòng:</strong>
+              <span>Microsoft Word, PowerPoint, Excel</span>
+            </div>
+            <div class="tool-group mt-2">
+              <strong>Công cụ AI:</strong>
+              <span>ChatGPT, Gemini, Antigravity</span>
+            </div>
+            <div class="tool-group mt-2">
+              <strong>Thiết kế:</strong>
+              <span>Adobe Photoshop, Canva</span>
+            </div>
+          </section>
+
+          <section class="cv-doc-section mt-6">
+            <h3 class="section-title">Ngôn ngữ</h3>
+            <ul class="clean-list">
+              <li><strong>Tiếng Việt:</strong> Ngôn ngữ chính</li>
+              <li><strong>Tiếng Anh:</strong> Đang phát triển</li>
             </ul>
-          </div>
-        </section>
-        
-        <section class="cv-section">
-          <h3>Dự án tiêu biểu</h3>
-          <div class="cv-item">
-            <h4>Hệ thống hỗ trợ sinh viên</h4>
-            <p>Xây dựng website khảo sát và hệ thống hỗ trợ sinh viên qua Telegram/Zalo.</p>
-          </div>
-        </section>
-      </main>
+          </section>
+
+          <section class="cv-doc-section mt-6 no-print">
+            <h3 class="section-title">Liên kết</h3>
+            <ul class="clean-list">
+              <li><a href="/du-an">Dự án giáo dục</a></li>
+              <li><a href="/nghien-cuu">Khám phá nghiên cứu</a></li>
+              <li><a href="/lien-he">Thông tin liên hệ</a></li>
+            </ul>
+          </section>
+
+        </aside>
+
+        <main class="cv-doc-main">
+          
+          <section class="cv-doc-section">
+            <h3 class="section-title">Học vấn</h3>
+            
+            <div class="timeline-item">
+              <div class="timeline-meta">2025 - Nay</div>
+              <h4 class="timeline-title">Thạc sĩ Ngôn ngữ Anh</h4>
+              <div class="timeline-subtitle">Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh (UEF)</div>
+              <p class="timeline-status">Trạng thái: Đang theo học</p>
+            </div>
+            
+            <div class="timeline-item">
+              <div class="timeline-meta">Giai đoạn đại học</div>
+              <h4 class="timeline-title">Cử nhân Tâm lý giáo dục</h4>
+              <div class="timeline-subtitle">Khoa Giáo dục, Trường Đại học Khoa học Xã hội và Nhân văn, ĐHQG-HCM</div>
+            </div>
+          </section>
+
+          <section class="cv-doc-section mt-8">
+            <h3 class="section-title">Kinh nghiệm nghề nghiệp</h3>
+            
+            <div class="timeline-item">
+              <div class="timeline-meta">Công tác trong lĩnh vực hỗ trợ học vụ</div>
+              <h4 class="timeline-title">Trung tâm Hỗ trợ học vụ, UEF</h4>
+              <ul class="bullet-list">
+                <li>Tham gia tư vấn và hỗ trợ giải đáp các vấn đề học vụ.</li>
+                <li>Hỗ trợ sinh viên tiếp cận quy trình và nguồn lực.</li>
+                <li>Tham gia truyền thông học vụ.</li>
+                <li>Tham gia xây dựng nội dung hỗ trợ kỹ năng học tập.</li>
+                <li>Phối hợp trong quá trình chăm sóc và hỗ trợ người học.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="cv-doc-section mt-8">
+            <h3 class="section-title">Kinh nghiệm giảng dạy</h3>
+            <ul class="bullet-list">
+              <li>Giảng dạy kỹ năng sống cho học sinh tiểu học và trung học cơ sở.</li>
+              <li>Tham gia các hoạt động giáo dục và công tác Đội.</li>
+              <li>Phát triển nội dung phù hợp với độ tuổi người học.</li>
+              <li>Hỗ trợ học sinh phát triển kỹ năng cá nhân và xã hội.</li>
+            </ul>
+          </section>
+
+          <section class="cv-doc-section mt-8">
+            <h3 class="section-title">Hoạt động tổ chức và lãnh đạo</h3>
+            <ul class="bullet-list">
+              <li>Liên chi hội phó Liên chi hội Sinh viên Khoa Giáo dục.</li>
+              <li>Tham gia tổ chức chương trình và phong trào sinh viên.</li>
+              <li>Tham gia tổ chức hoạt động Nhóm Sinh viên Công giáo Tu đoàn Thiên Phúc.</li>
+              <li>Tham gia công tác Đội tại Trường Tiểu học Lê Ngọc Hân.</li>
+              <li>Tham gia xây dựng đội ngũ truyền thông EMT.</li>
+            </ul>
+          </section>
+
+          <section class="cv-doc-section mt-8">
+            <h3 class="section-title">Nghiên cứu</h3>
+            <div class="timeline-item">
+              <StatusBadge status="Đang thực hiện" />
+              <h4 class="timeline-title mt-2">Vietnamese teachers’ attitudes toward using AI tools for corrective feedback on their students’ English writing</h4>
+            </div>
+          </section>
+
+          <section class="cv-doc-section mt-8">
+            <h3 class="section-title">Dự án</h3>
+            <ul class="bullet-list">
+              <li>Website khảo sát và nguồn lực hỗ trợ sinh viên</li>
+              <li>Góc kỹ năng và phương pháp học tập</li>
+              <li>Truyền thông học vụ</li>
+              <li>Tự động hóa hỗ trợ công việc</li>
+            </ul>
+          </section>
+
+        </main>
+      </div>
     </div>
   </div>
 </BaseLayout>
@@ -91,65 +164,192 @@ import { profile } from '../data/profile';
     padding: var(--space-12) var(--space-4);
   }
   
-  .cv-actions {
-    margin-bottom: var(--space-8);
+  .mt-2 { margin-top: var(--space-2); }
+  .mt-6 { margin-top: var(--space-6); }
+  .mt-8 { margin-top: var(--space-8); }
+  
+  .cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: var(--space-12);
   }
   
-  .cv-grid {
+  .cv-actions {
+    display: flex;
+    gap: var(--space-4);
+  }
+  
+  /* CV Document Design */
+  .cv-document {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-12);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .cv-doc-header h1 {
+    font-size: 2.5rem;
+    color: var(--color-pink-dark);
+    margin-bottom: var(--space-2);
+    border-bottom: 2px solid var(--color-pink-light);
+    padding-bottom: var(--space-4);
+  }
+  
+  .cv-doc-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    font-weight: 500;
+  }
+  
+  .cv-doc-summary {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--color-text-main);
+  }
+  
+  .cv-doc-body {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2.5fr;
     gap: var(--space-12);
   }
   
-  .cv-section {
-    margin-bottom: var(--space-8);
-  }
-  
-  .cv-section h3 {
+  .section-title {
+    font-size: 1.25rem;
     color: var(--color-pink-dark);
-    border-bottom: 2px solid var(--color-pink-light);
-    padding-bottom: var(--space-2);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   
-  .skill-list {
+  .clean-list {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   
-  .skill-list li {
-    background-color: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    padding: var(--space-2) var(--space-4);
-    border-radius: var(--radius-sm);
+  .clean-list li {
     margin-bottom: var(--space-2);
-    font-size: var(--text-sm);
   }
   
-  .cv-item {
+  .bullet-list {
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  
+  .bullet-list li {
+    margin-bottom: var(--space-2);
+    line-height: 1.5;
+  }
+  
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  
+  .skill-tags li {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+  }
+  
+  .tool-group span {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+  
+  /* Timeline Items */
+  .timeline-item {
     margin-bottom: var(--space-6);
   }
   
-  .cv-meta {
-    font-size: var(--text-sm);
+  .timeline-meta {
+    font-size: 0.875rem;
     color: var(--color-text-muted);
     font-weight: 600;
     margin-bottom: var(--space-1);
   }
   
-  .cv-item h4 {
-    margin-bottom: var(--space-1);
-    font-size: var(--text-lg);
+  .timeline-title {
+    font-size: 1.125rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.125rem;
   }
   
-  .cv-item p {
+  .timeline-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
     margin-bottom: var(--space-2);
-    font-weight: 500;
+  }
+  
+  .timeline-status {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
   }
   
   @media (max-width: 768px) {
-    .cv-grid {
+    .cv-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-6);
+    }
+    
+    .cv-doc-body {
       grid-template-columns: 1fr;
+    }
+    
+    .cv-document {
+      padding: var(--space-6);
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    :global(body) {
+      background-color: white !important;
+    }
+    
+    .no-print, :global(header), :global(footer) {
+      display: none !important;
+    }
+    
+    .page-section {
+      padding: 0 !important;
+    }
+    
+    .cv-document {
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+    
+    .cv-doc-body {
+      gap: var(--space-8);
+    }
+    
+    .skill-tags li {
+      border: 1px solid var(--color-border);
+      background-color: transparent;
+      color: var(--color-text-main);
+    }
+    
+    .section-title {
+      color: #000;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.25rem;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   }
 </style>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+---
+
+<BaseLayout title="Chính sách Sử dụng AI | Trịnh Gia Khiêm" description="Quan điểm về việc sử dụng Trí tuệ nhân tạo.">
+  <div class="container content-wrapper page-section">
+    <SectionHeading title="Sử dụng Trí tuệ nhân tạo (AI)" align="left" />
+    
+    <div class="policy-content mt-8">
+      <p>Tại không gian kỹ thuật số này và trong các công việc, dự án thực tế, tôi áp dụng các công cụ Trí tuệ nhân tạo (AI) với tinh thần cởi mở nhưng đi kèm với sự thận trọng và có trách nhiệm.</p>
+      
+      <h3>1. Trong việc tạo nội dung website</h3>
+      <p>Một số công cụ AI (như ChatGPT, Gemini) có thể được sử dụng để hỗ trợ tôi trong việc lên dàn ý, lập trình giao diện hoặc tìm kiếm ý tưởng. Tuy nhiên, toàn bộ nội dung bài viết, quan điểm giáo dục, thông tin nghề nghiệp và hướng nghiên cứu đều được viết và kiểm duyệt bởi chính tôi để đảm bảo tính chân thực và cá nhân hóa.</p>
+      
+      <h3>2. Trong môi trường giáo dục</h3>
+      <p>Như đã đề cập trong nguyên tắc nghiên cứu của tôi, công nghệ và AI đóng vai trò <strong>hỗ trợ chứ không thay thế</strong> phán đoán nghề nghiệp của người giáo viên hay làm giảm nỗ lực của người học. Việc ứng dụng AI vào học tập hay giảng dạy cần tuân thủ sự minh bạch và hướng tới mục tiêu phát triển người học một cách bền vững.</p>
+      
+      <h3>3. Tính toàn vẹn của dữ liệu</h3>
+      <p>Các nội dung khoa học, nhận định chuyên môn hoặc các trích dẫn được đưa ra trên website này luôn được kiểm tra để đảm bảo có nguồn gốc từ tác giả thực và nguồn học thuật uy tín, tránh tuyệt đối việc lan truyền các thông tin sai lệch do AI tạo ra (AI hallucinations).</p>
+      
+      <p class="mt-8 text-muted"><em>Cập nhật lần cuối: 20/07/2026</em></p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-12) var(--space-4);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .mt-8 { margin-top: var(--space-8); }
+  .text-muted { color: var(--color-text-muted); font-size: 0.875rem; }
+  
+  .policy-content h3 {
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-3);
+    color: var(--color-pink-dark);
+  }
+  
+  .policy-content p {
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+    color: var(--color-text-main);
+  }
+</style>

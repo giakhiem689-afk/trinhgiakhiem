@@ -1,0 +1,87 @@
+---
+interface Props {
+  status: string;
+}
+
+const { status } = Astro.props;
+
+// Determine color theme based on status string
+let theme = "default";
+const s = status.toLowerCase();
+
+if (s.includes("đang thực hiện") || s.includes("đang phát triển") || s.includes("đang xây dựng")) {
+  theme = "active";
+} else if (s.includes("thử nghiệm") || s.includes("cập nhật")) {
+  theme = "warning";
+} else if (s.includes("trước đây")) {
+  theme = "past";
+} else if (s.includes("ghi chú") || s.includes("quan điểm") || s.includes("nghiên cứu")) {
+  theme = "info";
+}
+---
+
+<span class={`status-badge status-${theme}`}>
+  <span class="status-dot" aria-hidden="true"></span>
+  <span class="status-text">{status}</span>
+</span>
+
+<style>
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    width: fit-content;
+  }
+  
+  .status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  
+  /* Default Theme */
+  .status-default {
+    background-color: #f1f5f9;
+    color: #475569;
+    border-color: #e2e8f0;
+  }
+  .status-default .status-dot { background-color: #94a3b8; }
+  
+  /* Active / In Progress (Màu xanh sage nhạt) */
+  .status-active {
+    background-color: var(--color-sage-pastel, #DDEBDD);
+    color: #2f4f2f;
+    border-color: #c2d8c2;
+  }
+  .status-active .status-dot { background-color: #4a7c4a; }
+  
+  /* Warning / Testing (Màu vàng/kem) */
+  .status-warning {
+    background-color: var(--color-cream-warm, #FFF3E8);
+    color: #8a6338;
+    border-color: #f5daba;
+  }
+  .status-warning .status-dot { background-color: #d97706; }
+  
+  /* Past / Archived (Màu xám/tím nhạt) */
+  .status-past {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    border-color: #e5e7eb;
+  }
+  .status-past .status-dot { background-color: #9ca3af; }
+  
+  /* Info / Notes (Màu xanh dương/tím nhạt) */
+  .status-info {
+    background-color: var(--color-lavender-pastel, #E9E2F4);
+    color: #554477;
+    border-color: #d4c5e6;
+  }
+  .status-info .status-dot { background-color: #7b61a7; }
+</style>

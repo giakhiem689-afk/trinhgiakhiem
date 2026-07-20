@@ -4,15 +4,27 @@ import SectionHeading from '../components/SectionHeading.astro';
 import Timeline from '../components/Timeline.astro';
 import { profile } from '../data/profile';
 ---
-<BaseLayout title={`Hành trình học tập | ${profile.name}`} description="Quá trình học tập và phát triển nghề nghiệp của Trịnh Gia Khiêm.">
+
+<BaseLayout title={`Hành trình | ${profile.name}`} description="Hành trình học tập, nghiên cứu và phát triển nghề nghiệp của Trịnh Gia Khiêm.">
   <div class="container content-wrapper page-section">
-    <SectionHeading title="Hành trình & Phát triển" subtitle="Timeline" align="center" />
-    
-    <div class="journey-content">
-      <p class="intro-text">Một hành trình liên tục học hỏi từ Tâm lý giáo dục, hỗ trợ học vụ, đến Ngôn ngữ Anh và ứng dụng AI trong giáo dục.</p>
-      
+    <section class="journey-header">
+      <SectionHeading title="Hành trình" subtitle="Học tập & Phát triển" align="left" />
+      <div class="lead-text">
+        <p>Hành trình của tôi không phải là một đường thẳng, mà là sự phát triển liên tục trong nhận thức về giáo dục. Từ những kiến thức Tâm lý học nền tảng cho đến khi ứng dụng vào hỗ trợ sinh viên, và giờ đây là mở rộng sang giáo dục ngôn ngữ và sự hỗ trợ của AI. Mỗi chặng đường đều để lại những bài học quý giá về cách con người học tập và phát triển.</p>
+      </div>
+    </section>
+
+    <section class="timeline-section mt-12">
       <Timeline />
-    </div>
+    </section>
+    
+    <section class="journey-footer mt-12 text-center">
+      <p>Muốn hiểu rõ hơn về các kỹ năng chuyên môn?</p>
+      <div class="mt-4">
+        <a href="/cv" class="btn btn-primary">Xem CV chi tiết</a>
+        <a href="/gioi-thieu" class="btn btn-secondary">Về trang Giới thiệu</a>
+      </div>
+    </section>
   </div>
 </BaseLayout>
 
@@ -21,10 +33,22 @@ import { profile } from '../data/profile';
     padding: var(--space-12) var(--space-4);
   }
   
-  .intro-text {
-    text-align: center;
+  .mt-4 { margin-top: var(--space-4); }
+  .mt-12 { margin-top: var(--space-12); }
+  
+  .text-center { text-align: center; }
+  
+  .lead-text {
     font-size: var(--text-lg);
-    max-width: 600px;
-    margin: 0 auto var(--space-12);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: var(--space-8);
+  }
+  
+  .journey-footer {
+    background-color: var(--color-bg-card);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
   }
 </style>

@@ -24,42 +24,52 @@ import { profile } from '../data/profile';
       </div>
       
       <div class="contact-cards">
-        {profile.email ? (
-          <a href={`mailto:${profile.email}`} class="card link-card">
-            <div class="card-icon">✉️</div>
+        <a href={`mailto:${profile.email}`} class="card link-card">
+          <div class="card-icon">✉️</div>
+          <div>
+            <h3>Email</h3>
+            <p>{profile.email}</p>
+          </div>
+        </a>
+        
+        {profile.phone && (
+          <a href={`tel:${profile.phone}`} class="card link-card">
+            <div class="card-icon">📞</div>
             <div>
-              <h3>Email</h3>
-              <p>{profile.email}</p>
+              <h3>Số điện thoại</h3>
+              <p>{profile.phone}</p>
             </div>
           </a>
-        ) : (
-          <div class="card link-card disabled">
-            <div class="card-icon">✉️</div>
+        )}
+
+        {profile.socials.facebook && (
+          <a href={profile.socials.facebook} target="_blank" rel="noopener noreferrer" class="card link-card">
+            <div class="card-icon">👥</div>
             <div>
-              <h3>Email</h3>
-              <p>Thông tin liên hệ đang được cập nhật.</p>
+              <h3>Facebook</h3>
+              <p>Kết nối cá nhân</p>
+            </div>
+          </a>
+        )}
+
+        {profile.website && (
+          <a href={profile.website} target="_blank" rel="noopener noreferrer" class="card link-card">
+            <div class="card-icon">🌐</div>
+            <div>
+              <h3>Website</h3>
+              <p>{profile.website}</p>
+            </div>
+          </a>
+        )}
+
+        {profile.address && (
+          <div class="card link-card disabled">
+            <div class="card-icon">📍</div>
+            <div>
+              <h3>Địa chỉ</h3>
+              <p>{profile.address}</p>
             </div>
           </div>
-        )}
-        
-        {profile.socials.github && profile.socials.github !== "#" && (
-          <a href={profile.socials.github} target="_blank" rel="noopener noreferrer" class="card link-card">
-            <div class="card-icon">💻</div>
-            <div>
-              <h3>GitHub</h3>
-              <p>giakhiem689-afk</p>
-            </div>
-          </a>
-        )}
-        
-        {profile.socials.linkedin && profile.socials.linkedin !== "#" && (
-          <a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" class="card link-card">
-            <div class="card-icon">👔</div>
-            <div>
-              <h3>LinkedIn</h3>
-              <p>Kết nối nghề nghiệp</p>
-            </div>
-          </a>
         )}
       </div>
     </div>

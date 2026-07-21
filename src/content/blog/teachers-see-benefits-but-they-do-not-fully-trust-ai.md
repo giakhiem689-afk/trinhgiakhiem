@@ -1,7 +1,7 @@
 ---
 title: Teachers See Benefits, but They Do Not Fully Trust AI
 description: Many English teachers are interested in using ChatGPT for writing instruction.
-publishedDate: 2026-06-21T10:50
+publishedDate: 2026-07-21T10:50
 category: Research, Compilation
 tags:
   - written feedback

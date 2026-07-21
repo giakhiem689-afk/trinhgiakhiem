@@ -1,7 +1,7 @@
 ---
 title: "Những câu hỏi tôi đang tìm hiểu về giáo viên và AI"
 description: "Ghi chú cá nhân về vai trò của trí tuệ nhân tạo (AI) trong giáo dục và những câu hỏi xoay quanh thái độ của giáo viên khi sử dụng AI."
-publishedDate: 2026-07-20
+publishedDate: 2026-07-10
 category: "AI và giảng dạy tiếng Anh"
 tags: ["AI in Education", "Teacher Attitudes", "Corrective Feedback"]
 readingTime: "3 phút"

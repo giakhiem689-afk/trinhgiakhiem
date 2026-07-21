@@ -1,7 +1,7 @@
 ---
 title: "Học cách trở thành một người học tốt hơn"
 description: "Trải nghiệm cá nhân về việc ứng dụng siêu nhận thức (metacognition) để làm chủ quá trình học tập."
-publishedDate: 2026-07-20
+publishedDate: 2026-07-05
 category: "Nghiên cứu và phương pháp"
 tags: ["Metacognition", "Learning Strategies", "Self-study"]
 readingTime: "4 phút"

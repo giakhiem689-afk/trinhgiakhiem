@@ -1,7 +1,7 @@
 ---
 title: "Từ Tâm lý giáo dục đến công việc hỗ trợ người học"
 description: "Hành trình áp dụng những nguyên lý Tâm lý giáo dục vào môi trường đại học để thực hiện công tác hỗ trợ học vụ."
-publishedDate: 2026-07-20
+publishedDate: 2026-07-15
 category: "Tâm lý giáo dục và hỗ trợ người học"
 tags: ["Educational Psychology", "Learner Support", "Higher Education"]
 readingTime: "4 phút"

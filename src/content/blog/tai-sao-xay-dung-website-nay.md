@@ -1,12 +1,15 @@
 ---
-title: "Tại sao tôi xây dựng website cá nhân này?"
-description: "Lý do đằng sau việc xây dựng một không gian cá nhân trên internet, nơi tập hợp hành trình nghề nghiệp, việc học tập và những trải nghiệm giáo dục."
+title: Tại sao tôi xây dựng website cá nhân này?
+description: Lý do đằng sau việc xây dựng một không gian cá nhân trên internet, nơi tập hợp hành trình nghề nghiệp, việc học tập và những trải nghiệm giáo dục.
 publishedDate: 2026-07-20
-category: "Hành trình và quan điểm cá nhân"
-tags: ["Personal Growth", "Education", "Journey"]
-readingTime: "3 phút"
+category: Hành trình và quan điểm cá nhân
+tags:
+  - Personal Growth
+  - Education
+  - Journey
+readingTime: 3 phút
 draft: false
-featured: true
+featured: false
 ---
 
 Lý do xây dựng website này không đơn thuần chỉ là để có một bản CV trực tuyến, mà là mong muốn tập hợp một hành trình nghề nghiệp, ghi lại những chặng đường phát triển bản thân.

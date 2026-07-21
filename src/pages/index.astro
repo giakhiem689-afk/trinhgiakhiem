@@ -14,7 +14,14 @@ let featuredResearch = [];
 
 try {
   const allPosts = await getCollection('blog');
-  recentPosts = allPosts.filter(p => !p.data.draft).sort((a, b) => b.data.publishedDate.valueOf() - a.data.publishedDate.valueOf()).slice(0, 3);
+  recentPosts = allPosts
+    .filter(p => !p.data.draft)
+    .sort((a, b) => {
+      const timeA = new Date(a.data.updatedDate || a.data.publishedDate).getTime();
+      const timeB = new Date(b.data.updatedDate || b.data.publishedDate).getTime();
+      return timeB - timeA;
+    })
+    .slice(0, 3);
 } catch (e) {
   console.log("No blog posts found yet");
 }

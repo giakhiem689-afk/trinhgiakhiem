@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Naruto Shippuden - Mobile Chronicles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Stats HUD -->
+        <div class="hud">
+            <div class="hud-item"><span class="hud-label">NARUTO</span><span class="hud-value" id="scoreVal">000000</span></div>
+            <div class="hud-item"><span class="hud-label">RAMEN</span><span class="hud-value" id="coinsVal">🍜 x00</span></div>
+            <div class="hud-item"><span class="hud-label">WORLD</span><span class="hud-value" id="worldVal">1-1</span></div>
+            <div class="hud-item"><span class="hud-label">TIME</span><span class="hud-value" id="timeVal">300</span></div>
+            <div class="hud-item lives-hud"><span class="hud-label">LIVES</span><span class="hud-value" id="livesVal">🍥 x03</span></div>
+        </div>
+
+        <!-- Screen Area with Canvas -->
+        <div class="screen-area">
+            <div class="crt-overlay active" id="crtOverlay"></div>
+            <canvas id="gameCanvas" width="640" height="400"></canvas>
+
+            <!-- Start Screen Overlay -->
+            <div class="game-overlay" id="startScreen">
+                <div class="overlay-content">
+                    <h2 class="game-logo">NARUTO<br><span>MOBILE</span></h2>
+                    <p class="blink">CHẠM VÀO ĐÂY ĐỂ BẮT ĐẦU</p>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div class="game-overlay hidden" id="gameOverScreen">
+                <div class="overlay-content">
+                    <h2 class="game-over-text">MISSION FAILED</h2>
+                    <button class="mobile-btn" id="restartBtn">CHƠI LẠI</button>
+                </div>
+            </div>
+
+            <!-- Win Overlay -->
+            <div class="game-overlay hidden" id="gameWinScreen">
+                <div class="overlay-content">
+                    <h2 class="game-win-text">MISSION CLEAR!</h2>
+                    <div class="final-score-box">
+                        <p>ĐIỂM: <span id="finalScore">000000</span></p>
+                        <p>THỜI GIAN: <span id="finalTime">000</span></p>
+                        <p>THƯỞNG: <span id="timeBonus">0000</span></p>
+                    </div>
+                    <button class="mobile-btn" id="nextLevelBtn">TIẾP TỤC</button>
+                </div>
+            </div>
+
+            <!-- Pause Overlay -->
+            <div class="game-overlay hidden" id="pauseScreen">
+                <div class="overlay-content">
+                    <h2 class="pause-text">PAUSED</h2>
+                    <p>Chạm vào đây để tiếp tục</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Console Buttons -->
+        <div class="console-buttons">
+            <button class="console-btn" id="soundToggleBtn">🔊 ÂM THANH: BẬT</button>
+            <button class="console-btn" id="crtToggleBtn">📺 CRT: BẬT</button>
+            <button class="console-btn" id="resetGameBtn">🔄 RESET</button>
+        </div>
+
+        <!-- Virtual Gamepad (Always Visible on Mobile Version) -->
+        <div class="mobile-gamepad">
+            <div class="dpad">
+                <button class="dpad-btn" id="btnLeft">◀</button>
+                <div class="dpad-center"></div>
+                <button class="dpad-btn" id="btnRight">▶</button>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn btn-b" id="btnFire">B</button>
+                <button class="action-btn btn-a" id="btnJump">A</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="sound.js"></script>
+    <script src="levels.js"></script>
+    <script src="entities.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

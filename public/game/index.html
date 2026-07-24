@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Naruto Shippuden - Retro Ninja Chronicles</title>
+    <!-- Google Fonts for retro/modern style -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="arcade-wrapper">
+        <!-- Arcade Cabinet Frame -->
+        <div class="arcade-cabinet">
+            <!-- Neon Header -->
+            <div class="arcade-header">
+                <h1 class="arcade-title">NARUTO</h1>
+                <div class="subtitle">NINJA CHRONICLES</div>
+            </div>
+
+            <!-- Main Screen Area -->
+            <div class="screen-container">
+                <!-- CRT Overlay for retro scanlines and flicker -->
+                <div class="crt-overlay active" id="crtOverlay"></div>
+                <div class="screen-glare"></div>
+
+                <!-- Naruto Header Stats (HUD) -->
+                <div class="hud">
+                    <div class="hud-item">
+                        <span class="hud-label">NARUTO</span>
+                        <span class="hud-value" id="scoreVal">000000</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-label">RAMEN</span>
+                        <span class="hud-value" id="coinsVal">🍜 x00</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-label">NINJA SIGHT</span>
+                        <span class="hud-value sight-ready" id="sightVal">👁️ READY [E]</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-label">TIME</span>
+                        <span class="hud-value" id="timeVal">300</span>
+                    </div>
+                    <div class="hud-item lives-hud">
+                        <span class="hud-label">LIVES</span>
+                        <span class="hud-value" id="livesVal">🍥 x03</span>
+                    </div>
+                </div>
+
+                <!-- Game Canvas -->
+                <canvas id="gameCanvas" width="640" height="400"></canvas>
+
+                <!-- UI Overlays (Start Screen, Pause, Game Over, Game Clear) -->
+                <div class="game-overlay" id="startScreen">
+                    <div class="overlay-content">
+                        <h2 class="game-logo">NARUTO<br><span>SHIPPUDEN</span></h2>
+                        <p class="blink">NHẤN VÀO ĐÂY HOẶC PHÍM ENTER ĐỂ CHƠI</p>
+                        <div class="instructions">
+                            <h3>HƯỚNG DẪN ĐIỀU KHIỂN:</h3>
+                            <div class="control-keys">
+                                <div><kbd>←</kbd> <kbd>→</kbd> / <kbd>A</kbd> <kbd>D</kbd> : Di chuyển trái/phải</div>
+                                <div><kbd>↓</kbd> / <kbd>S</kbd> : Cúi người chui qua tường vô hình</div>
+                                <div><kbd>Space</kbd> / <kbd>W</kbd> / <kbd>↑</kbd> : Nhảy cao</div>
+                                <div><kbd>E</kbd> / <kbd>C</kbd> : Bật Nhãn Quan Ninja (Soi bẫy vô hình)</div>
+                                <div><kbd>Shift</kbd> / <kbd>X</kbd> : Ném Rasengan / Chạy nhanh</div>
+                                <div><kbd>R</kbd> : Chơi lại nhanh | <kbd>P</kbd> : Tạm dừng</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-overlay hidden" id="gameOverScreen">
+                    <div class="overlay-content">
+                        <h2 class="game-over-text">MISSION FAILED</h2>
+                        <p class="motivate-text">THẤT BẠI LÀ MẸ THÀNH CÔNG! HÃY TIẾP TỤC!</p>
+                        <button class="arcade-btn-primary" id="restartBtn">CHƠI LẠI (Phím R)</button>
+                    </div>
+                </div>
+
+                <div class="game-overlay hidden" id="gameWinScreen">
+                    <div class="overlay-content">
+                        <h2 class="game-win-text">MISSION CLEAR!</h2>
+                        <div class="final-score-box">
+                            <p>ĐIỂM SỐ: <span id="finalScore">000000</span></p>
+                            <p>THỜI GIAN CÒN LẠI: <span id="finalTime">000</span></p>
+                            <p>ĐIỂM THƯỞNG: <span id="timeBonus">0000</span></p>
+                        </div>
+                        <button class="arcade-btn-primary" id="nextLevelBtn">TIẾP TỤC</button>
+                    </div>
+                </div>
+
+                <div class="game-overlay hidden" id="pauseScreen">
+                    <div class="overlay-content">
+                        <h2 class="pause-text">PAUSED</h2>
+                        <p>Nhấn <kbd>P</kbd> hoặc nhấn vào đây để tiếp tục</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arcade Control Panel (Physical Console feel) -->
+            <div class="arcade-controls">
+                <div class="controls-left">
+                    <button class="arcade-console-btn" id="soundToggleBtn">🔊 ÂM THANH: BẬT</button>
+                    <button class="arcade-console-btn" id="crtToggleBtn">📺 HIỆU ỨNG CRT: BẬT</button>
+                </div>
+                <div class="controls-right">
+                    <button class="arcade-console-btn" id="resetGameBtn">🔄 RESET GAME (R)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Virtual Gamepad for Mobile (Visible on Mobile only) -->
+        <div class="mobile-gamepad" id="mobileGamepad">
+            <div class="dpad">
+                <button class="dpad-btn" id="btnLeft" aria-label="Đi trái">◀</button>
+                <button class="dpad-btn" id="btnDown" aria-label="Cúi người">▼</button>
+                <button class="dpad-btn" id="btnRight" aria-label="Đi phải">▶</button>
+            </div>
+            <div class="action-buttons">
+                <button class="action-btn btn-eye" id="btnEye" aria-label="Nhãn Quan">👁️</button>
+                <button class="action-btn btn-b" id="btnFire" aria-label="Ném Rasengan">B</button>
+                <button class="action-btn btn-a" id="btnJump" aria-label="Nhảy">A</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="sound.js"></script>
+    <script src="levels.js"></script>
+    <script src="entities.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

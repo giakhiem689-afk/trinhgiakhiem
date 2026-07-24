@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.mobile-container {
+    width: 100%;
+    max-width: 680px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    border: 3px solid #ff6b00; /* Orange Chakra Border */
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+}
+
+/* HUD Styling */
+.hud {
+    display: flex;
+    justify-content: space-between;
+    background: #000;
+    padding: 8px 12px;
+    border-bottom: 2px solid #ff6b00;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+}
+
+.hud-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hud-label {
+    color: #ffaa00;
+    margin-bottom: 4px;
+}
+
+.hud-value {
+    color: #fff;
+}
+
+/* Screen Area */
+.screen-area {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#gameCanvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Scales properly keeping aspect ratio */
+}
+
+/* Overlays */
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.game-overlay.hidden {
+    display: none;
+}
+
+.overlay-content {
+    text-align: center;
+    font-family: 'Press Start 2P', monospace;
+}
+
+.game-logo {
+    font-size: 24px;
+    color: #ff6b00;
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.7);
+    margin-bottom: 12px;
+}
+
+.game-logo span {
+    color: #ff3366; /* Sakura Pink */
+}
+
+.blink {
+    font-size: 10px;
+    color: #00ffcc;
+    animation: blinker 1.2s linear infinite;
+    margin-top: 15px;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.mobile-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px #b34a00;
+}
+
+.mobile-btn:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* CRT Scanlines Overlay */
+.crt-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.crt-overlay.hidden {
+    display: none;
+}
+
+/* Console Control Buttons */
+.console-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    background-color: #111;
+    border-top: 2px solid #ff6b00;
+}
+
+.console-btn {
+    padding: 6px 12px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 11px;
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #ff6b00;
+    border-radius: 4px;
+}
+
+.console-btn:active {
+    background-color: #ff6b00;
+}
+
+/* Mobile Virtual Gamepad */
+.mobile-gamepad {
+    height: 180px;
+    background-color: #111;
+    border-top: 2px solid #ff6b00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.dpad {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    background-color: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ff6b00;
+}
+
+.dpad-btn {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    background-color: #333;
+    border: 1px solid #ff6b00;
+    color: #ff6b00;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.dpad-btn:active {
+    background-color: #ff6b00;
+    color: #fff;
+}
+
+#btnLeft { left: 5px; }
+#btnRight { right: 5px; }
+
+.dpad-center {
+    width: 30px;
+    height: 30px;
+    background-color: #111;
+    border-radius: 50%;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #000;
+    box-shadow: 0 4px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+.btn-a {
+    background-color: #ff3366; /* Pink jump button */
+    border-color: #b30030;
+}
+
+.btn-b {
+    background-color: #ff6b00; /* Orange run/fire button */
+    border-color: #b34a00;
+}

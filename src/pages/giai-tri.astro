@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import { profile } from '../data/profile';
+---
+
+<BaseLayout 
+  title={`Góc Giải Trí - Naruto Retro Ninja Chronicles | ${profile.name}`} 
+  description="Thư giãn cùng trò chơi Naruto Shippuden - Retro Ninja Chronicles 8-bit trên blog cá nhân của Trịnh Gia Khiêm."
+>
+  <div class="container content-wrapper page-section">
+    <section class="game-header">
+      <SectionHeading title="Góc Giải Trí" subtitle="Naruto Shippuden - Retro Ninja Chronicles" align="left" />
+      <div class="lead-text">
+        <p>
+          Chào mừng bạn đến với góc giải trí của blog! Sau những bài viết chia sẻ về giáo dục, ứng dụng AI và nghiên cứu, bạn có thể dành vài phút thư giãn cùng trò chơi phong cách Retro 8-bit nhập vai Ninja Naruto cực kỳ thú vị dưới đây.
+        </p>
+      </div>
+    </section>
+
+    <!-- Game Section -->
+    <section class="game-wrapper-section">
+      <div class="game-actions-bar">
+        <div class="game-badge">🎮 Game HTML5 Retro</div>
+        <div class="game-links">
+          <a href="/game/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            ↗ Mở cửa sổ riêng
+          </a>
+        </div>
+      </div>
+
+      <div class="game-container-card">
+        <iframe 
+          src="/game/index.html" 
+          title="Naruto Shippuden - Retro Ninja Chronicles"
+          class="game-iframe"
+          loading="lazy"
+          allow="autoplay; keyboard"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Instructions & Controls Guide -->
+    <section class="controls-guide-section mt-12">
+      <div class="card guide-card">
+        <h3 class="guide-title">🎮 Hướng Dẫn Điều Khiển & Mẹo Chơi</h3>
+        <div class="guide-grid">
+          <div class="guide-col">
+            <h4>Bàn Phím (Máy Tính)</h4>
+            <ul class="guide-list">
+              <li><kbd>←</kbd> <kbd>→</kbd> hoặc <kbd>A</kbd> <kbd>D</kbd> : Di chuyển Trái / Phải</li>
+              <li><kbd>Space</kbd> / <kbd>W</kbd> / <kbd>↑</kbd> : Nhảy cao</li>
+              <li><kbd>↓</kbd> / <kbd>S</kbd> : Cúi người chui qua tường vô hình</li>
+              <li><kbd>E</kbd> / <kbd>C</kbd> : Bật Nhãn Quan Ninja (Soi bẫy ẩn)</li>
+              <li><kbd>Shift</kbd> / <kbd>X</kbd> : Ném Rasengan / Chạy nhanh</li>
+              <li><kbd>R</kbd> : Tái đao (Reset) | <kbd>P</kbd> : Tạm dừng</li>
+            </ul>
+          </div>
+          <div class="guide-col">
+            <h4>Cảm Ứng (Điện Thoại / Máy Tính Bảng)</h4>
+            <ul class="guide-list">
+              <li>Sử dụng D-Pad điều hướng góc trái để di chuyển và cúi người.</li>
+              <li>Dùng nút <strong>A</strong> để Nhảy, nút <strong>B</strong> để Ném Rasengan.</li>
+              <li>Nút biểu tượng 👁️ để kích hoạt Nhãn Quan Ninja nhìn thấu bẫy ẩn!</li>
+              <li>Thu thập Ramen 🍜 để tích điểm và hoàn thành nhiệm vụ Ninja.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-footer mt-12 text-center">
+      <p>Bạn đã trải nghiệm trò chơi chưa? Hãy quay lại khám phá thêm các nội dung trên trang!</p>
+      <div class="mt-4">
+        <a href="/bai-viet" class="btn btn-primary">Đọc bài viết mới</a>
+        <a href="/du-an" class="btn btn-secondary">Xem các dự án</a>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-section {
+    padding: var(--space-12) var(--space-4);
+  }
+  
+  .mt-4 { margin-top: var(--space-4); }
+  .mt-12 { margin-top: var(--space-12); }
+  .text-center { text-align: center; }
+  
+  .lead-text {
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    max-width: 800px;
+    margin-bottom: var(--space-8);
+  }
+
+  .game-wrapper-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .game-actions-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .game-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-1) var(--space-3);
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    font-weight: 600;
+    font-size: var(--text-sm);
+    border-radius: var(--radius-full);
+  }
+
+  .btn-sm {
+    min-height: 36px;
+    padding: 0 var(--space-4);
+    font-size: var(--text-sm);
+  }
+
+  .game-container-card {
+    background-color: #0f0f1b;
+    border: 2px solid var(--color-pink-main);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(158, 80, 102, 0.15), 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    min-height: 520px;
+  }
+
+  @media (max-width: 640px) {
+    .game-container-card {
+      min-height: 600px;
+      aspect-ratio: auto;
+    }
+  }
+
+  .game-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  .guide-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+  }
+
+  .guide-title {
+    color: var(--color-pink-dark);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-6);
+  }
+
+  .guide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  @media (max-width: 768px) {
+    .guide-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+  }
+
+  .guide-col h4 {
+    color: var(--color-text-main);
+    font-size: var(--text-base);
+    margin-bottom: var(--space-3);
+  }
+
+  .guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+
+  .guide-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+  }
+
+  kbd {
+    background-color: var(--color-bg-main);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: var(--color-pink-dark);
+    font-family: monospace;
+    font-size: 0.85em;
+    font-weight: bold;
+    padding: 2px 6px;
+  }
+
+  .game-footer {
+    background-color: var(--color-bg-card);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>

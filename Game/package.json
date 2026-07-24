@@ -1,0 +1,29 @@
+{
+  "name": "super-mario-retro",
+  "version": "1.0.0",
+  "description": "Retro Mario Game in HTML5 Canvas",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "serve": "npx http-server -p 8080",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^17.1.2",
+    "http-server": "^14.1.1"
+  },
+  "build": {
+    "appId": "com.antigravity.narutoretrosasuke",
+    "productName": "Naruto Retro Chronicles",
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  }
+}

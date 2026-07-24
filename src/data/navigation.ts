@@ -4,5 +4,6 @@ export const navigation = [
   { label: "Dự án", href: "/du-an" },
   { label: "Bài viết", href: "/bai-viet" },
   { label: "Hành trình", href: "/hanh-trinh" },
+  { label: "Giải trí", href: "/giai-tri" },
   { label: "Liên hệ", href: "/lien-he" }
 ];

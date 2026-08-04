@@ -7,7 +7,7 @@ tags:
   - Teacher's Attitude
   - AI feedback
 readingTime: 3 minutes
-coverImage: /images/Demo_PP_Bangthongtin_07.07.2026 copy.png
+coverImage: ''
 draft: false
 featured: true
 ---

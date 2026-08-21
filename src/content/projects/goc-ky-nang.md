@@ -34,4 +34,4 @@ Tôi chịu trách nhiệm biên soạn nội dung, tóm tắt các lý thuyết
 
 ## 
 
-![pp_bangthongtin](/images/Demo_PP_Bangthongtin_07.07.2026%20copy.png "Phương pháp học tập")
+![Bảng thông tin tóm tắt các bước xây dựng phương pháp học tập hiệu quả](/images/phuong-phap-hoc-tap.png "Phương pháp học tập")

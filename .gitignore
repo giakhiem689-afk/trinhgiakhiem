@@ -22,3 +22,15 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# File cá nhân / ghi chú nháp — không đưa lên repo công khai
+*.docx
+*.doc
+Promt.txt
+prompt.txt
+ghi-chu/
+_nguon-goc-cap-nhat/

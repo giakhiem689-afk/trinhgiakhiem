@@ -3,18 +3,21 @@ import { navigation } from '../data/navigation';
 import { profile } from '../data/profile';
 
 const currentPath = Astro.url.pathname;
+
+const isActive = (href: string) =>
+  currentPath === href || (href !== '/' && currentPath.startsWith(href));
 ---
 <header class="site-header">
   <div class="container header-inner">
     <a href="/" class="logo">{profile.name}</a>
-    
-    <nav class="main-nav" aria-label="Main Navigation">
+
+    <nav class="main-nav" aria-label="Điều hướng chính">
       <ul class="nav-list">
         {navigation.map((item) => (
           <li>
-            <a 
-              href={item.href} 
-              class={`nav-link ${currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) ? 'active' : ''}`}
+            <a
+              href={item.href}
+              class={`nav-link ${isActive(item.href) ? 'active' : ''}`}
               aria-current={currentPath === item.href ? 'page' : undefined}
             >
               {item.label}
@@ -23,12 +26,82 @@ const currentPath = Astro.url.pathname;
         ))}
       </ul>
     </nav>
-    
+
     <div class="header-actions">
-      <a href="/cv" class="btn btn-primary">Xem CV</a>
+      <a href="/cv" class="btn btn-primary cv-btn">Xem CV</a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Mở menu điều hướng"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
     </div>
   </div>
+
+  <!-- Menu di động -->
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Điều hướng di động" hidden>
+    <ul class="mobile-nav-list">
+      {navigation.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class={`mobile-nav-link ${isActive(item.href) ? 'active' : ''}`}
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a href="/cv" class={`mobile-nav-link ${isActive('/cv') ? 'active' : ''}`}>Xem CV</a>
+      </li>
+    </ul>
+  </nav>
 </header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  if (toggle && mobileNav) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Đóng menu điều hướng' : 'Mở menu điều hướng');
+      toggle.classList.toggle('is-open', open);
+      mobileNav.classList.toggle('is-open', open);
+      if (open) {
+        mobileNav.removeAttribute('hidden');
+      } else {
+        mobileNav.setAttribute('hidden', '');
+      }
+    };
+
+    toggle.addEventListener('click', () => {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    // Đóng menu khi nhấn Escape
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    // Đóng menu khi quay lại kích thước desktop
+    const desktopQuery = window.matchMedia('(min-width: 769px)');
+    desktopQuery.addEventListener('change', (event) => {
+      if (event.matches) setOpen(false);
+    });
+  }
+</script>
 
 <style>
   .site-header {
@@ -38,21 +111,23 @@ const currentPath = Astro.url.pathname;
     top: 0;
     z-index: 100;
   }
-  
+
   .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--space-4);
     height: 72px;
   }
-  
+
   .logo {
     font-family: var(--font-heading);
     font-size: var(--text-lg);
     font-weight: 600;
     color: var(--color-pink-dark);
+    text-decoration: none;
   }
-  
+
   .nav-list {
     display: flex;
     gap: var(--space-6);
@@ -60,19 +135,113 @@ const currentPath = Astro.url.pathname;
     padding: 0;
     margin: 0;
   }
-  
+
   .nav-link {
     color: var(--color-text-main);
     font-weight: 500;
+    text-decoration: none;
   }
-  
-  .nav-link:hover, .nav-link.active {
+
+  .nav-link:hover,
+  .nav-link.active {
     color: var(--color-pink-dark);
   }
-  
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+  }
+
+  /* Nút hamburger */
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+  }
+
+  .nav-toggle-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--color-pink-dark);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Menu di động */
+  .mobile-nav {
+    display: none;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-main);
+  }
+
+  .mobile-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-2) var(--space-4) var(--space-4);
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: var(--space-3) var(--space-2);
+    color: var(--color-text-main);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .mobile-nav-list li:last-child .mobile-nav-link {
+    border-bottom: none;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: var(--color-pink-dark);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-toggle-bar {
+      transition: none;
+    }
+  }
+
   @media (max-width: 768px) {
     .main-nav {
-      display: none; /* Add mobile menu implementation if needed */
+      display: none;
+    }
+
+    .cv-btn {
+      display: none;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .mobile-nav.is-open {
+      display: block;
     }
   }
 </style>

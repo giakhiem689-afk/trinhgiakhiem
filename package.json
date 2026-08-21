@@ -1,7 +1,9 @@
 {
-  "name": "tested-tower",
+  "name": "trinhgiakhiem-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Website cá nhân của Trịnh Gia Khiêm — hồ sơ nghề nghiệp, nghiên cứu và blog về tâm lý giáo dục, hỗ trợ người học và AI trong giáo dục.",
+  "private": true,
   "engines": {
     "node": ">=22.12.0"
   },

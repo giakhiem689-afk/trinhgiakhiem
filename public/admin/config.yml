@@ -9,7 +9,7 @@ public_folder: "/images"
 
 # Cấu hình giao diện CMS
 site_url: https://trinhgiakhiem.info.vn
-logo_url: https://trinhgiakhiem.info.vn/images/avatar.png
+logo_url: https://trinhgiakhiem.info.vn/images/avatar.jpg
 
 collections:
   - name: "blog"

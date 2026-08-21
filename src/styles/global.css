@@ -1,7 +1,6 @@
 @import './tokens.css';
 
-/* Import Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+/* Fonts được nạp qua <link> trong SeoHead.astro (nhanh hơn @import) */
 
 /* CSS Reset */
 *, *::before, *::after {

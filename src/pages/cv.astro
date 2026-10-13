@@ -3,11 +3,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import { profile } from '../data/profile';
 import StatusBadge from '../components/StatusBadge.astro';
+
+const certificates = [
+  { name: 'Nghiệp vụ Tư vấn tâm lý học đường', date: '09/11/2021', issuer: 'Trường ĐH Khoa học Xã hội và Nhân văn - ĐHQG TP.HCM', grade: 'Xuất sắc' },
+  { name: 'Chứng chỉ Tin học', date: '04/07/2018', issuer: 'Trường ĐH Khoa học Xã hội và Nhân văn - ĐHQG TP.HCM', grade: 'Giỏi' },
+  { name: 'Chứng chỉ Photoshop', date: '', issuer: 'Trường ĐH Kinh tế - Tài chính TP.HCM', grade: '' },
+  { name: 'Chứng chỉ Ứng dụng Công nghệ thông tin cơ bản', date: '', issuer: 'Trường ĐH Kinh tế - Tài chính TP.HCM', grade: '' },
+];
 ---
 
 <BaseLayout title={`CV ${profile.name} | Academic Support and Educational Psychology`} description="Hồ sơ năng lực trực tuyến của Trịnh Gia Khiêm.">
   <div class="container content-wrapper page-section cv-page">
-    
+
     <div class="cv-header no-print">
       <SectionHeading title="Curriculum Vitae" subtitle="Hồ sơ nghề nghiệp" align="left" />
       <div class="cv-actions">
@@ -21,37 +28,53 @@ import StatusBadge from '../components/StatusBadge.astro';
       <header class="cv-doc-header">
         <h1>{profile.name}</h1>
         <p class="cv-doc-subtitle">Academic Support • Educational Psychology • English Language Education • AI in Education</p>
+        <ul class="cv-contact">
+          <li><strong>Email:</strong> <a href={`mailto:${profile.email}`}>{profile.email}</a></li>
+          <li><strong>Điện thoại:</strong> <a href={`tel:${profile.phone}`}>{profile.phone}</a></li>
+          <li><strong>Website:</strong> <a href={profile.website}>trinhgiakhiem.info.vn</a></li>
+        </ul>
       </header>
 
       <section class="cv-doc-summary mt-6">
-        <p>Người làm việc trong lĩnh vực giáo dục với nền tảng Tâm lý giáo dục, kinh nghiệm hỗ trợ học vụ, giảng dạy kỹ năng sống, tổ chức hoạt động và truyền thông giáo dục. Hiện đang theo học Chương trình Thạc sĩ Ngôn ngữ Anh và phát triển hướng nghiên cứu về thái độ của giáo viên đối với việc sử dụng AI trong phản hồi bài viết tiếng Anh.</p>
+        <p>Có chuyên ngành về Tâm lý Giáo dục và Tiếng Anh, 8 năm công tác trong lĩnh vực giáo dục. Có kỹ năng và kinh nghiệm về tư vấn, giảng dạy, công nghệ AI, công việc văn phòng, giải quyết vấn đề và chăm sóc người học trong lĩnh vực giáo dục. Có khả năng ứng dụng công nghệ thông tin và AI để giảm thời gian, công sức, tăng năng suất và chất lượng công việc. Mục tiêu: cống hiến cho Giáo dục, Chăm sóc sức khỏe tinh thần và Giảng dạy.</p>
       </section>
 
       <div class="cv-doc-body mt-8">
         <aside class="cv-doc-sidebar">
-          
+
           <section class="cv-doc-section">
-            <h3 class="section-title">Kỹ năng nghề nghiệp</h3>
+            <h3 class="section-title">Kỹ năng chuyên môn</h3>
             <ul class="clean-list skill-tags">
-              <li>Hỗ trợ người học</li>
-              <li>Tư vấn và tham vấn</li>
+              <li>Tư vấn, tham vấn</li>
+              <li>Hỗ trợ sinh viên</li>
+              <li>Giảng dạy, đào tạo</li>
+              <li>Truyền thông giáo dục</li>
+            </ul>
+          </section>
+
+          <section class="cv-doc-section mt-6">
+            <h3 class="section-title">Kỹ năng mềm</h3>
+            <ul class="clean-list skill-tags">
               <li>Giải quyết vấn đề</li>
               <li>Thuyết trình</li>
-              <li>Tổ chức chương trình</li>
-              <li>Truyền thông giáo dục</li>
-              <li>Xây dựng nội dung</li>
+              <li>Giao tiếp</li>
+              <li>Làm việc nhóm</li>
             </ul>
           </section>
 
           <section class="cv-doc-section mt-6">
             <h3 class="section-title">Công cụ</h3>
             <div class="tool-group">
-              <strong>Văn phòng:</strong>
-              <span>Microsoft Word, PowerPoint, Excel</span>
+              <strong>Tin học văn phòng:</strong>
+              <span>Microsoft Word, Excel, PowerPoint</span>
             </div>
             <div class="tool-group mt-2">
-              <strong>Công cụ AI:</strong>
-              <span>ChatGPT, Gemini, Antigravity</span>
+              <strong>Công nghệ &amp; AI:</strong>
+              <span>ChatGPT, Claude, Gemini, Antigravity, OpenClaw, Google Apps Script</span>
+            </div>
+            <div class="tool-group mt-2">
+              <strong>Dữ liệu:</strong>
+              <span>Zoho CRM, Edusoft, Excel, Access</span>
             </div>
             <div class="tool-group mt-2">
               <strong>Thiết kế:</strong>
@@ -63,7 +86,7 @@ import StatusBadge from '../components/StatusBadge.astro';
             <h3 class="section-title">Ngôn ngữ</h3>
             <ul class="clean-list">
               <li><strong>Tiếng Việt:</strong> Ngôn ngữ chính</li>
-              <li><strong>Tiếng Anh:</strong> Đang phát triển</li>
+              <li><strong>Tiếng Anh:</strong> Cử nhân Ngôn ngữ Anh, đang học Thạc sĩ</li>
             </ul>
           </section>
 
@@ -79,58 +102,133 @@ import StatusBadge from '../components/StatusBadge.astro';
         </aside>
 
         <main class="cv-doc-main">
-          
+
           <section class="cv-doc-section">
             <h3 class="section-title">Học vấn</h3>
-            
+
             <div class="timeline-item">
               <div class="timeline-meta">2025 - Nay</div>
               <h4 class="timeline-title">Thạc sĩ Ngôn ngữ Anh</h4>
-              <div class="timeline-subtitle">Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh (UEF)</div>
+              <div class="timeline-subtitle">Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</div>
               <p class="timeline-status">Trạng thái: Đang theo học</p>
             </div>
-            
+
             <div class="timeline-item">
-              <div class="timeline-meta">Giai đoạn đại học</div>
-              <h4 class="timeline-title">Cử nhân Tâm lý giáo dục</h4>
-              <div class="timeline-subtitle">Khoa Giáo dục, Trường Đại học Khoa học Xã hội và Nhân văn, ĐHQG-HCM</div>
+              <div class="timeline-meta">2022 - 2024</div>
+              <h4 class="timeline-title">Cử nhân Ngôn ngữ Anh</h4>
+              <div class="timeline-subtitle">Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-meta">2017 - 2021</div>
+              <h4 class="timeline-title">Cử nhân Tâm lý Giáo dục</h4>
+              <div class="timeline-subtitle">Trường Đại học Khoa học Xã hội và Nhân văn - ĐHQG TP.HCM</div>
             </div>
           </section>
 
           <section class="cv-doc-section mt-8">
-            <h3 class="section-title">Kinh nghiệm nghề nghiệp</h3>
-            
+            <h3 class="section-title">Chứng chỉ</h3>
+            <ul class="cert-list">
+              {certificates.map((c) => (
+                <li>
+                  <strong>{c.name}</strong>
+                  {c.grade && <span class="cert-grade">{c.grade}</span>}
+                  <div class="cert-meta">{c.issuer}{c.date && ` · ${c.date}`}</div>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section class="cv-doc-section mt-8">
+            <h3 class="section-title">Quá trình công tác</h3>
+
             <div class="timeline-item">
-              <div class="timeline-meta">Công tác trong lĩnh vực hỗ trợ học vụ</div>
-              <h4 class="timeline-title">Trung tâm Hỗ trợ học vụ, UEF</h4>
+              <div class="timeline-meta">2/2022 - Nay</div>
+              <h4 class="timeline-title">Trường Đại học Kinh tế - Tài chính TP.HCM (UEF)</h4>
+              <div class="timeline-subtitle">Nhân viên Trung tâm Hỗ trợ học vụ · Tổ trưởng Tổ Truyền thông học vụ (từ 2025)</div>
+              <p>Thực hiện nhiệm vụ thông tin - truyền thông, phòng ngừa và giải quyết vấn đề, tư vấn, chăm sóc, hỗ trợ sinh viên/phụ huynh về học tập và học vụ.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-meta">9/2020 - 6/2021</div>
+              <h4 class="timeline-title">Trung tâm Đào tạo Kỹ năng sống Ý Tưởng Việt</h4>
+              <div class="timeline-subtitle">Giáo viên Kỹ năng sống</div>
+              <p>Giảng dạy kỹ năng sống cho học sinh cấp 1, cấp 2 tại một số trường trên địa bàn TP.HCM.</p>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-meta">9/2018 - 6/2019</div>
+              <h4 class="timeline-title">Trường Tiểu học Lê Ngọc Hân (Quận 1, TP.HCM)</h4>
+              <div class="timeline-subtitle">Phó Tổng phụ trách Đội</div>
+              <p>Quản lý, thực hiện công tác Đội TNTP và phong trào thiếu nhi trong trường.</p>
+            </div>
+          </section>
+
+          <section class="cv-doc-section mt-8">
+            <h3 class="section-title">Kinh nghiệm</h3>
+
+            <div class="timeline-item">
+              <h4 class="timeline-title">Tư vấn, chăm sóc, hỗ trợ sinh viên</h4>
               <ul class="bullet-list">
-                <li>Tham gia tư vấn và hỗ trợ giải đáp các vấn đề học vụ.</li>
-                <li>Hỗ trợ sinh viên tiếp cận quy trình và nguồn lực.</li>
-                <li>Tham gia truyền thông học vụ.</li>
-                <li>Tham gia xây dựng nội dung hỗ trợ kỹ năng học tập.</li>
-                <li>Phối hợp trong quá trình chăm sóc và hỗ trợ người học.</li>
+                <li>Tư vấn trực tiếp và trực tuyến qua Facebook, Zalo, Email và Điện thoại tại Trung tâm Hỗ trợ học vụ UEF.</li>
+                <li>Tiếp nhận, xử lý và theo dõi hồ sơ học vụ; hướng dẫn quy trình, quy định đào tạo.</li>
+                <li>Hỗ trợ phụ huynh và sinh viên trong suốt quá trình học tập.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h4 class="timeline-title">Thiết kế, Thông tin - Truyền thông</h4>
+              <ul class="bullet-list">
+                <li>Tổ trưởng Tổ Truyền thông - Thông tin, Trung tâm Hỗ trợ học vụ UEF: thiết kế ấn phẩm, viết tin bài Website và Fanpage; quản lý hệ thống email; triển khai Email (Outlook, Zoho Campaign), SMS-ZNS và các kênh truyền thông học vụ.</li>
+                <li>Thành lập Đội Truyền thông EMT và xây dựng Fanpage Đoàn - Hội Khoa Giáo dục (ĐH KHXH&amp;NV); phụ trách toàn bộ hoạt động truyền thông.</li>
+                <li>Trưởng Ban Truyền thông Xuân tình nguyện Khoa Giáo dục 2019 và nhiều chương trình của Đoàn - Hội.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h4 class="timeline-title">Dữ liệu</h4>
+              <ul class="bullet-list">
+                <li>Quản lý dữ liệu sinh viên và chăm sóc sinh viên (xử lý, lưu trữ, truy xuất) trên Zoho CRM, Edusoft, Excel, Access.</li>
+                <li>Xử lý dữ liệu, phát hiện đối tượng cần chăm sóc và thực hiện chăm sóc.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h4 class="timeline-title">Giảng dạy</h4>
+              <ul class="bullet-list">
+                <li>Giáo viên Kỹ năng sống: giảng dạy kỹ năng sống cho học sinh tiểu học và trung học cơ sở tại nhiều trường ở TP.HCM.</li>
+                <li>Phó Tổng phụ trách Đội: hướng dẫn kỹ năng Đội, nghi thức Đội và tổ chức hoạt động trải nghiệm cho học sinh.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h4 class="timeline-title">Chương trình sự kiện - Phong trào</h4>
+              <ul class="bullet-list">
+                <li>Liên chi Hội Sinh viên Khoa Giáo dục (ĐH KHXH&amp;NV): Liên chi Hội phó; Ban Tổ chức Xuân tình nguyện, Trung thu yêu thương, Thu gom rác - Bảo vệ môi trường, Lễ Tri ân - Trưởng thành, Chào đón Tân sinh viên, Hội trại truyền thống.</li>
+                <li>Nhóm Sinh viên Công giáo Tu đoàn Thiên Phúc: Trưởng Ban Tổ chức sự kiện; Hội trại Xuân, Hát cho nhau nghe và các hoạt động cộng đồng.</li>
+                <li>Trường Tiểu học Lê Ngọc Hân: Ban Tổ chức Sinh hoạt đầu tuần, Hội chợ Xuân, Hội thi Chỉ huy Đội giỏi và các hoạt động ngoài giờ lên lớp.</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h4 class="timeline-title">Hành chính văn phòng &amp; Quản lý</h4>
+              <ul class="bullet-list">
+                <li>Quản lý Email Trung tâm Hỗ trợ học vụ: tiếp nhận, xử lý, phản hồi, lưu trữ và theo dõi email; công tác văn thư, công văn đi - đến.</li>
+                <li>Tổ trưởng Tổ Truyền thông học vụ, Trung tâm Hỗ trợ học vụ UEF.</li>
+                <li>Sáng lập và là đội trưởng đầu tiên của Đội Truyền thông Đoàn - Hội Khoa Giáo dục EMT.</li>
               </ul>
             </div>
           </section>
 
           <section class="cv-doc-section mt-8">
-            <h3 class="section-title">Kinh nghiệm giảng dạy</h3>
+            <h3 class="section-title">Thành tích</h3>
             <ul class="bullet-list">
-              <li>Giảng dạy kỹ năng sống cho học sinh tiểu học và trung học cơ sở.</li>
-              <li>Tham gia các hoạt động giáo dục và công tác Đội.</li>
-              <li>Phát triển nội dung phù hợp với độ tuổi người học.</li>
-              <li>Hỗ trợ học sinh phát triển kỹ năng cá nhân và xã hội.</li>
-            </ul>
-          </section>
-
-          <section class="cv-doc-section mt-8">
-            <h3 class="section-title">Hoạt động tổ chức và lãnh đạo</h3>
-            <ul class="bullet-list">
-              <li>Liên chi hội phó Liên chi hội Sinh viên Khoa Giáo dục.</li>
-              <li>Tham gia tổ chức chương trình và phong trào sinh viên.</li>
-              <li>Tham gia tổ chức hoạt động Nhóm Sinh viên Công giáo Tu đoàn Thiên Phúc.</li>
-              <li>Tham gia công tác Đội tại Trường Tiểu học Lê Ngọc Hân.</li>
-              <li>Tham gia xây dựng đội ngũ truyền thông EMT.</li>
+              <li>Nhân viên xuất sắc Trung tâm Hỗ trợ học vụ - Phòng Đào tạo, Trường ĐH Kinh tế - Tài chính TP.HCM các năm học 2022-2023, 2023-2024, 2024-2025.</li>
+              <li>Chiến sĩ thi đua cơ sở Trường ĐH Kinh tế - Tài chính TP.HCM các năm học 2022-2023, 2023-2024, 2024-2025.</li>
+              <li>Quý quân Hùng biện Tiếng nói Thanh niên “Hành động vì một thành phố phát triển”.</li>
+              <li>Giấy khen Khoa Giáo dục: Cá nhân có thành tích xuất sắc trong hoạt động phong trào 2017-2018.</li>
+              <li>Giấy khen Hội Sinh viên Trường: thành tích xuất sắc trong công tác Hội và phong trào sinh viên 2017-2018, 2018-2019 và giai đoạn 2016-2019.</li>
+              <li>Giấy khen Hội Sinh viên Trường: Chiến sĩ xuất sắc Xuân Tình Nguyện 2019.</li>
             </ul>
           </section>
 
@@ -264,6 +362,59 @@ import StatusBadge from '../components/StatusBadge.astro';
     margin-top: 0.25rem;
   }
   
+  .cv-contact {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-4) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-6);
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+  }
+
+  .cv-contact strong {
+    color: var(--color-text-main);
+  }
+
+  .cv-contact a {
+    color: inherit;
+    overflow-wrap: anywhere;
+  }
+
+  .cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cert-list li {
+    margin-bottom: var(--space-4);
+  }
+
+  .cert-grade {
+    display: inline-block;
+    margin-left: var(--space-2);
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    background-color: var(--color-pink-light);
+    color: var(--color-pink-dark);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    vertical-align: middle;
+  }
+
+  .cert-meta {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-top: 0.125rem;
+  }
+
+  .timeline-item p {
+    line-height: 1.6;
+    margin: 0;
+  }
+
   /* Timeline Items */
   .timeline-item {
     margin-bottom: var(--space-6);

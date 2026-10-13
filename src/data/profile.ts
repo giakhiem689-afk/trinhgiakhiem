@@ -31,6 +31,11 @@ export const profile = {
       period: "2017 - 2021"
     },
     {
+      title: "Cử nhân Ngôn ngữ Anh",
+      institution: "ĐH Kinh tế - Tài chính TP.HCM (UEF)",
+      period: "2022 - 2024"
+    },
+    {
       title: "Học viên Thạc sĩ Ngôn ngữ Anh",
       institution: "ĐH Kinh tế - Tài chính TP.HCM (UEF)",
       period: "2025 - Hiện tại"

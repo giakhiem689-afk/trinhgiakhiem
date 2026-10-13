@@ -28,6 +28,8 @@ export const timeline = [
     title: "Công việc hỗ trợ học vụ & Tự động hóa tại UEF",
     description: `Công tác tại <strong>Trung tâm Hỗ trợ học vụ UEF</strong>, cầu nối quan trọng giữa người học và nhà trường:<br/>
     <ul style="margin-top: 6px; padding-left: 20px; list-style-type: disc; font-size: 0.9em; line-height: 1.6;">
+      <li>Tốt nghiệp <strong>Cử nhân Ngôn ngữ Anh</strong> tại Trường Đại học Kinh tế - Tài chính TP.HCM (2022-2024).</li>
+      <li>Từ 2025 giữ vai trò <strong>Tổ trưởng Tổ Truyền thông học vụ</strong>, Trung tâm Hỗ trợ học vụ UEF.</li>
       <li>Đạt đánh giá <strong>Nhân viên xuất sắc</strong> Trung tâm Hỗ trợ học vụ - Phòng Đào tạo - Trường Đại học Kinh tế - Tài chính TP.HCM liên tiếp các năm học 2022-2023, 2023-2024 và 2024-2025.</li>
       <li>Đạt danh hiệu <strong>Chiến sĩ thi đua cơ sở</strong> Trường Đại học Kinh tế - Tài chính TP.HCM các năm học 2022-2023, 2023-2024 và 2024-2025.</li>
       <li>Hỗ trợ trực tiếp sinh viên xử lý quy chế học vụ (đăng ký học phần, bảo lưu, chuyển ngành, tốt nghiệp...).</li>

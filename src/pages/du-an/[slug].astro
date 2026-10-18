@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const { title, description, status, role, tools, coverImage } = project.data;
+const { title, description, status, role, tools, coverImage, appUrl } = project.data;
 ---
 
 <BaseLayout title={`${title} | Dự án`} description={description} image={coverImage}>
@@ -33,6 +33,12 @@ const { title, description, status, role, tools, coverImage } = project.data;
         </div>
       </div>
       
+      {appUrl && (
+        <div class="mt-8">
+          <a href={appUrl} class="btn btn-primary">▶ Mở ứng dụng</a>
+        </div>
+      )}
+
       {coverImage && (
         <div class="project-cover mt-8">
           <img src={coverImage} alt={title} class="card" />

@@ -52,6 +52,10 @@ const projects = defineCollection({
     skills: z.array(z.string()).optional(),
     coverImage: z.string().optional(),
     coverAlt: z.string().optional(),
+    // Đường dẫn tới ứng dụng chạy trực tiếp trên web (nếu có) — thẻ dự án sẽ mở thẳng app
+    appUrl: z.string().optional(),
+    // Thứ tự hiển thị: số nhỏ đứng trước (mặc định 100)
+    order: z.number().default(100),
     featured: z.boolean().default(false),
     draft: z.boolean().default(false)
   })

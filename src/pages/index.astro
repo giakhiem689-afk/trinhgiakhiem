@@ -28,7 +28,10 @@ try {
 
 try {
   const allProjects = await getCollection('projects');
-  featuredProjects = allProjects.filter(p => !p.data.draft && p.data.featured).slice(0, 3);
+  featuredProjects = allProjects
+    .filter(p => !p.data.draft && p.data.featured)
+    .sort((a, b) => a.data.order - b.data.order)
+    .slice(0, 3);
 } catch (e) {
   console.log("No projects found yet");
 }
@@ -126,8 +129,13 @@ try {
               <div class="mb-4">
                 <StatusBadge status={project.data.status} />
               </div>
-              <h3 class="highlight-title"><a href={`/du-an/${project.id}`}>{project.data.title}</a></h3>
+              <h3 class="highlight-title"><a href={project.data.appUrl ?? `/du-an/${project.id}`}>{project.data.title}</a></h3>
               <p class="highlight-desc mt-2">{project.data.description}</p>
+              {project.data.appUrl && (
+                <div class="mt-4">
+                  <a href={project.data.appUrl} class="btn btn-primary">▶ Mở ứng dụng</a>
+                </div>
+              )}
             </div>
           ))}
         </div>

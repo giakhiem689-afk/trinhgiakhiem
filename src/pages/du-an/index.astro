@@ -11,7 +11,9 @@ const description = "Các dự án xây dựng nguồn lực, công cụ và quy
 let projects = [];
 try {
   const allProjects = await getCollection('projects');
-  projects = allProjects.filter(p => !p.data.draft);
+  projects = allProjects
+    .filter(p => !p.data.draft)
+    .sort((a, b) => a.data.order - b.data.order);
 } catch (e) {
   console.log("No projects found", e);
 }
@@ -31,13 +33,14 @@ try {
     {projects.length > 0 ? (
       <section class="projects-grid mt-12">
         {projects.map((project) => (
-          <article class="project-card card">
+          <article class={`project-card card${project.data.appUrl ? ' project-card--app' : ''}`}>
             <div class="project-content">
               <div class="project-meta">
                 <StatusBadge status={project.data.status} />
+                {project.data.appUrl && <span class="app-badge">📱💻 Ứng dụng web</span>}
               </div>
               <h3 class="project-title">
-                <a href={`/du-an/${project.id}`}>{project.data.title}</a>
+                <a href={project.data.appUrl ?? `/du-an/${project.id}`} class={project.data.appUrl ? 'card-link' : undefined}>{project.data.title}</a>
               </h3>
               
               <div class="project-details">
@@ -51,6 +54,13 @@ try {
                   <span class="tool-tag">{tool}</span>
                 ))}
               </div>
+
+              {project.data.appUrl && (
+                <div class="app-actions">
+                  <span class="btn btn-primary app-open" aria-hidden="true">▶ Mở ứng dụng</span>
+                  <a href={`/du-an/${project.id}`} class="app-about">Giới thiệu dự án</a>
+                </div>
+              )}
             </div>
           </article>
         ))}
@@ -157,6 +167,73 @@ try {
     font-weight: 500;
   }
   
+  /* Thẻ ứng dụng: cả thẻ bấm được để mở app */
+  .project-card--app {
+    position: relative;
+    border: 2px solid var(--color-pink-main);
+    background: linear-gradient(160deg, var(--color-pink-light) 0%, var(--color-bg-card) 55%);
+  }
+
+  .project-card--app .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .app-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-bg-card);
+    color: var(--color-pink-dark);
+    border: 1px solid var(--color-border);
+  }
+
+  /* Kéo vùng bấm của link tiêu đề phủ toàn bộ thẻ */
+  .card-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+
+  .app-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+  }
+
+  .app-open {
+    pointer-events: none;
+  }
+
+  .project-card--app:hover .app-open {
+    filter: brightness(1.05);
+  }
+
+  /* Link phụ nằm trên lớp phủ để vẫn bấm riêng được */
+  .app-about {
+    position: relative;
+    z-index: 1;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .app-about:hover {
+    color: var(--color-pink-dark);
+  }
+
+  .project-card--app:focus-within {
+    outline: 3px solid var(--color-pink-main);
+    outline-offset: 3px;
+  }
+
   .empty-state {
     padding: var(--space-12);
     text-align: center;

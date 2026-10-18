@@ -41,6 +41,8 @@ collections:
       - {label: "Vai trò", name: "role", widget: "string"}
       - {label: "Công cụ sử dụng", name: "tools", widget: "list"}
       - {label: "Ảnh bìa", name: "coverImage", widget: "image", required: false}
+      - {label: "Link ứng dụng (nếu có)", name: "appUrl", widget: "string", required: false}
+      - {label: "Thứ tự (số nhỏ đứng trước)", name: "order", widget: "number", value_type: "int", default: 100, required: false}
       - {label: "Bản nháp", name: "draft", widget: "boolean", default: false}
       - {label: "Nổi bật", name: "featured", widget: "boolean", default: false}
       - {label: "Nội dung", name: "body", widget: "markdown"}

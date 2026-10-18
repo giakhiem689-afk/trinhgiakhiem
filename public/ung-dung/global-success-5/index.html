@@ -275,6 +275,22 @@ p { margin: 0; }
 .feedback .msg b { font-family: var(--font-display); font-size: 1.3rem; display: block; line-height: 1.1; }
 .feedback .xp { font-weight: 900; }
 
+/* Thanh thao tác cuối bài (máy tính: hàng nút giữa; điện thoại: cố định ở đáy, trong tầm ngón cái) */
+.act-bar { display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.bar-hint { color: var(--ink-soft); font-weight: 800; font-size: 0.92rem; text-align: center; }
+.opt { position: relative; }
+.opt-key { position: absolute; top: 6px; left: 8px; font-size: 0.72rem; font-weight: 900; color: var(--ink-soft); opacity: .6; }
+.fb-ico { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 900; font-size: 1.3rem; color: #fff; flex-shrink: 0; }
+.feedback.ok .fb-ico { background: var(--grass); }
+.feedback.no .fb-ico { background: var(--berry); }
+.fb-ans { display: block; }
+.fb-ans strong { font-weight: 900; }
+.fb-note { display: block; font-weight: 700; opacity: .8; }
+.talk-tabs { display: flex; gap: 6px; background: var(--card); border: 2px solid var(--line); border-radius: 14px; padding: 4px; }
+.talk-tabs button { flex: 1; border: 0; background: none; border-radius: 10px; padding: 8px 6px; font-weight: 900; font-size: 0.9rem; color: var(--ink-soft); white-space: nowrap; }
+.talk-tabs button.heard { color: #11622F; }
+.talk-tabs button.on { background: var(--violet); color: #fff; box-shadow: 0 3px 0 #4B3BB0; }
+
 /* Flashcard */
 .flash { perspective: 1200px; height: 340px; cursor: pointer; }
 .flash-in { position: relative; width: 100%; height: 100%; transition: transform .5s; transform-style: preserve-3d; }
@@ -336,7 +352,8 @@ p { margin: 0; }
 /* Memory */
 .mem-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .mem { aspect-ratio: 1 / 1.05; max-width: 100%; perspective: 800px; border: 0; background: none; padding: 0; }
-.mem-in { position: relative; width: 100%; height: 100%; transition: transform .4s; transform-style: preserve-3d; }
+/* display:block — mem-in là thẻ <span>; nếu để inline thì khung thẻ bị co về 0 và cả bộ thẻ không hiện */
+.mem-in { display: block; position: relative; width: 100%; height: 100%; transition: transform .4s; transform-style: preserve-3d; }
 .mem.open .mem-in, .mem.ok .mem-in { transform: rotateY(180deg); }
 .mem-f, .mem-b { position: absolute; inset: 0; border-radius: 14px; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 6px; text-align: center; }
 .mem-f { background: var(--violet); color: #fff; font-family: var(--font-display); font-size: 2rem; box-shadow: 0 4px 0 #4B3BB0; }
@@ -352,6 +369,7 @@ p { margin: 0; }
 .sum-stat b { display: block; font-family: var(--font-display); font-size: 1.7rem; line-height: 1; font-variant-numeric: tabular-nums; }
 .sum-stat span { font-size: 0.8rem; font-weight: 800; color: var(--ink-soft); }
 .big-stars { font-size: 3rem; letter-spacing: 6px; }
+.sum-emo { font-size: 4rem; line-height: 1; }
 .big-stars .off { filter: grayscale(1); opacity: .3; }
 .chest { font-size: 5rem; border: 0; background: none; animation: wobble 1.2s infinite; }
 .chest.opened { animation: pop .5s ease; }
@@ -381,6 +399,76 @@ p { margin: 0; }
 .badge b { display: block; line-height: 1.2; }
 .badge small { color: var(--ink-soft); font-weight: 700; }
 .grid-badges { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+
+/* Cửa hàng v4: ví, thẻ tích ngôi sao vàng, quà thật, album, khung ảnh */
+:root { --gold: #F2A900; --gold-deep: #B57E00; --gold-tint: #FFF6D6; }
+.wallet { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.chip.gold { border-color: var(--gold); background: var(--gold-tint); color: #7A5200; }
+.shop-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; background: var(--card); border: 2px solid var(--line); border-radius: 16px; padding: 5px; position: sticky; top: 64px; z-index: 10; }
+.shop-tabs button { border: 0; background: none; border-radius: 12px; padding: 8px 4px; font-weight: 900; font-size: 0.9rem; color: var(--ink-soft); display: flex; align-items: center; justify-content: center; gap: 6px; }
+.shop-tabs button .emo { font-size: 1.25rem; }
+.shop-tabs button.on { background: var(--orange); color: #fff; box-shadow: 0 3px 0 var(--orange-deep); }
+.gold-box { display: flex; flex-direction: column; gap: 14px; background: linear-gradient(180deg, var(--gold-tint), var(--card) 70%); border-color: #F2D47A; }
+.gold-head { display: flex; align-items: center; gap: 14px; }
+.gold-big { display: flex; align-items: center; gap: 6px; background: var(--card); border: 3px solid var(--gold); border-radius: 18px; padding: 6px 14px; box-shadow: 0 4px 0 var(--gold-deep); }
+.gold-big .emo { font-size: 2rem; }
+.gold-big b { font-family: var(--font-display); font-size: 2.2rem; line-height: 1; color: #7A5200; font-variant-numeric: tabular-nums; }
+.gold-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.gold-card { background: var(--card); border: 2px dashed #E8C766; border-radius: 14px; padding: 8px 10px; }
+.gold-card.full { border-style: solid; border-color: var(--gold); box-shadow: 0 3px 0 #F2D47A; }
+.gold-card.more { display: grid; place-items: center; font-weight: 900; color: var(--ink-soft); }
+.gold-card-no { font-size: 0.72rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); }
+.gold-slots { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; margin-top: 4px; }
+.gold-slots i { aspect-ratio: 1; border-radius: 50%; border: 2px dashed #E8C766; display: grid; place-items: center; font-style: normal; font-size: 1.3rem; font-family: var(--emoji); }
+.gold-slots i.on { border: 2px solid var(--gold); background: var(--gold-tint); animation: pop .35s ease; }
+.gold-buy { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.gold-buy small { font-weight: 700; }
+.gold-free { font-size: 0.88rem; font-weight: 600; }
+.reward-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.reward { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; padding: 14px 10px; border-radius: var(--r-md); background: var(--card); border: 2px solid var(--line); box-shadow: var(--shadow); }
+.reward > .emo { font-size: 2.6rem; }
+.reward b { font-size: 0.95rem; line-height: 1.2; flex: 1; }
+.reward.can { border-color: var(--gold); background: var(--gold-tint); }
+.reward-cost { font-weight: 900; color: #7A5200; background: var(--gold-tint); border: 2px solid #F2D47A; border-radius: 99px; padding: 1px 10px; font-size: 0.9rem; }
+.reward .bar { width: 100%; height: 8px; }
+.reward small { font-weight: 800; font-size: 0.8rem; }
+.reward .btn { padding: 8px 14px; font-size: 0.92rem; }
+.voucher-list { display: flex; flex-direction: column; gap: 10px; }
+.voucher { display: grid; grid-template-columns: auto 1fr auto; gap: 8px 12px; align-items: center; padding: 14px; border-radius: var(--r-md); background: var(--card); border: 2px dashed var(--orange); }
+.voucher-ico { font-size: 2.2rem; }
+.voucher b { display: block; line-height: 1.2; }
+.voucher small { color: var(--ink-soft); font-weight: 700; }
+.voucher-code, .code-big { font-family: ui-monospace, Consolas, monospace; font-weight: 900; font-size: 1.5rem; letter-spacing: .14em; color: var(--orange-deep); }
+.voucher-code { background: #FFE7DA; border-radius: 10px; padding: 4px 10px; }
+.voucher-act { grid-column: 1 / -1; display: flex; gap: 8px; flex-wrap: wrap; }
+.got-list { list-style: none; padding: 0; margin: 8px 0 0; display: flex; flex-direction: column; gap: 6px; font-weight: 800; }
+.how-list { margin: 8px 0 0; padding-left: 20px; color: var(--ink-soft); font-weight: 600; display: flex; flex-direction: column; gap: 4px; }
+.album { display: flex; flex-direction: column; gap: 10px; background: var(--card); border: 2px solid var(--line); border-radius: var(--r-lg); padding: 14px; }
+.album.full { border-color: var(--grass); background: var(--grass-tint); }
+.album-head { display: flex; align-items: center; gap: 12px; }
+.album-head b { font-family: var(--font-display); font-size: 1.15rem; display: block; margin-bottom: 4px; }
+.album-ico { font-size: 2rem; }
+.album-count { font-weight: 900; font-variant-numeric: tabular-nums; color: var(--ink-soft); }
+.album-note { font-size: 0.85rem; font-weight: 700; }
+.album .grid-stickers { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; }
+.sticker.r-rare:not(.locked) { border-color: #C8BBFF; }
+.sticker.r-epic:not(.locked) { border-color: var(--gold); background: var(--gold-tint); }
+.sticker .owned { color: var(--grass); font-weight: 900; }
+.frame-demo { width: 56px; height: 56px; font-size: 1.8rem; }
+.avatar.fr-gold { border: 3px solid var(--gold); box-shadow: 0 0 0 3px #FFE9A8; }
+.avatar.fr-fire { border: 3px solid #FF6A2C; box-shadow: 0 0 0 3px #FFC8A8, 0 0 10px #FF8A3D; }
+.avatar.fr-ocean { border: 3px solid #159BC0; box-shadow: 0 0 0 3px #BDEBF7; background: #E2F6FC; }
+.avatar.fr-rainbow { border: 3px solid transparent; background: linear-gradient(var(--sun-tint), var(--sun-tint)) padding-box, conic-gradient(#EE6A2C, #FFC530, #23A55A, #159BC0, #6B57D9, #D1366F, #EE6A2C) border-box; }
+.avatar.fr-galaxy { border: 3px solid transparent; background: radial-gradient(circle at 30% 30%, #3B2F8F, #120C3A) padding-box, conic-gradient(#6B57D9, #D1366F, #159BC0, #6B57D9) border-box; box-shadow: 0 0 10px #6B57D9; }
+.modal.wide { max-width: 640px; text-align: left; }
+.rw-head, .rw-row { display: grid; grid-template-columns: 54px 1fr 70px 40px; gap: 6px; align-items: center; }
+.rw-head { font-size: 0.72rem; font-weight: 900; color: var(--ink-soft); text-transform: uppercase; letter-spacing: .06em; }
+.rw-list { display: flex; flex-direction: column; gap: 6px; max-height: 46vh; overflow-y: auto; }
+.rw-row .text { padding: 8px; font-size: 0.95rem; }
+.rw-ico { text-align: center; font-family: var(--emoji); }
+input.pin { text-align: center; letter-spacing: .4em; font-size: 1.4rem; }
+.chest-used { font-weight: 700; max-width: 420px; }
+.teacher-card { border-color: #CFC6FF; }
 
 /* Settings */
 .set-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
@@ -470,9 +558,157 @@ input.text:focus { border-color: var(--aqua); outline: none; }
   .slots.compact .slot { width: 30px; height: 42px; font-size: 1.1rem; }
   .tile { min-width: 44px; height: 48px; font-size: 1.2rem; padding: 0 10px; }
   .modal { padding: 20px; }
+  .shop-tabs { top: 58px; }
+  .shop-tabs button { flex-direction: column; gap: 2px; font-size: 0.72rem; padding: 6px 2px; }
+  .gold-head h3 { font-size: 1rem; }
+  .gold-cards { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .gold-slots i { font-size: 1rem; }
+  .gold-buy .btn { width: 100%; }
+  .reward-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .album .grid-stickers { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .sticker { padding: 10px 4px; }
+  .sticker .emo { font-size: 2.2rem; }
+  .sticker b { font-size: 0.8rem; }
+  .voucher { grid-template-columns: auto 1fr; }
+  .voucher-code { grid-column: 1 / -1; text-align: center; }
+  .voucher-act .btn { flex: 1; }
+  .rw-head, .rw-row { grid-template-columns: 44px 1fr 56px 36px; }
+}
+
+/* ---------- Điện thoại: chặng học gói gọn trong MỘT màn hình ----------
+   Nguyên tắc: (1) bỏ thanh trên cùng khi đang làm bài — thanh tiến độ của bài đã đủ thông tin;
+   (2) câu hỏi ở trên, đáp án ở giữa, nút hành động cố định ở đáy (vùng ngón cái chạm dễ nhất);
+   (3) bảng nhận xét trượt lên đúng vùng nút, không che câu hỏi và đáp án đúng;
+   (4) kích thước co giãn theo chiều cao màn hình (dvh), nên máy thấp vẫn không phải cuộn. */
+@media (max-width: 860px) {
+  :root { --barH: 76px; }
+  body.in-activity .topbar { display: none; }
+  body.in-activity .content { padding-top: 0; padding-bottom: 0; gap: 0; }
+  .act { gap: 10px; min-height: 100vh; min-height: 100dvh; padding-top: max(10px, env(safe-area-inset-top, 0px)); padding-bottom: calc(var(--barH) + 12px + env(safe-area-inset-bottom, 0px)); }
+  .act-head { gap: 10px; }
+  .act-head .close { width: 36px; height: 36px; font-size: 1rem; }
+  .act-head .bar { height: 12px; }
+  .combo { min-width: 48px; font-size: 0.9rem; }
+  .act-label { gap: 8px; font-size: 0.88rem; }
+  .act-label .pill { font-size: 0.74rem; padding: 2px 9px; }
+  .prompt { font-size: 1.08rem; line-height: 1.2; }
+
+  .act-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 14; flex-wrap: nowrap;
+    min-height: var(--barH); background: var(--card); border-top: 2px solid var(--line);
+    padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  }
+  .act-bar .btn { flex: 1; padding: 13px 12px; font-size: 1.02rem; }
+  .act-bar .btn.big { flex: 1.4; }
+  .feedback {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 16; margin: 0; flex-wrap: nowrap; gap: 12px;
+    min-height: var(--barH); border-radius: 20px 20px 0 0; box-shadow: 0 -6px 18px rgba(13, 32, 46, .12);
+    padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  }
+  .feedback .msg { min-width: 0; font-size: 0.92rem; line-height: 1.3; }
+  .feedback .msg b { font-size: 1.12rem; }
+  .fb-ans { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .fb-note { font-size: 0.78rem; }
+  .feedback .btn { flex-shrink: 0; padding: 14px 18px; }
+  .opt-key { display: none; }
+
+  .prompt-card { padding: 12px; gap: 6px; }
+  .prompt-icon { font-size: 3.4rem; }
+  .prompt-word { font-size: 1.9rem; }
+  .speak-big { width: 78px; height: 78px; font-size: 2rem; box-shadow: 0 5px 0 var(--aqua-deep); }
+  .prompt-card.inline { flex-direction: row; text-align: left; justify-content: flex-start; gap: 12px; padding: 10px 12px; }
+  .prompt-card.inline .prompt-icon { font-size: 2.6rem; }
+  .prompt-card.inline .prompt-sub { flex: 1; min-width: 0; line-height: 1.25; }
+  .prompt-card.inline .btn { padding: 10px 12px; flex-shrink: 0; }
+  .prompt-card.inline .sound-row { flex-wrap: nowrap; gap: 6px; }
+  .options { gap: 8px; }
+  .opt { min-height: 64px; padding: 8px; gap: 2px; box-shadow: 0 3px 0 var(--line); }
+  .opt .emo { font-size: 2rem; }
+  .opt b { font-size: 1.02rem; }
+  .opt small { font-size: 0.8rem; line-height: 1.15; }
+  .gap-sentence { font-size: 1.1rem; line-height: 1.45; }
+
+  /* Học từ mới: thẻ co theo chiều cao màn hình */
+  .flash { height: clamp(200px, calc(100dvh - 330px), 340px); }
+  .flash .big { font-size: 4rem; }
+  .flash-face { padding: 14px; gap: 6px; }
+  .flash .m { font-size: 1.5rem; }
+  .flash .ex { font-size: 1rem; }
+  .sound-row { gap: 8px; }
+  .sound-row .btn { padding: 10px 14px; }
+  .lg-only { display: none; }
+
+  /* Mẫu câu */
+  .dialogue { gap: 8px; padding: 14px; }
+  .bubble { font-size: 1.02rem; padding: 10px 14px; max-width: 82%; }
+  .who-dot { width: 34px; height: 34px; }
+  .rhythm li { font-size: 1rem; }
+
+  /* Ghép chữ / ghép câu */
+  .slots { gap: 6px; min-height: 0; }
+  .slot { width: 36px; height: 46px; font-size: 1.35rem; border-width: 2px; }
+  .slots.compact .slot { width: 28px; height: 40px; font-size: 1.1rem; }
+  .gap { width: 10px; }
+  .tiles { gap: 7px; }
+  .tile { min-width: 42px; height: 46px; font-size: 1.25rem; padding: 0 10px; box-shadow: 0 3px 0 #C8BBFF; }
+  .tile.word { font-size: 1rem; padding: 0 11px; height: 44px; }
+  .answer-line { min-height: 60px; gap: 6px; padding: 6px; }
+
+  /* Lật thẻ: 4 cột × 3 hàng vừa một màn hình */
+  .mem-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .mem { aspect-ratio: 1 / 1.2; }
+  .mem-f { font-size: 1.6rem; }
+  .mem-b { font-size: 0.8rem; padding: 4px; }
+  .mem-b .emo { font-size: 1.7rem; }
+  .mem-b small { font-size: 0.66rem; line-height: 1.1; }
+
+  /* Màn tổng kết */
+  .act-summary { padding-bottom: 16px; }
+  .summary { gap: 10px; padding: 16px; }
+  .summary h2 { font-size: 1.5rem; }
+  .big-stars { font-size: 2.4rem; }
+  .sum-stat { padding: 8px; }
+  .sum-stat b { font-size: 1.35rem; }
+  .chest { font-size: 3.8rem; }
+  .reward-pop { font-size: 1.2rem; }
+}
+/* Máy rất thấp (≤ 620px chiều cao): thu thêm một nấc */
+@media (max-width: 860px) and (max-height: 620px) {
+  .prompt-icon { font-size: 2.8rem; }
+  .speak-big { width: 66px; height: 66px; font-size: 1.7rem; }
+  .opt { min-height: 56px; }
+  .opt .emo { font-size: 1.7rem; }
+  .act-label { display: none; }
 }
 .set-row .grow { flex: 1 1 220px; }
 
+/* Điện thoại cao (≥ 740px): tận dụng chỗ trống để phóng to vùng chạm cho trẻ */
+@media (max-width: 860px) and (min-height: 740px) {
+  .act { gap: 14px; }
+  .prompt { font-size: 1.2rem; }
+  .prompt-card { padding: 18px; gap: 10px; }
+  .prompt-icon { font-size: 4.2rem; }
+  .speak-big { width: 92px; height: 92px; font-size: 2.4rem; }
+  .options { gap: 12px; }
+  .opt { min-height: 88px; }
+  .opt .emo { font-size: 2.5rem; }
+  .opt b { font-size: 1.12rem; }
+  .tile { height: 52px; min-width: 46px; font-size: 1.4rem; }
+  .tile.word { height: 50px; font-size: 1.1rem; }
+  .slot { width: 40px; height: 52px; }
+  .bubble { font-size: 1.12rem; }
+}
+/* Màn tổng kết trên máy thấp */
+@media (max-width: 860px) and (max-height: 700px) {
+  .summary { gap: 8px; padding: 12px; }
+  .sum-emo { font-size: 2.8rem; }
+  .big-stars { font-size: 2rem; }
+  .summary h2 { font-size: 1.3rem; }
+  .chest { font-size: 3rem; }
+  .summary .eyebrow { display: none; }
+}
+body.has-fb .act-bar { display: none; }
+.act-memory .mem-grid { width: 100%; max-width: 560px; margin: 0 auto; }
 </style>
 </head>
 <body>
@@ -549,12 +785,12 @@ const UNITS_TAP1 = [
       ['address', '/əˈdres/', 'địa chỉ', '📬', "What's your address?", 'Địa chỉ của bạn là gì?'],
       ['street', '/striːt/', 'đường phố', '🛣️', "It's 45 Ba Trieu Street.", 'Số 45 phố Bà Triệu.'],
       ['near', '/nɪə/', 'gần', '📍', 'Do you live near the school?', 'Bạn sống gần trường không?'],
-      ['twenty-three', '/ˈtwenti θriː/', 'hai mươi ba (23)', '2️⃣', "It's 23 Queen Street.", 'Số 23 phố Queen.'],
-      ['thirty-eight', '/ˈθɜːti eɪt/', 'ba mươi tám (38)', '3️⃣', "It's 38 Dien Bien Street.", 'Số 38 phố Điện Biên.'],
-      ['ninety-three', '/ˈnaɪnti θriː/', 'chín mươi ba (93)', '9️⃣', "It's 93 Oxford Street.", 'Số 93 phố Oxford.'],
-      ['one one six', '/wʌn wʌn sɪks/', 'một một sáu (116)', '🔢', "It's 116 Hoa Binh Street.", 'Số 116 phố Hòa Bình.'],
-      ['fifteen', '/ˌfɪfˈtiːn/', 'mười lăm (15)', '🔟', 'I live at 15 King Street.', 'Mình sống ở số 15 phố King.'],
-      ['sixteen', '/ˌsɪksˈtiːn/', 'mười sáu (16)', '🔟', 'My house is number sixteen.', 'Nhà mình là số 16.']
+      ['twenty-three', '/ˈtwenti θriː/', 'hai mươi ba (23)', '2️⃣3️⃣', "It's 23 Queen Street.", 'Số 23 phố Queen.'],
+      ['thirty-eight', '/ˈθɜːti eɪt/', 'ba mươi tám (38)', '3️⃣8️⃣', "It's 38 Dien Bien Street.", 'Số 38 phố Điện Biên.'],
+      ['ninety-three', '/ˈnaɪnti θriː/', 'chín mươi ba (93)', '9️⃣3️⃣', "It's 93 Oxford Street.", 'Số 93 phố Oxford.'],
+      ['one one six', '/wʌn wʌn sɪks/', 'một một sáu (116)', '1️⃣1️⃣6️⃣', "It's 116 Hoa Binh Street.", 'Số 116 phố Hòa Bình.'],
+      ['fifteen', '/ˌfɪfˈtiːn/', 'mười lăm (15)', '1️⃣5️⃣', 'I live at 15 King Street.', 'Mình sống ở số 15 phố King.'],
+      ['sixteen', '/ˌsɪksˈtiːn/', 'mười sáu (16)', '1️⃣6️⃣', 'My house is number sixteen.', 'Nhà mình là số 16.']
     ]
   },
   {
@@ -918,7 +1154,7 @@ const UNITS_TAP2 = [
       ['fox', '/fɒks/', 'con cáo', '🦊', "They're the fox and the crow.", 'Đó là con cáo và con quạ.'],
       ['crow', '/krəʊ/', 'con quạ', '🐦', 'The crow sang for the fox.', 'Con quạ hát cho con cáo nghe.'],
       ['cook well', '/kʊk wel/', 'nấu ăn ngon', '🍳', 'She cooked very well.', 'Cô ấy nấu ăn rất ngon.'],
-      ['work hard', '/wɜːk hɑːd/', 'làm việc chăm chỉ', '🐜', 'He worked hard.', 'Cậu ấy làm việc chăm chỉ.'],
+      ['work hard', '/wɜːk hɑːd/', 'làm việc chăm chỉ', '💪', 'He worked hard.', 'Cậu ấy làm việc chăm chỉ.'],
       ['run fast', '/rʌn fɑːst/', 'chạy nhanh', '🏃', 'He ran fast.', 'Cậu ấy chạy nhanh.'],
       ['sing beautifully', '/sɪŋ ˈbjuːtɪfli/', 'hát hay', '🎶', 'He sang beautifully.', 'Cậu ấy hát rất hay.']
     ]
@@ -967,10 +1203,10 @@ const UNITS_TAP2 = [
       ['waterfall', '/ˈwɔːtəfɔːl/', 'thác nước', '💧', 'It was a big waterfall.', 'Đó là một thác nước lớn.'],
       ['walking streets', '/ˈwɔːkɪŋ striːts/', 'phố đi bộ', '🚶', "We're going to Ho Guom Walking Streets this weekend.", 'Cuối tuần này chúng mình sẽ đi phố đi bộ Hồ Gươm.'],
       ['kilometre', '/kɪˈlɒmɪtə/', 'ki-lô-mét', '📏', "It's about two kilometres.", 'Khoảng hai ki-lô-mét.'],
-      ['twenty-nine', '/ˈtwenti naɪn/', 'hai mươi chín (29)', '🔢', 'Da Nang – Hoi An: about 29 kilometres.', 'Đà Nẵng – Hội An: khoảng 29 ki-lô-mét.'],
-      ['forty', '/ˈfɔːti/', 'bốn mươi (40)', '🔢', "It's about 40 kilometres.", 'Khoảng 40 ki-lô-mét.'],
+      ['twenty-nine', '/ˈtwenti naɪn/', 'hai mươi chín (29)', '2️⃣9️⃣', 'Da Nang – Hoi An: about 29 kilometres.', 'Đà Nẵng – Hội An: khoảng 29 ki-lô-mét.'],
+      ['forty', '/ˈfɔːti/', 'bốn mươi (40)', '4️⃣0️⃣', "It's about 40 kilometres.", 'Khoảng 40 ki-lô-mét.'],
       ['one hundred', '/wʌn ˈhʌndrəd/', 'một trăm (100)', '💯', 'Hue – Da Nang: about 100 kilometres.', 'Huế – Đà Nẵng: khoảng 100 ki-lô-mét.'],
-      ['one hundred and twenty-nine', '/wʌn ˈhʌndrəd ən ˈtwenti naɪn/', 'một trăm hai mươi chín (129)', '🔢', 'Hue – Hoi An: about 129 kilometres.', 'Huế – Hội An: khoảng 129 ki-lô-mét.']
+      ['one hundred and twenty-nine', '/wʌn ˈhʌndrəd ən ˈtwenti naɪn/', 'một trăm hai mươi chín (129)', '1️⃣2️⃣9️⃣', 'Hue – Hoi An: about 129 kilometres.', 'Huế – Hội An: khoảng 129 ki-lô-mét.']
     ]
   },
   {
@@ -1048,16 +1284,51 @@ const STEPS = [
 ];
 const STEP = id => STEPS.find(s => s.id === id);
 const AVATARS = ['🦊', '🐼', '🐯', '🐨', '🐸', '🐵', '🦁', '🐰', '🐧', '🦄', '🐶', '🐱'];
+// Ảnh đại diện cho phép chọn: 12 ảnh cơ bản + ảnh đặc biệt bé đã mua
+const myAvatars = () => [...AVATARS, ...SHOP_AVATARS.filter(a => P()?.avatarsOwned?.includes(a.id)).map(a => a.icon)];
 const LEVEL_TITLES = [[1, 'Tân binh'], [3, 'Nhà thám hiểm nhí'], [5, 'Hiệp sĩ từ vựng'], [8, 'Phù thuỷ mẫu câu'], [12, 'Đại sứ tiếng Anh'], [16, 'Huyền thoại Global Success']];
+// ----- Cửa hàng & bộ sưu tập (phiên bản 4) -----
+// Tiền trong app: ⭐ sao. Nhãn đổi quà thật: 🌟 Ngôi sao vàng (mua bằng sao hoặc được thưởng khi học giỏi).
+// 6 album nhãn dán × 6 nhãn (3 Thường, 2 Hiếm, 1 Siêu hiếm). Giữ nguyên mã s1–s24 của bản cũ để không mất nhãn đã có.
+const ALBUMS = [
+  { id: 'zoo', icon: '🐾', name: 'Vườn thú vui nhộn' },
+  { id: 'space', icon: '🚀', name: 'Du hành vũ trụ' },
+  { id: 'food', icon: '🍉', name: 'Món ngon mỗi ngày' },
+  { id: 'play', icon: '⚽', name: 'Vui chơi & thể thao' },
+  { id: 'fairy', icon: '🏰', name: 'Xứ sở cổ tích' },
+  { id: 'luck', icon: '🍀', name: 'Ngôi sao may mắn' }
+];
 const STICKERS = [
-  ['s1', '🦖', 'Khủng long xanh', 'common'], ['s2', '🐙', 'Bạch tuộc tím', 'common'], ['s3', '🦋', 'Bướm cầu vồng', 'common'], ['s4', '🐢', 'Rùa con chăm chỉ', 'common'],
-  ['s5', '🐳', 'Cá voi xanh', 'common'], ['s6', '🦉', 'Cú mèo thông thái', 'common'], ['s7', '🌻', 'Hoa hướng dương', 'common'], ['s8', '🍉', 'Dưa hấu mát lạnh', 'common'],
-  ['s9', '🚀', 'Tên lửa vũ trụ', 'common'], ['s10', '🎸', 'Đàn ghi-ta', 'common'], ['s11', '⚽', 'Quả bóng vàng', 'common'], ['s12', '🧁', 'Bánh nướng nhỏ', 'common'],
-  ['s13', '🦄', 'Kỳ lân phép thuật', 'rare'], ['s14', '🐉', 'Rồng lửa', 'rare'], ['s15', '🤖', 'Robot thông minh', 'rare'], ['s16', '🧑‍🚀', 'Phi hành gia', 'rare'],
-  ['s17', '🦸', 'Siêu anh hùng', 'rare'], ['s18', '🏰', 'Lâu đài cổ tích', 'rare'], ['s19', '🌈', 'Cầu vồng diệu kì', 'rare'], ['s20', '🎡', 'Vòng quay khổng lồ', 'rare'],
-  ['s21', '👑', 'Vương miện trạng nguyên', 'epic'], ['s22', '🏆', 'Cúp vô địch', 'epic'], ['s23', '💎', 'Viên kim cương', 'epic'], ['s24', '🌟', 'Ngôi sao Global Success', 'epic']
-].map(([id, icon, name, rar]) => ({ id, icon, name, rar, cost: { common: 30, rare: 70, epic: 150 }[rar] }));
+  ['s1', 'zoo', '🦖', 'Khủng long xanh', 'common'], ['s2', 'zoo', '🐙', 'Bạch tuộc tím', 'common'], ['s4', 'zoo', '🐢', 'Rùa con chăm chỉ', 'common'],
+  ['s6', 'zoo', '🦉', 'Cú mèo thông thái', 'rare'], ['s5', 'zoo', '🐳', 'Cá voi xanh', 'rare'], ['s13', 'zoo', '🦄', 'Kỳ lân phép thuật', 'epic'],
+  ['n1', 'space', '🌙', 'Vầng trăng khuyết', 'common'], ['n2', 'space', '🪐', 'Sao Thổ có vành', 'common'], ['s15', 'space', '🤖', 'Robot thông minh', 'common'],
+  ['s16', 'space', '🧑‍🚀', 'Phi hành gia', 'rare'], ['s17', 'space', '🦸', 'Siêu anh hùng', 'rare'], ['s9', 'space', '🚀', 'Tên lửa vũ trụ', 'epic'],
+  ['s8', 'food', '🍉', 'Dưa hấu mát lạnh', 'common'], ['s12', 'food', '🧁', 'Bánh nướng nhỏ', 'common'], ['n4', 'food', '🍦', 'Kem ốc quế', 'common'],
+  ['n5', 'food', '🍕', 'Bánh pi-za', 'rare'], ['n6', 'food', '🥮', 'Bánh Trung thu', 'rare'], ['n7', 'food', '🎂', 'Bánh sinh nhật', 'epic'],
+  ['s11', 'play', '⚽', 'Quả bóng vàng', 'common'], ['n8', 'play', '🏸', 'Vợt cầu lông', 'common'], ['s10', 'play', '🎸', 'Đàn ghi-ta', 'common'],
+  ['s20', 'play', '🎡', 'Vòng quay khổng lồ', 'rare'], ['n9', 'play', '🥇', 'Huy chương vàng', 'rare'], ['s22', 'play', '🏆', 'Cúp vô địch', 'epic'],
+  ['n10', 'fairy', '🧚', 'Cô tiên nhỏ', 'common'], ['s3', 'fairy', '🦋', 'Bướm cầu vồng', 'common'], ['n11', 'fairy', '🍄', 'Cây nấm thần', 'common'],
+  ['s14', 'fairy', '🐉', 'Rồng lửa', 'rare'], ['s18', 'fairy', '🏰', 'Lâu đài cổ tích', 'rare'], ['s21', 'fairy', '👑', 'Vương miện trạng nguyên', 'epic'],
+  ['s7', 'luck', '🌻', 'Hoa hướng dương', 'common'], ['n12', 'luck', '🌸', 'Cành hoa đào', 'common'], ['n13', 'luck', '🍀', 'Cỏ bốn lá', 'common'],
+  ['s19', 'luck', '🌈', 'Cầu vồng diệu kì', 'rare'], ['s23', 'luck', '💎', 'Viên kim cương', 'rare'], ['s24', 'luck', '🌟', 'Ngôi sao Global Success', 'epic']
+].map(([id, album, icon, name, rar]) => ({ id, album, icon, name, rar, cost: { common: 80, rare: 200, epic: 500 }[rar] }));
 const RAR_NAME = { common: 'Thường', rare: 'Hiếm', epic: 'Siêu hiếm' };
+const ALBUM_BONUS = 2; // Ngôi sao vàng thưởng khi đủ một album
+const SHOP_AVATARS = [
+  ['a1', '🐲', 'Rồng con', 300], ['a2', '🦖', 'Khủng long', 300], ['a3', '🦩', 'Hồng hạc', 300], ['a4', '🐙', 'Bạch tuộc', 300],
+  ['a5', '🦚', 'Chim công', 450], ['a6', '🐳', 'Cá voi', 450], ['a7', '🤖', 'Robot', 600], ['a8', '🧚', 'Cô tiên', 600]
+].map(([id, icon, name, cost]) => ({ id, icon, name, cost }));
+const FRAMES = [
+  ['gold', 'Khung vàng', 200], ['fire', 'Khung lửa', 300], ['ocean', 'Khung đại dương', 300], ['rainbow', 'Khung cầu vồng', 600], ['galaxy', 'Khung thiên hà', 900]
+].map(([id, name, cost]) => ({ id, name, cost }));
+const GOLD_PRICE = 100;      // ⭐ sao cho 1 🌟 Ngôi sao vàng
+const GOLD_DAILY_LIMIT = 2;  // mỗi ngày đổi tối đa 2 lần — khuyến khích học đều mỗi ngày thay vì "cày" một lúc
+const DEFAULT_REWARDS = [
+  ['🙋', 'Chọn trò chơi khởi động đầu giờ', 3], ['🪑', 'Chọn chỗ ngồi yêu thích 1 buổi', 3], ['🧑‍🏫', 'Làm "trợ giảng nhí" 1 buổi', 4],
+  ['🏷️', '1 sticker thật', 5], ['✏️', '1 bút chì', 5], ['🖊️', '1 cây bút bi', 5], ['📏', '1 thước kẻ', 5], ['🧽', '1 cục tẩy', 5],
+  ['📒', '1 quyển vở', 10], ['🖍️', '1 hộp bút sáp màu', 12], ['📓', '1 sổ tay xinh', 15],
+  ['📜', 'Giấy khen "Ngôi sao tiếng Anh"', 20], ['🎒', 'Bộ đồ dùng học tập', 25]
+].map(([icon, name, cost], i) => ({ id: 'r' + (i + 1), icon, name, cost }));
 
 // ---------------- 2. Âm thanh & giọng đọc ----------------
 const Sound = {
@@ -1122,6 +1393,18 @@ let memoryOnly = false;
 function loadDB() {
   try { const s = localStorage.getItem(KEY); if (s) DB = JSON.parse(s); } catch (e) { memoryOnly = true; }
   if (!DB.profiles) DB = { version: 3, activeId: null, profiles: {} };
+  Object.values(DB.profiles).forEach(migrateProfile);
+  DB.teacher ||= { pin: null };
+  if (!Array.isArray(DB.rewards) || !DB.rewards.length) DB.rewards = DEFAULT_REWARDS.map(r => ({ ...r }));
+}
+// Bổ sung các trường mới (cửa hàng v4) cho hồ sơ cũ — không làm mất tiến độ đã có
+function migrateProfile(p) {
+  if (!p) return p;
+  p.gold ??= 0; p.goldEarned ??= 0; p.goldBuy ||= { date: null, n: 0 };
+  p.vouchers ||= []; p.avatarsOwned ||= []; p.frames ||= []; p.frame ??= null;
+  p.albumsDone ||= []; p.chestLog ||= { date: null, keys: [] }; p.goldTests ||= [];
+  p.stickers ||= []; p.badges ||= [];
+  return p;
 }
 function saveDB() { try { localStorage.setItem(KEY, JSON.stringify(DB)); } catch (e) { memoryOnly = true; } }
 function P() { return DB.profiles[DB.activeId] || null; }
@@ -1134,6 +1417,7 @@ function newProfile(name, avatar) {
     stats: { answered: 0, correct: 0, listenCorrect: 0, orderCorrect: 0, steps: 0, maxCombo: 0, chests: 0, perfectTests: 0, talk: 0 },
     set: { sound: true, rate: 0.9, accent: 'uk', goal: 50, freeMode: false }
   };
+  migrateProfile(DB.profiles[id]);
   DB.activeId = id; saveDB(); return DB.profiles[id];
 }
 function unitState(n) { const p = P(); return (p.units[n] ||= { steps: {}, stars: 0, best: 0 }); }
@@ -1199,6 +1483,9 @@ const BADGES = [
   { id: 'term1', icon: '🎒', name: 'Xong Học kì I', desc: 'Qua bài kiểm tra Unit 1–10', ok: p => UNITS.filter(u => u.term === 1).every(u => (p.units[u.unit]?.stars || 0) >= 1) },
   { id: 'term2', icon: '🎓', name: 'Xong Học kì II', desc: 'Qua bài kiểm tra Unit 11–20', ok: p => UNITS.filter(u => u.term === 2).every(u => (p.units[u.unit]?.stars || 0) >= 1) },
   { id: 'stick10', icon: '🗂️', name: 'Nhà sưu tầm', desc: 'Có 10 nhãn dán', ok: p => p.stickers.length >= 10 },
+  { id: 'album1', icon: '📒', name: 'Album đầu tiên', desc: 'Sưu tầm đủ một album nhãn dán', ok: p => (p.albumsDone || []).length >= 1 },
+  { id: 'gold5', icon: '🌟', name: 'Thẻ sao đầy', desc: 'Có tổng cộng 5 Ngôi sao vàng', ok: p => (p.goldEarned || 0) >= 5 },
+  { id: 'gift1', icon: '🎁', name: 'Món quà đầu tiên', desc: 'Nhận món quà thật đầu tiên ở lớp', ok: p => (p.vouchers || []).some(v => v.status === 'done') },
   { id: 'lv5', icon: '🛡️', name: 'Cấp 5', desc: 'Đạt cấp độ 5', ok: p => levelInfo(p.xp).lv >= 5 },
   { id: 'lv10', icon: '🏅', name: 'Cấp 10', desc: 'Đạt cấp độ 10', ok: p => levelInfo(p.xp).lv >= 10 }
 ];
@@ -1210,15 +1497,42 @@ function rollChest() {
   const p = P(); p.stats.chests++;
   const r = Math.random();
   const unowned = STICKERS.filter(s => !p.stickers.includes(s.id));
-  if (r < 0.22 && unowned.length) {
+  if (r < 0.15 && unowned.length) {
     const roll = Math.random(); const tier = roll < 0.07 ? 'epic' : roll < 0.32 ? 'rare' : 'common';
     const pool = unowned.filter(s => s.rar === tier).length ? unowned.filter(s => s.rar === tier) : unowned;
-    const s = pool[rand(0, pool.length - 1)]; p.stickers.push(s.id);
+    const s = pool[rand(0, pool.length - 1)]; p.stickers.push(s.id); checkAlbums();
     return { kind: 'sticker', s };
   }
-  const coins = r > 0.95 ? rand(50, 80) : r > 0.75 ? rand(20, 35) : rand(8, 18);
+  const coins = r > 0.96 ? rand(40, 60) : r > 0.78 ? rand(18, 28) : rand(6, 14);
   p.coins += coins; return { kind: 'coins', coins };
 }
+
+// ----- Ngôi sao vàng, album, cửa hàng -----
+function grantGold(n, why) {
+  const p = P(); p.gold += n; if (n > 0) p.goldEarned += n;
+  if (why) queueCelebrate({ type: 'gold', n, why });
+}
+function checkAlbums() {
+  const p = P();
+  ALBUMS.forEach(a => {
+    if (p.albumsDone.includes(a.id)) return;
+    if (STICKERS.filter(s => s.album === a.id).every(s => p.stickers.includes(s.id))) {
+      p.albumsDone.push(a.id); grantGold(ALBUM_BONUS, `Hoàn thành album <b>${a.icon} ${a.name}</b>`);
+    }
+  });
+}
+function goldBuyLeft() { const p = P(); return p.goldBuy.date === dateKey() ? Math.max(0, GOLD_DAILY_LIMIT - p.goldBuy.n) : GOLD_DAILY_LIMIT; }
+function buyGold() {
+  const p = P(); if (p.coins < GOLD_PRICE || goldBuyLeft() <= 0) return false;
+  if (p.goldBuy.date !== dateKey()) p.goldBuy = { date: dateKey(), n: 0 };
+  p.coins -= GOLD_PRICE; p.goldBuy.n++; p.gold++; p.goldEarned++;
+  return true;
+}
+// Mã phiếu 4 kí tự dễ đọc (bỏ 0/O, 1/I) để thầy cô ghi sổ
+function voucherCode(seed) { const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let h = hash(seed), c = ''; for (let i = 0; i < 4; i++) { c += A[h % A.length]; h = (Math.floor(h / A.length) ^ hash(c + seed)) >>> 0; } return c; }
+// Rương của mỗi chặng/bài chỉ mở 1 lần mỗi ngày: học bài mới hoặc quay lại hôm sau (học giãn cách) thay vì làm lại một bài để "cày" quà
+function chestAvailable(key) { const p = P(); return !(p.chestLog.date === dateKey() && p.chestLog.keys.includes(key)); }
+function useChest(key) { const p = P(); if (p.chestLog.date !== dateKey()) p.chestLog = { date: dateKey(), keys: [] }; p.chestLog.keys.push(key); }
 function markStudyToday() {
   const p = P(); const d = dateKey();
   if (p.lastStudy === d) return;
@@ -1236,6 +1550,7 @@ function flushCelebrations() {
   const done = () => { celebrating = false; saveDB(); renderTop(); flushCelebrations(); };
   if (c.type === 'level') { Sound.level(); Confetti.burst(120); modal({ art: '⬆️', title: `Lên cấp ${c.lv}!`, body: `Danh hiệu mới: <b>${levelTitle(c.lv)}</b>. Thưởng +30 ⭐.`, ok: 'Tuyệt vời!', onOk: done }); }
   else if (c.type === 'badge') { Sound.win(); Confetti.burst(80); modal({ art: c.b.icon, title: 'Huy hiệu mới!', body: `<b>${c.b.name}</b><br>${c.b.desc}. Thưởng +20 ⭐.`, ok: 'Nhận huy hiệu', onOk: done }); }
+  else if (c.type === 'gold') { Sound.win(); Confetti.burst(100); modal({ art: '🌟', title: `+${c.n} Ngôi sao vàng!`, body: `${c.why}. Ngôi sao vàng dùng để đổi quà thật ở lớp — xem trong mục <b>Phần thưởng</b>.`, ok: 'Tuyệt quá!', onOk: done }); }
   else if (c.type === 'goal') { Sound.win(); Confetti.burst(100); modal({ art: '🎯', title: 'Đạt mục tiêu hôm nay!', body: 'Bé đã đạt mục tiêu điểm kinh nghiệm của ngày. Một rương quà đang chờ bé!', ok: 'Mở rương', onOk: () => { celebrating = false; openChestModal(done); } }); }
   else done();
 }
@@ -1303,7 +1618,7 @@ function openChestModal(after) {
 function renderTop() {
   const p = P(); if (!p) return;
   const li = levelInfo(p.xp);
-  $('#top-avatar').textContent = p.avatar;
+  $('#top-avatar').textContent = p.avatar; $('#top-avatar').className = 'avatar' + (p.frame ? ' fr-' + p.frame : '');
   $('#top-name').textContent = p.name;
   $('#top-level').textContent = `Cấp ${li.lv} · ${levelTitle(li.lv)}`;
   $('#top-streak').textContent = displayStreak();
@@ -1313,6 +1628,7 @@ function renderTop() {
 }
 function go(screen, extra = {}) {
   if (act) { act = null; document.body.classList.remove('in-activity'); }
+  document.body.classList.remove('has-fb');
   Object.assign(view, { screen }, extra);
   if ('speechSynthesis' in window) speechSynthesis.cancel();
   render(); window.scrollTo(0, 0);
@@ -1442,26 +1758,89 @@ function renderReview() {
   </div>`;
 }
 
-// ---------------- 10. Phần thưởng ----------------
+// ---------------- 10. Phần thưởng: đổi quà thật, bộ sưu tập, cửa hàng ----------------
+function goldCards(n) {
+  // Thẻ tích Ngôi sao vàng: mỗi thẻ 5 ô — giống thẻ tích điểm bé quen thuộc ở lớp
+  const cards = Math.max(1, Math.ceil((n + 1) / 5)); let left = n;
+  return `<div class="gold-cards">${Array.from({ length: Math.min(cards, 6) }, (_, c) => {
+    const here = Math.min(5, Math.max(0, left)); left -= 5;
+    return `<div class="gold-card ${here === 5 ? 'full' : ''}"><span class="gold-card-no">Thẻ ${c + 1}</span><div class="gold-slots">${Array.from({ length: 5 }, (_, k) => `<i class="${k < here ? 'on' : ''}">${k < here ? '🌟' : ''}</i>`).join('')}</div></div>`;
+  }).join('')}${cards > 6 ? `<div class="gold-card more">+${cards - 6} thẻ</div>` : ''}</div>`;
+}
+function rewardsGift(p) {
+  const left = goldBuyLeft(); const canBuy = p.coins >= GOLD_PRICE && left > 0;
+  const pending = p.vouchers.filter(v => v.status === 'pending');
+  const done = p.vouchers.filter(v => v.status === 'done').slice(-6).reverse();
+  return `
+  <div class="card gold-box">
+    <div class="gold-head"><span class="gold-big">${emo('🌟')}<b>${p.gold}</b></span><div class="grow"><span class="eyebrow">Ngôi sao vàng của ${esc(p.name)}</span><h3>Gom đủ ngôi sao để đổi quà thật ở lớp</h3></div></div>
+    ${goldCards(p.gold)}
+    <div class="gold-buy">
+      <button class="btn sun big" data-buygold="1" ${canBuy ? '' : 'disabled'}>Đổi ⭐ ${GOLD_PRICE} → ${emo('🌟')} 1</button>
+      <small class="muted">${left > 0 ? `Hôm nay còn đổi được <b>${left}</b> lần · Bé đang có ${p.coins} ⭐` : 'Hôm nay đã đổi đủ 2 lần. Mai quay lại nhé!'}</small>
+    </div>
+    <p class="muted gold-free">Nhận Ngôi sao vàng miễn phí: đạt <b>3 sao</b> bài Kiểm tra Unit lần đầu (+1) · đủ một <b>album nhãn dán</b> (+${ALBUM_BONUS}) · thầy cô tặng khi bé học tốt trên lớp.</p>
+  </div>
+  ${pending.length ? `<section class="section-title"><h2>Phiếu chờ nhận quà</h2><span class="muted">Đưa phiếu cho thầy cô xem để nhận quà</span></section>
+  <div class="voucher-list">${pending.map(v => `<div class="voucher">
+    <span class="voucher-ico">${emo(v.icon)}</span>
+    <div class="grow"><b>${esc(v.name)}</b><small>${esc(p.name)} · ${new Date(v.at).toLocaleDateString('vi-VN')} · ${v.cost} 🌟</small></div>
+    <div class="voucher-code" aria-label="Mã phiếu">${v.code}</div>
+    <div class="voucher-act"><button class="btn green" data-vok="${v.id}">${emo('🔐')} Thầy cô xác nhận</button><button class="btn ghost" data-vcancel="${v.id}">Huỷ phiếu</button></div>
+  </div>`).join('')}</div>` : ''}
+  <section class="section-title"><h2>Quà ở lớp</h2><span class="muted">Thầy cô có thể sửa danh sách trong Cài đặt</span></section>
+  <div class="reward-grid">${DB.rewards.map(r => { const ok = p.gold >= r.cost; return `
+    <div class="reward ${ok ? 'can' : ''}">${emo(r.icon)}<b>${esc(r.name)}</b>
+      <span class="reward-cost">${r.cost} 🌟</span>
+      ${ok ? `<button class="btn orange" data-redeem="${r.id}">Đổi quà</button>` : `<div class="bar sun" title="Còn ${r.cost - p.gold} ngôi sao"><i style="width:${Math.round(p.gold / r.cost * 100)}%"></i></div><small class="muted">Còn ${r.cost - p.gold} 🌟</small>`}
+    </div>`; }).join('')}</div>
+  ${done.length ? `<section class="card"><h3>Quà bé đã nhận</h3><ul class="got-list">${done.map(v => `<li>${emo(v.icon)} ${esc(v.name)} <small class="muted">· ${new Date(v.doneAt).toLocaleDateString('vi-VN')}</small></li>`).join('')}</ul></section>` : ''}`;
+}
+function rewardsStickers(p) {
+  return ALBUMS.map(a => {
+    const list = STICKERS.filter(s => s.album === a.id); const have = list.filter(s => p.stickers.includes(s.id)).length;
+    const full = p.albumsDone.includes(a.id);
+    return `<section class="album ${full ? 'full' : ''}"><div class="album-head"><span class="album-ico">${emo(a.icon)}</span><div class="grow"><b>${a.name}</b><div class="bar ${full ? '' : 'violet'}"><i style="width:${have / list.length * 100}%"></i></div></div>
+      <span class="album-count">${have}/${list.length}${full ? ' ✓' : ''}</span></div>
+      <div class="grid-stickers">${list.map(s => { const own = p.stickers.includes(s.id); return `
+      <div class="sticker ${own ? '' : 'locked'} r-${s.rar}">${emo(s.icon)}<b>${esc(s.name)}</b><span class="rar ${s.rar}">${RAR_NAME[s.rar]}</span>
+      ${own ? '<small class="owned">✓ Đã có</small>' : `<button class="btn ${p.coins >= s.cost ? 'sun' : 'ghost'}" data-buy="${s.id}" ${p.coins >= s.cost ? '' : 'disabled'}>⭐ ${s.cost}</button>`}</div>`; }).join('')}</div>
+      <p class="album-note muted">${full ? `Đã đủ album! Bé đã nhận ${ALBUM_BONUS} 🌟 Ngôi sao vàng.` : `Đủ ${list.length} nhãn dán để nhận thưởng ${ALBUM_BONUS} 🌟 Ngôi sao vàng.`}</p></section>`;
+  }).join('');
+}
+function rewardsStyle(p) {
+  return `<section class="section-title"><h2>Ảnh đại diện đặc biệt</h2></section>
+  <div class="grid-stickers">${SHOP_AVATARS.map(a => { const own = p.avatarsOwned.includes(a.id); const using = p.avatar === a.icon; return `
+    <div class="sticker">${emo(a.icon)}<b>${a.name}</b>
+    ${using ? '<small class="owned">Đang dùng</small>' : own ? `<button class="btn ghost" data-useav="${a.id}">Dùng</button>` : `<button class="btn ${p.coins >= a.cost ? 'sun' : 'ghost'}" data-buyav="${a.id}" ${p.coins >= a.cost ? '' : 'disabled'}>⭐ ${a.cost}</button>`}</div>`; }).join('')}</div>
+  <section class="section-title"><h2>Khung ảnh đại diện</h2></section>
+  <div class="grid-stickers">${FRAMES.map(f => { const own = p.frames.includes(f.id); const using = p.frame === f.id; return `
+    <div class="sticker"><span class="avatar fr-${f.id} frame-demo">${p.avatar}</span><b>${f.name}</b>
+    ${using ? `<button class="btn ghost" data-usefr="">Bỏ khung</button>` : own ? `<button class="btn ghost" data-usefr="${f.id}">Dùng</button>` : `<button class="btn ${p.coins >= f.cost ? 'sun' : 'ghost'}" data-buyfr="${f.id}" ${p.coins >= f.cost ? '' : 'disabled'}>⭐ ${f.cost}</button>`}</div>`; }).join('')}</div>`;
+}
+function rewardsBadges(p) {
+  return `<div class="grid-badges">${BADGES.map(b => `<div class="badge ${p.badges.includes(b.id) ? '' : 'locked'}">${emo(b.icon)}<span><b>${b.name}</b><small>${b.desc}</small></span></div>`).join('')}</div>
+  <section class="card"><h3>Cách nhận thưởng</h3><ul class="how-list">
+    <li>Mỗi câu đúng: +10 XP và +1 ⭐. Đúng liên tiếp được cộng thêm XP.</li>
+    <li>Xong một chặng: +5 ⭐ và một rương quà bí mật. Mỗi chặng mở rương <b>1 lần mỗi ngày</b> — học chặng mới hoặc ôn lại vào hôm sau để nhận tiếp.</li>
+    <li>Đạt mục tiêu ngày, làm xong 3 nhiệm vụ hằng ngày: thêm rương quà.</li>
+    <li>Lên cấp: +30 ⭐. Mở huy hiệu: +20 ⭐.</li>
+    <li>${GOLD_PRICE} ⭐ đổi được 1 🌟 Ngôi sao vàng (tối đa ${GOLD_DAILY_LIMIT} lần/ngày). Ngôi sao vàng dùng để đổi quà thật ở lớp.</li></ul></section>`;
+}
 function renderRewards() {
-  const p = P(); const li = levelInfo(p.xp);
+  const p = P(); const li = levelInfo(p.xp); const tab = view.rtab || 'gift';
+  const pend = p.vouchers.filter(v => v.status === 'pending').length;
+  const tabs = [['gift', '🎁', 'Đổi quà thật'], ['stickers', '🗂️', 'Nhãn dán'], ['style', '🧑‍🎨', 'Ảnh & khung'], ['badges', '🏅', 'Huy hiệu']];
+  const body = { gift: rewardsGift, stickers: rewardsStickers, style: rewardsStyle, badges: rewardsBadges }[tab](p);
   return `
   <div class="card level-card"><div class="level-num"><small>CẤP</small><b>${li.lv}</b></div>
     <div><span class="eyebrow" style="color:#DCD5FF">${levelTitle(li.lv)}</span><h2>${p.xp} XP tổng cộng</h2>
     <div class="bar" style="margin:8px 0"><i style="width:${li.into / li.need * 100}%"></i></div><small style="font-weight:800">Còn ${li.need - li.into} XP để lên cấp ${li.lv + 1}</small></div></div>
-  <div class="row"><span class="chip coin">${emo('⭐')} ${p.coins} sao để đổi quà</span><span class="chip">${emo('🗂️')} ${p.stickers.length}/${STICKERS.length} nhãn dán</span><span class="chip">${emo('🏅')} ${p.badges.length}/${BADGES.length} huy hiệu</span>
+  <div class="wallet"><span class="chip coin" title="Sao dùng trong app">${emo('⭐')} ${p.coins} sao</span><span class="chip gold" title="Ngôi sao vàng đổi quà thật">${emo('🌟')} ${p.gold} ngôi sao vàng</span>
+    <span class="chip">${emo('🗂️')} ${p.stickers.length}/${STICKERS.length}</span>${pend ? `<span class="chip">${emo('🎫')} ${pend} phiếu chờ</span>` : ''}
     ${p.chestsPending ? `<button class="btn orange" data-chest="1">${emo('🎁')} Mở ${p.chestsPending} rương</button>` : ''}</div>
-  <section class="section-title"><h2>Bộ sưu tập nhãn dán</h2><span class="muted">Dùng sao để đổi, hoặc may mắn nhận được trong rương quà</span></section>
-  <div class="grid-stickers">${STICKERS.map(s => { const own = p.stickers.includes(s.id); return `
-    <div class="sticker ${own ? '' : 'locked'}">${emo(s.icon)}<b>${esc(s.name)}</b><span class="rar ${s.rar}">${RAR_NAME[s.rar]}</span>
-    ${own ? '<small class="muted" style="font-weight:800">Đã có</small>' : `<button class="btn ${p.coins >= s.cost ? 'sun' : 'ghost'}" data-buy="${s.id}" ${p.coins >= s.cost ? '' : 'disabled'}>⭐ ${s.cost}</button>`}</div>`; }).join('')}</div>
-  <section class="section-title"><h2>Huy hiệu</h2></section>
-  <div class="grid-badges">${BADGES.map(b => `<div class="badge ${p.badges.includes(b.id) ? '' : 'locked'}">${emo(b.icon)}<span><b>${b.name}</b><small>${b.desc}</small></span></div>`).join('')}</div>
-  <section class="card"><h3>Cách nhận thưởng</h3><ul style="margin:8px 0 0;padding-left:20px;color:var(--ink-soft);font-weight:600">
-    <li>Mỗi câu đúng: +10 XP và +1 ⭐. Đúng liên tiếp được cộng thêm XP.</li>
-    <li>Xong mỗi chặng: một rương quà bí mật (sao hoặc nhãn dán).</li>
-    <li>Đạt mục tiêu ngày và làm xong 3 nhiệm vụ hằng ngày: thêm rương quà.</li>
-    <li>Lên cấp: +30 ⭐. Mở huy hiệu: +20 ⭐.</li></ul></section>`;
+  <div class="shop-tabs" role="tablist">${tabs.map(([id, ic, name]) => `<button role="tab" aria-selected="${tab === id}" class="${tab === id ? 'on' : ''}" data-rtab="${id}">${emo(ic)}<span>${name}</span></button>`).join('')}</div>
+  ${body}`;
 }
 
 // ---------------- 11. Cài đặt & tiến độ ----------------
@@ -1479,6 +1858,12 @@ function renderSettings() {
   <div class="card"><h3>Học tập</h3>
     <div class="set-row"><span class="grow"><b>Mục tiêu mỗi ngày</b><small>Số điểm kinh nghiệm (XP) cần đạt mỗi ngày</small></span>${seg('goal', [[30, 'Nhẹ 30'], [50, 'Vừa 50'], [100, 'Chăm 100']])}</div>
     <div class="set-row"><span class="grow"><b>Học tự do</b><small>Mở khoá tất cả các chặng (dành cho giáo viên, phụ huynh)</small></span><button class="switch ${p.set.freeMode ? 'on' : ''}" data-toggle="freeMode" aria-label="Học tự do"></button></div>
+  </div>
+  <div class="card teacher-card"><h3>${emo('🧑‍🏫')} Dành cho thầy cô</h3>
+    <p class="muted" style="margin-top:4px">Học sinh dùng 🌟 Ngôi sao vàng để đổi quà thật ở lớp. Thầy cô dùng mã PIN để xác nhận trao quà, sửa danh sách quà và tặng thêm ngôi sao.</p>
+    <div class="set-row"><span class="grow"><b>Mã PIN thầy cô</b><small>${DB.teacher.pin ? 'Đã đặt mã PIN trên máy này.' : 'Chưa đặt — hãy đặt trước khi giao máy cho học sinh.'}</small></span><button class="btn ${DB.teacher.pin ? 'ghost' : 'orange'}" data-tpin="1">${DB.teacher.pin ? 'Đổi mã PIN' : 'Tạo mã PIN'}</button></div>
+    <div class="set-row"><span class="grow"><b>Danh sách quà ở lớp</b><small>${DB.rewards.length} món · từ ${Math.min(...DB.rewards.map(r => r.cost))} đến ${Math.max(...DB.rewards.map(r => r.cost))} 🌟</small></span><button class="btn ghost" data-trewards="1">Sửa danh sách</button></div>
+    <div class="set-row"><span class="grow"><b>Tặng Ngôi sao vàng</b><small>Khen thưởng ${esc(p.name)} khi học tốt trên lớp (hiện có ${p.gold} 🌟)</small></span><button class="btn ghost" data-tgrant="1">${emo('🌟')} Tặng / trừ</button></div>
   </div>
   <div class="card"><h3>Âm thanh & giọng đọc</h3>
     <div class="set-row"><span class="grow"><b>Hiệu ứng âm thanh</b></span><button class="switch ${p.set.sound ? 'on' : ''}" data-toggle="sound" aria-label="Âm thanh"></button></div>
@@ -1511,6 +1896,8 @@ function renderHelp() {
     <details class="help-q"><summary>Không nghe thấy tiếng đọc?</summary><p>Kiểm tra âm lượng máy và nút loa trên thanh trên cùng. Tiếng đọc dùng giọng có sẵn của máy; trên Windows nên cài thêm giọng tiếng Anh (Cài đặt › Thời gian & ngôn ngữ › Giọng nói).</p></details>
     <details class="help-q"><summary>Tiến độ được lưu ở đâu?</summary><p>Lưu tự động trên chính thiết bị đang dùng. Muốn chuyển máy, vào Cài đặt › Tạo mã sao lưu, rồi Khôi phục từ mã trên máy mới.</p></details>
     <details class="help-q"><summary>Nhiều bé dùng chung một máy được không?</summary><p>Được. Vào Cài đặt › Thêm người học. Mỗi bé có tiến độ, sao và nhãn dán riêng.</p></details>
+    <details class="help-q"><summary>Đổi quà thật ở lớp như thế nào?</summary><p>Bé dùng ${GOLD_PRICE} ⭐ sao để đổi 1 🌟 Ngôi sao vàng (tối đa ${GOLD_DAILY_LIMIT} lần mỗi ngày), hoặc nhận miễn phí khi đạt 3 sao bài Kiểm tra Unit, đủ một album nhãn dán, hay được thầy cô tặng. Đủ ngôi sao, bé vào Phần thưởng › Đổi quà thật để lấy phiếu. Mang máy đến lớp, thầy cô nhập mã PIN để xác nhận và trao quà. Thầy cô đặt mã PIN và sửa danh sách quà trong Cài đặt › Dành cho thầy cô.</p></details>
+    <details class="help-q"><summary>Vì sao làm lại một chặng không được rương nữa?</summary><p>Mỗi chặng chỉ mở rương 1 lần mỗi ngày. Như vậy bé được khuyến khích học chặng mới hoặc ôn lại vào hôm sau (ôn cách quãng giúp nhớ lâu hơn), thay vì làm đi làm lại một bài để lấy quà. Làm lại vẫn được cộng XP và sao cho mỗi câu đúng.</p></details>
     <details class="help-q"><summary>Làm sao học lại từ đầu?</summary><p>Cài đặt › Xoá tiến độ › Học lại từ đầu.</p></details>
   </div>`;
 }
@@ -1531,9 +1918,21 @@ function bindScreen(root) {
     else if (d.claim !== undefined) { const q = ensureDaily().quests[+d.claim]; if (q && !q.claimed && q.prog >= q.n) { q.claimed = true; gainCoins(15); gainXP(20); Sound.coin(); toast('+15 ⭐ · +20 XP'); checkBadges(); saveDB(); render(); } }
     else if (d.bonus) { const dl = ensureDaily(); dl.bonus = true; openChestModal(() => render()); }
     else if (d.chest) { openChestModal(() => render()); }
-    else if (d.buy) { const s = STICKERS.find(x => x.id === d.buy); const p = P(); if (s && p.coins >= s.cost && !p.stickers.includes(s.id)) { p.coins -= s.cost; p.stickers.push(s.id); Sound.win(); Confetti.burst(60); toast(`Đã đổi nhãn dán ${s.name}!`); checkBadges(); saveDB(); render(); } }
+    else if (d.rtab) { Sound.pop(); view.rtab = d.rtab; render(); }
+    else if (d.buy) { const s = STICKERS.find(x => x.id === d.buy); const p = P(); if (s && p.coins >= s.cost && !p.stickers.includes(s.id)) { p.coins -= s.cost; p.stickers.push(s.id); Sound.win(); Confetti.burst(60); toast(`Đã đổi nhãn dán ${s.name}!`); checkAlbums(); checkBadges(); saveDB(); render(); } }
+    else if (d.buyav) { const a = SHOP_AVATARS.find(x => x.id === d.buyav); const p = P(); if (a && p.coins >= a.cost && !p.avatarsOwned.includes(a.id)) { p.coins -= a.cost; p.avatarsOwned.push(a.id); p.avatar = a.icon; Sound.win(); Confetti.burst(50); toast(`Ảnh đại diện mới: ${a.name}!`); saveDB(); render(); } }
+    else if (d.useav) { const a = SHOP_AVATARS.find(x => x.id === d.useav); if (a && P().avatarsOwned.includes(a.id)) { P().avatar = a.icon; Sound.pop(); saveDB(); render(); } }
+    else if (d.buyfr) { const f = FRAMES.find(x => x.id === d.buyfr); const p = P(); if (f && p.coins >= f.cost && !p.frames.includes(f.id)) { p.coins -= f.cost; p.frames.push(f.id); p.frame = f.id; Sound.win(); Confetti.burst(50); toast(`Đã mua ${f.name}!`); saveDB(); render(); } }
+    else if (d.usefr !== undefined) { const p = P(); if (!d.usefr || p.frames.includes(d.usefr)) { p.frame = d.usefr || null; Sound.pop(); saveDB(); render(); } }
+    else if (d.buygold) { if (buyGold()) { Sound.coin(); Confetti.burst(50); toast('+1 🌟 Ngôi sao vàng!'); checkBadges(); saveDB(); render(); } }
+    else if (d.redeem) { redeemReward(d.redeem); }
+    else if (d.vok) { confirmVoucher(d.vok); }
+    else if (d.vcancel) { cancelVoucher(d.vcancel); }
+    else if (d.tpin) { teacherSetPin(); }
+    else if (d.trewards) { withPin(() => showRewardEditor()); }
+    else if (d.tgrant) { withPin(() => showGrantGold()); }
     else if (d.set) { const p = P(); const v = isNaN(+d.val) ? d.val : +d.val; p.set[d.set] = v; Sound.pop(); saveDB(); render(); }
-    else if (d.toggle) { const p = P(); p.set[d.toggle] = !p.set[d.toggle]; Sound.pop(); saveDB(); render(); }
+    else if (d.toggle) { const p = P(); const flip = () => { p.set[d.toggle] = !p.set[d.toggle]; Sound.pop(); saveDB(); render(); }; if (d.toggle === 'freeMode' && !p.set.freeMode && DB.teacher.pin) withPin(flip, 'Mở khoá tất cả các chặng cho bé'); else flip(); }
     else if (d.switch) { DB.activeId = d.switch; saveDB(); Sound.pop(); toast(`Đã chuyển sang ${P().name}`); go('home'); }
     else if (d.addprofile) { showOnboarding(true); }
     else if (d.rename) { showProfileEditor(); }
@@ -1545,11 +1944,78 @@ function bindScreen(root) {
     else if (d.onboard) { showOnboarding(false, true); }
   };
 }
+// ----- Đổi quà thật & xác nhận của thầy cô -----
+function redeemReward(rid) {
+  const r = DB.rewards.find(x => x.id === rid); const p = P(); if (!r || p.gold < r.cost) return;
+  modal({ art: r.icon, title: 'Đổi quà này?', body: `<b>${esc(r.name)}</b> · ${r.cost} 🌟<br>Bé sẽ nhận một <b>phiếu đổi quà</b>. Mang phiếu (mở trên máy) đến lớp để thầy cô xác nhận và trao quà.`, ok: 'Đổi quà', cancel: 'Để sau', onOk: () => {
+    const at = Date.now(); const id = 'v' + at.toString(36);
+    p.gold -= r.cost; p.vouchers.push({ id, rid: r.id, icon: r.icon, name: r.name, cost: r.cost, at, status: 'pending', code: voucherCode(p.id + id) });
+    Sound.win(); Confetti.burst(90); saveDB(); render();
+    modal({ art: '🎫', title: 'Đã có phiếu đổi quà!', body: `Mã phiếu: <b class="code-big">${p.vouchers.at(-1).code}</b><br>Đưa phiếu này cho thầy cô xem nhé.`, ok: 'Đã hiểu' });
+  } });
+}
+function confirmVoucher(vid) {
+  const p = P(); const v = p.vouchers.find(x => x.id === vid); if (!v || v.status !== 'pending') return;
+  withPin(() => { v.status = 'done'; v.doneAt = Date.now(); checkBadges(); saveDB(); Sound.win(); Confetti.burst(120); toast(`Đã trao quà: ${v.name}`); render(); flushCelebrations(); }, `Xác nhận trao quà <b>${esc(v.name)}</b> cho ${esc(p.name)} (mã ${v.code})`);
+}
+function cancelVoucher(vid) {
+  const p = P(); const v = p.vouchers.find(x => x.id === vid); if (!v || v.status !== 'pending') return;
+  confirmBox('Huỷ phiếu đổi quà?', `Phiếu <b>${esc(v.name)}</b> sẽ bị huỷ và bé được hoàn lại ${v.cost} 🌟.`, 'Huỷ phiếu', () => { p.vouchers = p.vouchers.filter(x => x !== v); p.gold += v.cost; saveDB(); render(); });
+}
+// Mã PIN thầy cô: lưu dạng băm trên máy, dùng chung cho mọi hồ sơ trên máy này
+const pinHash = pin => 'h' + hash('gs5-teacher:' + pin).toString(36);
+function pinInputHtml(id, label) { return `<label class="eyebrow" for="${id}">${label}</label><input id="${id}" class="text pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="6" autocomplete="off">`; }
+function withPin(onOk, what = 'Phần này dành cho thầy cô') {
+  if (!DB.teacher.pin) { teacherSetPin(onOk); return; }
+  const ov = modal({ art: '🔐', title: 'Nhập mã PIN thầy cô', body: what, ok: 'Xác nhận', cancel: 'Huỷ', html: pinInputHtml('pin-in', 'Mã PIN'), onOk: o => {
+    if (pinHash($('#pin-in', o).value.trim()) === DB.teacher.pin) onOk(); else { Sound.wrong(); toast('Mã PIN chưa đúng'); }
+  } });
+  const inp = $('#pin-in', ov); setTimeout(() => inp.focus(), 40); inp.onkeydown = e => { if (e.key === 'Enter') ov.querySelector('[data-x="o"]').click(); };
+}
+function teacherSetPin(after) {
+  const make = () => {
+    const ov = modal({ art: '🔐', title: DB.teacher.pin ? 'Đổi mã PIN thầy cô' : 'Tạo mã PIN thầy cô', body: 'Mã PIN gồm 4–6 chữ số, dùng để xác nhận trao quà và sửa danh sách quà. Thầy cô giữ bí mật mã này, không cho học sinh biết.', ok: 'Lưu mã PIN', cancel: 'Huỷ',
+      html: pinInputHtml('pin-a', 'Mã PIN mới') + pinInputHtml('pin-b', 'Nhập lại mã PIN'), onOk: o => {
+        const a = $('#pin-a', o).value.trim(), b = $('#pin-b', o).value.trim();
+        if (!/^\d{4,6}$/.test(a)) { toast('Mã PIN cần 4–6 chữ số'); return; }
+        if (a !== b) { toast('Hai lần nhập chưa giống nhau'); return; }
+        DB.teacher.pin = pinHash(a); saveDB(); toast('Đã lưu mã PIN thầy cô'); if (view.screen === 'settings') render(); after && after();
+      } });
+    setTimeout(() => $('#pin-a', ov).focus(), 40);
+  };
+  if (DB.teacher.pin && !after) withPin(make, 'Nhập mã PIN hiện tại để đổi mã mới'); else make();
+}
+function showRewardEditor() {
+  const rows = (list = DB.rewards, fresh = false) => list.map((r, i) => `<div class="rw-row" data-i="${fresh ? 'new' : i}"><input class="text rw-ico" value="${esc(r.icon)}" maxlength="4" aria-label="Biểu tượng"><input class="text rw-name" value="${esc(r.name)}" maxlength="60" aria-label="Tên quà"><input class="text rw-cost" type="number" min="1" max="200" value="${r.cost}" aria-label="Số ngôi sao vàng"><button class="icon-btn" data-rwdel="${i}" aria-label="Xoá quà">✕</button></div>`).join('');
+  const ov = modal({ art: '', title: 'Danh sách quà ở lớp', body: 'Sửa tên quà và số 🌟 Ngôi sao vàng cần để đổi. Áp dụng cho mọi học sinh dùng máy này.', ok: 'Lưu danh sách', cancel: 'Huỷ',
+    html: `<div class="rw-head"><span>Hình</span><span>Tên quà</span><span>🌟</span><span></span></div><div class="rw-list">${rows()}</div><div class="row" style="justify-content:center"><button class="btn ghost" data-rwadd="1">+ Thêm quà</button><button class="btn ghost" data-rwreset="1">Khôi phục mặc định</button></div>`,
+    onOk: o => {
+      const list = [...o.querySelectorAll('.rw-row')].map((row, i) => ({ id: DB.rewards[+row.dataset.i]?.id || 'c' + Date.now().toString(36) + i, icon: row.querySelector('.rw-ico').value.trim() || '🎁', name: row.querySelector('.rw-name').value.trim(), cost: Math.max(1, Math.min(200, Math.round(+row.querySelector('.rw-cost').value) || 5)) })).filter(r => r.name);
+      if (!list.length) { toast('Cần ít nhất một món quà'); return; }
+      DB.rewards = list; saveDB(); toast('Đã lưu danh sách quà'); render();
+    } });
+  ov.querySelector('.modal').classList.add('wide');
+  ov.addEventListener('click', e => {
+    const t = e.target.closest('button'); if (!t) return; const box = ov.querySelector('.rw-list');
+    if (t.dataset.rwdel !== undefined) t.closest('.rw-row').remove();
+    if (t.dataset.rwadd) { box.insertAdjacentHTML('beforeend', `<div class="rw-row" data-i="new"><input class="text rw-ico" value="🎁" maxlength="4" aria-label="Biểu tượng"><input class="text rw-name" value="" maxlength="60" placeholder="Tên quà mới" aria-label="Tên quà"><input class="text rw-cost" type="number" min="1" max="200" value="5" aria-label="Số ngôi sao vàng"><button class="icon-btn" data-rwdel="x" aria-label="Xoá quà">✕</button></div>`); box.lastElementChild.querySelector('.rw-name').focus(); }
+    if (t.dataset.rwreset) box.innerHTML = rows(DEFAULT_REWARDS, true);
+  });
+}
+function showGrantGold() {
+  const p = P(); let n = 1;
+  const ov = modal({ art: '🌟', title: `Tặng Ngôi sao vàng cho ${esc(p.name)}`, body: `Khen thưởng khi bé học tốt trên lớp. Hiện bé có ${p.gold} 🌟.`, ok: 'Tặng', cancel: 'Huỷ',
+    html: `<div class="row" style="justify-content:center"><button class="btn ghost" data-g="-1">−</button><b id="g-n" class="code-big">+1</b><button class="btn ghost" data-g="1">+</button></div>`,
+    onOk: () => { if (n > 0) { grantGold(n, 'Thầy cô khen thưởng'); } else { p.gold = Math.max(0, p.gold + n); toast(`Đã trừ ${-n} 🌟`); } checkBadges(); saveDB(); render(); } });
+  ov.addEventListener('click', e => { const g = e.target.closest('[data-g]'); if (!g) return; n = Math.max(-p.gold, Math.min(10, n + +g.dataset.g)); if (n === 0) n = +g.dataset.g > 0 ? 1 : -1; if (n < -p.gold) n = 1; $('#g-n', ov).textContent = (n > 0 ? '+' : '') + n; });
+}
+
 function restoreFrom(text) {
   try {
     const raw = text.trim().replace(/^GS5:/, '');
     const obj = raw.startsWith('{') ? JSON.parse(raw) : JSON.parse(decodeURIComponent(escape(atob(raw))));
     if (!obj || !obj.id || obj.xp === undefined || !obj.stats) throw new Error('bad');
+    migrateProfile(obj);
     DB.profiles[obj.id] = obj; DB.activeId = obj.id; saveDB();
     toast(`Đã khôi phục tiến độ của ${obj.name}`); go('home');
   } catch (e) { toast('Mã sao lưu không đúng. Hãy kiểm tra lại.'); }
@@ -1560,7 +2026,7 @@ function showOnboarding(addOnly = false, viewOnly = false) {
   const slides = [
     { art: '👋', title: 'Chào mừng đến Global Success 5!', html: `<p class="muted" style="text-align:center">Ứng dụng giúp bé học Tiếng Anh lớp 5 theo đúng sách giáo khoa <b>Global Success</b>: 20 Unit, 4 bài Review, hơn 260 từ vựng và mẫu câu trọng tâm.</p>` },
     { art: '🗺️', title: 'Mỗi Unit có 6 chặng', html: `<ul class="onb-list">${STEPS.map((s, i) => `<li>${emo(s.icon)}<span><b>${i + 1}. ${s.name}</b></span></li>`).join('')}</ul><p class="muted" style="text-align:center;margin-top:6px">Làm xong chặng này, chặng sau sẽ mở.</p>` },
-    { art: '🎁', title: 'Học càng chăm, quà càng nhiều', html: `<ul class="onb-list"><li>${emo('⚡')}<span><b>Điểm XP & cấp độ</b>Mỗi câu đúng được cộng điểm, đủ điểm thì lên cấp.</span></li><li>${emo('⭐')}<span><b>Sao & nhãn dán</b>Dùng sao đổi nhãn dán đáng yêu.</span></li><li>${emo('🎁')}<span><b>Rương quà bí mật</b>Xong mỗi chặng được mở một rương.</span></li><li>${emo('🔥')}<span><b>Chuỗi ngày học & nhiệm vụ</b>Học mỗi ngày để giữ ngọn lửa.</span></li></ul>` },
+    { art: '🎁', title: 'Học càng chăm, quà càng nhiều', html: `<ul class="onb-list"><li>${emo('⚡')}<span><b>Điểm XP & cấp độ</b>Mỗi câu đúng được cộng điểm, đủ điểm thì lên cấp.</span></li><li>${emo('⭐')}<span><b>Sao & bộ sưu tập</b>Dùng sao sưu tầm nhãn dán, ảnh đại diện, khung ảnh.</span></li><li>${emo('🌟')}<span><b>Ngôi sao vàng đổi quà thật</b>Gom ngôi sao vàng để đổi bút, thước, sticker… ở lớp.</span></li><li>${emo('🎁')}<span><b>Rương quà bí mật</b>Xong mỗi chặng được mở một rương.</span></li><li>${emo('🔥')}<span><b>Chuỗi ngày học & nhiệm vụ</b>Học mỗi ngày để giữ ngọn lửa.</span></li></ul>` },
     { art: '💾', title: 'Tiến độ luôn được lưu', html: `<p class="muted" style="text-align:center">Mọi bài học tự động lưu trên máy. Phụ huynh có thể sao lưu, khôi phục hoặc xoá tiến độ trong <b>Cài đặt</b>. Bấm nút <b>?</b> bất cứ lúc nào để xem lại hướng dẫn.</p>` }
   ];
   let i = addOnly ? slides.length : 0; let avatar = AVATARS[0];
@@ -1598,7 +2064,7 @@ function showOnboarding(addOnly = false, viewOnly = false) {
 }
 function showProfileEditor() {
   const p = P(); let avatar = p.avatar;
-  const ov = modal({ art: '', title: 'Đổi tên & ảnh đại diện', ok: 'Lưu', cancel: 'Huỷ', html: `<input id="ed-name" class="text" maxlength="20" value="${esc(p.name)}"><div class="avatars">${AVATARS.map(a => `<button class="${a === avatar ? 'on' : ''}" data-av="${a}">${emo(a)}</button>`).join('')}</div>`, onOk: o => { p.name = ($('#ed-name', o).value || '').trim() || p.name; p.avatar = avatar; saveDB(); render(); } });
+  const ov = modal({ art: '', title: 'Đổi tên & ảnh đại diện', ok: 'Lưu', cancel: 'Huỷ', html: `<input id="ed-name" class="text" maxlength="20" value="${esc(p.name)}"><div class="avatars">${myAvatars().map(a => `<button class="${a === avatar ? 'on' : ''}" data-av="${a}">${emo(a)}</button>`).join('')}</div>`, onOk: o => { p.name = ($('#ed-name', o).value || '').trim() || p.name; p.avatar = avatar; saveDB(); render(); } });
   ov.querySelectorAll('[data-av]').forEach(b => b.onclick = () => { avatar = b.dataset.av; ov.querySelectorAll('[data-av]').forEach(x => x.classList.toggle('on', x === b)); });
 }
 
@@ -1692,7 +2158,7 @@ function head(prog) {
     <div class="act-label ${t.cls}"><span class="pill" style="background:var(--c)">${t.label}</span><b>${t.name}</b></div>`;
 }
 function drawAct() {
-  const c = $('#content'); renderTop();
+  const c = $('#content'); renderTop(); document.body.classList.remove('has-fb');
   if (act.kind === 'learn') c.innerHTML = drawLearn();
   else if (act.kind === 'talk') c.innerHTML = drawTalk();
   else if (act.kind === 'memory') c.innerHTML = drawMemory();
@@ -1703,7 +2169,7 @@ function drawAct() {
   if (act.kind === 'quiz') { const q = act.qs[act.i]; if (q && q.mode === 'listen' && !act.locked) setTimeout(() => act === cur && Sound.speak(q.w.word), 300); }
   if (act.kind === 'learn' && !act.flipped) { const w = act.list[act.i]; if (w) setTimeout(() => act === cur && Sound.speak(w.word), 250); }
 }
-function wrapAct(inner) { return `<div class="act">${inner}</div>`; }
+function wrapAct(inner) { return `<div class="act act-${act.kind}">${inner}</div>`; }
 
 // Chặng 1: Học từ mới (thẻ lật)
 function drawLearn() {
@@ -1715,22 +2181,36 @@ function drawLearn() {
         <div class="flash-face">${emo(w.icon, 'big')}<div class="w">${esc(w.word)}</div>${w.phonetic ? `<div class="p ipa">${esc(w.phonetic)}</div>` : ''}<div class="hint">Nghe, nói to theo rồi lật thẻ</div></div>
         <div class="flash-face back"><div class="m">${esc(w.meaning)}</div><div class="ex">“${esc(w.example)}”</div><div class="exvi">${esc(w.exampleVi)}</div></div>
       </div></div>
-    <div class="sound-row"><button class="btn" data-a="say">${emo('🔊')} Nghe từ</button><button class="btn ghost" data-a="slow">${emo('🐢')} Nghe chậm</button><button class="btn ghost" data-a="sayex">${emo('💬')} Nghe câu ví dụ</button></div>
-    <div class="row" style="justify-content:center"><button class="btn ghost big" data-a="again">${emo('🔁')} Chưa nhớ</button><button class="btn green big" data-a="know">${emo('✅')} Mình đã nhớ</button></div>`);
+    <div class="sound-row"><button class="btn" data-a="say">${emo('🔊')} Nghe<span class="lg-only">&nbsp;từ</span></button><button class="btn ghost" data-a="slow">${emo('🐢')} Chậm</button><button class="btn ghost" data-a="sayex">${emo('💬')} Câu<span class="lg-only">&nbsp;ví dụ</span></button></div>
+    <div class="act-bar"><button class="btn ghost big" data-a="again">${emo('🔁')} Chưa nhớ</button><button class="btn green big" data-a="know">${emo('✅')} Đã nhớ</button></div>`);
 }
 // Chặng 2: Mẫu câu
 function drawTalk() {
+  // Mỗi lần chỉ hiện MỘT đoạn hội thoại (thẻ 1·2·3·Nhịp điệu) để vừa một màn hình, không phải cuộn
   const u = UNIT(act.unit); const all = u.patterns.length; const heard = act.heard.size;
-  return wrapAct(`${head(heard / all * 100)}
-    <p class="prompt">Nghe từng đoạn hội thoại rồi nói to theo bạn A và bạn B.</p>
-    ${u.patterns.map((p, i) => `<div class="card dialogue">
-      <div class="row" style="justify-content:space-between"><span class="eyebrow">Mẫu câu ${i + 1}</span>${act.heard.has(i) ? '<span class="tag" style="background:var(--grass-tint);color:#11622F">✓ Đã nghe</span>' : ''}</div>
+  const hasRhythm = u.rhythm.length > 0;
+  const ti = act.ti ?? 0; const onRhythm = hasRhythm && ti === all;
+  const tabs = `<div class="talk-tabs" role="tablist">${u.patterns.map((p, i) => `<button role="tab" aria-selected="${i === ti}" class="${i === ti ? 'on' : ''} ${act.heard.has(i) ? 'heard' : ''}" data-a="ttab" data-i="${i}">${act.heard.has(i) ? '✓ ' : ''}Mẫu ${i + 1}</button>`).join('')}${hasRhythm ? `<button role="tab" aria-selected="${onRhythm}" class="${onRhythm ? 'on' : ''}" data-a="ttab" data-i="${all}">${emo('🎵')} Nhịp</button>` : ''}</div>`;
+  let panel;
+  if (onRhythm) {
+    panel = `<div class="card rhythm"><span class="eyebrow">${u.rhythmLabel}</span><ul>${u.rhythm.map(r => `<li><button class="icon-btn" data-a="sayt" data-t="${esc(r)}" aria-label="Nghe">${emo('🔊')}</button>${esc(r)}</li>`).join('')}</ul></div>`;
+  } else {
+    const p = u.patterns[ti];
+    panel = `<div class="card dialogue">
       <div class="bubble-row a"><span class="who-dot">A</span><div class="bubble">${esc(p.q)}</div></div>
       <div class="bubble-row b"><span class="who-dot">B</span><div class="bubble">${esc(p.a)}</div></div>
       <p class="dlg-vi">${esc(p.vi)}</p>
-      <div class="sound-row"><button class="btn" data-a="dlg" data-i="${i}">${emo('🔊')} Nghe</button><button class="btn ghost" data-a="dlgslow" data-i="${i}">${emo('🐢')} Nghe chậm</button></div></div>`).join('')}
-    ${u.rhythm.length ? `<div class="card rhythm"><span class="eyebrow">${u.rhythmLabel}</span><ul>${u.rhythm.map(r => `<li><button class="icon-btn" data-a="sayt" data-t="${esc(r)}" aria-label="Nghe">${emo('🔊')}</button>${esc(r)}</li>`).join('')}</ul></div>` : ''}
-    <button class="btn green big block" data-a="talkdone" ${heard >= all ? '' : 'disabled'}>${heard >= all ? 'Hoàn thành chặng' : `Nghe đủ ${all} mẫu câu để hoàn thành (${heard}/${all})`}</button>`);
+      <div class="sound-row"><button class="btn" data-a="dlg" data-i="${ti}">${emo('🔊')} Nghe</button><button class="btn ghost" data-a="dlgslow" data-i="${ti}">${emo('🐢')} Nghe chậm</button></div></div>`;
+  }
+  const nextUnheard = u.patterns.findIndex((_, i) => !act.heard.has(i));
+  const bar = heard >= all
+    ? `<button class="btn green big" data-a="talkdone">${emo('✅')} Hoàn thành chặng</button>`
+    : (act.heard.has(ti) && nextUnheard >= 0
+      ? `<button class="btn big" data-a="ttab" data-i="${nextUnheard}">Mẫu câu tiếp theo →</button>`
+      : `<span class="bar-hint">Bấm ${emo('🔊')} <b>Nghe</b> rồi nói to theo bạn A và bạn B · ${heard}/${all}</span>`);
+  return wrapAct(`${head(heard / all * 100)}
+    <p class="prompt">Nghe rồi nói to theo bạn A và bạn B.</p>
+    ${tabs}${panel}<div class="act-bar">${bar}</div>`);
 }
 // Câu hỏi luyện tập / kiểm tra
 function drawQuestion() {
@@ -1742,25 +2222,27 @@ function drawQuestion() {
     if (q.mode === 'listen') prompt = `<p class="prompt">Nghe và chọn ${q.show === 'pic' ? 'tranh' : 'từ'} đúng</p><div class="card prompt-card"><button class="speak-big" data-a="say" aria-label="Nghe lại">${emo('🔊')}</button><button class="btn ghost" data-a="slow">${emo('🐢')} Nghe chậm</button></div>`;
     else if (q.mode === 'pic') prompt = `<p class="prompt">Tranh này là gì trong tiếng Anh?</p><div class="card prompt-card">${emo(q.w.icon, 'prompt-icon')}<span class="prompt-sub">${esc(q.w.meaning)}</span></div>`;
     else prompt = `<p class="prompt">Chọn nghĩa đúng của từ</p><div class="card prompt-card"><span class="prompt-word">${esc(q.w.word)}</span>${q.w.phonetic ? `<span class="ipa muted">${esc(q.w.phonetic)}</span>` : ''}<button class="btn ghost" data-a="say">${emo('🔊')} Nghe</button></div>`;
-    body = prompt + `<div class="options">${q.options.map((o, k) => `<button class="opt" data-a="pick" data-id="${o.id}" aria-label="Phương án ${k + 1}">
-      ${q.show === 'pic' ? `${emo(o.icon)}<small>${esc(o.meaning)}</small>` : q.show === 'word' ? `<b>${esc(o.word)}</b>` : `<b>${esc(o.meaning)}</b>`}</button>`).join('')}</div>`;
+    body = prompt + `<div class="options">${q.options.map((o, k) => `<button class="opt" data-a="pick" data-id="${o.id}"><span class="opt-key" aria-hidden="true">${k + 1}</span>
+      ${q.show === 'pic' ? `${emo(o.icon)}<small>${esc(o.meaning)}</small>` : q.show === 'word' ? `<b>${esc(o.word)}</b>` : `<b>${esc(o.meaning)}</b>`}</button>`).join('')}</div>
+      <div class="act-bar"><span class="bar-hint">Chạm vào một đáp án</span></div>`;
   } else if (q.type === 'gap') {
     body = `<p class="prompt">Chọn từ đúng để điền vào chỗ trống</p><div class="card prompt-card"><p class="gap-sentence">${esc(q.before)}<span class="blank">${act.locked ? esc(q.w.word) : ''}</span>${esc(q.after)}</p><span class="muted" style="font-weight:700">${esc(q.w.exampleVi)}</span></div>
-      <div class="options">${q.options.map(o => `<button class="opt" data-a="pick" data-id="${o.id}"><b>${esc(o.word)}</b></button>`).join('')}</div>`;
+      <div class="options">${q.options.map((o, k) => `<button class="opt" data-a="pick" data-id="${o.id}"><span class="opt-key" aria-hidden="true">${k + 1}</span><b>${esc(o.word)}</b></button>`).join('')}</div>
+      <div class="act-bar"><span class="bar-hint">Chạm vào từ đúng</span></div>`;
   } else if (q.type === 'spell') {
     if (!q.bank) { const L = letters(q.w.word); q.layout = q.w.word.split('').map(ch => /[a-z]/i.test(ch) ? 'slot' : ch); q.slots = Array(L.length).fill(null); q.bank = shuffle(L.split('').map((ch, k) => ({ k, ch, used: false }))); }
     let si = 0;
     const slots = q.layout.map(part => { if (part !== 'slot') return part === ' ' ? '<span class="gap"></span>' : `<span class="fixed-ch">${esc(part)}</span>`; const k = si++; const s = q.slots[k]; return `<span class="slot ${s ? 'filled' : ''} ${q.mark ? (q.mark[k] ? 'good' : 'bad') : ''}" data-a="unslot" data-k="${k}">${s ? s.ch : ''}</span>`; }).join('');
-    body = `<p class="prompt">Ghép chữ cái thành từ tiếng Anh</p><div class="card prompt-card">${emo(q.w.icon, 'prompt-icon')}<span class="prompt-sub">${esc(q.w.meaning)}</span><button class="btn ghost" data-a="say">${emo('🔊')} Nghe từ</button></div>
+    body = `<p class="prompt">Ghép chữ cái thành từ tiếng Anh</p><div class="card prompt-card inline">${emo(q.w.icon, 'prompt-icon')}<span class="prompt-sub">${esc(q.w.meaning)}</span><button class="btn ghost" data-a="say">${emo('🔊')} Nghe</button></div>
       <div class="slots ${q.slots.length > 9 ? 'compact' : ''}">${slots}</div>
       <div class="tiles">${q.bank.map((t, k) => `<button class="tile ${t.used ? 'used' : ''}" data-a="tile" data-k="${k}" ${t.used ? 'disabled' : ''}>${t.ch}</button>`).join('')}</div>
-      <div class="row" style="justify-content:center"><button class="btn ghost" data-a="hint" ${act.locked ? 'disabled' : ''}>${emo('💡')} Gợi ý 1 chữ</button><button class="btn ghost" data-a="clear" ${act.locked ? 'disabled' : ''}>Xoá làm lại</button></div>`;
+      <div class="act-bar"><button class="btn ghost" data-a="clear" ${act.locked ? 'disabled' : ''}>${emo('↩️')} Xoá làm lại</button><button class="btn sun" data-a="hint" ${act.locked ? 'disabled' : ''}>${emo('💡')} Gợi ý 1 chữ</button></div>`;
   } else if (q.type === 'order') {
     if (!q.bank) { const toks = q.s.en.split(' '); let b = shuffle(toks.map((t, k) => ({ k, t, used: false }))); if (b.every((x, k) => x.k === k)) b.push(b.shift()); q.bank = b; q.ans = []; }
-    body = `<p class="prompt">Nghe rồi sắp xếp các từ thành câu đúng</p><div class="card prompt-card"><span class="prompt-sub">${esc(q.s.vi)}</span><div class="sound-row"><button class="btn" data-a="sayt" data-t="${esc(q.s.en)}">${emo('🔊')} Nghe câu</button><button class="btn ghost" data-a="slowt" data-t="${esc(q.s.en)}">${emo('🐢')} Chậm</button></div></div>
+    body = `<p class="prompt">Nghe rồi sắp xếp các từ thành câu đúng</p><div class="card prompt-card inline"><span class="prompt-sub">${esc(q.s.vi)}</span><div class="sound-row"><button class="btn" data-a="sayt" data-t="${esc(q.s.en)}" aria-label="Nghe câu">${emo('🔊')}</button><button class="btn ghost" data-a="slowt" data-t="${esc(q.s.en)}" aria-label="Nghe chậm">${emo('🐢')}</button></div></div>
       <div class="answer-line ${q.mark || ''}">${q.ans.map((t, k) => `<button class="tile word" data-a="unans" data-k="${k}">${esc(t.t)}</button>`).join('') || '<span class="muted" style="font-weight:700">Chạm vào các thẻ từ bên dưới</span>'}</div>
       <div class="tiles">${q.bank.map((t, k) => `<button class="tile word ${t.used ? 'used' : ''}" data-a="tok" data-k="${k}" ${t.used ? 'disabled' : ''}>${esc(t.t)}</button>`).join('')}</div>
-      <div class="row" style="justify-content:center"><button class="btn ghost" data-a="oclear" ${act.locked ? 'disabled' : ''}>Xoá làm lại</button><button class="btn green" data-a="ocheck" ${q.ans.length === q.bank.length && !act.locked ? '' : 'disabled'}>Kiểm tra</button></div>`;
+      <div class="act-bar"><button class="btn ghost" data-a="oclear" ${act.locked ? 'disabled' : ''}>${emo('↩️')} Làm lại</button><button class="btn green big" data-a="ocheck" ${q.ans.length === q.bank.length && !act.locked ? '' : 'disabled'}>Kiểm tra</button></div>`;
   }
   return wrapAct(`${head(act.i / n * 100)}${body}<div id="fb"></div>`);
 }
@@ -1772,23 +2254,26 @@ function answer(ok, q, correctText) {
   let gained = 0;
   if (ok) {
     act.correct++; act.combo++; act.best = Math.max(act.best, act.combo);
-    gained = 10 + Math.min(act.combo - 1, 5) * 2; act.xp += gained; act.coins += 1;
+    // Có dùng gợi ý: vẫn tính đúng (không làm bé nản) nhưng thưởng ít hơn, để bé muốn tự làm
+    const coin = q.hinted ? 0 : 1;
+    gained = q.hinted ? 5 : 10 + Math.min(act.combo - 1, 5) * 2; act.xp += gained; act.coins += coin;
     p.stats.correct++; p.stats.maxCombo = Math.max(p.stats.maxCombo, act.combo);
     if (q.mode === 'listen') { p.stats.listenCorrect++; questProgress('listen'); }
     if (q.type === 'order') { p.stats.orderCorrect++; questProgress('order'); }
     questProgress('correct'); questProgress('combo', act.combo, 'max');
     if (wid) { const s = wordState(wid); s.m = Math.min(5, s.m + 1); s.seen++; }
-    gainXP(gained); gainCoins(1); Sound.correct();
+    gainXP(gained); if (coin) gainCoins(coin); Sound.correct();
   } else {
     act.combo = 0; Sound.wrong();
     if (wid) { const s = wordState(wid); s.m = Math.max(0, s.m - 1); s.wrong++; s.seen++; act.wrongWords.add(wid); }
     // Câu sai được hỏi lại ở cuối bài (chỉ ở bài luyện tập, không ở bài kiểm tra)
-    if (!act.isTest && !act.retryUsed.has(act.i)) { act.retryUsed.add(act.qs.length); const copy = { ...q, bank: null, ans: null, slots: null, mark: null, options: q.options ? shuffle(q.options) : undefined }; act.qs.push(copy); }
+    if (!act.isTest && !act.retryUsed.has(act.i)) { act.retryUsed.add(act.qs.length); const copy = { ...q, bank: null, ans: null, slots: null, mark: null, hinted: false, options: q.options ? shuffle(q.options) : undefined }; act.qs.push(copy); }
   }
   saveDB(); renderTop();
   const say = q.type === 'order' ? q.s.en : q.w?.word;
-  $('#fb').outerHTML = `<div class="feedback ${ok ? 'ok' : 'no'}" id="fb" role="status"><div class="msg"><b>${ok ? praise() : 'Chưa đúng rồi!'}</b>${ok ? `<span class="xp">+${gained} XP · +1 ⭐${act.combo >= 3 ? ` · Chuỗi đúng x${act.combo}` : ''}</span>` : `Đáp án đúng: <b style="display:inline;font-family:var(--font-body);font-size:1rem">${esc(correctText)}</b>${act.isTest ? '' : ' · Câu này sẽ được hỏi lại.'}`}</div>
-    <button class="btn ${ok ? 'green' : 'red'} big" data-a="next" id="btn-next">Tiếp tục →</button></div>`;
+  $('#fb').outerHTML = `<div class="feedback ${ok ? 'ok' : 'no'}" id="fb" role="status"><span class="fb-ico" aria-hidden="true">${ok ? '✓' : '✗'}</span><div class="msg"><b>${ok ? praise() : 'Chưa đúng rồi!'}</b>${ok ? `<span class="xp">+${gained} XP${q.hinted ? ' · có dùng gợi ý' : ' · +1 ⭐'}${act.combo >= 3 ? ` · Chuỗi x${act.combo}` : ''}</span>` : `<span class="fb-ans">Đáp án: <strong>${esc(correctText)}</strong></span>${act.isTest ? '' : '<small class="fb-note">Câu này sẽ được hỏi lại.</small>'}`}</div>
+    <button class="btn ${ok ? 'green' : 'red'} big" data-a="next" id="btn-next">Tiếp →</button></div>`;
+  document.body.classList.add('has-fb');
   $('.combo').textContent = act.combo >= 2 ? `🔥 x${act.combo}` : '';
   if (say) setTimeout(() => Sound.speak(say), ok ? 250 : 500);
   setTimeout(() => $('#btn-next')?.focus(), 50);
@@ -1815,6 +2300,7 @@ function onActClick(e) {
     const u = UNIT(act.unit);
     if (a === 'dlg' || a === 'dlgslow') { const i = +b.dataset.i; const p = u.patterns[i]; Sound.speakSeq([p.q, p.a], a === 'dlgslow'); if (!act.heard.has(i)) { act.heard.add(i); P().stats.talk++; questProgress('talk'); gainXP(5); act.xp += 5; saveDB(); setTimeout(drawAct, 150); } }
     else if (a === 'sayt') Sound.speak(b.dataset.t);
+    else if (a === 'ttab') { act.ti = +b.dataset.i; Sound.pop(); drawAct(); }
     else if (a === 'talkdone') finishStep();
     return;
   }
@@ -1836,7 +2322,7 @@ function onActClick(e) {
     if (!q.slots.includes(null)) { const L = letters(q.w.word); q.mark = q.slots.map((s, i) => s.ch === L[i]); drawAct(); answer(q.mark.every(Boolean), q, q.w.word); } else drawAct();
   } else if (a === 'unslot') { const k = +b.dataset.k; const s = q.slots[k]; if (!s) return; s.used = false; q.slots[k] = null; Sound.pop(); drawAct(); }
   else if (a === 'clear') { q.slots.fill(null); q.bank.forEach(t => t.used = false); drawAct(); }
-  else if (a === 'hint') { const L = letters(q.w.word); const k = q.slots.findIndex((s, i) => !s || s.ch !== L[i]); if (k < 0) return; if (q.slots[k]) { q.slots[k].used = false; q.slots[k] = null; } const t = q.bank.find(x => !x.used && x.ch === L[k]) || q.slots.find((s, i) => s && i > k && s.ch === L[k]); if (t) { const old = q.slots.indexOf(t); if (old >= 0) q.slots[old] = null; t.used = true; q.slots[k] = t; } act.hinted = true; Sound.pop(); if (!q.slots.includes(null)) { q.mark = q.slots.map((s, i) => s.ch === L[i]); drawAct(); answer(q.mark.every(Boolean), q, q.w.word); } else drawAct(); }
+  else if (a === 'hint') { const L = letters(q.w.word); const k = q.slots.findIndex((s, i) => !s || s.ch !== L[i]); if (k < 0) return; if (q.slots[k]) { q.slots[k].used = false; q.slots[k] = null; } const t = q.bank.find(x => !x.used && x.ch === L[k]) || q.slots.find((s, i) => s && i > k && s.ch === L[k]); if (t) { const old = q.slots.indexOf(t); if (old >= 0) q.slots[old] = null; t.used = true; q.slots[k] = t; } q.hinted = true; Sound.pop(); if (!q.slots.includes(null)) { q.mark = q.slots.map((s, i) => s.ch === L[i]); drawAct(); answer(q.mark.every(Boolean), q, q.w.word); } else drawAct(); }
   else if (a === 'tok') { const t = q.bank[+b.dataset.k]; if (t.used) return; t.used = true; q.ans.push(t); Sound.pop(); drawAct(); }
   else if (a === 'unans') { const [t] = q.ans.splice(+b.dataset.k, 1); t.used = false; Sound.pop(); drawAct(); }
   else if (a === 'oclear') { q.ans = []; q.bank.forEach(t => t.used = false); drawAct(); }
@@ -1880,19 +2366,26 @@ function finishStep() {
   if (a.unit && a.step && passed) { const st = unitState(a.unit); st.steps[a.step] = true; if (a.isTest) { st.stars = Math.max(st.stars, stars); st.best = Math.max(st.best, acc); if (acc === 100) p.stats.perfectTests++; } }
   if (a.review) { const st = (p.units[a.review] ||= { steps: {}, stars: 0, best: 0 }); st.best = Math.max(st.best, acc); }
   if (passed) { p.stats.steps++; questProgress('steps'); markStudyToday(); }
+  // Học giỏi được thưởng thật: lần đầu đạt 3 sao bài Kiểm tra Unit (hoặc ≥ 90% bài Review) → +1 🌟
+  const goldKey = a.isTest ? (a.unit ? 'u' + a.unit : a.review) : null;
+  if (goldKey && (a.unit ? stars === 3 : acc >= 90) && !p.goldTests.includes(goldKey)) { p.goldTests.push(goldKey); grantGold(1, a.unit ? `Đạt 3 sao bài Kiểm tra Unit ${a.unit}` : `Đạt ${acc}% bài ${esc(a.title)}`); }
+  const chestKey = a.unit && a.step ? `${a.unit}:${a.step}` : a.kind === 'memory' ? `mem:${a.unit}` : `q:${a.review || a.title || 'x'}`;
+  const chestOk = passed && chestAvailable(chestKey);
   checkBadges(); saveDB();
   Sound.win(); Confetti.burst(passed ? 120 : 40);
   const nextIdx = a.unit && a.step ? STEPS.findIndex(s => s.id === a.step) + 1 : -1;
   const next = nextIdx > 0 && nextIdx < STEPS.length ? STEPS[nextIdx] : null;
   const wrongs = [...a.wrongWords].map(WORD).filter(Boolean);
-  $('#content').innerHTML = `<div class="act"><div class="card summary">
-    ${a.isTest ? `<div class="big-stars">${[1, 2, 3].map(i => `<span class="${stars >= i ? '' : 'off'}">⭐</span>`).join('')}</div>` : `<div style="font-size:4rem">${emo(passed ? '🎉' : '💪')}</div>`}
+  document.body.classList.remove('has-fb');
+  $('#content').innerHTML = `<div class="act act-summary"><div class="card summary">
+    ${a.isTest ? `<div class="big-stars">${[1, 2, 3].map(i => `<span class="${stars >= i ? '' : 'off'}">⭐</span>`).join('')}</div>` : `<div class="sum-emo">${emo(passed ? '🎉' : '💪')}</div>`}
     <h2>${a.isTest ? (stars === 3 ? 'Hoàn hảo!' : stars === 2 ? 'Rất tốt!' : stars === 1 ? 'Đã qua bài!' : 'Cố lên, thử lại nhé!') : 'Hoàn thành chặng!'}</h2>
     <p class="muted">${a.unit ? `Unit ${a.unit}: ${esc(UNIT(a.unit).title)}` : esc(a.title || '')}${a.step ? ` · ${STEP(a.step).name}` : ''}</p>
     <div class="sum-stats"><div class="sum-stat"><b>+${a.xp}</b><span>XP</span></div><div class="sum-stat"><b>${a.answered ? acc + '%' : '✓'}</b><span>${a.answered ? 'Độ chính xác' : 'Hoàn thành'}</span></div><div class="sum-stat"><b>+${a.coins}</b><span>⭐ sao</span></div></div>
     ${a.best >= 3 ? `<p style="font-weight:900;color:var(--orange-deep)">🔥 Chuỗi đúng dài nhất: ${a.best} câu</p>` : ''}
     ${wrongs.length ? `<div><span class="eyebrow">Từ cần ôn thêm</span><div class="row" style="justify-content:center;margin-top:6px">${wrongs.map(w => `<span class="tag">${w.icon} ${esc(w.word)} = ${esc(w.meaning)}</span>`).join('')}</div></div>` : ''}
-    ${passed ? `<p class="eyebrow">Phần thưởng hoàn thành chặng</p><button class="chest" id="sum-chest" aria-label="Mở rương">${emo('🎁')}</button><div class="reward-pop" id="sum-reward">Chạm vào rương để mở!</div>` : ''}
+    ${chestOk ? `<p class="eyebrow">Phần thưởng hoàn thành chặng</p><button class="chest" id="sum-chest" aria-label="Mở rương">${emo('🎁')}</button><div class="reward-pop" id="sum-reward">Chạm vào rương để mở!</div>`
+      : passed ? `<p class="muted chest-used">${emo('🎁')} Rương của bài này hôm nay đã mở rồi. Học chặng mới, hoặc ôn lại bài này vào ngày mai để nhận rương nhé!</p>` : ''}
     <div class="row" style="justify-content:center">
       ${a.unit && a.step ? `<button class="btn ghost" id="sum-back">Về trang Unit</button>` : `<button class="btn ghost" id="sum-back">Quay lại</button>`}
       ${!passed && a.unit ? `<button class="btn orange" id="sum-retry">Làm lại</button>` : ''}
@@ -1905,13 +2398,14 @@ function finishStep() {
   $('#sum-next') && ($('#sum-next').onclick = () => leave(() => startStep(unitN, next.id)));
   $('#sum-retry') && ($('#sum-retry').onclick = () => leave(() => startStep(unitN, a.step)));
   const ch = $('#sum-chest');
-  if (ch) ch.onclick = () => { if (ch.disabled) return; ch.disabled = true; const r = rollChest(); ch.classList.add('opened'); Sound.coin(); Confetti.burst(60); ch.innerHTML = emo(r.kind === 'sticker' ? r.s.icon : '⭐'); $('#sum-reward').innerHTML = r.kind === 'sticker' ? `Nhãn dán mới: <b>${esc(r.s.name)}</b> (${RAR_NAME[r.s.rar]})` : `+${r.coins} ⭐`; checkBadges(); saveDB(); renderTop(); flushCelebrations(); };
+  if (ch) ch.onclick = () => { if (ch.disabled) return; ch.disabled = true; useChest(chestKey); const r = rollChest(); ch.classList.add('opened'); Sound.coin(); Confetti.burst(60); ch.innerHTML = emo(r.kind === 'sticker' ? r.s.icon : '⭐'); $('#sum-reward').innerHTML = r.kind === 'sticker' ? `Nhãn dán mới: <b>${esc(r.s.name)}</b> (${RAR_NAME[r.s.rar]})` : `+${r.coins} ⭐`; checkBadges(); saveDB(); renderTop(); flushCelebrations(); };
   renderTop(); flushCelebrations();
 }
 
 // ---------------- 18. Khởi động ----------------
 function boot() {
   loadDB(); Sound.init();
+  document.addEventListener('pointerdown', () => { try { if ('speechSynthesis' in window) { const u = new SpeechSynthesisUtterance(' '); u.volume = 0; speechSynthesis.speak(u); } Sound.ac(); } catch (e) { /* bỏ qua */ } }, { once: true });
   document.addEventListener('click', e => { const n = e.target.closest('[data-nav]'); if (n && !n.closest('#content')) { Sound.pop(); go(n.dataset.nav); } });
   $('#btn-sound').onclick = () => { const p = P(); if (!p) return; p.set.sound = !p.set.sound; saveDB(); renderTop(); };
   $('#btn-help').onclick = () => { Sound.pop(); go('help'); };

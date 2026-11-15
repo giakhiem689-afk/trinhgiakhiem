@@ -9,7 +9,8 @@ export interface DtSection {
   kind: 'Mạch điện' | 'Kỹ năng đọc' | 'Kỹ năng đo' | 'Khái niệm' | 'Tính toán' | 'Xử lý lỗi';
   task: string;        // việc người học cần làm với mô phỏng
   watch: string[];     // điều cần quan sát
-  qa: [string, string][]; // câu hỏi dự đoán và gợi ý
+  qa: [string, string][]; // câu hỏi dự đoán và gợi ý (câu đầu dùng cho bước Dự đoán)
+  teach: string;       // gợi ý tổ chức cho người dạy
 }
 
 export interface DtLesson {
@@ -45,6 +46,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'dong-ho-van-nang',
+        teach: 'Cho cả lớp giơ tay chọn “đúng hay sai” trước mỗi tổ hợp. Dừng lâu ở trường hợp ampe kế mắc song song nguồn, vì đây là lỗi làm cháy cầu chì đồng hồ thường gặp nhất.',
         title: 'Đồng hồ vạn năng: chọn chức năng và cách mắc',
         ref: 'An toàn trước khi thực hành; Phụ lục A',
         kind: 'Kỹ năng đo',
@@ -62,6 +64,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'dao-dong-ky',
+        teach: 'Giao mỗi nhóm ba tín hiệu và yêu cầu ghi số ô trước khi nhân. Lỗi thường gặp là đọc biên độ đỉnh thay cho đỉnh–đỉnh.',
         title: 'Đọc dao động ký: biên độ và tần số',
         ref: 'Các bài 3, 5, 6, 7 (quan sát dạng sóng)',
         kind: 'Kỹ năng đọc',
@@ -87,6 +90,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'ma-mau',
+        teach: 'Phát điện trở thật để đọc song song với mô phỏng. Lỗi thường gặp là đọc ngược chiều và nhầm vạch hệ số nhân thành một chữ số.',
         title: 'Đọc mã màu điện trở',
         ref: 'Mục 1.1, Bảng 1.1',
         kind: 'Kỹ năng đọc',
@@ -103,6 +107,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'ma-so',
+        teach: 'Hỏi nhanh hai mã “100” và “101” để gỡ ngộ nhận rằng số cuối là một chữ số của trị số. Cho học viên tự tìm mã trên bo mạch cũ.',
         title: 'Đọc mã số trên điện trở dán và tụ điện',
         ref: 'Mục 1.1 và 1.3',
         kind: 'Kỹ năng đọc',
@@ -119,6 +124,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'chia-ap',
+        teach: 'Yêu cầu ghi dự đoán Ura trước khi bấm “Nối tải”. Liên hệ với điện trở vào của đồng hồ và lý do cần bộ đệm ở bài 7.',
         title: 'Cầu chia áp và ảnh hưởng của tải',
         ref: 'Mục 1.2, Hình 1.1, Ví dụ 2',
         kind: 'Mạch điện',
@@ -135,6 +141,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'tu-nap-xa',
+        teach: 'Cho học viên đọc τ trên đồ thị rồi so với tích R·C. Nhấn mạnh dòng lớn nhất lúc bắt đầu nạp, không phải lúc tụ đầy.',
         title: 'Tụ điện nạp và xả qua điện trở',
         ref: 'Mục 1.3, Hình 1.2, Ví dụ 3',
         kind: 'Mạch điện',
@@ -151,6 +158,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'tai-cam',
+        teach: 'Hỏi vì sao transistor có thể hỏng dù nguồn chỉ 12 V, rồi mới cho xem đỉnh 60 V khi không có diode.',
         title: 'Tải cảm và diode dập xung',
         ref: 'Mục 1.4',
         kind: 'Khái niệm',
@@ -176,6 +184,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'tiep-giap-pn',
+        teach: 'Kéo thật chậm từ 0,5 V đến 0,7 V để thấy đường cong dựng đứng. Tránh để học viên ghi nhớ “0,7 V” như một hằng số.',
         title: 'Tiếp giáp PN và đường đặc tính diode',
         ref: 'Mục 2.1 và 2.2',
         kind: 'Khái niệm',
@@ -192,6 +201,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'led',
+        teach: 'Giao mỗi nhóm một bộ số liệu khác nhau, tính tay trước rồi mới đối chiếu. Hỏi vì sao chọn giá trị chuẩn lớn hơn chứ không nhỏ hơn.',
         title: 'Tính điện trở hạn dòng cho LED',
         ref: 'Mục 2.2; câu 1 phần ôn tập',
         kind: 'Tính toán',
@@ -208,6 +218,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'bjt-cong-tac',
+        teach: 'Giữ nguyên tải, chỉ tăng RB cho đến khi trạng thái đổi sang “Khuếch đại”. Đó là lúc giải thích β cưỡng bức.',
         title: 'BJT làm công tắc đóng cắt rơle',
         ref: 'Mục 2.3, Hình 2.1, Ví dụ 1',
         kind: 'Mạch điện',
@@ -224,6 +235,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'mosfet',
+        teach: 'Dừng ở VGS = 2,2 V để học viên thấy tổn hao 0,8 W. Đây là bằng chứng VGS(th) không phải điện áp mở hoàn toàn.',
         title: 'MOSFET làm công tắc cho quạt',
         ref: 'Mục 2.4; câu 2 phần ôn tập',
         kind: 'Mạch điện',
@@ -240,6 +252,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'do-kiem-bjt',
+        teach: 'Tổ chức thi tìm đúng với ít lần đo nhất. Yêu cầu ghi đủ bảng sáu phép đo trước khi kết luận.',
         title: 'Dò chân BJT bằng thang diode',
         ref: 'Mục 2.5 và 2.6',
         kind: 'Kỹ năng đo',
@@ -265,6 +278,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'cau-chinh-luu',
+        teach: 'Bấm “Tạm dừng” ở mỗi nửa chu kỳ và gọi học viên lên chỉ đường dòng. Đối chiếu tên nút A, B, P, N với Hình 3.1.',
         title: 'Đường dòng trong mạch chỉnh lưu',
         ref: 'Mục 3.1, Hình 3.1',
         kind: 'Mạch điện',
@@ -281,6 +295,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'tu-loc',
+        teach: 'Tháo tụ rồi lắp lại để thấy tác dụng lọc. Cho học viên đoán độ gợn khi tải tăng gấp đôi rồi mới kéo thanh trượt.',
         title: 'Tụ lọc và độ gợn',
         ref: 'Mục 3.2, 3.3 và 3.6',
         kind: 'Mạch điện',
@@ -298,6 +313,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'duong-mach',
+        teach: 'Dùng ngay trước khi vẽ mạch in sản phẩm ở mục 3.6. Phân biệt rõ “đủ về điện” với “gia công được”.',
         title: 'Bề rộng đường mạch in',
         ref: 'Mục 3.5, 3.6 (bước 3); Phụ lục C',
         kind: 'Tính toán',
@@ -323,6 +339,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'zener',
+        teach: 'Giảm Rtải từ từ cho đến khi dòng Zener về 0. Yêu cầu lập bảng bốn trường hợp nguồn và tải như trong giờ thực hành.',
         title: 'Ổn áp song song dùng Zener',
         ref: 'Mục 4.2, Ví dụ 1',
         kind: 'Mạch điện',
@@ -339,6 +356,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'on-ap-ic',
+        teach: 'Bật “Phân tầng” và hỏi tổng nhiệt có giảm không. Ngộ nhận phổ biến là phân tầng làm bộ nguồn mát hơn.',
         title: 'Nhiệt trên IC ổn áp L7805',
         ref: 'Mục 4.4 và 4.7 (bước 1)',
         kind: 'Tính toán',
@@ -364,6 +382,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'da-hai',
+        teach: 'Cho học viên kể đủ sáu bước chuyển trạng thái bằng lời, rồi mới chiếu dạng sóng base xuống điện áp âm.',
         title: 'Đa hài tự dao động dùng hai BJT',
         ref: 'Mục 5.2, Hình 5.1, Ví dụ 1 và 2',
         kind: 'Mạch điện',
@@ -381,6 +400,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'da-hai-role',
+        teach: 'Chọn TIP41C với RB = 33 kΩ để xuất hiện cảnh báo, rồi cho các nhóm tự tìm cặp RB và C sửa được mà vẫn giữ thời gian.',
         title: 'Đa hài lái rơle 24 V: kiểm tra bão hòa',
         ref: 'Mục 5.5 (bước 1)',
         kind: 'Tính toán',
@@ -406,6 +426,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'astable',
+        teach: 'Che phần số đo, yêu cầu đoán LED sáng lâu hơn hay tắt lâu hơn. Sau đó gắn RA, RB vào từng đường nạp và xả.',
         title: 'NE555 đa hài (astable)',
         ref: 'Mục 6.1 và 6.2, Hình 6.2, Ví dụ 1',
         kind: 'Mạch điện',
@@ -423,6 +444,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'monostable',
+        teach: 'Cho học viên bấm trigger liên tục để tự phát hiện mạch không nhận trigger khi đang có xung.',
         title: 'NE555 đơn ổn (monostable)',
         ref: 'Mục 6.3, Ví dụ 2',
         kind: 'Mạch điện',
@@ -448,6 +470,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'khuech-dai',
+        teach: 'Lần lượt tạo ba kiểu sai: cắt đỉnh, méo do slew rate, giảm độ lợi. Với mỗi kiểu, yêu cầu nêu bằng chứng trên dạng sóng.',
         title: 'Mạch đảo, không đảo và các giới hạn',
         ref: 'Mục 7.2 và 7.3, Hình 7.1 và 7.2',
         kind: 'Mạch điện',
@@ -465,6 +488,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'hysteresis',
+        teach: 'Để hysteresis bằng 0 và tăng nhiễu trước. Chỉ khi học viên thấy ngõ ra rung mới giới thiệu hai ngưỡng.',
         title: 'Hysteresis chống nhiễu ở bộ so sánh',
         ref: 'Mục 7.5 và 8.3, Hình 8.2',
         kind: 'Khái niệm',
@@ -490,6 +514,7 @@ export const dtLessons: DtLesson[] = [
     sections: [
       {
         id: 'ntc-quat',
+        teach: 'Chạy chu trình tự động và yêu cầu đọc nhiệt độ bật, tắt trên đồ thị. Nối với cách hiệu chỉnh hai điểm ở mục 8.5.',
         title: 'Điều khiển quạt theo nhiệt độ',
         ref: 'Mục 8.1–8.4, Hình 8.1 và 8.2, Ví dụ 1',
         kind: 'Mạch điện',
@@ -507,6 +532,7 @@ export const dtLessons: DtLesson[] = [
       },
       {
         id: 'xu-ly-loi',
+        teach: 'Dùng làm bài kiểm tra miệng theo nhóm: trước mỗi phép đo phải nêu lý do. Chấm theo quá trình, không chỉ theo kết quả.',
         title: 'Tìm lỗi theo chuỗi đo',
         ref: 'Mục 8.6–8.8; Phụ lục B',
         kind: 'Xử lý lỗi',
@@ -524,3 +550,13 @@ export const dtLessons: DtLesson[] = [
     ],
   },
 ];
+
+export const dtKinds: Record<DtSection['kind'], string> = {
+  'Mạch điện': 'mach',
+  'Kỹ năng đọc': 'doc',
+  'Kỹ năng đo': 'do',
+  'Khái niệm': 'kn',
+  'Tính toán': 'tinh',
+  'Xử lý lỗi': 'loi',
+};
+export const dtTotal = dtLessons.reduce((n, l) => n + l.sections.length, 0);

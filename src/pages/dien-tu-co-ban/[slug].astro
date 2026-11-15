@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { dtCourse, dtLessons } from '../../data/dienTu';
+import DtSidebar from '../../components/DtSidebar.astro';
+import { dtCourse, dtLessons, dtKinds } from '../../data/dienTu';
 import '../../styles/dien-tu.css';
 
 export function getStaticPaths() {
@@ -17,64 +18,101 @@ const description = `${lesson.goal} Mô phỏng tương tác: ${lesson.sections.
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container dt-page">
-    <p class="dt-crumb"><a href={dtCourse.base}>{dtCourse.title}</a> / {lesson.short}</p>
-    <h1 class="dt-h1">{heading}</h1>
-    <p class="dt-meta">{lesson.hours}</p>
-    <p class="dt-lead">{lesson.goal}</p>
+  <div class="dt-shell">
+    <DtSidebar current={lesson.slug} />
 
-    <nav aria-label="Chọn bài học">
-      <ul class="dt-tabs">
-        {dtLessons.map((l) => (
-          <li><a href={`${dtCourse.base}/${l.slug}`} aria-current={l.slug === lesson.slug ? 'page' : undefined}>{l.short}</a></li>
-        ))}
-      </ul>
-    </nav>
+    <div class="dt-main">
+      <div class="dt-bar">
+        <button type="button" class="dt-tool dt-menu" id="dt-menu" aria-controls="dt-side" aria-expanded="false">☰ Mục lục</button>
+        <p class="dt-crumb"><a href={dtCourse.base}>{dtCourse.title}</a><span aria-hidden="true">›</span>{lesson.short}</p>
+        <button type="button" class="dt-tool dt-bar-gv" data-gv aria-pressed="false">Chế độ giảng dạy</button>
+      </div>
 
-    <nav aria-label="Các phần trong bài">
-      <ol class="dt-toc">
-        {lesson.sections.map((s, i) => (
-          <li><a href={`#${s.id}`}><b>{i + 1}</b><span>{s.title}<small>{s.kind}</small></span></a></li>
-        ))}
-      </ol>
-    </nav>
+      <header class="dt-hero">
+        <p class="dt-eyebrow">{lesson.hours}</p>
+        <h1 class="dt-h1">{heading}</h1>
+        <p class="dt-lead">{lesson.goal}</p>
+        <ol class="dt-chips" aria-label="Các phần trong bài">
+          {lesson.sections.map((s, i) => (
+            <li><a href={`#${s.id}`} data-spy={s.id}><b>{i + 1}</b>{s.title}</a></li>
+          ))}
+        </ol>
+      </header>
 
-    {lesson.sections.map((s, i) => (
-      <section class="dt-sec" id={s.id}>
-        <div class="dt-sec-head">
-          <h2>{i + 1}. {s.title}</h2>
-          <span class="dt-kind">{s.kind}</span>
-        </div>
-        <p class="dt-ref">Giáo trình: {s.ref}<a href={`#${s.id}`} aria-label={`Liên kết trực tiếp đến phần ${s.title}`}>Liên kết đến phần này</a></p>
-        <p class="dt-task">{s.task}</p>
+      {lesson.sections.map((s, i) => {
+        const key = `${lesson.slug}#${s.id}`;
+        const nextSec = lesson.sections[i + 1];
+        return (
+          <section class="dt-sec" id={s.id} data-key={key}>
+            <header class="dt-sec-head">
+              <span class="dt-num" aria-hidden="true">{i + 1}</span>
+              <div class="dt-sec-title">
+                <h2>{s.title}</h2>
+                <p class="dt-ref"><span class="dt-kind" data-kind={dtKinds[s.kind]}>{s.kind}</span>Giáo trình: {s.ref}</p>
+              </div>
+              <button type="button" class="dt-tool dt-tool-quiet" data-copy={s.id}>Chép liên kết</button>
+            </header>
 
-        <div class="dt-sim" data-sim={s.id}>
-          <noscript><p class="note">Mô phỏng cần bật JavaScript trong trình duyệt.</p></noscript>
-        </div>
+            <ol class="dt-flow">
+              <li class="dt-step dt-step-pred">
+                <h3><b>1</b>Dự đoán</h3>
+                <p class="dt-q">{s.qa[0][0]}</p>
+                <label class="dt-pred">
+                  <span>Dự đoán của tôi (lưu trên máy này)</span>
+                  <input type="text" data-pred={key} placeholder="Ghi con số hoặc chiều thay đổi bạn nghĩ sẽ xảy ra" autocomplete="off" />
+                </label>
+              </li>
 
-        <div class="dt-after">
-          <div>
-            <h3>Quan sát</h3>
-            <ul>{s.watch.map((w) => <li>{w}</li>)}</ul>
-          </div>
-          <div>
-            <h3>Dự đoán rồi kiểm tra</h3>
-            {s.qa.map(([q, a]) => (
-              <details class="dt-qa"><summary>{q}</summary><p>{a}</p></details>
-            ))}
-          </div>
-        </div>
-      </section>
-    ))}
+              <li class="dt-step">
+                <h3><b>2</b>Thử với mô phỏng</h3>
+                <p class="dt-task">{s.task}</p>
+                <div class="dt-sim" data-sim={s.id}>
+                  <noscript><p class="note">Mô phỏng cần bật JavaScript trong trình duyệt.</p></noscript>
+                </div>
+              </li>
 
-    <div class="dt-pager">
-      {prev ? <a class="btn btn-secondary" href={`${dtCourse.base}/${prev.slug}`}>← {prev.short}</a> : <a class="btn btn-secondary" href={dtCourse.base}>← Tổng quan</a>}
-      {next ? <a class="btn btn-primary" href={`${dtCourse.base}/${next.slug}`}>{next.short} →</a> : <a class="btn btn-primary" href={dtCourse.base}>Về tổng quan</a>}
+              <li class="dt-step">
+                <h3><b>3</b>Quan sát và giải thích</h3>
+                <div class="dt-after">
+                  <div>
+                    <h4>Điều cần thấy</h4>
+                    <ul>{s.watch.map((w) => <li>{w}</li>)}</ul>
+                  </div>
+                  <div>
+                    <h4>Đối chiếu dự đoán</h4>
+                    {s.qa.map(([q, a], k) => (
+                      <details class="dt-qa"><summary>{k === 0 ? 'Đáp án câu dự đoán' : q}</summary><p>{a}</p></details>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            </ol>
+
+            <aside class="dt-teach"><b>Gợi ý cho người dạy</b><p>{s.teach}</p></aside>
+
+            <footer class="dt-sec-foot">
+              <button type="button" class="dt-done" data-done={key} aria-pressed="false"><span class="dt-done-box" aria-hidden="true"></span><span class="dt-done-txt">Đánh dấu đã hiểu</span></button>
+              {nextSec
+                ? <a class="dt-next" href={`#${nextSec.id}`}>Phần tiếp: {nextSec.title} ↓</a>
+                : next
+                  ? <a class="dt-next" href={`${dtCourse.base}/${next.slug}`}>Sang {next.short}: {next.title} →</a>
+                  : <a class="dt-next" href={dtCourse.base}>Về tổng quan khóa học →</a>}
+            </footer>
+          </section>
+        );
+      })}
+
+      <nav class="dt-pager" aria-label="Chuyển bài">
+        {prev ? <a href={`${dtCourse.base}/${prev.slug}`}><small>Bài trước</small>← {prev.short}: {prev.title}</a> : <a href={dtCourse.base}><small>Quay lại</small>← Tổng quan khóa học</a>}
+        {next ? <a class="dt-pager-next" href={`${dtCourse.base}/${next.slug}`}><small>Bài tiếp theo</small>{next.short}: {next.title} →</a> : <a class="dt-pager-next" href={dtCourse.base}><small>Hoàn thành</small>Về tổng quan khóa học →</a>}
+      </nav>
     </div>
   </div>
+  <div class="dt-scrim" id="dt-scrim" hidden></div>
 
-  <script is:inline src="/dien-tu/core.js?v=1" defer></script>
-  <script is:inline src="/dien-tu/l12.js?v=1" defer></script>
-  <script is:inline src="/dien-tu/l345.js?v=1" defer></script>
-  <script is:inline src="/dien-tu/l678.js?v=1" defer></script>
+  <script is:inline src="/dien-tu/core.js?v=2" defer></script>
+  <script is:inline src="/dien-tu/l12.js?v=2" defer></script>
+  <script is:inline src="/dien-tu/l345.js?v=2" defer></script>
+  <script is:inline src="/dien-tu/l678.js?v=2" defer></script>
+  <script is:inline src="/dien-tu/ui.js?v=2" defer></script>
 </BaseLayout>

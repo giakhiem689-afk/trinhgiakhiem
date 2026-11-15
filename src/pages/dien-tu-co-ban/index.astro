@@ -1,45 +1,95 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { dtCourse, dtLessons } from '../../data/dienTu';
+import DtSidebar from '../../components/DtSidebar.astro';
+import { dtCourse, dtLessons, dtKinds, dtTotal } from '../../data/dienTu';
 import '../../styles/dien-tu.css';
 
 const title = 'Điện tử cơ bản MĐ13 – Bài học mô phỏng tương tác | Trịnh Gia Khiêm';
 const description =
   'Bài học tương tác môn Điện tử cơ bản (MĐ13, trung cấp): đọc mã màu điện trở, đồng hồ vạn năng, dao động ký, diode, BJT, MOSFET, mạch nguồn, ổn áp, dao động, IC 555, op amp và mạch cảm biến.';
-const total = dtLessons.reduce((n, l) => n + l.sections.length, 0);
+const kinds = Object.entries(dtKinds);
+const first = dtLessons[0];
 ---
 
 <BaseLayout title={title} description={description}>
-  <div class="container dt-page">
-    <p class="dt-meta">{dtCourse.subtitle}</p>
-    <h1 class="dt-h1">{dtCourse.title}: bài học mô phỏng tương tác</h1>
-    <p class="dt-lead">{dtCourse.intro}</p>
+  <div class="dt-shell">
+    <DtSidebar />
 
-    <ol class="dt-steps" aria-label="Cách học với mô phỏng">
-      {dtCourse.steps.map(([name, text]) => (
-        <li><strong>{name}</strong>{text}</li>
-      ))}
-    </ol>
+    <div class="dt-main">
+      <div class="dt-bar">
+        <button type="button" class="dt-tool dt-menu" id="dt-menu" aria-controls="dt-side" aria-expanded="false">☰ Mục lục</button>
+        <p class="dt-crumb">{dtCourse.title}<span aria-hidden="true">›</span>Tổng quan</p>
+        <button type="button" class="dt-tool dt-bar-gv" data-gv aria-pressed="false">Chế độ giảng dạy</button>
+      </div>
 
-    <p class="dt-meta">{dtLessons.length} bài · {total} mô phỏng</p>
-    <section class="dt-cards">
-      {dtLessons.map((l) => (
-        <article class="dt-card">
-          <p class="dt-meta">{l.hours}</p>
-          <h2><a href={`${dtCourse.base}/${l.slug}`}>{l.short === l.title ? l.title : `${l.short}: ${l.title}`}</a></h2>
-          <p>{l.goal}</p>
-          <ul>
-            {l.sections.map((s) => (
-              <li><a href={`${dtCourse.base}/${l.slug}#${s.id}`}>{s.title}<span>{s.kind}</span></a></li>
-            ))}
-          </ul>
-        </article>
-      ))}
-    </section>
+      <header class="dt-hero dt-hero-home">
+        <p class="dt-eyebrow">{dtCourse.subtitle}</p>
+        <h1 class="dt-h1">{dtCourse.title}: học bằng mô phỏng tương tác</h1>
+        <p class="dt-lead">{dtCourse.intro}</p>
+        <div class="dt-cta">
+          <a class="btn btn-primary" id="dt-continue" href={`${dtCourse.base}/${first.slug}#${first.sections[0].id}`}
+             data-keys={dtLessons.flatMap((l) => l.sections.map((s) => `${l.slug}#${s.id}`)).join(',')}>Bắt đầu học</a>
+          <span class="dt-cta-note">{dtLessons.length} bài · {dtTotal} mô phỏng · không cần cài đặt</span>
+        </div>
+      </header>
 
-    <p class="dt-ref" style="margin-top: var(--space-12); max-width: 75ch;">
-      Mô phỏng dùng mô hình lý tưởng hóa với đúng công thức và số liệu ví dụ của giáo trình: không có dung sai, nhiệt hay tiếp xúc kém.
-      Nó giúp dự đoán và hình dung, không thay cho phép đo ở mạch thật. Mọi thao tác thực hành tuân theo quy định an toàn của xưởng và hướng dẫn của giáo viên.
-    </p>
+      <section class="dt-block" aria-labelledby="dt-how">
+        <h2 id="dt-how" class="dt-h2">Mỗi phần học theo ba bước</h2>
+        <ol class="dt-method">
+          <li><b>1</b><strong>Dự đoán</strong><span>Đọc câu hỏi và ghi dự đoán trước khi chạm vào mô phỏng.</span></li>
+          <li><b>2</b><strong>Thử với mô phỏng</strong><span>Thay một thông số mỗi lần, quan sát dòng điện, con số và dạng sóng.</span></li>
+          <li><b>3</b><strong>Quan sát và giải thích</strong><span>Đối chiếu với đáp án, rồi lắp mạch thật và đo để so sánh.</span></li>
+        </ol>
+      </section>
+
+      <section class="dt-block" aria-labelledby="dt-path">
+        <div class="dt-block-head">
+          <h2 id="dt-path" class="dt-h2">Lộ trình học</h2>
+          <div class="dt-filter" role="group" aria-label="Lọc theo loại hoạt động">
+            <button type="button" data-filter="" aria-pressed="true">Tất cả</button>
+            {kinds.map(([name, slug]) => <button type="button" data-filter={slug} aria-pressed="false"><i class="dt-dot" data-kind={slug}></i>{name}</button>)}
+          </div>
+        </div>
+
+        <ol class="dt-path">
+          {dtLessons.map((l) => (
+            <li class="dt-lesson">
+              <div class="dt-lesson-head">
+                <span class="dt-badge dt-badge-lg" aria-hidden="true">{l.slug.startsWith('bai-') ? l.slug.slice(4) : '0'}</span>
+                <div>
+                  <h3><a href={`${dtCourse.base}/${l.slug}`}>{l.short === l.title ? l.title : `${l.short}: ${l.title}`}</a></h3>
+                  <p class="dt-lesson-meta">{l.hours}</p>
+                </div>
+                <span class="dt-count dt-count-lg" data-keys={l.sections.map((s) => `${l.slug}#${s.id}`).join(',')}>0/{l.sections.length}</span>
+              </div>
+              <p class="dt-lesson-goal">{l.goal}</p>
+              <ul class="dt-secs">
+                {l.sections.map((s) => (
+                  <li data-kind={dtKinds[s.kind]}>
+                    <a href={`${dtCourse.base}/${l.slug}#${s.id}`}>
+                      <i class="dt-ck" data-ck={`${l.slug}#${s.id}`} aria-hidden="true"></i>
+                      <span class="dt-secs-t">{s.title}</span>
+                      <span class="dt-kind" data-kind={dtKinds[s.kind]}>{s.kind}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section class="dt-block dt-guide" aria-labelledby="dt-gvh">
+        <h2 id="dt-gvh" class="dt-h2">Dành cho người dạy</h2>
+        <div class="dt-guide-grid">
+          <div><h3>Trình chiếu trên lớp</h3><p>Bật “Chế độ giảng dạy” để ẩn mục lục, phóng to mô phỏng và hiện gợi ý tổ chức cho từng phần: câu hỏi dẫn dắt và ngộ nhận thường gặp.</p></div>
+          <div><h3>Giao bài bằng liên kết</h3><p>Mỗi phần có nút “Chép liên kết” dẫn thẳng đến đúng mô phỏng. Các liên kết này trùng với dòng “Mô phỏng tương tác” trong giáo trình.</p></div>
+          <div><h3>Gắn với giờ thực hành</h3><p>Dùng bước Dự đoán thay cho cột “giá trị dự đoán” của phiếu đo, sau đó cho học viên lắp mạch thật và giải thích sai lệch.</p></div>
+        </div>
+        <p class="dt-fine">Mô phỏng dùng mô hình lý tưởng hóa với đúng công thức và số liệu ví dụ của giáo trình: không có dung sai, nhiệt hay tiếp xúc kém. Nó giúp dự đoán và hình dung, không thay cho phép đo ở mạch thật. Mọi thao tác thực hành tuân theo quy định an toàn của xưởng.</p>
+      </section>
+    </div>
   </div>
+  <div class="dt-scrim" id="dt-scrim" hidden></div>
+  <script is:inline src="/dien-tu/ui.js?v=2" defer></script>
 </BaseLayout>

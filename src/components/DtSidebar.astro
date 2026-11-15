@@ -1,0 +1,49 @@
+---
+// Thanh mục lục cố định của tab "Điện tử cơ bản": danh sách bài, tiến độ, chế độ giảng dạy.
+import { dtCourse, dtLessons, dtTotal } from '../data/dienTu';
+
+interface Props { current?: string }
+const { current } = Astro.props;
+---
+<aside class="dt-side" id="dt-side" aria-label="Mục lục bài học">
+  <div class="dt-side-head">
+    <a href={dtCourse.base} class="dt-side-title">{dtCourse.title}</a>
+    <span>{dtCourse.subtitle}</span>
+  </div>
+
+  <div class="dt-prog" aria-live="polite">
+    <div class="dt-prog-bar"><i id="dt-prog-fill"></i></div>
+    <span id="dt-prog-txt" data-total={dtTotal}>0/{dtTotal} phần đã hiểu</span>
+  </div>
+
+  <nav aria-label="Các bài học">
+    <ol class="dt-nav">
+      <li>
+        <a class="dt-nav-l" href={dtCourse.base} aria-current={current ? undefined : 'page'}>
+          <span class="dt-badge dt-badge-home" aria-hidden="true">≡</span><span class="dt-nav-t">Tổng quan khóa học</span>
+        </a>
+      </li>
+      {dtLessons.map((l) => (
+        <li>
+          <a class="dt-nav-l" href={`${dtCourse.base}/${l.slug}`} aria-current={l.slug === current ? 'page' : undefined}>
+            <span class="dt-badge" aria-hidden="true">{l.slug.startsWith('bai-') ? l.slug.slice(4) : '0'}</span>
+            <span class="dt-nav-t">{l.title}</span>
+            <span class="dt-count" data-keys={l.sections.map((s) => `${l.slug}#${s.id}`).join(',')}>0/{l.sections.length}</span>
+          </a>
+          {l.slug === current && (
+            <ol class="dt-nav-s">
+              {l.sections.map((s) => (
+                <li><a href={`#${s.id}`} data-spy={s.id}><i class="dt-ck" data-ck={`${l.slug}#${s.id}`} aria-hidden="true"></i>{s.title}</a></li>
+              ))}
+            </ol>
+          )}
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <div class="dt-side-foot">
+    <button type="button" class="dt-tool" data-gv aria-pressed="false">Chế độ giảng dạy</button>
+    <button type="button" class="dt-tool dt-tool-quiet" id="dt-reset">Xóa tiến độ trên máy này</button>
+  </div>
+</aside>

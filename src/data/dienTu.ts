@@ -1,6 +1,6 @@
 // Nội dung tab "Điện tử cơ bản" — bám theo giáo trình MĐ13 (trình độ trung cấp).
 // Mỗi phần (section) có một mô phỏng tương tác; `id` là neo để dẫn link trực tiếp:
-//   /dien-tu-co-ban/<slug>#<id>
+//   /du-an/dien-tu-co-ban/<slug>#<id>
 
 export interface DtSection {
   id: string;          // neo trên trang và khóa của mô phỏng (data-sim)
@@ -23,7 +23,7 @@ export interface DtLesson {
 }
 
 export const dtCourse = {
-  base: '/dien-tu-co-ban',
+  base: '/du-an/dien-tu-co-ban',
   title: 'Điện tử cơ bản',
   subtitle: 'Mô đun MĐ13 · Trình độ trung cấp · 90 giờ',
   intro:

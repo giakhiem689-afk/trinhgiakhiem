@@ -1,8 +1,8 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import DtSidebar from '../../components/DtSidebar.astro';
-import { dtCourse, dtLessons, dtKinds, dtTotal } from '../../data/dienTu';
-import '../../styles/dien-tu.css';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import DtSidebar from '../../../components/DtSidebar.astro';
+import { dtCourse, dtLessons, dtKinds, dtTotal } from '../../../data/dienTu';
+import '../../../styles/dien-tu.css';
 
 const title = 'Điện tử cơ bản MĐ13 – Bài học mô phỏng tương tác | Trịnh Gia Khiêm';
 const description =
@@ -18,7 +18,7 @@ const first = dtLessons[0];
     <div class="dt-main">
       <div class="dt-bar">
         <button type="button" class="dt-tool dt-menu" id="dt-menu" aria-controls="dt-side" aria-expanded="false">☰ Mục lục</button>
-        <p class="dt-crumb">{dtCourse.title}<span aria-hidden="true">›</span>Tổng quan</p>
+        <p class="dt-crumb"><a href="/du-an">Dự án</a><span aria-hidden="true">›</span>{dtCourse.title}</p>
         <button type="button" class="dt-tool dt-bar-gv" data-gv aria-pressed="false">Chế độ giảng dạy</button>
       </div>
 
@@ -27,7 +27,7 @@ const first = dtLessons[0];
         <h1 class="dt-h1">{dtCourse.title}: học bằng mô phỏng tương tác</h1>
         <p class="dt-lead">{dtCourse.intro}</p>
         <div class="dt-cta">
-          <a class="btn btn-primary" id="dt-continue" href={`${dtCourse.base}/${first.slug}#${first.sections[0].id}`}
+          <a class="btn btn-primary" id="dt-continue" data-base={dtCourse.base} href={`${dtCourse.base}/${first.slug}#${first.sections[0].id}`}
              data-keys={dtLessons.flatMap((l) => l.sections.map((s) => `${l.slug}#${s.id}`)).join(',')}>Bắt đầu học</a>
           <span class="dt-cta-note">{dtLessons.length} bài · {dtTotal} mô phỏng · không cần cài đặt</span>
         </div>
@@ -91,5 +91,5 @@ const first = dtLessons[0];
     </div>
   </div>
   <div class="dt-scrim" id="dt-scrim" hidden></div>
-  <script is:inline src="/dien-tu/ui.js?v=2" defer></script>
+  <script is:inline src="/dien-tu/ui.js?v=3" defer></script>
 </BaseLayout>

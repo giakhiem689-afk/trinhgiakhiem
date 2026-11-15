@@ -16,7 +16,7 @@
     $$("[data-ck]").forEach(function (i) { i.classList.toggle("on", has(i.getAttribute("data-ck"))); });
     $$(".dt-count").forEach(function (c) { var ks = c.getAttribute("data-keys").split(","), n = ks.filter(has).length; c.textContent = n + "/" + ks.length; c.classList.toggle("full", n === ks.length); });
     var txt = $("#dt-prog-txt"); if (txt) { var total = +txt.getAttribute("data-total"), n = done.length > total ? total : done.length; txt.textContent = n + "/" + total + " phần đã hiểu"; $("#dt-prog-fill").style.width = (total ? n / total * 100 : 0) + "%"; }
-    var go = $("#dt-continue"); if (go) { var all = go.getAttribute("data-keys").split(","), nx = all.filter(function (k) { return !has(k); })[0]; if (done.length && nx) { go.textContent = "Tiếp tục học"; go.setAttribute("href", "/dien-tu-co-ban/" + nx); } else if (done.length && !nx) { go.textContent = "Ôn lại từ đầu"; } }
+    var go = $("#dt-continue"); if (go) { var all = go.getAttribute("data-keys").split(","), nx = all.filter(function (k) { return !has(k); })[0]; if (done.length && nx) { go.textContent = "Tiếp tục học"; go.setAttribute("href", go.getAttribute("data-base") + "/" + nx); } else if (done.length && !nx) { go.textContent = "Ôn lại từ đầu"; } }
   }
   document.addEventListener("click", function (ev) {
     var b = ev.target.closest("[data-done]"); if (!b) return; var k = b.getAttribute("data-done"), i = done.indexOf(k);

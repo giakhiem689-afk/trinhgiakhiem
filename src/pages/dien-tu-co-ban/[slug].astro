@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { dtCourse, dtLessons } from '../../data/dienTu';
+import '../../styles/dien-tu.css';
+
+export function getStaticPaths() {
+  return dtLessons.map((lesson, index) => ({ params: { slug: lesson.slug }, props: { index } }));
+}
+
+const { index } = Astro.props;
+const lesson = dtLessons[index];
+const prev = dtLessons[index - 1];
+const next = dtLessons[index + 1];
+const heading = lesson.short === lesson.title ? lesson.title : `${lesson.short}: ${lesson.title}`;
+const title = `${heading} – Điện tử cơ bản MĐ13 | Trịnh Gia Khiêm`;
+const description = `${lesson.goal} Mô phỏng tương tác: ${lesson.sections.map((s) => s.title).join('; ')}.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container dt-page">
+    <p class="dt-crumb"><a href={dtCourse.base}>{dtCourse.title}</a> / {lesson.short}</p>
+    <h1 class="dt-h1">{heading}</h1>
+    <p class="dt-meta">{lesson.hours}</p>
+    <p class="dt-lead">{lesson.goal}</p>
+
+    <nav aria-label="Chọn bài học">
+      <ul class="dt-tabs">
+        {dtLessons.map((l) => (
+          <li><a href={`${dtCourse.base}/${l.slug}`} aria-current={l.slug === lesson.slug ? 'page' : undefined}>{l.short}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <nav aria-label="Các phần trong bài">
+      <ol class="dt-toc">
+        {lesson.sections.map((s, i) => (
+          <li><a href={`#${s.id}`}><b>{i + 1}</b><span>{s.title}<small>{s.kind}</small></span></a></li>
+        ))}
+      </ol>
+    </nav>
+
+    {lesson.sections.map((s, i) => (
+      <section class="dt-sec" id={s.id}>
+        <div class="dt-sec-head">
+          <h2>{i + 1}. {s.title}</h2>
+          <span class="dt-kind">{s.kind}</span>
+        </div>
+        <p class="dt-ref">Giáo trình: {s.ref}<a href={`#${s.id}`} aria-label={`Liên kết trực tiếp đến phần ${s.title}`}>Liên kết đến phần này</a></p>
+        <p class="dt-task">{s.task}</p>
+
+        <div class="dt-sim" data-sim={s.id}>
+          <noscript><p class="note">Mô phỏng cần bật JavaScript trong trình duyệt.</p></noscript>
+        </div>
+
+        <div class="dt-after">
+          <div>
+            <h3>Quan sát</h3>
+            <ul>{s.watch.map((w) => <li>{w}</li>)}</ul>
+          </div>
+          <div>
+            <h3>Dự đoán rồi kiểm tra</h3>
+            {s.qa.map(([q, a]) => (
+              <details class="dt-qa"><summary>{q}</summary><p>{a}</p></details>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <div class="dt-pager">
+      {prev ? <a class="btn btn-secondary" href={`${dtCourse.base}/${prev.slug}`}>← {prev.short}</a> : <a class="btn btn-secondary" href={dtCourse.base}>← Tổng quan</a>}
+      {next ? <a class="btn btn-primary" href={`${dtCourse.base}/${next.slug}`}>{next.short} →</a> : <a class="btn btn-primary" href={dtCourse.base}>Về tổng quan</a>}
+    </div>
+  </div>
+
+  <script is:inline src="/dien-tu/core.js?v=1" defer></script>
+  <script is:inline src="/dien-tu/l12.js?v=1" defer></script>
+  <script is:inline src="/dien-tu/l345.js?v=1" defer></script>
+  <script is:inline src="/dien-tu/l678.js?v=1" defer></script>
+</BaseLayout>

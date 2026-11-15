@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { dtCourse, dtLessons } from '../../data/dienTu';
+import '../../styles/dien-tu.css';
+
+const title = 'Điện tử cơ bản MĐ13 – Bài học mô phỏng tương tác | Trịnh Gia Khiêm';
+const description =
+  'Bài học tương tác môn Điện tử cơ bản (MĐ13, trung cấp): đọc mã màu điện trở, đồng hồ vạn năng, dao động ký, diode, BJT, MOSFET, mạch nguồn, ổn áp, dao động, IC 555, op amp và mạch cảm biến.';
+const total = dtLessons.reduce((n, l) => n + l.sections.length, 0);
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="container dt-page">
+    <p class="dt-meta">{dtCourse.subtitle}</p>
+    <h1 class="dt-h1">{dtCourse.title}: bài học mô phỏng tương tác</h1>
+    <p class="dt-lead">{dtCourse.intro}</p>
+
+    <ol class="dt-steps" aria-label="Cách học với mô phỏng">
+      {dtCourse.steps.map(([name, text]) => (
+        <li><strong>{name}</strong>{text}</li>
+      ))}
+    </ol>
+
+    <p class="dt-meta">{dtLessons.length} bài · {total} mô phỏng</p>
+    <section class="dt-cards">
+      {dtLessons.map((l) => (
+        <article class="dt-card">
+          <p class="dt-meta">{l.hours}</p>
+          <h2><a href={`${dtCourse.base}/${l.slug}`}>{l.short === l.title ? l.title : `${l.short}: ${l.title}`}</a></h2>
+          <p>{l.goal}</p>
+          <ul>
+            {l.sections.map((s) => (
+              <li><a href={`${dtCourse.base}/${l.slug}#${s.id}`}>{s.title}<span>{s.kind}</span></a></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </section>
+
+    <p class="dt-ref" style="margin-top: var(--space-12); max-width: 75ch;">
+      Mô phỏng dùng mô hình lý tưởng hóa với đúng công thức và số liệu ví dụ của giáo trình: không có dung sai, nhiệt hay tiếp xúc kém.
+      Nó giúp dự đoán và hình dung, không thay cho phép đo ở mạch thật. Mọi thao tác thực hành tuân theo quy định an toàn của xưởng và hướng dẫn của giáo viên.
+    </p>
+  </div>
+</BaseLayout>
